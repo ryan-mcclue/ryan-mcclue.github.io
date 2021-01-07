@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: zlib-acknowledgement
+
+*
+!*/
+
+!.gitignore
+!.gitattributes
+
+!README.md
+
+!https-server.py
+
+!index.html
+
+!syn.js
+!syn-worklet.js

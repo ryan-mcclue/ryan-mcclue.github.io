@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: zlib-acknowledgement
 // GAMES TO INSPECT: Unto The End
 
 // TODO(Ryan): Ensure canvas dimensions match the width

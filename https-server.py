@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
- 
+# SPDX-License-Identifier: zlib-acknowledgement
+
 # NOTE(Ryan): Create ssl certificates:
 # openssl req -x509 -nodes -newkey rsa:4096 -keyout localhost.key -out localhost.crt -days 365
 

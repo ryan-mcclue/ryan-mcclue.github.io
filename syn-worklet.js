@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: zlib-acknowledgement
 function angular_frequency(hertz) {
   return hertz * 2 * Math.PI;
 }
