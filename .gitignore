@@ -11,6 +11,10 @@
 !https-server.py
 
 !index.html
+!rem.js
+!favicon.ico
 
-!syn.js
-!syn-worklet.js
+!web/**/**.js
+!web/**/**.html
+!web/**/**.css
+!web/**/**.mp4
