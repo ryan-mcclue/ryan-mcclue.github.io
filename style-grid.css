@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding and border are included in width */
+}
+
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+.REM {
+  font-size: 1rem;
+}
+
+.REM_Container {
+  font-size: 1em;
+  display: grid;
+  /* like grow and shrink, i.e. relative to other items */
+  grid-template-columns: repeat(2, 1fr);
+  /* default to 100px but allowed to grow as necessary */
+  grid-auto-rows: minmax(100px, auto);
+  /* space between with grid-row-gap */
+  background-color: black;
+  /* this controls horizontal */
+  justify-content: center;
+  /* this controls vertical 
+   * will need to provide width and height of item for alignment to work */
+  align-content: center;
+  /* align-items control items */
+}
+
+.REM_Container_Item {
+  font-size: 1em;
+  width: 5em; 
+  height: 5em; 
+  /* align-self: start */
+}
+
+.REM_Container_Item:nth-child(1) {
+  background-color: red;
+  /* the column end is +1 to how many columns 
+   * grid-column-start: 1, grid-column-end: -1
+   * grid-column: span 2;
+   */
+}
+
+.REM_Container_Item:nth-child(2) {
+  background-color: green;
+}
+
+.REM_Container_Item:nth-child(3) {
+  background-color: blue;
+}

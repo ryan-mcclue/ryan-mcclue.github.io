@@ -13,15 +13,26 @@
   font-size: 1rem;
 }
 
+/* we alter the display of our items here 
+ * the items just have barebones styling */
 .REM_Container {
   font-size: 1em;
   background-color: black;
+  padding: 1em;
   display: flex;
+  /* this will push onto separate lines 
+  flex-wrap: wrap;
+  this is for multi-lines
+  align-content: space-between;
+  */
   /* this is in relation to our main axis 
    * experiment here */
-  justify-content: center;
+  justify-content: space-around;
   /* this is in relation to our cross axis */
-  align-items: flex-start;
+  align-items: center;
+  /* this changes orientation of axis 
+   * still takes up entire width */
+  flex-direction: column;
 }
 
 /* flex box will make sure these boxes fit no matter the screen width 
@@ -30,6 +41,8 @@
   font-size: 1em;
   width: 5em;
   height: 5em;
+  /* we can specify how items resize themselves with grow and shrink properties here 
+   * can also individually align-self and order */
 }
 .REM_Container_Item:nth-child(1) {
   background-color: red;

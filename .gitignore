@@ -11,7 +11,8 @@
 !https-server.py
 
 !index.html
-!style.css
+!style-flex.css
+!style-grid.css
 !script.js
 !favicon.ico
 
