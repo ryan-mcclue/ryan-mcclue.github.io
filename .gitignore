@@ -11,7 +11,8 @@
 !https-server.py
 
 !index.html
-!rem.js
+!style.css
+!script.js
 !favicon.ico
 
 !web/**/**.js

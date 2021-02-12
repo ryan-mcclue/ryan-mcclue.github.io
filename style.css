@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding and border are included in width */
+}
+
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+.REM {
+  font-size: 1rem;
+}
+
+.REM_Container {
+  font-size: 1em;
+  background-color: black;
+  display: flex;
+  /* this is in relation to our main axis 
+   * experiment here */
+  justify-content: center;
+  /* this is in relation to our cross axis */
+  align-items: flex-start;
+}
+
+/* flex box will make sure these boxes fit no matter the screen width 
+ * do we need to use ems here? */
+.REM_Container_Item {
+  font-size: 1em;
+  width: 5em;
+  height: 5em;
+}
+.REM_Container_Item:nth-child(1) {
+  background-color: red;
+}
+.REM_Container_Item:nth-child(2) {
+  background-color: orange;
+}
+.REM_Container_Item:nth-child(3) {
+  background-color: blue;
+}
