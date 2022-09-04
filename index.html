@@ -569,7 +569,7 @@ using</p></li>
 </ul>
 <p>TODO: favourites tab for morning viewing videos: common sense
 skeptic; techquickie; handmade podcast; network next</p>
-<p>chefgood: 20 x $209 mymusclechef: 20 x $219</p>
+<p>chefgood: 20 x $209 mymusclechef: 20 x $219 WELCOME20</p>
 <p>dinner + lunch: $220 breakfast: $100 rent: $345 phone: $70</p>
 <p>leftover: $265</p>
 <p>salary: ≈$52,000</p>
@@ -1364,8 +1364,11 @@ adapters?</p>
 <h2 id="matching-pairs">Matching Pairs</h2>
 <p>A quadratically scaling solution is intuitive However, as we know
 every match is unique, linearly scaling solution obtained with a hash
-map. <code>(x &gt;&gt; 4 + 12) &amp; (size - 1)</code> Important to keep
-in mind we are executing on a physical machine and that Big-Oh is a
+map. C++ STL implementation of hash tables are sets (just keys) and maps
+Unordered variants are raw hash maps Ordered use self-balancing
+red-black-tree yielding logarithmic time Simplest hashing function
+<code>(x &gt;&gt; 4 + 12) &amp; (size - 1)</code> Important to keep in
+mind we are executing on a physical machine and that Big-Oh is a
 ‘zero-cost abstraction’ world. For example, the extra overhead of
 introducing a hashmap (memory allocations/copies) will result in this
 being slower for small lists (also way no dynamic memory allocations in
