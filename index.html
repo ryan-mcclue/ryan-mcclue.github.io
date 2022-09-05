@@ -232,8 +232,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#rage-against-the-machine"
-id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
 <li><a
 href="#important-for-all-topics-included-have-some-mention-on-wallpaper"
 id="toc-important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
@@ -274,365 +272,10 @@ Winner</a></li>
 <li><a href="#the-scripting-awakening"
 id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
+<li><a href="#rage-against-the-machine"
+id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
 </ul>
 </nav>
-<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
-<p>instead of feature, we introduce a patented terminology like user
-stories to have someone teach you them. slows down development business
-logic …. just means high-order operations in say main()</p>
-<p>Incessent unit-testing, why not test startup assembly then. Falls
-apart… What not to test, e.g. assume that hex_to_bin() simple enough to
-work? Introducing formulas to determine whether or not to automate
-something….</p>
-<p>certain ‘design pattern’ enforce really long names to conform to
-pattern. any competent programmer can read use-case specific functions
-with clearer names
-“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
-<p>file for every test, file for every class. leads to awful build
-times</p>
-<p>How can software better serve humanity? e.g. bloatware causes
-slowness for aus post workers</p>
-<p>With UML if doing sufficiently complex to the same level as a
-blueprint, may as well have just written the program the idea of
-iterative design would be followed by literal architects, however too
-costly and time consuming. with software, we have the ability to do
-this. 1. design (urban planner): separation of code (mental clarity and
-division of labour) design metrics are temporal coupling (physics
-outputs data to renderer, so format is important), layout coupling
-(renderer inherits from opengl), idealogical coupling (threading, width,
-memory), fluidity (one change to system causes a major crash) 2.
-programming (architect) 3. compiler (builder)</p>
-<p>Most design patterns are just utility classes rather than a way to
-architect a program</p>
-<p>I don’t want to fight the language (Java). Higher level languages
-should allow you to easily express cpu instructions</p>
-<p>reject the idea of TDD driving good design. accept that tests
-validate design. tdd and bdd have good elements in them, but the dogma
-is not effective.</p>
-<p>code shouldn’t take longer than 10 seconds to compile.</p>
-<p>in general we don’t add security threats that weren’t already
-present, e.g. loading from shared object could just as easily override
-binary if have write priveleges to both</p>
-<p>even though a ‘new’ language won’t crash, it can still have buffer
-overruns. NullPtrExceptions</p>
-<p>c++ struct functions implicitly have a this pointer. virtual
-functions will result in a vtable (array of function pointers) to be
-generated for that struct. therefore, virtual function will first go to
-vtable, then lookup in function, so double indirection (so not a
-zero-cost abstraction) normal function call just call 0x1234, however
-with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
-pointers)</p>
-<p>an engine makes things that aren’t likely to be difficult easy
-(except for linux…) important to know low-level to write new tools. we
-don’t have a wheel yet.</p>
-<p>for any non-trival task, scripting languages become a hindrance with
-no static type checking, no real debugger, slow, not as capable. there
-are complications in software we have wrongly convinced ourselves are
-necessary, e.g. scripting for hotloading hotloading C is far superior,
-as C is more powerful and can use same debugger (using Lua is a
-downgrade) build systems can be useful as they allow for incremental
-builds (however, in negatively reinforces people to only make small
-changes) (speed increase may only be noticeable for large, complex code
-base) they are also useful for managing cross compilation (libraries
-have to be pulled in and compile also) the idea of incorporating a
-scripting language into a game was a failed experiment in 2005s. things
-like a visual based interface is fine as it is constrained</p>
-<p>with closed source it is often the case that a company employs
-someone to oversee the experience of the software and have q+a
-therefore, better quality with this higher layer of checking than open
-source.</p>
-<p>the best bet in safeguarding security is to reduce the attack
-surface, which means to reduce the number of lines of code.</p>
-<p>Don’t restrict right side of bell curve Let your aces be aces Being
-an ace involves having an opinion Most influential software written
-largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
-to maintain it. Fallacy about solo programmer productivity requiring
-large teams. Design by committee pushes design to middle of bell curve
-as opposing views average out</p>
-<p>templates add complexity in the debugger (no actual names). only
-really useful if you save a ton of code (not much code to just write
-each implementation) if templates are necessary then just use
-meta-programming as it is much more powerful.</p>
-<p>many programs treat memory as an infinite resource. allocating memory
-is introducing a failure case and making not a fan of allocation
-festivals. we can create our application with minimal failure cases
-(cannot do this with the platform layer).</p>
-<p>uml and diagrams in general are a waste of time (its just code you
-would write and often fails to capture subtleties) you should become
-more proficient at reading code and understanding its relationship.</p>
-<p>oh no, we had a security bug in our development version! (printf and
-friends. printf %f defaults to double)</p>
-<p>understanding history is important; c runtime library way of packing
-return fail information is the reason for inverse truthniess</p>
-<p>downloading unverified external tool, always good to get more viruses
-on my machine… unless playing at EVO with some maxed out razer device,
-not feasible to hit that hard I guess RTFM is the answer to that…</p>
-<p>build tools are more of a hindrance! always asking yourself what
-flags are being passed (linker and compiling separate steps), what files
-are it picking up, what is the CWD, etc.</p>
-<p>Go against merge requests from strangers and just auto let a group of
-trusted people. This avoids the problem where you work for hours only to
-have it blocked</p>
-<p>Many online communities are anti-engineering in that they don’t
-embrace criticism.</p>
-<p>Do anything on web takes a lot longer than it should dealing with a
-myriad of software with different odd conventions. Lack of
-functionality/integration with hardware will lead to collapse Many
-features lacking like type system, try to emulate. Many features have
-like garbage collection try to avoid.</p>
-<p>Scripting languages can cause heap fragmentation. Why just use a real
-language as we want robustness (scripting languages dependent on
-interpreter speed) and type checking</p>
-<p>Fundamental lack of awareness that there is a better way to program.
-We all make slow because of lack of time however to say it can’t be done
-is a fallacy. The cultural differences with these people make it a
-fool’s errand to try and get these people to program correctly e.g. time
-visual studio users think is fast is less than 10 seconds?!</p>
-<p>Const rarely finds bugs that I have, i.e..writing to a variable a
-shouldn’t. In saying that, you should use features of language that
-helps you catch bugs.</p>
-<p>Apple store is hardly a free marketplace. They can just block your
-app for any reason</p>
-<p>DRM and engine usage make using games in the future difficult
-(e.g. museum)</p>
-<p>Also, the excessive testing is pushed by web where the poor languages
-dictate heavy testing. Testing first makes no sense as the app may
-change</p>
-<p>Audiophiles think they hear things that aren’t there</p>
-<p>Much like the food industry has organic vs processed, we need a term
-for games that are made by people who love games and care about the
-experience as opposed to large companies concerned with making money
-(indie vs triple a)</p>
-<p>Sometimes crashing is good because it signifies the serious problem
-that can be rectified immediately rather than some other Insidious
-hidden bug The problem is not mapping id/pointer (or whatever std:: c++
-people would use) to an entity correctly (i.e. correspondence problem).
-the symptom of this problem will be different depending on the
-implementation, e.g. pointer will crash program.</p>
-<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
-commands except privileged ls. Plus sign turning off, minus on, etc.</p>
-<p>The flip side of high level languages is loss of capability in
-controlling the cpu Run time languages are slower and more complex Most
-scripting languages aren’t designed for modern hardware, e.g. simd,
-threads</p>
-<p>Scripting once, deploying everywhere is broken. You must test what
-you write on each machine. Computers aren’t wonderful abstractions we
-wish they were</p>
-<p>C was created to solve the problem of a portable high level assembly
-language for UNIX. C++ is a frankenstein languAge with bjarne just
-adding features in, e.g. he just wanted c with classes. Go and rust were
-designed for specific purposes, although I don’t care about safe memory
-features or want garbage collection. Complexity creates bugs. C++
-incredibly complex. People just stick to a subset of c++, which may be
-different to yours. Exceptions defer error handling and also bring about
-an ethos of more errors when they should just be states of your
-program.</p>
-<p>roughly 90% of games played on PC games are pirated. however
-intensive anti-piracy makes it harder for people to play your game yet,
-in line with this is, there is no code of ethics in computer science for
-wasting peoples time. so, get more respect from community? drm just
-introduces another way for the software to waste people’s time (however,
-may come a day when it’s required…)</p>
-<p>Successful ideas are higher level languages to assembly and compile
-time type checking Success is solving a problem people have talked
-themselves out of solving Why does Twitter need 4000 employees? Spacex
-is roughly the same and the put rockets on mars! They make problems
-difficult by the engineering culture they create. 18000 classes
-overflowed java function pointer buffer, they are deluded in thinking
-this way Over concerned with Uml, state diagrams, acronyms, etc.
-Nightmarish distractions/unproductive</p>
-<p>High level don’t worry about implementation details - chrome c++
-entering a 1 char created 25000 memory allocations with std::strong
-Abstractions - more code makes program as a whole more difficult to
-understand. Abstractions are just hiding low level which is the most
-important part and will constrain the system. Java huge call stack to
-make a http request. Make lightweight abstractions only Functional
-programming - Haskell around since 1990 hasn’t taken over. Imperative
-more clear. Functional breaks down over non trivial work Data hiding -
-poor cache performance, redundant code Excessive inheritance - poor
-cache performance Exceptions - constant cognitive tax on remembering
-what throws what and huge verbosity doing so. Also don’t know what
-program will throw during some time Commenting - write good comments and
-garden them as they can rot easily Re-use - only effective when used to
-small extent, humans are bad at understanding layers upon layers. You
-don’t make something better by making it more complicated All
-aforementioned ideas can be contextually useful</p>
-<p>The backbone of web tcp/ip has scaled tremendously well over 60
-years. The web software stack is opposite. Browsers rev every 15
-minutes, everything is worse than it was before, JavaScript slower than
-anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
-particular type of software development rapid. However they fail to
-effectively utilise system resources to solve a problem that would be
-easy in C. Often people are only concerned with how fast they can write
-this, without caring about quality. In the web sphere google, Facebook
-etc. Know their competitors aren’t going to be concerned with quality,
-e.g. gmail is incredibly slow and littered with bugs (typing in a name
-gives wrong result as it hasn’t finished time to server) so they use
-these technologies that help to get something working quickly but will
-be janky. I want to write software where quality matters and software is
-enjoyable to use. Web needs to acknowledge this. They have different
-thinking, e.g. network latency so we don’t have to care about
-performance, no you need more effort to avoid this latency! Although
-different tradeoffs made for different contexts, on a whole programming
-is programming. The web is almost impossible to write good software as
-have to deal with complexities that don’t have to be there. Best minds
-are being put to make people click ads</p>
-<p>Why is it big news regarding command prompt. Battlefield orders of
-magnitude complex and runs faster Msdos could see all physical memory;
-Modern cpus have mmu</p>
-<p>must be able to judge the quality of something from your own
-criteria, not simply on social cues/norms</p>
-<p>memory safety not of that much concern for programming. however, for
-security I suppose it is? wish security wasn’t an issue
-https://github.com/KULeuven-COSIC/Starlink-FI/</p>
-<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
-beaglebone cape, raspberry pi hat etc.</p>
-<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
-package name, however binaries are named differently.</p>
-<p>still installing an OS is a cross-your-fingers exercise. A single USB
-presents multiple boot options. choosing between uefi 1.0 and 1.0 one
-will give you WIFI during install ubuntu forums have contemporary posts
-mentioning install issues this finicky nature means just have barebones
-things and install separate OS in virtual machine chose xcfe4 for
-gnome-repeat-bug and easy shortcuts</p>
-<p>the lack of type systems in Javascript and Python leads to extensions
-with it</p>
-<p>Vulkan like filling in a centrelink form, so much setup</p>
-<p>Any overarching idelogoy like everything is objects, everything is
-data is pretty arbitrary. Certain approaches are useful for particular
-problems. I’m sensiiltive to Input lag in text editor, so use vim.
-Intellisense pop ups slow</p>
-<p>Although large groups can help maintain, the introduction of many can
-create imperfections This extends to all software companies. Do a lot of
-good things, but will always have things that are dysfunctional at, e.g
-documentation, disparate build systems, non-uniform design practices
-Don’t restrict right side of bell curve Let your aces be aces Being an
-ace involves having an opinion Most influential software written largely
-by one person, e.g Linux, Unix, git etc. Then a team is assigned to
-maintain it. Fallacy about solo programmer productivity requiring large
-teams. Design by committee pushes design to middle of bell curve as
-opposing views average out</p>
-<p>Loss of generational knowledge, i.e. people forgetting gensis of
-influential software written by individuals</p>
-<p>Growth of machine learning due to quantity of computation available.
-Localised improvements, overall degradation (rendering, update
-processing etc. far more involved) Wrong perception that performance
-takes too much time, so we want do it but we could do it. However, if
-they have never done it, how could they say they could? Growth of
-startups are just finding a niche, rather than writing revolutionary
-software</p>
-<p>Testing nomenclature so diverse, yet could be boiled down to a
-handful of terms, e.g. Regression testing just re-running tests on new
-changes, which is something you do implicitly</p>
-<ul>
-<li><p>cool idea of SDR (software defined radio) and RF analyser
-https://greatscottgadgets.com/sdr/1/
-https://github.com/ainfosec/FISSURE</p></li>
-<li><p>if COMP3331 largely theoretical. apply to calculating speed
-differences for our Internet connection, e.g. WiFi vs Ethernet. DSL vs
-FTTN vs FTTP. when does it reach trans-alantic-cable. wherein the packet
-flow is the largest bottleneck? is it just geographic distance from
-Australia?</p></li>
-<li><p>how does quantum computing work?</p></li>
-<li><p>what frequencies/technologies are regulated like in ISM; by
-extension what other regulations are there?</p></li>
-<li><p>why floating point inaccuracies</p></li>
-<li><p>examples of hardware virtualisation instructions/codecs?
-(e.g. multiway MMU?)</p></li>
-<li><p>vulkan renderer:
-https://www.youtube.com/watch?v=BR2my8OE1Sc&amp;list=PL0JVLUVCkk-l7CWCn3-cdftR0oajugYvd&amp;index=1</p></li>
-<li><p>how does something like red hat and android get around gplv2 of
-linux kernel</p></li>
-<li><p>the SIG introduces bluetooth 5 which states higher data rate,
-long range BLE etc. are their decisions informed on techonology advances
-(seems not to be the case with 4G LTE…)</p></li>
-<li><p>Understand memory alignment and cost of unaligned accesses? (is
-it due to common programmer workflows and less transistors required?)
-for modern hardware, trying to read data from an unaligned memory access
-can result in 2 reads and a combine so, there are custom compiler
-options to specify alignment (declspec() for stack, aligned_malloc for
-heap) why not just always automatically align things? conserve space?
-when to use these alignment extensions? when doing performance
-timing/tuning?</p></li>
-<li><p>is distinction between a unicast (device to device), multicast
-(device to some devices), broadcast (device to all devices) only
-discernable in packet format, i.e. must be parsed by network card first?
-are signal strength changed?</p></li>
-<li><p>Software laws, e. G. Have 4k in name, but image quality 1080p,
-Elon musk making false claims, Most dash cams same SoC, and image
-sensor, just different housing Garmon products to use must sign up for
-garmin account and agree to collection of data what are laws for
-misinformation, e.g. tesla, ‘4k’ dash cams, stats misleading: M1 chip
-faster (only faster than Intel based macs), we don’t track in
-‘traditional’ ways, tiktok keylogger technology exists but not
-using</p></li>
-</ul>
-<p>TODO: favourites tab for morning viewing videos: common sense
-skeptic; techquickie; handmade podcast; network next</p>
-<p>chefgood: 20 x $209 mymusclechef: 20 x $219 WELCOME20</p>
-<p>dinner + lunch: $220 breakfast: $100 rent: $345 phone: $70</p>
-<p>leftover: $265</p>
-<p>salary: ≈$52,000</p>
-<p>fortnightly: $1400 + quarterly: $4000 = weekly: $1000</p>
-<p>communicating with busy people:
-https://threadreaderapp.com/thread/1562510420644343810.html</p>
-<p>thread local storage could be implemented hyper-threaded cpu?</p>
-<p>computer science papers https://blog.acolyer.org/</p>
-<p>QUESTIONS:</p>
-<p>security so vast and not something I want to devote time to:
-https://leveleffect.referralrock.com/l/JOHNHAMMON07/</p>
-<p>the constellation we can’t see as it’s blocked by the sign is the
-zodiac sign for that month not new territory to regain interest in the
-past, e.g. renaissance grew interest in ancient greek astrology zodiac
-latinized of zodiakos, meaning circle of animals (all zodiac names
-latinized greek) vernal is beginning of astronomical year; daylight
-starts getting longer until summer solstice. hence, spring is when
-zodiac starts aries (march 20th) -&gt; ram taurus (april) -&gt; bull
-gemini (may) -&gt; twin brothers cancer (june) -&gt; crab leo (july)
--&gt; lion virgo (august) -&gt; woman libra (september) -&gt; scales of
-justice scorpio (october) -&gt; scorpion sagittarius (november) -&gt;
-archer’s arrow capricorn (december) -&gt; goat aquarius (january) -&gt;
-water bearer pisces (feburary) -&gt; opposing fish</p>
-<p>IS IT POSSIBLE THAT AN ASSEMBLY INSTRUCTION LIKE RDTSCP COULD BE
-TRAPPED BY PROGRAM LOADER?
-https://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints</p>
-<p>NOTE(importance of reading programming papers…. after handmade
-finished)</p>
-<p>vector math routines (obtaining cross product from column vector
-form) when drawing vectors in a physical sense, keep in mind they are
-rooted at the origin (even if drawings show them across time) whenever
-doing vector addition/subtraction, remember the head-to-tail rule (their
-direction is determined by their sign). could also think that subtract
-whenever you want to ‘go away’ from something dot product transpose
-notation useful for emulating matrix multiplication unit circle, x =
-cosθ dot product allows us to project a vector’s length onto a unit
-vector dot product allows us to measure a vector on any axis system we
-want by setting up two unit vectors that are orthogonal to each other
-simple plane equation with d=0 will be through origin (altering d shifts
-the plane up/down) cross product gives vector that is orthogonal to the
-plane that the two original vectors lie on (length is |a|·|b|·sinθ). So,
-really only works in at least 3 dimensions with units, e.g. for camera,
-start with arbitrary ‘unit’ defintion. later move onto more physical
-things like metres by applying a scaling factor to direction vector, can
-move along it world space coordinates. camera position is based on
-these. the camera will have its own axis system which we determine what
-it should be and then use cross product based on what we want
-understanding dot product equivalence with circle equation for
-multiplication of vectors, be explicit with a hadamard function
-(IMPORTANT have reciprocal square root approximation which is there
-specifically for normalisation. much faster cycle count and latency than
-square root)</p>
-<p>noise is randomness. white noise is complete randomness. blue noise
-(harder to generate) is randomness with limitations on how close
-together points can be (more uniform)</p>
-<p>pride cometh before the fall! six of one, half a dozen of the other.
-have our cake and eat it too ad infinatum</p>
-<p>Borrowing money: clear you’re the right person to give the money to.
-Clear you understand what you’re doing and the game process is figured
-out. Proof of you will complete it. Here is the game, why I’m good at
-it, why people will like it and why I’m going to succeed at developing
-it Interview ability to explain problems you have encountered on
-projects</p>
 <h1
 id="important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
 FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</h1>
@@ -776,6 +419,12 @@ journaling or soft-links inode references file metadata (pointer to
 data, permissions, access time). this allows concurrent modification of
 the file</p>
 <p>UUID/GUID (universally/globally) 16bytes</p>
+<p>premptive scheduler will swap processes based on specific criteria.
+most are round-robin, i.e. has process is run for a predefined time
+slice CFS does not use heuristics (ad hoc guide), ∴ more straightforward
+uses rb-tree. so, as task inserted onto this is logarithmic, ∴ this is
+cost of context switch each node key is
+<code>(time process as run on CPU) * (process niceness)</code></p>
 <h2 id="cpu">CPU</h2>
 <p>cpu contains clock. each tick marks a step in the fetch(signal sent
 along address bus as specified by PC; instruction or data sent along
@@ -905,6 +554,8 @@ to CPUs, e.g have cache, GDDR6 memory (more simple parrellisation)</p>
 <p>new TV monitor combination QD-OLED curved monitors less fatiguing as
 physically matches our eye’s shape flexible/bendable monitors no one
 asked for…</p>
+<p>cool looking completely submerged server desktops. pure water is a
+very good insulator (our tap water will have chlorine for example)</p>
 <p>sextempber cornucopia of condoms don’t have to be nostradamus to work
 out parents parking in effect, most people’s journey to learning is
 bespoke my engineering mind (which has been molded by experience)
@@ -1371,24 +1022,14 @@ red-black-tree yielding logarithmic time Simplest hashing function
 mind we are executing on a physical machine and that Big-Oh is a
 ‘zero-cost abstraction’ world. For example, the extra overhead of
 introducing a hashmap (memory allocations/copies) will result in this
-being slower for small lists (also way no dynamic memory allocations in
-ISR)</p>
+being slower for small lists (also no dynamic memory allocations in ISR)
+This is why C++ STL uses hybrid introsort</p>
 <h2 id="sorting-squared-array">Sorting Squared Array</h2>
-<p>Insertion/bubble sort preferable for small lists. Medium we want
-divide-and-conquer merge/quick. Large we want radix A naive approach
-will achieve loglinear from divide-and-conquer sorting. However, we can
-take advantage of the fact that the array is already sorted and achieve
-a linear solution by …</p>
+<p>Quadratic insertion/bubble sort preferable for small lists Loglinear
+divide-and-conquer merge/quick for medium Linear radix for large</p>
 <h2 id="tournament-winner">Tournament Winner</h2>
 <p>In cases space and size parameters different Can join linear
 operations populate and min/max determination</p>
-<p>premptive scheduler will interrupt based on priority non-premptive
-cannot interrupt task unless task manually relinquishes (high response
-time) within these we have priority scheduling, i.e. assigning priority
-to task as oppose to say estimated execution time round-robin has each
-task run for a predefined time slice and swapped out if necessary<br />
-(Seems most are round-robin like, with variations on determining time
-slice quanta)</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
 <p>https://marketplace.fedevel.education/itemDetail.html?itemtype=course&amp;dbid=1569757838995&amp;instrid=us-east-2_KpwYC7yK5:45f6c01d-ccc8-43e0-8f33-c5a70caf707f</p>
 <p>Adventures in Creation</p>
@@ -2431,5 +2072,364 @@ a breeze</p>
 <p>Starting from scratch, try to avoid analysis paralysis</p>
 <p>Pragmas and binary searching codebase to check where compiler
 optimises routine wrong</p>
+<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
+<p>instead of feature, we introduce a patented terminology like user
+stories to have someone teach you them. slows down development business
+logic …. just means high-order operations in say main()</p>
+<p>Incessent unit-testing, why not test startup assembly then. Falls
+apart… What not to test, e.g. assume that hex_to_bin() simple enough to
+work? Introducing formulas to determine whether or not to automate
+something….</p>
+<p>certain ‘design pattern’ enforce really long names to conform to
+pattern. any competent programmer can read use-case specific functions
+with clearer names
+“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
+<p>file for every test, file for every class. leads to awful build
+times</p>
+<p>How can software better serve humanity? e.g. bloatware causes
+slowness for aus post workers</p>
+<p>With UML if doing sufficiently complex to the same level as a
+blueprint, may as well have just written the program the idea of
+iterative design would be followed by literal architects, however too
+costly and time consuming. with software, we have the ability to do
+this. 1. design (urban planner): separation of code (mental clarity and
+division of labour) design metrics are temporal coupling (physics
+outputs data to renderer, so format is important), layout coupling
+(renderer inherits from opengl), idealogical coupling (threading, width,
+memory), fluidity (one change to system causes a major crash) 2.
+programming (architect) 3. compiler (builder)</p>
+<p>Most design patterns are just utility classes rather than a way to
+architect a program</p>
+<p>I don’t want to fight the language (Java). Higher level languages
+should allow you to easily express cpu instructions</p>
+<p>reject the idea of TDD driving good design. accept that tests
+validate design. tdd and bdd have good elements in them, but the dogma
+is not effective.</p>
+<p>code shouldn’t take longer than 10 seconds to compile.</p>
+<p>in general we don’t add security threats that weren’t already
+present, e.g. loading from shared object could just as easily override
+binary if have write priveleges to both</p>
+<p>even though a ‘new’ language won’t crash, it can still have buffer
+overruns. NullPtrExceptions</p>
+<p>c++ struct functions implicitly have a this pointer. virtual
+functions will result in a vtable (array of function pointers) to be
+generated for that struct. therefore, virtual function will first go to
+vtable, then lookup in function, so double indirection (so not a
+zero-cost abstraction) normal function call just call 0x1234, however
+with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
+pointers)</p>
+<p>an engine makes things that aren’t likely to be difficult easy
+(except for linux…) important to know low-level to write new tools. we
+don’t have a wheel yet.</p>
+<p>for any non-trival task, scripting languages become a hindrance with
+no static type checking, no real debugger, slow, not as capable. there
+are complications in software we have wrongly convinced ourselves are
+necessary, e.g. scripting for hotloading hotloading C is far superior,
+as C is more powerful and can use same debugger (using Lua is a
+downgrade) build systems can be useful as they allow for incremental
+builds (however, in negatively reinforces people to only make small
+changes) (speed increase may only be noticeable for large, complex code
+base) they are also useful for managing cross compilation (libraries
+have to be pulled in and compile also) the idea of incorporating a
+scripting language into a game was a failed experiment in 2005s. things
+like a visual based interface is fine as it is constrained</p>
+<p>with closed source it is often the case that a company employs
+someone to oversee the experience of the software and have q+a
+therefore, better quality with this higher layer of checking than open
+source.</p>
+<p>the best bet in safeguarding security is to reduce the attack
+surface, which means to reduce the number of lines of code.</p>
+<p>Don’t restrict right side of bell curve Let your aces be aces Being
+an ace involves having an opinion Most influential software written
+largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
+to maintain it. Fallacy about solo programmer productivity requiring
+large teams. Design by committee pushes design to middle of bell curve
+as opposing views average out</p>
+<p>templates add complexity in the debugger (no actual names). only
+really useful if you save a ton of code (not much code to just write
+each implementation) if templates are necessary then just use
+meta-programming as it is much more powerful.</p>
+<p>many programs treat memory as an infinite resource. allocating memory
+is introducing a failure case and making not a fan of allocation
+festivals. we can create our application with minimal failure cases
+(cannot do this with the platform layer).</p>
+<p>uml and diagrams in general are a waste of time (its just code you
+would write and often fails to capture subtleties) you should become
+more proficient at reading code and understanding its relationship.</p>
+<p>oh no, we had a security bug in our development version! (printf and
+friends. printf %f defaults to double)</p>
+<p>understanding history is important; c runtime library way of packing
+return fail information is the reason for inverse truthniess</p>
+<p>downloading unverified external tool, always good to get more viruses
+on my machine… unless playing at EVO with some maxed out razer device,
+not feasible to hit that hard I guess RTFM is the answer to that…</p>
+<p>build tools are more of a hindrance! always asking yourself what
+flags are being passed (linker and compiling separate steps), what files
+are it picking up, what is the CWD, etc.</p>
+<p>Go against merge requests from strangers and just auto let a group of
+trusted people. This avoids the problem where you work for hours only to
+have it blocked</p>
+<p>Many online communities are anti-engineering in that they don’t
+embrace criticism.</p>
+<p>Do anything on web takes a lot longer than it should dealing with a
+myriad of software with different odd conventions. Lack of
+functionality/integration with hardware will lead to collapse Many
+features lacking like type system, try to emulate. Many features have
+like garbage collection try to avoid.</p>
+<p>Scripting languages can cause heap fragmentation. Why just use a real
+language as we want robustness (scripting languages dependent on
+interpreter speed) and type checking</p>
+<p>Fundamental lack of awareness that there is a better way to program.
+We all make slow because of lack of time however to say it can’t be done
+is a fallacy. The cultural differences with these people make it a
+fool’s errand to try and get these people to program correctly e.g. time
+visual studio users think is fast is less than 10 seconds?!</p>
+<p>Const rarely finds bugs that I have, i.e..writing to a variable a
+shouldn’t. In saying that, you should use features of language that
+helps you catch bugs.</p>
+<p>Apple store is hardly a free marketplace. They can just block your
+app for any reason</p>
+<p>DRM and engine usage make using games in the future difficult
+(e.g. museum)</p>
+<p>Also, the excessive testing is pushed by web where the poor languages
+dictate heavy testing. Testing first makes no sense as the app may
+change</p>
+<p>Audiophiles think they hear things that aren’t there</p>
+<p>Much like the food industry has organic vs processed, we need a term
+for games that are made by people who love games and care about the
+experience as opposed to large companies concerned with making money
+(indie vs triple a)</p>
+<p>Sometimes crashing is good because it signifies the serious problem
+that can be rectified immediately rather than some other Insidious
+hidden bug The problem is not mapping id/pointer (or whatever std:: c++
+people would use) to an entity correctly (i.e. correspondence problem).
+the symptom of this problem will be different depending on the
+implementation, e.g. pointer will crash program.</p>
+<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
+commands except privileged ls. Plus sign turning off, minus on, etc.</p>
+<p>The flip side of high level languages is loss of capability in
+controlling the cpu Run time languages are slower and more complex Most
+scripting languages aren’t designed for modern hardware, e.g. simd,
+threads</p>
+<p>Scripting once, deploying everywhere is broken. You must test what
+you write on each machine. Computers aren’t wonderful abstractions we
+wish they were</p>
+<p>C was created to solve the problem of a portable high level assembly
+language for UNIX. C++ is a frankenstein languAge with bjarne just
+adding features in, e.g. he just wanted c with classes. Go and rust were
+designed for specific purposes, although I don’t care about safe memory
+features or want garbage collection. Complexity creates bugs. C++
+incredibly complex. People just stick to a subset of c++, which may be
+different to yours. Exceptions defer error handling and also bring about
+an ethos of more errors when they should just be states of your
+program.</p>
+<p>roughly 90% of games played on PC games are pirated. however
+intensive anti-piracy makes it harder for people to play your game yet,
+in line with this is, there is no code of ethics in computer science for
+wasting peoples time. so, get more respect from community? drm just
+introduces another way for the software to waste people’s time (however,
+may come a day when it’s required…)</p>
+<p>Successful ideas are higher level languages to assembly and compile
+time type checking Success is solving a problem people have talked
+themselves out of solving Why does Twitter need 4000 employees? Spacex
+is roughly the same and the put rockets on mars! They make problems
+difficult by the engineering culture they create. 18000 classes
+overflowed java function pointer buffer, they are deluded in thinking
+this way Over concerned with Uml, state diagrams, acronyms, etc.
+Nightmarish distractions/unproductive</p>
+<p>High level don’t worry about implementation details - chrome c++
+entering a 1 char created 25000 memory allocations with std::strong
+Abstractions - more code makes program as a whole more difficult to
+understand. Abstractions are just hiding low level which is the most
+important part and will constrain the system. Java huge call stack to
+make a http request. Make lightweight abstractions only Functional
+programming - Haskell around since 1990 hasn’t taken over. Imperative
+more clear. Functional breaks down over non trivial work Data hiding -
+poor cache performance, redundant code Excessive inheritance - poor
+cache performance Exceptions - constant cognitive tax on remembering
+what throws what and huge verbosity doing so. Also don’t know what
+program will throw during some time Commenting - write good comments and
+garden them as they can rot easily Re-use - only effective when used to
+small extent, humans are bad at understanding layers upon layers. You
+don’t make something better by making it more complicated All
+aforementioned ideas can be contextually useful</p>
+<p>The backbone of web tcp/ip has scaled tremendously well over 60
+years. The web software stack is opposite. Browsers rev every 15
+minutes, everything is worse than it was before, JavaScript slower than
+anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
+particular type of software development rapid. However they fail to
+effectively utilise system resources to solve a problem that would be
+easy in C. Often people are only concerned with how fast they can write
+this, without caring about quality. In the web sphere google, Facebook
+etc. Know their competitors aren’t going to be concerned with quality,
+e.g. gmail is incredibly slow and littered with bugs (typing in a name
+gives wrong result as it hasn’t finished time to server) so they use
+these technologies that help to get something working quickly but will
+be janky. I want to write software where quality matters and software is
+enjoyable to use. Web needs to acknowledge this. They have different
+thinking, e.g. network latency so we don’t have to care about
+performance, no you need more effort to avoid this latency! Although
+different tradeoffs made for different contexts, on a whole programming
+is programming. The web is almost impossible to write good software as
+have to deal with complexities that don’t have to be there. Best minds
+are being put to make people click ads</p>
+<p>Why is it big news regarding command prompt. Battlefield orders of
+magnitude complex and runs faster Msdos could see all physical memory;
+Modern cpus have mmu</p>
+<p>must be able to judge the quality of something from your own
+criteria, not simply on social cues/norms</p>
+<p>memory safety not of that much concern for programming. however, for
+security I suppose it is? wish security wasn’t an issue
+https://github.com/KULeuven-COSIC/Starlink-FI/</p>
+<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
+beaglebone cape, raspberry pi hat etc.</p>
+<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
+package name, however binaries are named differently.</p>
+<p>still installing an OS is a cross-your-fingers exercise. A single USB
+presents multiple boot options. choosing between uefi 1.0 and 1.0 one
+will give you WIFI during install ubuntu forums have contemporary posts
+mentioning install issues this finicky nature means just have barebones
+things and install separate OS in virtual machine chose xcfe4 for
+gnome-repeat-bug and easy shortcuts</p>
+<p>the lack of type systems in Javascript and Python leads to extensions
+with it</p>
+<p>Vulkan like filling in a centrelink form, so much setup</p>
+<p>Any overarching idelogoy like everything is objects, everything is
+data is pretty arbitrary. Certain approaches are useful for particular
+problems. I’m sensiiltive to Input lag in text editor, so use vim.
+Intellisense pop ups slow</p>
+<p>Although large groups can help maintain, the introduction of many can
+create imperfections This extends to all software companies. Do a lot of
+good things, but will always have things that are dysfunctional at, e.g
+documentation, disparate build systems, non-uniform design practices
+Don’t restrict right side of bell curve Let your aces be aces Being an
+ace involves having an opinion Most influential software written largely
+by one person, e.g Linux, Unix, git etc. Then a team is assigned to
+maintain it. Fallacy about solo programmer productivity requiring large
+teams. Design by committee pushes design to middle of bell curve as
+opposing views average out</p>
+<p>Loss of generational knowledge, i.e. people forgetting gensis of
+influential software written by individuals</p>
+<p>Growth of machine learning due to quantity of computation available.
+Localised improvements, overall degradation (rendering, update
+processing etc. far more involved) Wrong perception that performance
+takes too much time, so we want do it but we could do it. However, if
+they have never done it, how could they say they could? Growth of
+startups are just finding a niche, rather than writing revolutionary
+software</p>
+<p>Testing nomenclature so diverse, yet could be boiled down to a
+handful of terms, e.g. Regression testing just re-running tests on new
+changes, which is something you do implicitly</p>
+<ul>
+<li><p>cool idea of SDR (software defined radio) and RF analyser
+https://greatscottgadgets.com/sdr/1/
+https://github.com/ainfosec/FISSURE</p></li>
+<li><p>if COMP3331 largely theoretical. apply to calculating speed
+differences for our Internet connection, e.g. WiFi vs Ethernet. DSL vs
+FTTN vs FTTP. when does it reach trans-alantic-cable. wherein the packet
+flow is the largest bottleneck? is it just geographic distance from
+Australia?</p></li>
+<li><p>how does quantum computing work?</p></li>
+<li><p>what frequencies/technologies are regulated like in ISM; by
+extension what other regulations are there?</p></li>
+<li><p>why floating point inaccuracies</p></li>
+<li><p>examples of hardware virtualisation instructions/codecs?
+(e.g. multiway MMU?)</p></li>
+<li><p>vulkan renderer:
+https://www.youtube.com/watch?v=BR2my8OE1Sc&amp;list=PL0JVLUVCkk-l7CWCn3-cdftR0oajugYvd&amp;index=1</p></li>
+<li><p>how does something like red hat and android get around gplv2 of
+linux kernel</p></li>
+<li><p>the SIG introduces bluetooth 5 which states higher data rate,
+long range BLE etc. are their decisions informed on techonology advances
+(seems not to be the case with 4G LTE…)</p></li>
+<li><p>Understand memory alignment and cost of unaligned accesses? (is
+it due to common programmer workflows and less transistors required?)
+for modern hardware, trying to read data from an unaligned memory access
+can result in 2 reads and a combine so, there are custom compiler
+options to specify alignment (declspec() for stack, aligned_malloc for
+heap) why not just always automatically align things? conserve space?
+when to use these alignment extensions? when doing performance
+timing/tuning?</p></li>
+<li><p>is distinction between a unicast (device to device), multicast
+(device to some devices), broadcast (device to all devices) only
+discernable in packet format, i.e. must be parsed by network card first?
+are signal strength changed?</p></li>
+<li><p>Software laws, e. G. Have 4k in name, but image quality 1080p,
+Elon musk making false claims, Most dash cams same SoC, and image
+sensor, just different housing Garmon products to use must sign up for
+garmin account and agree to collection of data what are laws for
+misinformation, e.g. tesla, ‘4k’ dash cams, stats misleading: M1 chip
+faster (only faster than Intel based macs), we don’t track in
+‘traditional’ ways, tiktok keylogger technology exists but not
+using</p></li>
+</ul>
+<p>TODO: favourites tab for morning viewing videos: common sense
+skeptic; techquickie; handmade podcast; network next</p>
+<p>Resident Name Unit Number / 17 High Street University Terraces
+Kensington NSW 2033 Australia</p>
+<p>chefgood: 20 x $209 mymusclechef: 20 x $219 WELCOME20</p>
+<p>dinner + lunch: $220 breakfast: $100 rent: $345 phone: $70</p>
+<p>leftover: $265</p>
+<p>salary: ≈$52,000</p>
+<p>fortnightly: $1400 + quarterly: $4000 = weekly: $1000</p>
+<p>communicating with busy people:
+https://threadreaderapp.com/thread/1562510420644343810.html</p>
+<p>thread local storage could be implemented hyper-threaded cpu?</p>
+<p>computer science papers https://blog.acolyer.org/</p>
+<p>QUESTIONS:</p>
+<p>security so vast and not something I want to devote time to:
+https://leveleffect.referralrock.com/l/JOHNHAMMON07/</p>
+<p>the constellation we can’t see as it’s blocked by the sign is the
+zodiac sign for that month not new territory to regain interest in the
+past, e.g. renaissance grew interest in ancient greek astrology zodiac
+latinized of zodiakos, meaning circle of animals (all zodiac names
+latinized greek) vernal is beginning of astronomical year; daylight
+starts getting longer until summer solstice. hence, spring is when
+zodiac starts aries (march 20th) -&gt; ram taurus (april) -&gt; bull
+gemini (may) -&gt; twin brothers cancer (june) -&gt; crab leo (july)
+-&gt; lion virgo (august) -&gt; woman libra (september) -&gt; scales of
+justice scorpio (october) -&gt; scorpion sagittarius (november) -&gt;
+archer’s arrow capricorn (december) -&gt; goat aquarius (january) -&gt;
+water bearer pisces (feburary) -&gt; opposing fish</p>
+<p>IS IT POSSIBLE THAT AN ASSEMBLY INSTRUCTION LIKE RDTSCP COULD BE
+TRAPPED BY PROGRAM LOADER?
+https://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints</p>
+<p>NOTE(importance of reading programming papers…. after handmade
+finished)</p>
+<p>vector math routines (obtaining cross product from column vector
+form) when drawing vectors in a physical sense, keep in mind they are
+rooted at the origin (even if drawings show them across time) whenever
+doing vector addition/subtraction, remember the head-to-tail rule (their
+direction is determined by their sign). could also think that subtract
+whenever you want to ‘go away’ from something dot product transpose
+notation useful for emulating matrix multiplication unit circle, x =
+cosθ dot product allows us to project a vector’s length onto a unit
+vector dot product allows us to measure a vector on any axis system we
+want by setting up two unit vectors that are orthogonal to each other
+simple plane equation with d=0 will be through origin (altering d shifts
+the plane up/down) cross product gives vector that is orthogonal to the
+plane that the two original vectors lie on (length is |a|·|b|·sinθ). So,
+really only works in at least 3 dimensions with units, e.g. for camera,
+start with arbitrary ‘unit’ defintion. later move onto more physical
+things like metres by applying a scaling factor to direction vector, can
+move along it world space coordinates. camera position is based on
+these. the camera will have its own axis system which we determine what
+it should be and then use cross product based on what we want
+understanding dot product equivalence with circle equation for
+multiplication of vectors, be explicit with a hadamard function
+(IMPORTANT have reciprocal square root approximation which is there
+specifically for normalisation. much faster cycle count and latency than
+square root)</p>
+<p>noise is randomness. white noise is complete randomness. blue noise
+(harder to generate) is randomness with limitations on how close
+together points can be (more uniform)</p>
+<p>pride cometh before the fall! six of one, half a dozen of the other.
+have our cake and eat it too ad infinatum</p>
+<p>Borrowing money: clear you’re the right person to give the money to.
+Clear you understand what you’re doing and the game process is figured
+out. Proof of you will complete it. Here is the game, why I’m good at
+it, why people will like it and why I’m going to succeed at developing
+it Interview ability to explain problems you have encountered on
+projects</p>
 </body>
 </html>
