@@ -232,19 +232,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#language-of-the-people"
-id="toc-language-of-the-people">Language of the People</a></li>
-<li><a href="#embedded-workflow" id="toc-embedded-workflow">Embedded
-Workflow</a></li>
-<li><a href="#array-away" id="toc-array-away">Array Away</a>
-<ul>
-<li><a href="#matching-pairs" id="toc-matching-pairs">Matching
-Pairs</a></li>
-<li><a href="#sorting-squared-array"
-id="toc-sorting-squared-array">Sorting Squared Array</a></li>
-<li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
-Winner</a></li>
-</ul></li>
 <li><a href="#the-scripting-awakening"
 id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
@@ -274,8 +261,1058 @@ id="toc-news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
 the Pride</a></li>
 <li><a href="#news---a-virgin-woman" id="toc-news---a-virgin-woman">NEWS
 - A Virgin Woman</a></li>
+<li><a href="#language-of-the-people"
+id="toc-language-of-the-people">Language of the People</a></li>
+<li><a href="#embedded-workflow" id="toc-embedded-workflow">Embedded
+Workflow</a></li>
+<li><a href="#array-away" id="toc-array-away">Array Away</a>
+<ul>
+<li><a href="#matching-pairs" id="toc-matching-pairs">Matching
+Pairs</a></li>
+<li><a href="#sorting-squared-array"
+id="toc-sorting-squared-array">Sorting Squared Array</a></li>
+<li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
+Winner</a></li>
+</ul></li>
 </ul>
 </nav>
+<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
+<p>I decided to try and implement ctime in Bash for pedagogical
+purposes. My first task was to write and read a binary file. Googling
+how to do this in Bash returned the consensus, “use another language”.
+Often when I read this, I’m not deterred. I have encountered similar
+naysayers before when it comes to directly using Xlib. However, when it
+came to wanting structures to read and write to (essential for binary
+work), I found Bash was empty. With this understanding, I realised more
+generally that the usefulness of scripting languages are limited.
+Specifically, they should be limited to basic tasks that involve
+searching or external tool usage. I suppose my biggest use case of Bash
+is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
+interactions. C is a simple language and if you understand it’s
+low-level capabilities, you can do many things. However, despite this
+recognition, I did come upon certain procedures to follow when working
+with Bash scripts.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
+<p>The diverse software landscape of Linux distros means that we don’t
+know what version of each</p>
+<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
+download, must get link with email. STM32CubeIDE is woefully slow.
+Maximising to full screen just blurs out half Once installed, a series
+of pop-up menus just keep appearing spontaneously as it has to download
+more to satisfy a simple create project To download qtcreator well known
+bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
+command line arguments and mirror parsing,
+e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
+http://ftp.jaist.ac.jp/pub/qtproject</p>
+<p>My god, installing cubemx is awful. require email. password setting
+for account fails.</p>
+<p>QTcreator does not honour system .gdbinit file, have to manually set
+breakpoints and dissassembly flavour QTCreator doesn’t show console
+output. Tick ‘run in terminal’ crashes on startup</p>
+<p>Before even using the program, installing is bad. Install pandoc. It
+requires a pdf engine, e.g. xelatex that must be separately installed
+Which name is not found with traditional
+<code>sudo apt install xelatex</code>, it’s in
+<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
+package name to install a missing dependency is what I use ubuntu stack
+exchange mostly for…..</p>
+<p>Firefox just forces restart</p>
+<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
+<p>sound output varies significantly across different hardware. so, to
+detect possible sound bugs we may need to invest in a good piece of
+sound hardware</p>
+<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
+flexibility with pulse, e.g. can disable it if only needing one
+application at time, or can redirect it to another sound card) audio is
+a mess in linux</p>
+<p>due to disconnected nature of x11 and scheduling, must vsync.
+sleeping isn’t an option due default to round-robin scheduling policy
+(switching to real-time scheduling is not suitable for general-os). we
+could improve by setting niceness (however must be sudo) as not real
+time, we can’t control a lot of things, e.g. could be USB latency, adobe
+photoshop in background, etc. on say raspberry pi could program GPIO
+pins to have a accurate poll for a joystick.</p>
+<p>sound on linux is absurd (tribal knowledge). even the people on the
+mailing list don’t know how it works. constantly saying, don’t do this,
+use a library… often times, source code is the documentation, so good
+luck spending months on how to operate low level. return when threading
+is involved.</p>
+<p>x11 is more complicated than it needs to be. like many OS commands,
+it should do a lot of the dirty work for you, as no-one knows all the
+minutiae. it’s bad to think that OSs are getting harder to work with.
+however, it is unfair to pick on X11, as their are other apis (even
+modern) that are just as bad, even worse. x11 is particular annoying in
+that if it crashes, even launching a virtual terminal may not work as
+keys aren’t registered</p>
+<p>if only eclispe cdt debugger was good. it terminates for no reason
+when running (can sometimes be fixed by switching to run mode and then
+back to debug). sometimes have to restart to fix. run-to-line doesn’t
+work when inside sub-routine. memory browser crashes on entering
+address. doesn’t give information on stack overflows.</p>
+<p>firefox will unexpectanctly say we updated in the background and you
+must restart or tab crashed etc.</p>
+<p>Online help forums for QTCreator useless. In reality, only core devs
+would be able to answer your question thoroughly So, this is where I see
+the benefit of mailing lists</p>
+<p>Often Ubuntu audio mixer just stops working and generates fuzz and
+have to restart</p>
+<p>Firefox facebook video chat. For some reason just mysteriously stops
+working. says to restart, did that work, nope! both rev every fucking
+second is probably why.</p>
+<p>Unfortunate just resign yourself to choosing the software with fewest
+or manageable ‘quirks’ (bugs to offensive…)</p>
+<p>How on earth can something so frequently used like TeX have such
+poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
+text as text. If different file extension, will perform different
+parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
+<p>FreeCAD have to click in particular order for symmetry,
+e.g. point-line-point</p>
+<p>QTcreator so complicated to run cross-debugger, have to write down
+steps</p>
+<p>Tim Berners-Lee envisioned a universal place for information
+exchange. Unfortunately the freedom of creativity has resulted in much
+of the Web being intrusive and hindering</p>
+<p>Order of arguments matter in docker, for some reason –rm must be
+before -it</p>
+<p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
+1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
+really only applicable for perhaps a logic gate or 0.1hz square wave)
+can debug PWM, I2C Ensure BNC connector is plugged in correctly (affect
+probe compensation; similar to banana plugs in multimeter not being
+plugged in correctly) Continous triggering enables us to view from start
+point, i.e. static image not free flowing. Will show before and after
+trigger point, i.e. start in centre of screen No real issue with
+oscilloscope blowing up if testing battery powered/isolated DC power
+supply. With USB powered, ground must be on ground! Otherwise will short
+USB and that port will probably break</p>
+<p>Normal-mode triggering the best of both worlds</p>
+<p>Using RS232 (recommended standard) decoder functionality (there is
+also SPI/I2C decoding).
+https://www.youtube.com/watch?v=SarsWOCMvjg&amp;t=76s Also investigate
+PWM</p>
+<p>IMPORTANT: ensure offset dials are correct first, i.e. at 0 so 0 is
+centre with menu, end-arrows can still be pressed even if not visible
+change to 24mega points for memory when just wanting wave length (not
+zooming in?)</p>
+<p>math -&gt; decoder on; event table on (make sure zoomed out enough to
+view multiple packets (this will increase memory automatically?);
+increase baud also)</p>
+<p>single-shot triggering contact bounce first then ringing as stablises
+(makes it a balancing act between selecting triggering level for button
+press and release) Multimeter measure power consumption of MCU? (stm32
+nucleo boards have convenient IDD jumper) verify signal ringing
+(e.g. clock signal), i.e. inspect ramp-up/down (measure time to
+completely bottom out)</p>
+<h1 id="resilience">Resilience</h1>
+<p>TACKLING DIFFICULT PROBLEM – HOTLOADING FILE MODIFICATION TIME BEING
+READ TOO EARLY. MISINTERPRETING TIMESPEC NANOSEC</p>
+<p>linux raw ALSA can fall into the trap of being so niche and difficult
+it is neck beard inducing</p>
+<p>use of set -x in bash scripts will exit if subprocess returns an
+error, even if 2&gt;/dev/null. Cryptic!</p>
+<p>xlib scaled, vsync, refresh rate</p>
+<p>ell library</p>
+<p>linux input analysing SDL2 source</p>
+<p>polling multiple keyboards lag due to bug in gnome. inspect gnome git
+switched to desktop environment to lxfe 4. also makes creating shortcuts
+a breeze</p>
+<p>Starting from scratch, try to avoid analysis paralysis</p>
+<p>Pragmas and binary searching codebase to check where compiler
+optimises routine wrong</p>
+<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
+<p>instead of feature, we introduce a patented terminology like user
+stories to have someone teach you them. slows down development business
+logic …. just means high-order operations in say main()</p>
+<p>Incessent unit-testing, why not test startup assembly then. Falls
+apart… What not to test, e.g. assume that hex_to_bin() simple enough to
+work? Introducing formulas to determine whether or not to automate
+something….</p>
+<p>certain ‘design pattern’ enforce really long names to conform to
+pattern. any competent programmer can read use-case specific functions
+with clearer names
+“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
+<p>file for every test, file for every class. leads to awful build
+times</p>
+<p>How can software better serve humanity? e.g. bloatware causes
+slowness for aus post workers</p>
+<p>With UML if doing sufficiently complex to the same level as a
+blueprint, may as well have just written the program the idea of
+iterative design would be followed by literal architects, however too
+costly and time consuming. with software, we have the ability to do
+this. 1. design (urban planner): separation of code (mental clarity and
+division of labour) design metrics are temporal coupling (physics
+outputs data to renderer, so format is important), layout coupling
+(renderer inherits from opengl), idealogical coupling (threading, width,
+memory), fluidity (one change to system causes a major crash) 2.
+programming (architect) 3. compiler (builder)</p>
+<p>Most design patterns are just utility classes rather than a way to
+architect a program</p>
+<p>I don’t want to fight the language (Java). Higher level languages
+should allow you to easily express cpu instructions</p>
+<p>reject the idea of TDD driving good design. accept that tests
+validate design. tdd and bdd have good elements in them, but the dogma
+is not effective.</p>
+<p>code shouldn’t take longer than 10 seconds to compile.</p>
+<p>in general we don’t add security threats that weren’t already
+present, e.g. loading from shared object could just as easily override
+binary if have write priveleges to both</p>
+<p>even though a ‘new’ language won’t crash, it can still have buffer
+overruns. NullPtrExceptions</p>
+<p>c++ struct functions implicitly have a this pointer. virtual
+functions will result in a vtable (array of function pointers) to be
+generated for that struct. therefore, virtual function will first go to
+vtable, then lookup in function, so double indirection (so not a
+zero-cost abstraction) normal function call just call 0x1234, however
+with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
+pointers)</p>
+<p>an engine makes things that aren’t likely to be difficult easy
+(except for linux…) important to know low-level to write new tools. we
+don’t have a wheel yet.</p>
+<p>for any non-trival task, scripting languages become a hindrance with
+no static type checking, no real debugger, slow, not as capable. there
+are complications in software we have wrongly convinced ourselves are
+necessary, e.g. scripting for hotloading hotloading C is far superior,
+as C is more powerful and can use same debugger (using Lua is a
+downgrade) build systems can be useful as they allow for incremental
+builds (however, in negatively reinforces people to only make small
+changes) (speed increase may only be noticeable for large, complex code
+base) they are also useful for managing cross compilation (libraries
+have to be pulled in and compile also) the idea of incorporating a
+scripting language into a game was a failed experiment in 2005s. things
+like a visual based interface is fine as it is constrained</p>
+<p>with closed source it is often the case that a company employs
+someone to oversee the experience of the software and have q+a
+therefore, better quality with this higher layer of checking than open
+source.</p>
+<p>the best bet in safeguarding security is to reduce the attack
+surface, which means to reduce the number of lines of code.</p>
+<p>Don’t restrict right side of bell curve Let your aces be aces Being
+an ace involves having an opinion Most influential software written
+largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
+to maintain it. Fallacy about solo programmer productivity requiring
+large teams. Design by committee pushes design to middle of bell curve
+as opposing views average out</p>
+<p>templates add complexity in the debugger (no actual names). only
+really useful if you save a ton of code (not much code to just write
+each implementation) if templates are necessary then just use
+meta-programming as it is much more powerful.</p>
+<p>many programs treat memory as an infinite resource. allocating memory
+is introducing a failure case and making not a fan of allocation
+festivals. we can create our application with minimal failure cases
+(cannot do this with the platform layer).</p>
+<p>uml and diagrams in general are a waste of time (its just code you
+would write and often fails to capture subtleties) you should become
+more proficient at reading code and understanding its relationship.</p>
+<p>oh no, we had a security bug in our development version! (printf and
+friends. printf %f defaults to double)</p>
+<p>understanding history is important; c runtime library way of packing
+return fail information is the reason for inverse truthniess</p>
+<p>downloading unverified external tool, always good to get more viruses
+on my machine… unless playing at EVO with some maxed out razer device,
+not feasible to hit that hard I guess RTFM is the answer to that…</p>
+<p>build tools are more of a hindrance! always asking yourself what
+flags are being passed (linker and compiling separate steps), what files
+are it picking up, what is the CWD, etc.</p>
+<p>Go against merge requests from strangers and just auto let a group of
+trusted people. This avoids the problem where you work for hours only to
+have it blocked</p>
+<p>Many online communities are anti-engineering in that they don’t
+embrace criticism.</p>
+<p>Do anything on web takes a lot longer than it should dealing with a
+myriad of software with different odd conventions. Lack of
+functionality/integration with hardware will lead to collapse Many
+features lacking like type system, try to emulate. Many features have
+like garbage collection try to avoid.</p>
+<p>Scripting languages can cause heap fragmentation. Why just use a real
+language as we want robustness (scripting languages dependent on
+interpreter speed) and type checking</p>
+<p>Fundamental lack of awareness that there is a better way to program.
+We all make slow because of lack of time however to say it can’t be done
+is a fallacy. The cultural differences with these people make it a
+fool’s errand to try and get these people to program correctly e.g. time
+visual studio users think is fast is less than 10 seconds?!</p>
+<p>Const rarely finds bugs that I have, i.e..writing to a variable a
+shouldn’t. In saying that, you should use features of language that
+helps you catch bugs.</p>
+<p>Apple store is hardly a free marketplace. They can just block your
+app for any reason</p>
+<p>DRM and engine usage make using games in the future difficult
+(e.g. museum)</p>
+<p>Also, the excessive testing is pushed by web where the poor languages
+dictate heavy testing. Testing first makes no sense as the app may
+change</p>
+<p>Audiophiles think they hear things that aren’t there</p>
+<p>Much like the food industry has organic vs processed, we need a term
+for games that are made by people who love games and care about the
+experience as opposed to large companies concerned with making money
+(indie vs triple a)</p>
+<p>Sometimes crashing is good because it signifies the serious problem
+that can be rectified immediately rather than some other Insidious
+hidden bug The problem is not mapping id/pointer (or whatever std:: c++
+people would use) to an entity correctly (i.e. correspondence problem).
+the symptom of this problem will be different depending on the
+implementation, e.g. pointer will crash program.</p>
+<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
+commands except privileged ls. Plus sign turning off, minus on, etc.</p>
+<p>The flip side of high level languages is loss of capability in
+controlling the cpu Run time languages are slower and more complex Most
+scripting languages aren’t designed for modern hardware, e.g. simd,
+threads</p>
+<p>Scripting once, deploying everywhere is broken. You must test what
+you write on each machine. Computers aren’t wonderful abstractions we
+wish they were</p>
+<p>C was created to solve the problem of a portable high level assembly
+language for UNIX. C++ is a frankenstein languAge with bjarne just
+adding features in, e.g. he just wanted c with classes. Go and rust were
+designed for specific purposes, although I don’t care about safe memory
+features or want garbage collection. Complexity creates bugs. C++
+incredibly complex. People just stick to a subset of c++, which may be
+different to yours. Exceptions defer error handling and also bring about
+an ethos of more errors when they should just be states of your
+program.</p>
+<p>roughly 90% of games played on PC games are pirated. however
+intensive anti-piracy makes it harder for people to play your game yet,
+in line with this is, there is no code of ethics in computer science for
+wasting peoples time. so, get more respect from community? drm just
+introduces another way for the software to waste people’s time (however,
+may come a day when it’s required…)</p>
+<p>Successful ideas are higher level languages to assembly and compile
+time type checking Success is solving a problem people have talked
+themselves out of solving Why does Twitter need 4000 employees? Spacex
+is roughly the same and the put rockets on mars! They make problems
+difficult by the engineering culture they create. 18000 classes
+overflowed java function pointer buffer, they are deluded in thinking
+this way Over concerned with Uml, state diagrams, acronyms, etc.
+Nightmarish distractions/unproductive</p>
+<p>High level don’t worry about implementation details - chrome c++
+entering a 1 char created 25000 memory allocations with std::strong
+Abstractions - more code makes program as a whole more difficult to
+understand. Abstractions are just hiding low level which is the most
+important part and will constrain the system. Java huge call stack to
+make a http request. Make lightweight abstractions only Functional
+programming - Haskell around since 1990 hasn’t taken over. Imperative
+more clear. Functional breaks down over non trivial work Data hiding -
+poor cache performance, redundant code Excessive inheritance - poor
+cache performance Exceptions - constant cognitive tax on remembering
+what throws what and huge verbosity doing so. Also don’t know what
+program will throw during some time Commenting - write good comments and
+garden them as they can rot easily Re-use - only effective when used to
+small extent, humans are bad at understanding layers upon layers. You
+don’t make something better by making it more complicated All
+aforementioned ideas can be contextually useful</p>
+<p>The backbone of web tcp/ip has scaled tremendously well over 60
+years. The web software stack is opposite. Browsers rev every 15
+minutes, everything is worse than it was before, JavaScript slower than
+anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
+particular type of software development rapid. However they fail to
+effectively utilise system resources to solve a problem that would be
+easy in C. Often people are only concerned with how fast they can write
+this, without caring about quality. In the web sphere google, Facebook
+etc. Know their competitors aren’t going to be concerned with quality,
+e.g. gmail is incredibly slow and littered with bugs (typing in a name
+gives wrong result as it hasn’t finished time to server) so they use
+these technologies that help to get something working quickly but will
+be janky. I want to write software where quality matters and software is
+enjoyable to use. Web needs to acknowledge this. They have different
+thinking, e.g. network latency so we don’t have to care about
+performance, no you need more effort to avoid this latency! Although
+different tradeoffs made for different contexts, on a whole programming
+is programming. The web is almost impossible to write good software as
+have to deal with complexities that don’t have to be there. Best minds
+are being put to make people click ads</p>
+<p>Why is it big news regarding command prompt. Battlefield orders of
+magnitude complex and runs faster Msdos could see all physical memory;
+Modern cpus have mmu</p>
+<p>must be able to judge the quality of something from your own
+criteria, not simply on social cues/norms</p>
+<p>memory safety not of that much concern for programming. however, for
+security I suppose it is? wish security wasn’t an issue
+https://github.com/KULeuven-COSIC/Starlink-FI/</p>
+<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
+beaglebone cape, raspberry pi hat etc.</p>
+<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
+package name, however binaries are named differently.</p>
+<p>still installing an OS is a cross-your-fingers exercise. A single USB
+presents multiple boot options. choosing between uefi 1.0 and 1.0 one
+will give you WIFI during install ubuntu forums have contemporary posts
+mentioning install issues this finicky nature means just have barebones
+things and install separate OS in virtual machine chose xcfe4 for
+gnome-repeat-bug and easy shortcuts</p>
+<p>the lack of type systems in Javascript and Python leads to extensions
+with it</p>
+<p>Vulkan like filling in a centrelink form, so much setup</p>
+<p>Any overarching idelogoy like everything is objects, everything is
+data is pretty arbitrary. Certain approaches are useful for particular
+problems. I’m sensiiltive to Input lag in text editor, so use vim.
+Intellisense pop ups slow</p>
+<p>Although large groups can help maintain, the introduction of many can
+create imperfections This extends to all software companies. Do a lot of
+good things, but will always have things that are dysfunctional at, e.g
+documentation, disparate build systems, non-uniform design practices
+Don’t restrict right side of bell curve Let your aces be aces Being an
+ace involves having an opinion Most influential software written largely
+by one person, e.g Linux, Unix, git etc. Then a team is assigned to
+maintain it. Fallacy about solo programmer productivity requiring large
+teams. Design by committee pushes design to middle of bell curve as
+opposing views average out</p>
+<p>Loss of generational knowledge, i.e. people forgetting gensis of
+influential software written by individuals</p>
+<p>Growth of machine learning due to quantity of computation available.
+Localised improvements, overall degradation (rendering, update
+processing etc. far more involved) Wrong perception that performance
+takes too much time, so we want do it but we could do it. However, if
+they have never done it, how could they say they could? Growth of
+startups are just finding a niche, rather than writing revolutionary
+software</p>
+<p>Testing nomenclature so diverse, yet could be boiled down to a
+handful of terms, e.g. Regression testing just re-running tests on new
+changes, which is something you do implicitly</p>
+<ul>
+<li><p>cool idea of SDR (software defined radio) and RF analyser
+https://greatscottgadgets.com/sdr/1/
+https://github.com/ainfosec/FISSURE</p></li>
+<li><p>if COMP3331 largely theoretical. apply to calculating speed
+differences for our Internet connection, e.g. WiFi vs Ethernet. DSL vs
+FTTN vs FTTP. when does it reach trans-alantic-cable. wherein the packet
+flow is the largest bottleneck? is it just geographic distance from
+Australia?</p></li>
+<li><p>how does quantum computing work?</p></li>
+<li><p>what frequencies/technologies are regulated like in ISM; by
+extension what other regulations are there?</p></li>
+<li><p>why floating point inaccuracies</p></li>
+<li><p>examples of hardware virtualisation instructions/codecs?
+(e.g. multiway MMU?)</p></li>
+<li><p>vulkan renderer:
+https://www.youtube.com/watch?v=BR2my8OE1Sc&amp;list=PL0JVLUVCkk-l7CWCn3-cdftR0oajugYvd&amp;index=1</p></li>
+<li><p>how does something like red hat and android get around gplv2 of
+linux kernel</p></li>
+<li><p>the SIG introduces bluetooth 5 which states higher data rate,
+long range BLE etc. are their decisions informed on techonology advances
+(seems not to be the case with 4G LTE…)</p></li>
+<li><p>Understand memory alignment and cost of unaligned accesses? (is
+it due to common programmer workflows and less transistors required?)
+for modern hardware, trying to read data from an unaligned memory access
+can result in 2 reads and a combine so, there are custom compiler
+options to specify alignment (declspec() for stack, aligned_malloc for
+heap) why not just always automatically align things? conserve space?
+when to use these alignment extensions? when doing performance
+timing/tuning?</p></li>
+<li><p>is distinction between a unicast (device to device), multicast
+(device to some devices), broadcast (device to all devices) only
+discernable in packet format, i.e. must be parsed by network card first?
+are signal strength changed?</p></li>
+<li><p>Software laws, e. G. Have 4k in name, but image quality 1080p,
+Elon musk making false claims, Most dash cams same SoC, and image
+sensor, just different housing Garmon products to use must sign up for
+garmin account and agree to collection of data what are laws for
+misinformation, e.g. tesla, ‘4k’ dash cams, stats misleading: M1 chip
+faster (only faster than Intel based macs), we don’t track in
+‘traditional’ ways, tiktok keylogger technology exists but not
+using</p></li>
+</ul>
+<p>TODO: favourites tab for morning viewing videos: common sense
+skeptic; techquickie; handmade podcast; network next</p>
+<p>Resident Name Unit Number / 17 High Street University Terraces
+Kensington NSW 2033 Australia</p>
+<p>chefgood: 20 x $209 mymusclechef: 20 x $219 WELCOME20</p>
+<p>dinner + lunch: $220 breakfast: $100 rent: $345 phone: $70</p>
+<p>leftover: $265</p>
+<p>salary: ≈$52,000</p>
+<p>fortnightly: $1400 + quarterly: $4000 = weekly: $1000</p>
+<p>communicating with busy people:
+https://threadreaderapp.com/thread/1562510420644343810.html</p>
+<p>thread local storage could be implemented hyper-threaded cpu?</p>
+<p>computer science papers https://blog.acolyer.org/</p>
+<p>QUESTIONS:</p>
+<p>security so vast and not something I want to devote time to:
+https://leveleffect.referralrock.com/l/JOHNHAMMON07/</p>
+<p>the constellation we can’t see as it’s blocked by the sign is the
+zodiac sign for that month not new territory to regain interest in the
+past, e.g. renaissance grew interest in ancient greek astrology zodiac
+latinized of zodiakos, meaning circle of animals (all zodiac names
+latinized greek) vernal is beginning of astronomical year; daylight
+starts getting longer until summer solstice. hence, spring is when
+zodiac starts aries (march 20th) -&gt; ram taurus (april) -&gt; bull
+gemini (may) -&gt; twin brothers cancer (june) -&gt; crab leo (july)
+-&gt; lion virgo (august) -&gt; woman libra (september) -&gt; scales of
+justice scorpio (october) -&gt; scorpion sagittarius (november) -&gt;
+archer’s arrow capricorn (december) -&gt; goat aquarius (january) -&gt;
+water bearer pisces (feburary) -&gt; opposing fish</p>
+<p>IS IT POSSIBLE THAT AN ASSEMBLY INSTRUCTION LIKE RDTSCP COULD BE
+TRAPPED BY PROGRAM LOADER?
+https://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints</p>
+<p>NOTE(importance of reading programming papers…. after handmade
+finished)</p>
+<p>vector math routines (obtaining cross product from column vector
+form) when drawing vectors in a physical sense, keep in mind they are
+rooted at the origin (even if drawings show them across time) whenever
+doing vector addition/subtraction, remember the head-to-tail rule (their
+direction is determined by their sign). could also think that subtract
+whenever you want to ‘go away’ from something dot product transpose
+notation useful for emulating matrix multiplication unit circle, x =
+cosθ dot product allows us to project a vector’s length onto a unit
+vector dot product allows us to measure a vector on any axis system we
+want by setting up two unit vectors that are orthogonal to each other
+simple plane equation with d=0 will be through origin (altering d shifts
+the plane up/down) cross product gives vector that is orthogonal to the
+plane that the two original vectors lie on (length is |a|·|b|·sinθ). So,
+really only works in at least 3 dimensions with units, e.g. for camera,
+start with arbitrary ‘unit’ defintion. later move onto more physical
+things like metres by applying a scaling factor to direction vector, can
+move along it world space coordinates. camera position is based on
+these. the camera will have its own axis system which we determine what
+it should be and then use cross product based on what we want
+understanding dot product equivalence with circle equation for
+multiplication of vectors, be explicit with a hadamard function
+(IMPORTANT have reciprocal square root approximation which is there
+specifically for normalisation. much faster cycle count and latency than
+square root)</p>
+<p>noise is randomness. white noise is complete randomness. blue noise
+(harder to generate) is randomness with limitations on how close
+together points can be (more uniform)</p>
+<p>pride cometh before the fall! six of one, half a dozen of the other.
+have our cake and eat it too ad infinatum</p>
+<p>Borrowing money: clear you’re the right person to give the money to.
+Clear you understand what you’re doing and the game process is figured
+out. Proof of you will complete it. Here is the game, why I’m good at
+it, why people will like it and why I’m going to succeed at developing
+it Interview ability to explain problems you have encountered on
+projects</p>
+<h1
+id="important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
+FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</h1>
+<p>WHAT ARE RFCS?</p>
+<p>OAuth (open authentication) exchanges tokens to authorise access;
+specifically use personal access token with OAuth scope ‘repo’ for
+github to grant circleci push priveleges (have to add this add
+environment variable to circleci) tokens ability to ‘scope’ gives them
+an advantage over ssh keys typically used by RESTful services</p>
+<ol type="1">
+<li>to use Google APIs create Google Cloud Console project and grant
+particular API access to it</li>
+<li>create OAuth credentials to access API</li>
+</ol>
+<p>so the authorisation part is to establish the ‘scope’ of the
+tokens</p>
+<p>with OAuth: 1. consent screen to obtain token this will be a GET
+request, whose location will be described by the standard ‘discovery
+document’
+(https://accounts.google.com/.well-known/openid-configuration)</p>
+<p>authorization_endpoint:
+“https://accounts.google.com/o/oauth2/v2/auth”</p>
+<p>tokens obtained will be short-lived, i.e 2-5 minutes so will have to
+refresh</p>
+<p>(a consent screen only required if accessing another users data?)</p>
+<p>(client id and client secret are like our login and password) 1. get
+authorisation code GET https://accounts.google.com/o/oauth2/v2/auth?
+client_id=937397032650-rmntctql9qo8o85cscd85l2hvo9v1818.apps.googleusercontent.com
+&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob
+&amp;scope=https://www.googleapis.com/auth/photoslibrary
+&amp;response_type=code</p>
+<p>(have to submit verification request to get write access?)</p>
+<p>google scopes:
+https://developers.google.com/identity/protocols/oauth2/scopes#photoslibrary</p>
+<p>(particular methods relevent to the API we want to use will require
+different scope levels)</p>
+<ol start="2" type="1">
+<li>exchange code for access token</li>
+</ol>
+<p>PCI usually for attaching peripherals to motherboards,
+e.g. network/audio/usb/graphics controller cards</p>
+<p>RESTful urls respond to CRUD requests in a standard way so, a url is
+an access point to a resource e.g, following REST: * GET
+example.com/users will return list of resource, i.e. all users * POST
+example.com/users will create a new resource * GET example.com/users/1
+return single resource * PUT example.com/users/1 update single resource
+* DELETE example.com/users/1 delete single resource</p>
+<p>curl defaults to GET headers with -H “Pragma: no-cache”</p>
+<h2 id="screens">Screens</h2>
+<p>Touch screen types need some external input to complete circuit
+Resistive works by pressure pushing down plastic&lt;-electric
+coating-&gt;glass Unresponsive, durable, cheap (e.g. atm machine)
+Capacitive how a grid of nodes that store some charge, i.e. like a
+capacitor When our finger touches (we are good conductor due to impure
+ion water in us), charge flows through us and back to the phone,
+changing the electric current Things electrically similar to our fingers
+are sausages, banana peels</p>
+<p>1080i/p interlaced means display even and odd rows for each frame
+(due to bandwith, not used anymore) progressive will display each row
+sequentially for a given frame</p>
+<p>4k means horizontal resolution of approximately 4000 pixels. standard
+different for say television and projection industry</p>
+<p>plasma is superheated matter, i.e. ionised gas</p>
+<p>LED is the backlight, as oppose to fluorescent (LCD still used within
+this). so really LED LCD. IPS (in-plane switching), TFT (thin film
+transistor) are examples of LCD panel technology OLED produces own
+light, i.e. current passed through an OLED diode to produce light</p>
+<h2 id="wireless">Wireless</h2>
+<p>RFID (radio frequency identification) no line of sight required (can
+read through objects unlike barcode) Also read multiple objects at once.
+RFID tag. Greater read range (shop security) A QR code is just a 2d
+barcode with more bandwidth. Laser readers quicker. NFC for low-power
+data transfer. NFC tag. (payment systems)</p>
+<p>TV standards Americas: NTSC (30fps, less scanlines per frame) 4.4MHz
+Europe, Asia, Australia: PAL (Phase alternate line) (25fps) 2.5MHz</p>
+<p>sound waves 20Hz - 20kHz (sonar; sound navigation and ranging)
+ultrasonic (radio waves largely absorbed in seawater due
+conductiveness)</p>
+<p>more easily focused as longer wavelength to not bend around corners
+radio waves 10Hz - 300GHz (true radio would be FM radio) higher
+frequency means more information can be conveyed radio waves bounce off
+ionosphere (long range)</p>
+<p>microwaves make up majority of the spectrum of radio waves microwaves
+300MHz - 300GHz (radar) divided into bands, e.g. C-band, L-band,
+etc.</p>
+<p>infrared waves 300GHz - 300THz (object detection) heat emission</p>
+<p>visible light (lasers; weather dependent) lidar</p>
+<p>UV</p>
+<p>ionising x-rays</p>
+<p>ionising gamma-rays</p>
+<p>ISM (industrial, scientific and medical) bands exclude
+telecommunication frequencies</p>
+<p>4G (generation) type of cellular technology. define min/max
+upload/download rates as many cell towers cannot fully support the
+bandwidth capabilities outlined by 4G, use the term 4G LTE (long term
+evolution) to indicate implement some of 4G features. now have 4G LTE
+cat 13 to indicate featurs implemented around 1800MHz</p>
+<p>does version 5.0 expand upon enhanced data rate, i.e. bluetooth
+classic bandwidth? seems higher that higher than 6GHz requires license?
+ISM range? (why bluetooth considered part of ISM?)</p>
+<p>GNSS (Global Navigation Satellite Systems) constellations (GPS:US,
+GLONASS:Russia, Galileo:EU, Beido:China) all location providing
+services. implement different frequencies, etc.</p>
+<p>lower frequency, longer range</p>
+<p>telecommunications standards: * GSM (global system for mobile
+communications) - uses SIM (subscriber identification module) cards to
+authenticate and authorise access I suppose eSIM would make SIM-locking
+easier to overcome Phone number linked/contained within SIM, however can
+be reassigned * CDMA (code division multiple access) - uses ESN
+(electronic serial number)</p>
+<p>Udp (head of line blocking) + client server (p2p unreliable as
+internet path optimised for cost/closest exchange point) + dedicated
+(peoples home Internet don’t normally have high upload rates); Mix of
+cloud (flexible to just turn up and down, high egress bandwidth charge)
+and bare metal (fixed bandwidth rate set into price) Matchmaking, host
+migration difficult as hard to measure what user has good
+connection,<br />
+e.g. Whats there NAT type?</p>
+<h2 id="power">Power</h2>
+<p>LiPo is lithium-ion poly. uses polymer electrolyte instead of liquid.
+lipo more expensive, shorter lifespan, less energy, more robust li-poly
+battery is rechargeable (so rechargeable is structured to allow a
+current to be passed to it to reverse the process) battery will have two
+electrodes, say lithium cobalt oxide (cathode) and graphite (anode,
+negative) graphite is almost always used as anode when charging, lithium
+ions move to graphite when discharging, lithium ions move from graphite
+to lithium so, we can see that the atomic structure of the electrodes
+are changed, hence why charge cycles affect battery life LiPo is
+lithium-ion poly. uses polymer electrolyte instead of liquid. lipo more
+expensive, shorter lifespan, less energy, more robust</p>
+<h2 id="memory">Memory</h2>
+<p>eMMC is the interface as well eMMC precursor to SD. TF (transflash)
+more commonly known as micro-SD card cheaper than SSD, yet slower still
+uses NAND flash technology</p>
+<p>QSPI can be used without CPU with data queues</p>
+<h2 id="bootstrap">Bootstrap</h2>
+<p>UEFI (interface between firmwire and system; essentially interface to
+boot into things) ACPI (data format to convey firmwire information) the
+ESP will have EGI entries that point to a UUID of where to boot one of
+these will be grub binary like shimx64.efi</p>
+<h2 id="formats">Formats</h2>
+<p>fat for esp (because FAT simple, open and supported virtually
+everywhere) vfat is driver (typically for fat32)</p>
+<p>ext4 for system (supports larger file sizes) (ntfs microsoft
+proprietary) most filesystems will use a self-balancing tree to index
+files</p>
+<h2 id="unix">Unix</h2>
+<p>Contempt culture (language wars)-change-systemd Original Unix borne
+out of want for simplicity over competing systems Terminal type writer
+something you should ask your grandfather about Service is like a
+collection of daemons. Need for services came from growth of Web and
+need for handling databases, lots of connections etc. Something like
+launchd (an unit system) allows services to be started not at boot
+time.<br />
+Also listen for software hardware changes.<br />
+So, we extend from simple bootstrapping to handling events.<br />
+So, now more than service manager, a system manager As kernel more
+dynamic, e.g change IRQ for device at runtime,<br />
+can think of a system layer as an intermediary between kernel and users
+pace.<br />
+Have things like network manager. This avoids having 15 disparate
+packages each with own file format config Systemd a collection of
+binaries, so not exactly violating Unix philosphy Some disparity between
+systemd idea and its inplementation Major component of systemd is
+service manager, I.e init system to bootstrap user space</p>
+<p>system level software systemd () cron (job scheduler)</p>
+<p>in a sense, LTS involves significant backports</p>
+<p>hardlink to inode (therefore impervious to file name change,
+deletion, etc.) softlink to file name</p>
+<p>a directory is a mapping of filenames to inodes (for ext4
+atleast?)</p>
+<p>journaling is regularly writing operations that are to be performed
+in RAM to disk area of memory known as journal. then apply these changes
+to disk when necessary this overhead makes them slower, but more robust
+on crashes as can read journal to ascertain whether certain operations
+finished performing</p>
+<p>the metadata stored by inode determined by filesystem in use<br />
+e.g. fat32 won’t store permissions, last modification time fat32 also no
+journaling or soft-links inode references file metadata (pointer to
+data, permissions, access time). this allows concurrent modification of
+the file</p>
+<p>UUID/GUID (universally/globally) 16bytes</p>
+<p>premptive scheduler will swap processes based on specific criteria.
+most are round-robin, i.e. has process is run for a predefined time
+slice CFS does not use heuristics (ad hoc guide), ∴ more straightforward
+uses rb-tree. so, as task inserted onto this is logarithmic, ∴ this is
+cost of context switch each node key is
+<code>(time process as run on CPU) * (process niceness)</code></p>
+<h2 id="cpu">CPU</h2>
+<p>cpu contains clock. each tick marks a step in the fetch(signal sent
+along address bus as specified by PC; instruction or data sent along
+data bus)- so, whenever interacting with memory, will first have to
+specify address bus and get/store result via data bus therefore, for
+something like LDR rax, [val] will require two fetch-executes. this is
+von-neumann bottleneck most modern computers are modified-harvard, in
+that the L1 caches have separate instruction and data regions.
+therefore, they can be read simultaneously</p>
+<p>decode-execute cycle an accumulator register is term used to indicate
+typical register that holds results of large arithmetic</p>
+<p>von-neumann instruction, data in RAM instructions+data share data bus
+between CPU and RAM, so they have to be fetched separately</p>
+<p>harvard instruction, data separate</p>
+<p>in reality, all CPUs are von-neumann presented to the user and
+harvard at the low-level. it’s only harvard from the pipeline/cache
+stage modified harvard could also mean instruction and data bus, but
+unified memory so, the variation amongst harvard architectures is in how
+one transitions to the other</p>
+<p>Procedure Call Standard for the Arm Architecture (AAPCS). Part of ABI
+for ARM (also part of ABI is debugging, dynamic linking semantics etc.)
+From this we can garner say, not to put more than 4 word sized arguments
+to function as this will require stack, consuming more time and space
+Furthermore, alignment restrictions mean that passing a double word has
+to be even-odd register pair, so ordering of parameters important So,
+call standard important for ordering and number of parameters?</p>
+<p>When people say vector operations, they mean SIMD</p>
+<p>endianness only relevent when reading and writing to memory addresses
+and interpreting the bytes overall, endianness usefulness determined by
+majority of operations performed, e.g. converting string to int easier
+in big-endian e.g. little-endian easier to read values of variable
+length (address does not change)</p>
+<p>CISC gives reduced cache pressure for high-intensive, sustained
+loops</p>
+<p>memory model: visibility and consistency of changes to data stored in
+memory necessary for understanding multiple thread execution</p>
+<p>hardware (from machine code to execution on the CPU): * sequential
+consistency (ideal as easy to understand, however doesn’t maximise
+hardware speed) * x86-TSO (total store order). each processor reads from
+shared memory all processors agree upon the order in which their write
+queues are written to memory write queue is FIFO, so write queue is
+flushed in same order as seen by the processor however, when the write
+queue is flushed is up to the CPU therefore, to enforce stronger memory
+ordering, architecture supplies memory barriers/fences (in a sense to
+enforce sequentially consistent behaviours) to ensure write queue is
+flushed before any future reads occur (without fences, I suppose write
+queue length would determine whether certain synchronisation problems
+occur more frequently) * ARM (most relaxed) each processor reads and
+writes from its own copy of memory writes propagate to other processors
+independently, i.e not all update at same time furthermore, the order of
+the writes can be reordered furthermore, processors are allowed to delay
+reads until writes later in the instruction stream</p>
+<p>language (from source to machine code) so, C11 memory model is in
+relation to rearranging of loads/stores in assembly for optimisations?
+(so is a weak model?) mainly in reference to the behaviour of atomics to
+synchronise programs so, language memory model will abstract away
+hardware memory model? https://research.swtch.com/plmm</p>
+<h2 id="arm">ARM</h2>
+<p>cortex-a53 is a synthesisable IP core sold to other semiconductor
+companies as licensed IP core, the amount of cache will vary
+e.g. 8-64Kb?</p>
+<p>FPU is a VFPv3-D16 implementation of the ARMv7 floating-point
+architecture</p>
+<p>details hidden due to IP nature, e.g. LPDDR3 memory controller from
+CPU is all we can know?</p>
+<h2 id="ports">Ports</h2>
+<p>(audio visual) HDMI-A, C (mini), D (micro) USB-A,USB-B,USB-B(mini)
+USB-C is USB3.0</p>
+<p>3.5mm audio jack (3 pole; 4 pole for added microphone)</p>
+<p>ethernet CAT backwards compatible. connector called RJ45 telephone
+cable is called RJ11</p>
+<p>IEC power cords (kettleplug, cloverleaf)</p>
+<p>DC barrel jack</p>
+<h2 id="legalities">Legalities</h2>
+<p>anti-trust laws don’t prevent monopolies, they prevent attempting to
+monopolise illegal, e.g. Microsoft attempting to monopolise browser
+market</p>
+<p>permissive (MIT, BSD, Apache, zlib) gives users more freedom to say
+relicense, include closed source software, etc. generally just
+attribution licenses (in that this is only enforcement)</p>
+<p>weak copyleft (LPGL) (glibc) applies to files of library not your
+entire codebase, i.e. must still release your version of the library
+used so, dynamic linking makes this easier for keeping your source
+closed if static, must make a few extra steps to ensure the LGPL parts
+are available, e.g. publish object files</p>
+<p>copyleft (GPL) enforces devlopers wants the for code on users, so the
+software stays under the same license. encounter more licensing
+restrictions. GPLv3 tiviosiataion, issue for Mac as their code is signed
+so doesn’t allow for user modification (so deals with hardware/system
+locks) code signing issues? so, GPL infects your software, enforces even
+if just a library usage to release whole project as GPLv3 (so source
+code released)</p>
+<p>although android technically open-source, most of the software run on
+it isn’t</p>
+<p>creative commons is a set of licenses that make explicit requirements
+for users, e.g. CC BY-NC, CC BY-SA, etc. unlike MIT, Apache includes a
+user non-litigation, so users can’t initiate litigation if the creators
+decide to patent something</p>
+<h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
+<p>Xcode cloud subscription. oh no wasting so much time on naming of new
+processes, e.g. ‘Developer Experience Infrastructure’,</p>
+<p>Another billionaire investing in a ‘utopian cities’ seems more
+dystopic than anything.</p>
+<p>PIC have weird instruction set, so generally have to use with
+assembly over C compiler. So, use AVR for low-end like just LED driving?
+e.g. TLC5971</p>
+<p>time-of-flight sensor like an infrared radar</p>
+<p>over-current and over-voltage detectors for when using charging
+devices, e.g USB-C charger? so, perhaps investigate/understand voltage
+regulators? also have UVLO (undervoltage-lockout)</p>
+<p>new USB-PD (power delivery) interface more power from USB-C</p>
+<p>I can see machine learning ‘appropriate’ in say cleaning up random
+noise, e.g. brain signals</p>
+<p>interesting set of questions to inspect a software engineering
+workplace:
+https://neverworkintheory.org/2022/08/30/software-engineering-research-questions.html?utm_source=tldrnewsletter</p>
+<p>things like database accelerator library indicative of normal
+software not being fast</p>
+<p>MOSFETs are a type of transistor. different transistors for say
+quick-switching, low signal, high frequency, amplifier etc.</p>
+<p>USB-4, PCI5, DDR5 emerging standards.</p>
+<p>Could buy a GPU for running interesting machine learning applications
+like Stable Diffusion (prompt engineers, oh dear…) GPU structure similar
+to CPUs, e.g have cache, GDDR6 memory (more simple parrellisation)</p>
+<p>float-toy nice web visualistion tool</p>
+<p>interestingly CRT can scale better than fixed-set resolution LCD</p>
+<p>new TV monitor combination QD-OLED curved monitors less fatiguing as
+physically matches our eye’s shape flexible/bendable monitors no one
+asked for…</p>
+<p>cool looking completely submerged server desktops. pure water is a
+very good insulator (our tap water will have chlorine for example)</p>
+<p>the Nintendo DSi implemented augmented reality virtual reality is
+completely immersive</p>
+<p>interesting wireless charging…</p>
+<p>trie -&gt; gzip. still have to decode and resulting memory same as
+before compression succinct data structures are designed to not have to
+be decoded, i.e. everything is stored as bits. ∴ uses a lot less memory
+(however, only for larger datasets)</p>
+<p>sextempber cornucopia of condoms don’t have to be nostradamus to work
+out parents parking in effect, most people’s journey to learning is
+bespoke my engineering mind (which has been molded by experience)
+results in largely ad hoc responses</p>
+<h1 id="news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
+the Pride</h1>
+<p>Politics are infiltrating areas of technology: * Rust toolchains on
+embedded. Rust developers have explicitly tweeted saying technology will
+always be political * NASA Artemis Accords have first line stating
+primary focus on women and person of colour on Moon Leads down the path
+of FSF, and in fact any cultural revolution which thinks it can do
+whatever it wants in the name of the people. Although perhaps ad
+hominem, experience has shown that they’re all polite until they’re
+not.</p>
+<p>Seems in with big-tech, marketing is often more important than the
+underlying technology. 170km ‘The Line’ ecotopia, metaverse, telsa etc.
+They make wild claims and the general public has no way of knowing the
+facts behind them (perception vs reality) A scary thought is that in
+this age, possible for self-sustaining narratives capable of deflecting
+facts</p>
+<p>ARMs open-model allowed vendors to implement custom MPUs that saw in
+gain dominance over oher RISCs like MIPS and AVR.</p>
+<p>Tech companies becoming conglomerate monopolies, e.g. tiktok music,
+apple tv etc.</p>
+<p>Much like the C++ standards committee, concerns of ‘ivory tower’
+nature of smart home Matter standards</p>
+<p>Seeing consequences of covid semiconductor demand in chip shortages.
+Exacerbated by increase usage in automotive industry and large
+dependence on foundries in Taiwan</p>
+<p>Annoyed at the web: * Seemingly lack of awareness of bloated and
+abstracted infrastructure * New technologies in the sphere are just
+sensationalised titles with little substance e.g. homescreen social
+media, css layout model and js frameworks</p>
+<p>The importance of programming to a physical machine is paramount. The
+underlying technology is always changing, e.g. arcade machines,
+consoles, phones, watches, plastic 4bit processors</p>
+<p>EU lawmakers want USB-C for all mobile devices to reduce e-waste.
+Makes me postulate a technocracy.</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<h1 id="news---a-virgin-woman">NEWS - A Virgin Woman</h1>
+<p>Thread is new low-power protocol for Matter (and therefore IoT
+devices, i.e. mesh network). Similar to Zigbee and Z-Wave</p>
+<p>hierarchy:topology p2p:(mesh, bus) client-server:star</p>
+<p>Advent of more software in cars has led to subscription based
+services, e.g. heated seats. However, adding software increases
+complexity: * Will lack of connectivity (e.g., no cell coverage where
+you’re at) mean that the features are disabled until you get back into
+cell range? * Can the servers be DOS’d so that nobody’s seat heaters
+work? * If I pay for a subscription and sell a car, does the
+subscription stay with the car? Or will it be like Tesla’s approach,
+where the new owner has to pay to unlock the software features, even if
+the previous owner paid? * What if there is a bug on the server that
+incorrectly reports my subscription status? Will I be refunded, fully or
+partially? * What happens when you can’t get in touch with customer
+support because your subscription isn’t being properly detected on the
+hardware? * What happens if the hardware breaks, but you’ve paid for the
+subscription? Is repair to heated seats covered under terms of the
+subscription, or will that be pushed to owners? * What happens if this
+strategy is used by a smaller company than BMW, who suddenly goes out of
+business and bricks your otherwise perfectly working hardware due to
+shutting down servers?</p>
+<p>Are big-tech companies realising the flaws in their ‘Simplicity
+Sprints’ culture? Slowing hiring, realising they have way too many
+employees</p>
+<p>BCI (brain computer interfaces) are a real future</p>
+<p>Unfortunate that ‘true security’ makes things more complex and
+inconvenient, e.g. yubikey</p>
+<p>Physics head-scratcher: dark matter makes up 80% of universe, yet we
+can’t detect it?</p>
+<p>Meta releasing AI chatbot to wild has again resulted in racist and
+sexist comments</p>
+<p>More evidence of contrasting quality between modern hardware and
+software with worldwide Google outage caused by software update</p>
+<p>Oncall software engineers akin to casual teachers</p>
+<p>What are FPGAs and how do they allow the creation of hardware for
+emulating old games like GBA? EU enforcing USB-C forces Apple to switch
+to USB-C. Yay!</p>
+<p>Oh dear, Java is not dying out (state of the octoverse)</p>
+<p>Realise I’m highly misanthropic Frequent STMicroelectronics
+newsletter coverage of IoT (and the many, many protocols) and machine
+learning indicative of trend in industry</p>
+<p>Hi-fi audio. Newer terms to mean higher fidelity/data resolution new
+OLED TVs (contrast, blacks). QLED/QNED (brightness) is a adding a
+‘quantom dot’ layer into the white LED backlight LCD sandwich</p>
+<p>5.1 means 5 speakers, 1 subwoofer woofer, subwoofer, speaker,
+tweeter</p>
+<p>Things getting smaller and more data, e.g. ‘normal’ sized VR
+headsets</p>
+<p>I really don’t see fold phones as necessary…</p>
+<p>Are we moving down the road of homogenous, e.g. specifically target
+CPU or GPU or hetereogenous programming, e.g. CUDA</p>
+<p>Although a update pathway is provided from 20.04 to 22.04, I’m
+reluctant to do so due to possible configuration issues. Why I chose LTS
+5 year support (2025)</p>
+<p>Interesting maglev trains reach amazing speeds and produce minimal
+noise due to lack of friction</p>
+<p>Interesting blood transfusions from older mice to younger mice, the
+younger mice display characteristics of old mice</p>
+<p>Bitcoin is a Ponzi scheme as almost no one actually uses it in
+transactions, and is purely speculative. Does not create anything.
+Interesting manifestation of capitalism.</p>
+<p>Moore’s law number of transistors doubles every 2 years. Although not
+strictly true, general trend is holding. Proebsting’s law states that
+compiler improvements will double program performance every 18 years.
+Therefore, cautious about the performance benefits a compiler brings.
+Focusing on programmer productivity is more fruitful In general, newer
+compilers take longer to compile, but produce slightly faster code maybe
+20% faster.</p>
+<p>Cyberdecks are evidence that the trend of going smaller isn’t always
+aesthetic</p>
+<p>Growing trend to have workstations operate in the cloud or
+containerisation. For testing yes, for development however?</p>
+<p>Strive towards much more potent nuclear fusion reactors as oppose to
+nuclear fission (neutron splits Uranium, same as original nuclear
+bombs)</p>
+<p>Amazing that certain old rpm harddrives were susceptible to crashing
+when ‘Rhythm Nation’ played as the resonant frequency was the same</p>
+<p>Streaming outnumbering cable and broadcast TV</p>
+<p>ripgrep a much faster and user friendly grep! unar will automatically
+handle pesky non-folder archives</p>
+<p>Interesting to see if mir wayland will take over xlib x11</p>
+<p>Although the open nature of RISC-V gives it some economical
+advantages, historically the ISA has not been the major driving factor
+in widespread adoption. Rather, who invests the most in R&amp;D,
+e.g. many places will develop ARM, with RISC-V go on your own.</p>
+<p>Security an ever present issue, e.g. every Ubuntu weekly newsletter
+get a list a security updates</p>
+<p>Privacy laws prevent recording keystrokes in app, however can record
+other information like time between keypresses etc. to identify you,
+e.g. TikTok</p>
+<p>Chiplets connection of chips. So, can build chiplets that aren’t SoC,
+e.g. just CPUs and SoCs without chiplets Intel R&amp;D into chiplet
+technology stacking presents it as a future possibility (Apple already
+uses it with two M1 max chips to M1 ultra)</p>
+<p>ACM (Association for Computing Machinery) Turing Award is essentially
+Nobel Prize for Computer Science. Not applicable for me as awards
+largely for academic contributions like papers/reports published e.g
+data abstraction (Liskov substitution, Byzantine fault tolerance),
+parallel computing (OpenMP standard). In some sense, the modern day
+Booles and Babbages I’m more concerned with engineering feats in
+software products.</p>
+<p>An unfortunate reality of open tech, AI being used to make paywalls
+‘smarter’</p>
+<p>Read a Google research project on removing noise in photos.
+Investigate source to test and am completely put off by the amount of
+dependencies involved: conda (why not just whole hog and docker),
+python, jax for TPU (python to tensor processing unit), external
+repositories This also applied to the ‘amazing’ AI image generator
+Stable Diffusion (I suppose high VRAM requirements also) Docker has uses
+in CI</p>
+<p>AI for everything dogma is becomming more pervasive with ‘clusters’
+to train model. Although Tesla can build a supercomputer to train, like
+all dogmas, not applicable to everything (readability, debugging goes
+down)</p>
+<p>Even air-gapped computers are not safe from sniffing</p>
+<p>Seems that any in-demand tech device subject to bot scalping</p>
+<p>As Moore’s law is widening, i.e. was 2 years now 4 years, companies
+creating own hardware, e.g. YouTube chip to handle transcoding</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<p>hotloading metaprogramming</p>
+<p>Often legacy supported code adds lots of corner cases, e.g. opengl
+i.e don’t have consistent performance characteristics</p>
+<p>immediate mode and retained mode are about lifetimes. for immediate,
+the caller does not need to know about the lifetime of an object.</p>
+<p>discovering for linux docs (xlib, alsa) are code and for development
+may have to add to groups (uinput)</p>
+<p>plugins just be .so files that are loaded with dlsym()</p>
+<p>Use of discriminated unions and type fields for type sharing</p>
+<p>Visualising essential for debugging insidious problems… Print rows of
+text aligned Conversion from single-state to recording data over time
+will require memory which we will cast to appropriate state structure,
+e.g. DebugState state structures will have
+<code>b32 is_initialised</code> field which will initialise a memory
+arena Then have CounterState and CounterSnapshot (move per frame data
+into this) Each frame, copy over src to dst (with a rolling buffer) In
+the rendering of the records, to display snapshots, generate statistics
+like min, max, avg. These will be converged into a Statistic struct for
+each value Have helper function for begin, update and end statistic with
+value Now we have max, loop over again to generate graph height scale
+and say red colour scale Alternatively we could have absolute height
+scale, e.g <code>total / 0.033f</code> (So in drawing, will typically
+have ‘raw’ structures that just have data, and will then loop over these
+again to generate relationships to actually draw from etc.)</p>
+<p>(TODO: UI have layout and font information…) Drawing have left_edge,
+top_edge Drawing charts, define chart_height, bar_width, bar_spacing
+etc. in pixels Can draw single pixel height reference line Cycle through
+colours with <code>arr[index % ARRAY_COUNT(arr)]</code></p>
+<p>Drawing just take state, and input. After base drawing, look at input
+and alter if appropriate</p>
+<p>Draw routines with origin vector and vector axis (basis vectors) Axis
+that aren’t perpendicular causes shearing</p>
+<p>artist creates in SRGB space (in photoshop) so if we do any math on
+it (like a lerp), will have to convert it to linear space and then back
+to srgb for the monitor (if we were to just blit directly, it would be
+fine) to emulate complicated curves, could table drive it we compromise
+on r² and √2 without gamma correction, resultant image will look very
+dim (due to nature of monitor gamma curve) so with rgb values, preface
+with linear or srgb</p>
 <p>IMPORTANT: ALWAYS PROVIDE EXAMPLE!</p>
 <p>DC motor: raw PWM signal and ground signal controls speed high rpm,
 continous rotation (e.g. fans, cars) servo: dc-motor + gearing set +
@@ -283,6 +1320,7 @@ control circuit + position sensor signal controls position limited to
 180° accurate rotation (e.g. robot arms) stepper: can be made to move
 precise well defined ‘steps’, i.e. jumps between electromagnets position
 fundamental (e.g. 3D printers)</p>
+<p>AVR used in lower-end (8bit) as less complex, cheaper than ARM</p>
 <p>TODO: working with thumb instructions TODO: best practices monitoring
 systems in the field (4G?)</p>
 <p>note, if using newlib, will still have a _start</p>
@@ -424,7 +1462,7 @@ http://graphics.stanford.edu/~seander/bithacks.html</p>
 <p>is power profiler kit specific to each board necessary, e.g. nordic,
 stm32?</p>
 <p>blogs: https://dmitry.gr/?r=05.Projects
-https://tratt.net/laurie/blog/</p>
+https://tratt.net/laurie/blog/ http://stevehanov.ca/blog/</p>
 <p>Seems that IAR compiler produces smaller, faster code than gcc?</p>
 <p>Fallback to: https://grep.app/search when searching for code snippets
 on github?</p>
@@ -1440,1035 +2478,5 @@ for STLs in general across all languages. Some may have bloatness from
 other areas, e.g. C++ templates To avoid the compiler having to generate
 a large export table of all functions, make them <code>static</code> To
 avoid large amounts of linking, have a unity build.</p>
-<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
-<p>I decided to try and implement ctime in Bash for pedagogical
-purposes. My first task was to write and read a binary file. Googling
-how to do this in Bash returned the consensus, “use another language”.
-Often when I read this, I’m not deterred. I have encountered similar
-naysayers before when it comes to directly using Xlib. However, when it
-came to wanting structures to read and write to (essential for binary
-work), I found Bash was empty. With this understanding, I realised more
-generally that the usefulness of scripting languages are limited.
-Specifically, they should be limited to basic tasks that involve
-searching or external tool usage. I suppose my biggest use case of Bash
-is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
-interactions. C is a simple language and if you understand it’s
-low-level capabilities, you can do many things. However, despite this
-recognition, I did come upon certain procedures to follow when working
-with Bash scripts.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
-<p>The diverse software landscape of Linux distros means that we don’t
-know what version of each</p>
-<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
-download, must get link with email. STM32CubeIDE is woefully slow.
-Maximising to full screen just blurs out half Once installed, a series
-of pop-up menus just keep appearing spontaneously as it has to download
-more to satisfy a simple create project To download qtcreator well known
-bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
-command line arguments and mirror parsing,
-e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
-http://ftp.jaist.ac.jp/pub/qtproject</p>
-<p>My god, installing cubemx is awful. require email. password setting
-for account fails.</p>
-<p>QTcreator does not honour system .gdbinit file, have to manually set
-breakpoints and dissassembly flavour QTCreator doesn’t show console
-output. Tick ‘run in terminal’ crashes on startup</p>
-<p>Before even using the program, installing is bad. Install pandoc. It
-requires a pdf engine, e.g. xelatex that must be separately installed
-Which name is not found with traditional
-<code>sudo apt install xelatex</code>, it’s in
-<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
-package name to install a missing dependency is what I use ubuntu stack
-exchange mostly for…..</p>
-<p>Firefox just forces restart</p>
-<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
-<p>sound output varies significantly across different hardware. so, to
-detect possible sound bugs we may need to invest in a good piece of
-sound hardware</p>
-<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
-flexibility with pulse, e.g. can disable it if only needing one
-application at time, or can redirect it to another sound card) audio is
-a mess in linux</p>
-<p>due to disconnected nature of x11 and scheduling, must vsync.
-sleeping isn’t an option due default to round-robin scheduling policy
-(switching to real-time scheduling is not suitable for general-os). we
-could improve by setting niceness (however must be sudo) as not real
-time, we can’t control a lot of things, e.g. could be USB latency, adobe
-photoshop in background, etc. on say raspberry pi could program GPIO
-pins to have a accurate poll for a joystick.</p>
-<p>sound on linux is absurd (tribal knowledge). even the people on the
-mailing list don’t know how it works. constantly saying, don’t do this,
-use a library… often times, source code is the documentation, so good
-luck spending months on how to operate low level. return when threading
-is involved.</p>
-<p>x11 is more complicated than it needs to be. like many OS commands,
-it should do a lot of the dirty work for you, as no-one knows all the
-minutiae. it’s bad to think that OSs are getting harder to work with.
-however, it is unfair to pick on X11, as their are other apis (even
-modern) that are just as bad, even worse. x11 is particular annoying in
-that if it crashes, even launching a virtual terminal may not work as
-keys aren’t registered</p>
-<p>if only eclispe cdt debugger was good. it terminates for no reason
-when running (can sometimes be fixed by switching to run mode and then
-back to debug). sometimes have to restart to fix. run-to-line doesn’t
-work when inside sub-routine. memory browser crashes on entering
-address. doesn’t give information on stack overflows.</p>
-<p>firefox will unexpectanctly say we updated in the background and you
-must restart or tab crashed etc.</p>
-<p>Online help forums for QTCreator useless. In reality, only core devs
-would be able to answer your question thoroughly So, this is where I see
-the benefit of mailing lists</p>
-<p>Often Ubuntu audio mixer just stops working and generates fuzz and
-have to restart</p>
-<p>Firefox facebook video chat. For some reason just mysteriously stops
-working. says to restart, did that work, nope! both rev every fucking
-second is probably why.</p>
-<p>Unfortunate just resign yourself to choosing the software with fewest
-or manageable ‘quirks’ (bugs to offensive…)</p>
-<p>How on earth can something so frequently used like TeX have such
-poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
-text as text. If different file extension, will perform different
-parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
-<p>FreeCAD have to click in particular order for symmetry,
-e.g. point-line-point</p>
-<p>QTcreator so complicated to run cross-debugger, have to write down
-steps</p>
-<p>Tim Berners-Lee envisioned a universal place for information
-exchange. Unfortunately the freedom of creativity has resulted in much
-of the Web being intrusive and hindering</p>
-<p>Order of arguments matter in docker, for some reason –rm must be
-before -it</p>
-<p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
-1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
-really only applicable for perhaps a logic gate or 0.1hz square wave)
-can debug PWM, I2C Ensure BNC connector is plugged in correctly (affect
-probe compensation; similar to banana plugs in multimeter not being
-plugged in correctly) Continous triggering enables us to view from start
-point, i.e. static image not free flowing. Will show before and after
-trigger point, i.e. start in centre of screen No real issue with
-oscilloscope blowing up if testing battery powered/isolated DC power
-supply. With USB powered, ground must be on ground! Otherwise will short
-USB and that port will probably break</p>
-<p>Normal-mode triggering the best of both worlds</p>
-<p>Using RS232 (recommended standard) decoder functionality (there is
-also SPI/I2C decoding).
-https://www.youtube.com/watch?v=SarsWOCMvjg&amp;t=76s Also investigate
-PWM</p>
-<p>IMPORTANT: ensure offset dials are correct first, i.e. at 0 so 0 is
-centre with menu, end-arrows can still be pressed even if not visible
-change to 24mega points for memory when just wanting wave length (not
-zooming in?)</p>
-<p>math -&gt; decoder on; event table on (make sure zoomed out enough to
-view multiple packets (this will increase memory automatically?);
-increase baud also)</p>
-<p>single-shot triggering contact bounce first then ringing as stablises
-(makes it a balancing act between selecting triggering level for button
-press and release) Multimeter measure power consumption of MCU? (stm32
-nucleo boards have convenient IDD jumper) verify signal ringing
-(e.g. clock signal), i.e. inspect ramp-up/down (measure time to
-completely bottom out)</p>
-<h1 id="resilience">Resilience</h1>
-<p>TACKLING DIFFICULT PROBLEM – HOTLOADING FILE MODIFICATION TIME BEING
-READ TOO EARLY. MISINTERPRETING TIMESPEC NANOSEC</p>
-<p>linux raw ALSA can fall into the trap of being so niche and difficult
-it is neck beard inducing</p>
-<p>use of set -x in bash scripts will exit if subprocess returns an
-error, even if 2&gt;/dev/null. Cryptic!</p>
-<p>xlib scaled, vsync, refresh rate</p>
-<p>ell library</p>
-<p>linux input analysing SDL2 source</p>
-<p>polling multiple keyboards lag due to bug in gnome. inspect gnome git
-switched to desktop environment to lxfe 4. also makes creating shortcuts
-a breeze</p>
-<p>Starting from scratch, try to avoid analysis paralysis</p>
-<p>Pragmas and binary searching codebase to check where compiler
-optimises routine wrong</p>
-<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
-<p>instead of feature, we introduce a patented terminology like user
-stories to have someone teach you them. slows down development business
-logic …. just means high-order operations in say main()</p>
-<p>Incessent unit-testing, why not test startup assembly then. Falls
-apart… What not to test, e.g. assume that hex_to_bin() simple enough to
-work? Introducing formulas to determine whether or not to automate
-something….</p>
-<p>certain ‘design pattern’ enforce really long names to conform to
-pattern. any competent programmer can read use-case specific functions
-with clearer names
-“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
-<p>file for every test, file for every class. leads to awful build
-times</p>
-<p>How can software better serve humanity? e.g. bloatware causes
-slowness for aus post workers</p>
-<p>With UML if doing sufficiently complex to the same level as a
-blueprint, may as well have just written the program the idea of
-iterative design would be followed by literal architects, however too
-costly and time consuming. with software, we have the ability to do
-this. 1. design (urban planner): separation of code (mental clarity and
-division of labour) design metrics are temporal coupling (physics
-outputs data to renderer, so format is important), layout coupling
-(renderer inherits from opengl), idealogical coupling (threading, width,
-memory), fluidity (one change to system causes a major crash) 2.
-programming (architect) 3. compiler (builder)</p>
-<p>Most design patterns are just utility classes rather than a way to
-architect a program</p>
-<p>I don’t want to fight the language (Java). Higher level languages
-should allow you to easily express cpu instructions</p>
-<p>reject the idea of TDD driving good design. accept that tests
-validate design. tdd and bdd have good elements in them, but the dogma
-is not effective.</p>
-<p>code shouldn’t take longer than 10 seconds to compile.</p>
-<p>in general we don’t add security threats that weren’t already
-present, e.g. loading from shared object could just as easily override
-binary if have write priveleges to both</p>
-<p>even though a ‘new’ language won’t crash, it can still have buffer
-overruns. NullPtrExceptions</p>
-<p>c++ struct functions implicitly have a this pointer. virtual
-functions will result in a vtable (array of function pointers) to be
-generated for that struct. therefore, virtual function will first go to
-vtable, then lookup in function, so double indirection (so not a
-zero-cost abstraction) normal function call just call 0x1234, however
-with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
-pointers)</p>
-<p>an engine makes things that aren’t likely to be difficult easy
-(except for linux…) important to know low-level to write new tools. we
-don’t have a wheel yet.</p>
-<p>for any non-trival task, scripting languages become a hindrance with
-no static type checking, no real debugger, slow, not as capable. there
-are complications in software we have wrongly convinced ourselves are
-necessary, e.g. scripting for hotloading hotloading C is far superior,
-as C is more powerful and can use same debugger (using Lua is a
-downgrade) build systems can be useful as they allow for incremental
-builds (however, in negatively reinforces people to only make small
-changes) (speed increase may only be noticeable for large, complex code
-base) they are also useful for managing cross compilation (libraries
-have to be pulled in and compile also) the idea of incorporating a
-scripting language into a game was a failed experiment in 2005s. things
-like a visual based interface is fine as it is constrained</p>
-<p>with closed source it is often the case that a company employs
-someone to oversee the experience of the software and have q+a
-therefore, better quality with this higher layer of checking than open
-source.</p>
-<p>the best bet in safeguarding security is to reduce the attack
-surface, which means to reduce the number of lines of code.</p>
-<p>Don’t restrict right side of bell curve Let your aces be aces Being
-an ace involves having an opinion Most influential software written
-largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
-to maintain it. Fallacy about solo programmer productivity requiring
-large teams. Design by committee pushes design to middle of bell curve
-as opposing views average out</p>
-<p>templates add complexity in the debugger (no actual names). only
-really useful if you save a ton of code (not much code to just write
-each implementation) if templates are necessary then just use
-meta-programming as it is much more powerful.</p>
-<p>many programs treat memory as an infinite resource. allocating memory
-is introducing a failure case and making not a fan of allocation
-festivals. we can create our application with minimal failure cases
-(cannot do this with the platform layer).</p>
-<p>uml and diagrams in general are a waste of time (its just code you
-would write and often fails to capture subtleties) you should become
-more proficient at reading code and understanding its relationship.</p>
-<p>oh no, we had a security bug in our development version! (printf and
-friends. printf %f defaults to double)</p>
-<p>understanding history is important; c runtime library way of packing
-return fail information is the reason for inverse truthniess</p>
-<p>downloading unverified external tool, always good to get more viruses
-on my machine… unless playing at EVO with some maxed out razer device,
-not feasible to hit that hard I guess RTFM is the answer to that…</p>
-<p>build tools are more of a hindrance! always asking yourself what
-flags are being passed (linker and compiling separate steps), what files
-are it picking up, what is the CWD, etc.</p>
-<p>Go against merge requests from strangers and just auto let a group of
-trusted people. This avoids the problem where you work for hours only to
-have it blocked</p>
-<p>Many online communities are anti-engineering in that they don’t
-embrace criticism.</p>
-<p>Do anything on web takes a lot longer than it should dealing with a
-myriad of software with different odd conventions. Lack of
-functionality/integration with hardware will lead to collapse Many
-features lacking like type system, try to emulate. Many features have
-like garbage collection try to avoid.</p>
-<p>Scripting languages can cause heap fragmentation. Why just use a real
-language as we want robustness (scripting languages dependent on
-interpreter speed) and type checking</p>
-<p>Fundamental lack of awareness that there is a better way to program.
-We all make slow because of lack of time however to say it can’t be done
-is a fallacy. The cultural differences with these people make it a
-fool’s errand to try and get these people to program correctly e.g. time
-visual studio users think is fast is less than 10 seconds?!</p>
-<p>Const rarely finds bugs that I have, i.e..writing to a variable a
-shouldn’t. In saying that, you should use features of language that
-helps you catch bugs.</p>
-<p>Apple store is hardly a free marketplace. They can just block your
-app for any reason</p>
-<p>DRM and engine usage make using games in the future difficult
-(e.g. museum)</p>
-<p>Also, the excessive testing is pushed by web where the poor languages
-dictate heavy testing. Testing first makes no sense as the app may
-change</p>
-<p>Audiophiles think they hear things that aren’t there</p>
-<p>Much like the food industry has organic vs processed, we need a term
-for games that are made by people who love games and care about the
-experience as opposed to large companies concerned with making money
-(indie vs triple a)</p>
-<p>Sometimes crashing is good because it signifies the serious problem
-that can be rectified immediately rather than some other Insidious
-hidden bug The problem is not mapping id/pointer (or whatever std:: c++
-people would use) to an entity correctly (i.e. correspondence problem).
-the symptom of this problem will be different depending on the
-implementation, e.g. pointer will crash program.</p>
-<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
-commands except privileged ls. Plus sign turning off, minus on, etc.</p>
-<p>The flip side of high level languages is loss of capability in
-controlling the cpu Run time languages are slower and more complex Most
-scripting languages aren’t designed for modern hardware, e.g. simd,
-threads</p>
-<p>Scripting once, deploying everywhere is broken. You must test what
-you write on each machine. Computers aren’t wonderful abstractions we
-wish they were</p>
-<p>C was created to solve the problem of a portable high level assembly
-language for UNIX. C++ is a frankenstein languAge with bjarne just
-adding features in, e.g. he just wanted c with classes. Go and rust were
-designed for specific purposes, although I don’t care about safe memory
-features or want garbage collection. Complexity creates bugs. C++
-incredibly complex. People just stick to a subset of c++, which may be
-different to yours. Exceptions defer error handling and also bring about
-an ethos of more errors when they should just be states of your
-program.</p>
-<p>roughly 90% of games played on PC games are pirated. however
-intensive anti-piracy makes it harder for people to play your game yet,
-in line with this is, there is no code of ethics in computer science for
-wasting peoples time. so, get more respect from community? drm just
-introduces another way for the software to waste people’s time (however,
-may come a day when it’s required…)</p>
-<p>Successful ideas are higher level languages to assembly and compile
-time type checking Success is solving a problem people have talked
-themselves out of solving Why does Twitter need 4000 employees? Spacex
-is roughly the same and the put rockets on mars! They make problems
-difficult by the engineering culture they create. 18000 classes
-overflowed java function pointer buffer, they are deluded in thinking
-this way Over concerned with Uml, state diagrams, acronyms, etc.
-Nightmarish distractions/unproductive</p>
-<p>High level don’t worry about implementation details - chrome c++
-entering a 1 char created 25000 memory allocations with std::strong
-Abstractions - more code makes program as a whole more difficult to
-understand. Abstractions are just hiding low level which is the most
-important part and will constrain the system. Java huge call stack to
-make a http request. Make lightweight abstractions only Functional
-programming - Haskell around since 1990 hasn’t taken over. Imperative
-more clear. Functional breaks down over non trivial work Data hiding -
-poor cache performance, redundant code Excessive inheritance - poor
-cache performance Exceptions - constant cognitive tax on remembering
-what throws what and huge verbosity doing so. Also don’t know what
-program will throw during some time Commenting - write good comments and
-garden them as they can rot easily Re-use - only effective when used to
-small extent, humans are bad at understanding layers upon layers. You
-don’t make something better by making it more complicated All
-aforementioned ideas can be contextually useful</p>
-<p>The backbone of web tcp/ip has scaled tremendously well over 60
-years. The web software stack is opposite. Browsers rev every 15
-minutes, everything is worse than it was before, JavaScript slower than
-anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
-particular type of software development rapid. However they fail to
-effectively utilise system resources to solve a problem that would be
-easy in C. Often people are only concerned with how fast they can write
-this, without caring about quality. In the web sphere google, Facebook
-etc. Know their competitors aren’t going to be concerned with quality,
-e.g. gmail is incredibly slow and littered with bugs (typing in a name
-gives wrong result as it hasn’t finished time to server) so they use
-these technologies that help to get something working quickly but will
-be janky. I want to write software where quality matters and software is
-enjoyable to use. Web needs to acknowledge this. They have different
-thinking, e.g. network latency so we don’t have to care about
-performance, no you need more effort to avoid this latency! Although
-different tradeoffs made for different contexts, on a whole programming
-is programming. The web is almost impossible to write good software as
-have to deal with complexities that don’t have to be there. Best minds
-are being put to make people click ads</p>
-<p>Why is it big news regarding command prompt. Battlefield orders of
-magnitude complex and runs faster Msdos could see all physical memory;
-Modern cpus have mmu</p>
-<p>must be able to judge the quality of something from your own
-criteria, not simply on social cues/norms</p>
-<p>memory safety not of that much concern for programming. however, for
-security I suppose it is? wish security wasn’t an issue
-https://github.com/KULeuven-COSIC/Starlink-FI/</p>
-<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
-beaglebone cape, raspberry pi hat etc.</p>
-<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
-package name, however binaries are named differently.</p>
-<p>still installing an OS is a cross-your-fingers exercise. A single USB
-presents multiple boot options. choosing between uefi 1.0 and 1.0 one
-will give you WIFI during install ubuntu forums have contemporary posts
-mentioning install issues this finicky nature means just have barebones
-things and install separate OS in virtual machine chose xcfe4 for
-gnome-repeat-bug and easy shortcuts</p>
-<p>the lack of type systems in Javascript and Python leads to extensions
-with it</p>
-<p>Vulkan like filling in a centrelink form, so much setup</p>
-<p>Any overarching idelogoy like everything is objects, everything is
-data is pretty arbitrary. Certain approaches are useful for particular
-problems. I’m sensiiltive to Input lag in text editor, so use vim.
-Intellisense pop ups slow</p>
-<p>Although large groups can help maintain, the introduction of many can
-create imperfections This extends to all software companies. Do a lot of
-good things, but will always have things that are dysfunctional at, e.g
-documentation, disparate build systems, non-uniform design practices
-Don’t restrict right side of bell curve Let your aces be aces Being an
-ace involves having an opinion Most influential software written largely
-by one person, e.g Linux, Unix, git etc. Then a team is assigned to
-maintain it. Fallacy about solo programmer productivity requiring large
-teams. Design by committee pushes design to middle of bell curve as
-opposing views average out</p>
-<p>Loss of generational knowledge, i.e. people forgetting gensis of
-influential software written by individuals</p>
-<p>Growth of machine learning due to quantity of computation available.
-Localised improvements, overall degradation (rendering, update
-processing etc. far more involved) Wrong perception that performance
-takes too much time, so we want do it but we could do it. However, if
-they have never done it, how could they say they could? Growth of
-startups are just finding a niche, rather than writing revolutionary
-software</p>
-<p>Testing nomenclature so diverse, yet could be boiled down to a
-handful of terms, e.g. Regression testing just re-running tests on new
-changes, which is something you do implicitly</p>
-<ul>
-<li><p>cool idea of SDR (software defined radio) and RF analyser
-https://greatscottgadgets.com/sdr/1/
-https://github.com/ainfosec/FISSURE</p></li>
-<li><p>if COMP3331 largely theoretical. apply to calculating speed
-differences for our Internet connection, e.g. WiFi vs Ethernet. DSL vs
-FTTN vs FTTP. when does it reach trans-alantic-cable. wherein the packet
-flow is the largest bottleneck? is it just geographic distance from
-Australia?</p></li>
-<li><p>how does quantum computing work?</p></li>
-<li><p>what frequencies/technologies are regulated like in ISM; by
-extension what other regulations are there?</p></li>
-<li><p>why floating point inaccuracies</p></li>
-<li><p>examples of hardware virtualisation instructions/codecs?
-(e.g. multiway MMU?)</p></li>
-<li><p>vulkan renderer:
-https://www.youtube.com/watch?v=BR2my8OE1Sc&amp;list=PL0JVLUVCkk-l7CWCn3-cdftR0oajugYvd&amp;index=1</p></li>
-<li><p>how does something like red hat and android get around gplv2 of
-linux kernel</p></li>
-<li><p>the SIG introduces bluetooth 5 which states higher data rate,
-long range BLE etc. are their decisions informed on techonology advances
-(seems not to be the case with 4G LTE…)</p></li>
-<li><p>Understand memory alignment and cost of unaligned accesses? (is
-it due to common programmer workflows and less transistors required?)
-for modern hardware, trying to read data from an unaligned memory access
-can result in 2 reads and a combine so, there are custom compiler
-options to specify alignment (declspec() for stack, aligned_malloc for
-heap) why not just always automatically align things? conserve space?
-when to use these alignment extensions? when doing performance
-timing/tuning?</p></li>
-<li><p>is distinction between a unicast (device to device), multicast
-(device to some devices), broadcast (device to all devices) only
-discernable in packet format, i.e. must be parsed by network card first?
-are signal strength changed?</p></li>
-<li><p>Software laws, e. G. Have 4k in name, but image quality 1080p,
-Elon musk making false claims, Most dash cams same SoC, and image
-sensor, just different housing Garmon products to use must sign up for
-garmin account and agree to collection of data what are laws for
-misinformation, e.g. tesla, ‘4k’ dash cams, stats misleading: M1 chip
-faster (only faster than Intel based macs), we don’t track in
-‘traditional’ ways, tiktok keylogger technology exists but not
-using</p></li>
-</ul>
-<p>TODO: favourites tab for morning viewing videos: common sense
-skeptic; techquickie; handmade podcast; network next</p>
-<p>Resident Name Unit Number / 17 High Street University Terraces
-Kensington NSW 2033 Australia</p>
-<p>chefgood: 20 x $209 mymusclechef: 20 x $219 WELCOME20</p>
-<p>dinner + lunch: $220 breakfast: $100 rent: $345 phone: $70</p>
-<p>leftover: $265</p>
-<p>salary: ≈$52,000</p>
-<p>fortnightly: $1400 + quarterly: $4000 = weekly: $1000</p>
-<p>communicating with busy people:
-https://threadreaderapp.com/thread/1562510420644343810.html</p>
-<p>thread local storage could be implemented hyper-threaded cpu?</p>
-<p>computer science papers https://blog.acolyer.org/</p>
-<p>QUESTIONS:</p>
-<p>security so vast and not something I want to devote time to:
-https://leveleffect.referralrock.com/l/JOHNHAMMON07/</p>
-<p>the constellation we can’t see as it’s blocked by the sign is the
-zodiac sign for that month not new territory to regain interest in the
-past, e.g. renaissance grew interest in ancient greek astrology zodiac
-latinized of zodiakos, meaning circle of animals (all zodiac names
-latinized greek) vernal is beginning of astronomical year; daylight
-starts getting longer until summer solstice. hence, spring is when
-zodiac starts aries (march 20th) -&gt; ram taurus (april) -&gt; bull
-gemini (may) -&gt; twin brothers cancer (june) -&gt; crab leo (july)
--&gt; lion virgo (august) -&gt; woman libra (september) -&gt; scales of
-justice scorpio (october) -&gt; scorpion sagittarius (november) -&gt;
-archer’s arrow capricorn (december) -&gt; goat aquarius (january) -&gt;
-water bearer pisces (feburary) -&gt; opposing fish</p>
-<p>IS IT POSSIBLE THAT AN ASSEMBLY INSTRUCTION LIKE RDTSCP COULD BE
-TRAPPED BY PROGRAM LOADER?
-https://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints</p>
-<p>NOTE(importance of reading programming papers…. after handmade
-finished)</p>
-<p>vector math routines (obtaining cross product from column vector
-form) when drawing vectors in a physical sense, keep in mind they are
-rooted at the origin (even if drawings show them across time) whenever
-doing vector addition/subtraction, remember the head-to-tail rule (their
-direction is determined by their sign). could also think that subtract
-whenever you want to ‘go away’ from something dot product transpose
-notation useful for emulating matrix multiplication unit circle, x =
-cosθ dot product allows us to project a vector’s length onto a unit
-vector dot product allows us to measure a vector on any axis system we
-want by setting up two unit vectors that are orthogonal to each other
-simple plane equation with d=0 will be through origin (altering d shifts
-the plane up/down) cross product gives vector that is orthogonal to the
-plane that the two original vectors lie on (length is |a|·|b|·sinθ). So,
-really only works in at least 3 dimensions with units, e.g. for camera,
-start with arbitrary ‘unit’ defintion. later move onto more physical
-things like metres by applying a scaling factor to direction vector, can
-move along it world space coordinates. camera position is based on
-these. the camera will have its own axis system which we determine what
-it should be and then use cross product based on what we want
-understanding dot product equivalence with circle equation for
-multiplication of vectors, be explicit with a hadamard function
-(IMPORTANT have reciprocal square root approximation which is there
-specifically for normalisation. much faster cycle count and latency than
-square root)</p>
-<p>noise is randomness. white noise is complete randomness. blue noise
-(harder to generate) is randomness with limitations on how close
-together points can be (more uniform)</p>
-<p>pride cometh before the fall! six of one, half a dozen of the other.
-have our cake and eat it too ad infinatum</p>
-<p>Borrowing money: clear you’re the right person to give the money to.
-Clear you understand what you’re doing and the game process is figured
-out. Proof of you will complete it. Here is the game, why I’m good at
-it, why people will like it and why I’m going to succeed at developing
-it Interview ability to explain problems you have encountered on
-projects</p>
-<h1
-id="important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
-FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</h1>
-<p>WHAT ARE RFCS?</p>
-<p>OAuth (open authentication) exchanges tokens to authorise access;
-specifically use personal access token with OAuth scope ‘repo’ for
-github to grant circleci push priveleges (have to add this add
-environment variable to circleci) tokens ability to ‘scope’ gives them
-an advantage over ssh keys typically used by RESTful services</p>
-<ol type="1">
-<li>to use Google APIs create Google Cloud Console project and grant
-particular API access to it</li>
-<li>create OAuth credentials to access API</li>
-</ol>
-<p>so the authorisation part is to establish the ‘scope’ of the
-tokens</p>
-<p>with OAuth: 1. consent screen to obtain token this will be a GET
-request, whose location will be described by the standard ‘discovery
-document’
-(https://accounts.google.com/.well-known/openid-configuration)</p>
-<p>authorization_endpoint:
-“https://accounts.google.com/o/oauth2/v2/auth”</p>
-<p>tokens obtained will be short-lived, i.e 2-5 minutes so will have to
-refresh</p>
-<p>(a consent screen only required if accessing another users data?)</p>
-<p>(client id and client secret are like our login and password) 1. get
-authorisation code GET https://accounts.google.com/o/oauth2/v2/auth?
-client_id=937397032650-rmntctql9qo8o85cscd85l2hvo9v1818.apps.googleusercontent.com
-&amp;redirect_uri=urn:ietf:wg:oauth:2.0:oob
-&amp;scope=https://www.googleapis.com/auth/photoslibrary
-&amp;response_type=code</p>
-<p>(have to submit verification request to get write access?)</p>
-<p>google scopes:
-https://developers.google.com/identity/protocols/oauth2/scopes#photoslibrary</p>
-<p>(particular methods relevent to the API we want to use will require
-different scope levels)</p>
-<ol start="2" type="1">
-<li>exchange code for access token</li>
-</ol>
-<p>PCI usually for attaching peripherals to motherboards,
-e.g. network/audio/usb/graphics controller cards</p>
-<p>RESTful urls respond to CRUD requests in a standard way so, a url is
-an access point to a resource e.g, following REST: * GET
-example.com/users will return list of resource, i.e. all users * POST
-example.com/users will create a new resource * GET example.com/users/1
-return single resource * PUT example.com/users/1 update single resource
-* DELETE example.com/users/1 delete single resource</p>
-<p>curl defaults to GET headers with -H “Pragma: no-cache”</p>
-<h2 id="screens">Screens</h2>
-<p>Touch screen types need some external input to complete circuit
-Resistive works by pressure pushing down plastic&lt;-electric
-coating-&gt;glass Unresponsive, durable, cheap (e.g. atm machine)
-Capacitive how a grid of nodes that store some charge, i.e. like a
-capacitor When our finger touches (we are good conductor due to impure
-ion water in us), charge flows through us and back to the phone,
-changing the electric current Things electrically similar to our fingers
-are sausages, banana peels</p>
-<p>1080i/p interlaced means display even and odd rows for each frame
-(due to bandwith, not used anymore) progressive will display each row
-sequentially for a given frame</p>
-<p>4k means horizontal resolution of approximately 4000 pixels. standard
-different for say television and projection industry</p>
-<p>plasma is superheated matter, i.e. ionised gas</p>
-<p>LED is the backlight, as oppose to fluorescent (LCD still used within
-this). so really LED LCD. IPS (in-plane switching), TFT (thin film
-transistor) are examples of LCD panel technology OLED produces own
-light, i.e. current passed through an OLED diode to produce light</p>
-<h2 id="wireless">Wireless</h2>
-<p>RFID (radio frequency identification) no line of sight required (can
-read through objects unlike barcode) Also read multiple objects at once.
-RFID tag. Greater read range (shop security) A QR code is just a 2d
-barcode with more bandwidth. Laser readers quicker. NFC for low-power
-data transfer. NFC tag. (payment systems)</p>
-<p>TV standards Americas: NTSC (30fps, less scanlines per frame) 4.4MHz
-Europe, Asia, Australia: PAL (Phase alternate line) (25fps) 2.5MHz</p>
-<p>sound waves 20Hz - 20kHz (sonar; sound navigation and ranging)
-ultrasonic (radio waves largely absorbed in seawater due
-conductiveness)</p>
-<p>more easily focused as longer wavelength to not bend around corners
-radio waves 10Hz - 300GHz (true radio would be FM radio) higher
-frequency means more information can be conveyed radio waves bounce off
-ionosphere (long range)</p>
-<p>microwaves make up majority of the spectrum of radio waves microwaves
-300MHz - 300GHz (radar) divided into bands, e.g. C-band, L-band,
-etc.</p>
-<p>infrared waves 300GHz - 300THz (object detection) heat emission</p>
-<p>visible light (lasers; weather dependent) lidar</p>
-<p>UV</p>
-<p>ionising x-rays</p>
-<p>ionising gamma-rays</p>
-<p>ISM (industrial, scientific and medical) bands exclude
-telecommunication frequencies</p>
-<p>4G (generation) type of cellular technology. define min/max
-upload/download rates as many cell towers cannot fully support the
-bandwidth capabilities outlined by 4G, use the term 4G LTE (long term
-evolution) to indicate implement some of 4G features. now have 4G LTE
-cat 13 to indicate featurs implemented around 1800MHz</p>
-<p>does version 5.0 expand upon enhanced data rate, i.e. bluetooth
-classic bandwidth? seems higher that higher than 6GHz requires license?
-ISM range? (why bluetooth considered part of ISM?)</p>
-<p>GNSS (Global Navigation Satellite Systems) constellations (GPS:US,
-GLONASS:Russia, Galileo:EU, Beido:China) all location providing
-services. implement different frequencies, etc.</p>
-<p>lower frequency, longer range</p>
-<p>telecommunications standards: * GSM (global system for mobile
-communications) - uses SIM (subscriber identification module) cards to
-authenticate and authorise access I suppose eSIM would make SIM-locking
-easier to overcome Phone number linked/contained within SIM, however can
-be reassigned * CDMA (code division multiple access) - uses ESN
-(electronic serial number)</p>
-<p>Udp (head of line blocking) + client server (p2p unreliable as
-internet path optimised for cost/closest exchange point) + dedicated
-(peoples home Internet don’t normally have high upload rates); Mix of
-cloud (flexible to just turn up and down, high egress bandwidth charge)
-and bare metal (fixed bandwidth rate set into price) Matchmaking, host
-migration difficult as hard to measure what user has good
-connection,<br />
-e.g. Whats there NAT type?</p>
-<h2 id="power">Power</h2>
-<p>LiPo is lithium-ion poly. uses polymer electrolyte instead of liquid.
-lipo more expensive, shorter lifespan, less energy, more robust li-poly
-battery is rechargeable (so rechargeable is structured to allow a
-current to be passed to it to reverse the process) battery will have two
-electrodes, say lithium cobalt oxide (cathode) and graphite (anode,
-negative) graphite is almost always used as anode when charging, lithium
-ions move to graphite when discharging, lithium ions move from graphite
-to lithium so, we can see that the atomic structure of the electrodes
-are changed, hence why charge cycles affect battery life LiPo is
-lithium-ion poly. uses polymer electrolyte instead of liquid. lipo more
-expensive, shorter lifespan, less energy, more robust</p>
-<h2 id="memory">Memory</h2>
-<p>eMMC is the interface as well eMMC precursor to SD. TF (transflash)
-more commonly known as micro-SD card cheaper than SSD, yet slower still
-uses NAND flash technology</p>
-<p>QSPI can be used without CPU with data queues</p>
-<h2 id="bootstrap">Bootstrap</h2>
-<p>UEFI (interface between firmwire and system; essentially interface to
-boot into things) ACPI (data format to convey firmwire information) the
-ESP will have EGI entries that point to a UUID of where to boot one of
-these will be grub binary like shimx64.efi</p>
-<h2 id="formats">Formats</h2>
-<p>fat for esp (because FAT simple, open and supported virtually
-everywhere) vfat is driver (typically for fat32)</p>
-<p>ext4 for system (supports larger file sizes) (ntfs microsoft
-proprietary) most filesystems will use a self-balancing tree to index
-files</p>
-<h2 id="unix">Unix</h2>
-<p>Contempt culture (language wars)-change-systemd Original Unix borne
-out of want for simplicity over competing systems Terminal type writer
-something you should ask your grandfather about Service is like a
-collection of daemons. Need for services came from growth of Web and
-need for handling databases, lots of connections etc. Something like
-launchd (an unit system) allows services to be started not at boot
-time.<br />
-Also listen for software hardware changes.<br />
-So, we extend from simple bootstrapping to handling events.<br />
-So, now more than service manager, a system manager As kernel more
-dynamic, e.g change IRQ for device at runtime,<br />
-can think of a system layer as an intermediary between kernel and users
-pace.<br />
-Have things like network manager. This avoids having 15 disparate
-packages each with own file format config Systemd a collection of
-binaries, so not exactly violating Unix philosphy Some disparity between
-systemd idea and its inplementation Major component of systemd is
-service manager, I.e init system to bootstrap user space</p>
-<p>system level software systemd () cron (job scheduler)</p>
-<p>in a sense, LTS involves significant backports</p>
-<p>hardlink to inode (therefore impervious to file name change,
-deletion, etc.) softlink to file name</p>
-<p>a directory is a mapping of filenames to inodes (for ext4
-atleast?)</p>
-<p>journaling is regularly writing operations that are to be performed
-in RAM to disk area of memory known as journal. then apply these changes
-to disk when necessary this overhead makes them slower, but more robust
-on crashes as can read journal to ascertain whether certain operations
-finished performing</p>
-<p>the metadata stored by inode determined by filesystem in use<br />
-e.g. fat32 won’t store permissions, last modification time fat32 also no
-journaling or soft-links inode references file metadata (pointer to
-data, permissions, access time). this allows concurrent modification of
-the file</p>
-<p>UUID/GUID (universally/globally) 16bytes</p>
-<p>premptive scheduler will swap processes based on specific criteria.
-most are round-robin, i.e. has process is run for a predefined time
-slice CFS does not use heuristics (ad hoc guide), ∴ more straightforward
-uses rb-tree. so, as task inserted onto this is logarithmic, ∴ this is
-cost of context switch each node key is
-<code>(time process as run on CPU) * (process niceness)</code></p>
-<h2 id="cpu">CPU</h2>
-<p>cpu contains clock. each tick marks a step in the fetch(signal sent
-along address bus as specified by PC; instruction or data sent along
-data bus)- so, whenever interacting with memory, will first have to
-specify address bus and get/store result via data bus therefore, for
-something like LDR rax, [val] will require two fetch-executes. this is
-von-neumann bottleneck most modern computers are modified-harvard, in
-that the L1 caches have separate instruction and data regions.
-therefore, they can be read simultaneously</p>
-<p>decode-execute cycle an accumulator register is term used to indicate
-typical register that holds results of large arithmetic</p>
-<p>von-neumann instruction, data in RAM instructions+data share data bus
-between CPU and RAM, so they have to be fetched separately</p>
-<p>harvard instruction, data separate</p>
-<p>in reality, all CPUs are von-neumann presented to the user and
-harvard at the low-level. it’s only harvard from the pipeline/cache
-stage modified harvard could also mean instruction and data bus, but
-unified memory so, the variation amongst harvard architectures is in how
-one transitions to the other</p>
-<p>Procedure Call Standard for the Arm Architecture (AAPCS). Part of ABI
-for ARM (also part of ABI is debugging, dynamic linking semantics etc.)
-From this we can garner say, not to put more than 4 word sized arguments
-to function as this will require stack, consuming more time and space
-Furthermore, alignment restrictions mean that passing a double word has
-to be even-odd register pair, so ordering of parameters important So,
-call standard important for ordering and number of parameters?</p>
-<p>When people say vector operations, they mean SIMD</p>
-<p>endianness only relevent when reading and writing to memory addresses
-and interpreting the bytes overall, endianness usefulness determined by
-majority of operations performed, e.g. converting string to int easier
-in big-endian e.g. little-endian easier to read values of variable
-length (address does not change)</p>
-<p>CISC gives reduced cache pressure for high-intensive, sustained
-loops</p>
-<p>memory model: visibility and consistency of changes to data stored in
-memory necessary for understanding multiple thread execution</p>
-<p>hardware (from machine code to execution on the CPU): * sequential
-consistency (ideal as easy to understand, however doesn’t maximise
-hardware speed) * x86-TSO (total store order). each processor reads from
-shared memory all processors agree upon the order in which their write
-queues are written to memory write queue is FIFO, so write queue is
-flushed in same order as seen by the processor however, when the write
-queue is flushed is up to the CPU therefore, to enforce stronger memory
-ordering, architecture supplies memory barriers/fences (in a sense to
-enforce sequentially consistent behaviours) to ensure write queue is
-flushed before any future reads occur (without fences, I suppose write
-queue length would determine whether certain synchronisation problems
-occur more frequently) * ARM (most relaxed) each processor reads and
-writes from its own copy of memory writes propagate to other processors
-independently, i.e not all update at same time furthermore, the order of
-the writes can be reordered furthermore, processors are allowed to delay
-reads until writes later in the instruction stream</p>
-<p>language (from source to machine code) so, C11 memory model is in
-relation to rearranging of loads/stores in assembly for optimisations?
-(so is a weak model?) mainly in reference to the behaviour of atomics to
-synchronise programs so, language memory model will abstract away
-hardware memory model? https://research.swtch.com/plmm</p>
-<h2 id="arm">ARM</h2>
-<p>cortex-a53 is a synthesisable IP core sold to other semiconductor
-companies as licensed IP core, the amount of cache will vary
-e.g. 8-64Kb?</p>
-<p>FPU is a VFPv3-D16 implementation of the ARMv7 floating-point
-architecture</p>
-<p>details hidden due to IP nature, e.g. LPDDR3 memory controller from
-CPU is all we can know?</p>
-<h2 id="ports">Ports</h2>
-<p>(audio visual) HDMI-A, C (mini), D (micro) USB-A,USB-B,USB-B(mini)
-USB-C is USB3.0</p>
-<p>3.5mm audio jack (3 pole; 4 pole for added microphone)</p>
-<p>ethernet CAT backwards compatible. connector called RJ45 telephone
-cable is called RJ11</p>
-<p>IEC power cords (kettleplug, cloverleaf)</p>
-<p>DC barrel jack</p>
-<h2 id="legalities">Legalities</h2>
-<p>anti-trust laws don’t prevent monopolies, they prevent attempting to
-monopolise illegal, e.g. Microsoft attempting to monopolise browser
-market</p>
-<p>permissive (MIT, BSD, Apache, zlib) gives users more freedom to say
-relicense, include closed source software, etc. generally just
-attribution licenses (in that this is only enforcement)</p>
-<p>weak copyleft (LPGL) (glibc) applies to files of library not your
-entire codebase, i.e. must still release your version of the library
-used so, dynamic linking makes this easier for keeping your source
-closed if static, must make a few extra steps to ensure the LGPL parts
-are available, e.g. publish object files</p>
-<p>copyleft (GPL) enforces devlopers wants the for code on users, so the
-software stays under the same license. encounter more licensing
-restrictions. GPLv3 tiviosiataion, issue for Mac as their code is signed
-so doesn’t allow for user modification (so deals with hardware/system
-locks) code signing issues? so, GPL infects your software, enforces even
-if just a library usage to release whole project as GPLv3 (so source
-code released)</p>
-<p>although android technically open-source, most of the software run on
-it isn’t</p>
-<p>creative commons is a set of licenses that make explicit requirements
-for users, e.g. CC BY-NC, CC BY-SA, etc. unlike MIT, Apache includes a
-user non-litigation, so users can’t initiate litigation if the creators
-decide to patent something</p>
-<h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
-<p>Xcode cloud subscription. oh no wasting so much time on naming of new
-processes, e.g. ‘Developer Experience Infrastructure’,</p>
-<p>Another billionaire investing in a ‘utopian cities’ seems more
-dystopic than anything.</p>
-<p>PIC have weird instruction set, so generally have to use with
-assembly over C compiler. So, use AVR for low-end like just LED driving?
-e.g. TLC5971</p>
-<p>time-of-flight sensor like an infrared radar</p>
-<p>over-current and over-voltage detectors for when using charging
-devices, e.g USB-C charger? so, perhaps investigate/understand voltage
-regulators? also have UVLO (undervoltage-lockout)</p>
-<p>new USB-PD (power delivery) interface more power from USB-C</p>
-<p>I can see machine learning ‘appropriate’ in say cleaning up random
-noise, e.g. brain signals</p>
-<p>interesting set of questions to inspect a software engineering
-workplace:
-https://neverworkintheory.org/2022/08/30/software-engineering-research-questions.html?utm_source=tldrnewsletter</p>
-<p>things like database accelerator library indicative of normal
-software not being fast</p>
-<p>MOSFETs are a type of transistor. different transistors for say
-quick-switching, low signal, high frequency, amplifier etc.</p>
-<p>USB-4, PCI5, DDR5 emerging standards.</p>
-<p>Could buy a GPU for running interesting machine learning applications
-like Stable Diffusion (prompt engineers, oh dear…) GPU structure similar
-to CPUs, e.g have cache, GDDR6 memory (more simple parrellisation)</p>
-<p>float-toy nice web visualistion tool</p>
-<p>interestingly CRT can scale better than fixed-set resolution LCD</p>
-<p>new TV monitor combination QD-OLED curved monitors less fatiguing as
-physically matches our eye’s shape flexible/bendable monitors no one
-asked for…</p>
-<p>cool looking completely submerged server desktops. pure water is a
-very good insulator (our tap water will have chlorine for example)</p>
-<p>sextempber cornucopia of condoms don’t have to be nostradamus to work
-out parents parking in effect, most people’s journey to learning is
-bespoke my engineering mind (which has been molded by experience)
-results in largely ad hoc responses</p>
-<h1 id="news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
-the Pride</h1>
-<p>Politics are infiltrating areas of technology: * Rust toolchains on
-embedded. Rust developers have explicitly tweeted saying technology will
-always be political * NASA Artemis Accords have first line stating
-primary focus on women and person of colour on Moon Leads down the path
-of FSF, and in fact any cultural revolution which thinks it can do
-whatever it wants in the name of the people. Although perhaps ad
-hominem, experience has shown that they’re all polite until they’re
-not.</p>
-<p>Seems in with big-tech, marketing is often more important than the
-underlying technology. 170km ‘The Line’ ecotopia, metaverse, telsa etc.
-They make wild claims and the general public has no way of knowing the
-facts behind them (perception vs reality) A scary thought is that in
-this age, possible for self-sustaining narratives capable of deflecting
-facts</p>
-<p>ARMs open-model allowed vendors to implement custom MPUs that saw in
-gain dominance over oher RISCs like MIPS and AVR.</p>
-<p>Tech companies becoming conglomerate monopolies, e.g. tiktok music,
-apple tv etc.</p>
-<p>Much like the C++ standards committee, concerns of ‘ivory tower’
-nature of smart home Matter standards</p>
-<p>Seeing consequences of covid semiconductor demand in chip shortages.
-Exacerbated by increase usage in automotive industry and large
-dependence on foundries in Taiwan</p>
-<p>Annoyed at the web: * Seemingly lack of awareness of bloated and
-abstracted infrastructure * New technologies in the sphere are just
-sensationalised titles with little substance e.g. homescreen social
-media, css layout model and js frameworks</p>
-<p>The importance of programming to a physical machine is paramount. The
-underlying technology is always changing, e.g. arcade machines,
-consoles, phones, watches, plastic 4bit processors</p>
-<p>EU lawmakers want USB-C for all mobile devices to reduce e-waste.
-Makes me postulate a technocracy.</p>
-<!-- SPDX-License-Identifier: zlib-acknowledgement -->
-<h1 id="news---a-virgin-woman">NEWS - A Virgin Woman</h1>
-<p>Thread is new low-power protocol for Matter (and therefore IoT
-devices, i.e. mesh network). Similar to Zigbee and Z-Wave</p>
-<p>hierarchy:topology p2p:(mesh, bus) client-server:star</p>
-<p>Advent of more software in cars has led to subscription based
-services, e.g. heated seats. However, adding software increases
-complexity: * Will lack of connectivity (e.g., no cell coverage where
-you’re at) mean that the features are disabled until you get back into
-cell range? * Can the servers be DOS’d so that nobody’s seat heaters
-work? * If I pay for a subscription and sell a car, does the
-subscription stay with the car? Or will it be like Tesla’s approach,
-where the new owner has to pay to unlock the software features, even if
-the previous owner paid? * What if there is a bug on the server that
-incorrectly reports my subscription status? Will I be refunded, fully or
-partially? * What happens when you can’t get in touch with customer
-support because your subscription isn’t being properly detected on the
-hardware? * What happens if the hardware breaks, but you’ve paid for the
-subscription? Is repair to heated seats covered under terms of the
-subscription, or will that be pushed to owners? * What happens if this
-strategy is used by a smaller company than BMW, who suddenly goes out of
-business and bricks your otherwise perfectly working hardware due to
-shutting down servers?</p>
-<p>Are big-tech companies realising the flaws in their ‘Simplicity
-Sprints’ culture? Slowing hiring, realising they have way too many
-employees</p>
-<p>BCI (brain computer interfaces) are a real future</p>
-<p>Unfortunate that ‘true security’ makes things more complex and
-inconvenient, e.g. yubikey</p>
-<p>Physics head-scratcher: dark matter makes up 80% of universe, yet we
-can’t detect it?</p>
-<p>Meta releasing AI chatbot to wild has again resulted in racist and
-sexist comments</p>
-<p>More evidence of contrasting quality between modern hardware and
-software with worldwide Google outage caused by software update</p>
-<p>Oncall software engineers akin to casual teachers</p>
-<p>What are FPGAs and how do they allow the creation of hardware for
-emulating old games like GBA? EU enforcing USB-C forces Apple to switch
-to USB-C. Yay!</p>
-<p>Oh dear, Java is not dying out (state of the octoverse)</p>
-<p>Realise I’m highly misanthropic Frequent STMicroelectronics
-newsletter coverage of IoT (and the many, many protocols) and machine
-learning indicative of trend in industry</p>
-<p>Hi-fi audio. Newer terms to mean higher fidelity/data resolution new
-OLED TVs (contrast, blacks). QLED/QNED (brightness) is a adding a
-‘quantom dot’ layer into the white LED backlight LCD sandwich</p>
-<p>5.1 means 5 speakers, 1 subwoofer woofer, subwoofer, speaker,
-tweeter</p>
-<p>Things getting smaller and more data, e.g. ‘normal’ sized VR
-headsets</p>
-<p>I really don’t see fold phones as necessary…</p>
-<p>Are we moving down the road of homogenous, e.g. specifically target
-CPU or GPU or hetereogenous programming, e.g. CUDA</p>
-<p>Although a update pathway is provided from 20.04 to 22.04, I’m
-reluctant to do so due to possible configuration issues. Why I chose LTS
-5 year support (2025)</p>
-<p>Interesting maglev trains reach amazing speeds and produce minimal
-noise due to lack of friction</p>
-<p>Interesting blood transfusions from older mice to younger mice, the
-younger mice display characteristics of old mice</p>
-<p>Bitcoin is a Ponzi scheme as almost no one actually uses it in
-transactions, and is purely speculative. Does not create anything.
-Interesting manifestation of capitalism.</p>
-<p>Moore’s law number of transistors doubles every 2 years. Although not
-strictly true, general trend is holding. Proebsting’s law states that
-compiler improvements will double program performance every 18 years.
-Therefore, cautious about the performance benefits a compiler brings.
-Focusing on programmer productivity is more fruitful In general, newer
-compilers take longer to compile, but produce slightly faster code maybe
-20% faster.</p>
-<p>Cyberdecks are evidence that the trend of going smaller isn’t always
-aesthetic</p>
-<p>Growing trend to have workstations operate in the cloud or
-containerisation. For testing yes, for development however?</p>
-<p>Strive towards much more potent nuclear fusion reactors as oppose to
-nuclear fission (neutron splits Uranium, same as original nuclear
-bombs)</p>
-<p>Amazing that certain old rpm harddrives were susceptible to crashing
-when ‘Rhythm Nation’ played as the resonant frequency was the same</p>
-<p>Streaming outnumbering cable and broadcast TV</p>
-<p>ripgrep a much faster and user friendly grep! unar will automatically
-handle pesky non-folder archives</p>
-<p>Interesting to see if mir wayland will take over xlib x11</p>
-<p>Although the open nature of RISC-V gives it some economical
-advantages, historically the ISA has not been the major driving factor
-in widespread adoption. Rather, who invests the most in R&amp;D,
-e.g. many places will develop ARM, with RISC-V go on your own.</p>
-<p>Security an ever present issue, e.g. every Ubuntu weekly newsletter
-get a list a security updates</p>
-<p>Privacy laws prevent recording keystrokes in app, however can record
-other information like time between keypresses etc. to identify you,
-e.g. TikTok</p>
-<p>Chiplets connection of chips. So, can build chiplets that aren’t SoC,
-e.g. just CPUs and SoCs without chiplets Intel R&amp;D into chiplet
-technology stacking presents it as a future possibility (Apple already
-uses it with two M1 max chips to M1 ultra)</p>
-<p>ACM (Association for Computing Machinery) Turing Award is essentially
-Nobel Prize for Computer Science. Not applicable for me as awards
-largely for academic contributions like papers/reports published e.g
-data abstraction (Liskov substitution, Byzantine fault tolerance),
-parallel computing (OpenMP standard). In some sense, the modern day
-Booles and Babbages I’m more concerned with engineering feats in
-software products.</p>
-<p>An unfortunate reality of open tech, AI being used to make paywalls
-‘smarter’</p>
-<p>Read a Google research project on removing noise in photos.
-Investigate source to test and am completely put off by the amount of
-dependencies involved: conda (why not just whole hog and docker),
-python, jax for TPU (python to tensor processing unit), external
-repositories This also applied to the ‘amazing’ AI image generator
-Stable Diffusion (I suppose high VRAM requirements also) Docker has uses
-in CI</p>
-<p>AI for everything dogma is becomming more pervasive with ‘clusters’
-to train model. Although Tesla can build a supercomputer to train, like
-all dogmas, not applicable to everything (readability, debugging goes
-down)</p>
-<p>Even air-gapped computers are not safe from sniffing</p>
-<p>Seems that any in-demand tech device subject to bot scalping</p>
-<p>As Moore’s law is widening, i.e. was 2 years now 4 years, companies
-creating own hardware, e.g. YouTube chip to handle transcoding</p>
-<!-- SPDX-License-Identifier: zlib-acknowledgement -->
-<p>hotloading metaprogramming</p>
-<p>Often legacy supported code adds lots of corner cases, e.g. opengl
-i.e don’t have consistent performance characteristics</p>
-<p>immediate mode and retained mode are about lifetimes. for immediate,
-the caller does not need to know about the lifetime of an object.</p>
-<p>discovering for linux docs (xlib, alsa) are code and for development
-may have to add to groups (uinput)</p>
-<p>plugins just be .so files that are loaded with dlsym()</p>
-<p>Use of discriminated unions and type fields for type sharing</p>
-<p>Visualising essential for debugging insidious problems… Print rows of
-text aligned Conversion from single-state to recording data over time
-will require memory which we will cast to appropriate state structure,
-e.g. DebugState state structures will have
-<code>b32 is_initialised</code> field which will initialise a memory
-arena Then have CounterState and CounterSnapshot (move per frame data
-into this) Each frame, copy over src to dst (with a rolling buffer) In
-the rendering of the records, to display snapshots, generate statistics
-like min, max, avg. These will be converged into a Statistic struct for
-each value Have helper function for begin, update and end statistic with
-value Now we have max, loop over again to generate graph height scale
-and say red colour scale Alternatively we could have absolute height
-scale, e.g <code>total / 0.033f</code> (So in drawing, will typically
-have ‘raw’ structures that just have data, and will then loop over these
-again to generate relationships to actually draw from etc.)</p>
-<p>(TODO: UI have layout and font information…) Drawing have left_edge,
-top_edge Drawing charts, define chart_height, bar_width, bar_spacing
-etc. in pixels Can draw single pixel height reference line Cycle through
-colours with <code>arr[index % ARRAY_COUNT(arr)]</code></p>
-<p>Drawing just take state, and input. After base drawing, look at input
-and alter if appropriate</p>
-<p>Draw routines with origin vector and vector axis (basis vectors) Axis
-that aren’t perpendicular causes shearing</p>
-<p>artist creates in SRGB space (in photoshop) so if we do any math on
-it (like a lerp), will have to convert it to linear space and then back
-to srgb for the monitor (if we were to just blit directly, it would be
-fine) to emulate complicated curves, could table drive it we compromise
-on r² and √2 without gamma correction, resultant image will look very
-dim (due to nature of monitor gamma curve) so with rgb values, preface
-with linear or srgb</p>
 </body>
 </html>
