@@ -232,8 +232,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#the-scripting-awakening"
-id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
 <li><a href="#rage-against-the-machine"
 id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
@@ -274,36 +272,10 @@ id="toc-sorting-squared-array">Sorting Squared Array</a></li>
 <li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
 Winner</a></li>
 </ul></li>
+<li><a href="#the-scripting-awakening"
+id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 </ul>
 </nav>
-<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
-<p>I decided to try and implement ctime in Bash for pedagogical
-purposes. My first task was to write and read a binary file. Googling
-how to do this in Bash returned the consensus, “use another language”.
-Often when I read this, I’m not deterred. I have encountered similar
-naysayers before when it comes to directly using Xlib. However, when it
-came to wanting structures to read and write to (essential for binary
-work), I found Bash was empty. With this understanding, I realised more
-generally that the usefulness of scripting languages are limited.
-Specifically, they should be limited to basic tasks that involve
-searching or external tool usage. I suppose my biggest use case of Bash
-is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
-interactions. C is a simple language and if you understand it’s
-low-level capabilities, you can do many things. However, despite this
-recognition, I did come upon certain procedures to follow when working
-with Bash scripts.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
 <p>The diverse software landscape of Linux distros means that we don’t
 know what version of each</p>
 <p>STM32CubeMX (this justs generates code, IDE is full fledged) to
@@ -1081,8 +1053,8 @@ processes, e.g. ‘Developer Experience Infrastructure’,</p>
 <p>Another billionaire investing in a ‘utopian cities’ seems more
 dystopic than anything.</p>
 <p>PIC have weird instruction set, so generally have to use with
-assembly over C compiler. So, use AVR for low-end like just LED driving?
-e.g. TLC5971</p>
+assembly over C compiler (no good free compiler) So, use AVR for low-end
+like just LED driving? e.g. TLC5971</p>
 <p>time-of-flight sensor like an infrared radar</p>
 <p>over-current and over-voltage detectors for when using charging
 devices, e.g USB-C charger? so, perhaps investigate/understand voltage
@@ -1115,10 +1087,30 @@ completely immersive</p>
 before compression succinct data structures are designed to not have to
 be decoded, i.e. everything is stored as bits. ∴ uses a lot less memory
 (however, only for larger datasets)</p>
+<p>compound literals issues with debugger and maintanence</p>
+<p>C11 static assertions, how to use? performance improvements? static
+const char sound_signature[] = { #embed &lt;sdk/jump.wav&gt; };
+static_assert((sizeof(sound_signature) / sizeof(*sound_signature)) &gt;=
+4, “There should be at least 4 elements in this array.”); anonymous
+structs int fnc(int arr[static 2])</p>
+<p>C23 can prevent VLA by defining constexpr true, false keywords
+nullptr (it’s a pointer not number) enum e : unsigned short { x }; digit
+separators function attributes</p>
+<p>smarter devices not necessarily better, e.g. printer’s with
+end-of-life software</p>
+<p>lol, ferrocene is a developing rust toolchain</p>
+<p>PLC more expensive microcontroller that is more versatile,
+e.g. handle voltage overload (often used in assembly lines)</p>
+<p>removing shared pointers probably gives later code in the pipeline a
+small cache boost as all the data is now co-located excessive logging
+cause for bad performance excessive heap usage bad for performance if on
+an OS note there is static, stack and heap memory areas</p>
+<p>lol, killedbygoogle.com. perhaps not wise to rely on new services</p>
 <p>sextempber cornucopia of condoms don’t have to be nostradamus to work
 out parents parking in effect, most people’s journey to learning is
 bespoke my engineering mind (which has been molded by experience)
-results in largely ad hoc responses</p>
+results in largely ad hoc responses many positive social dealings at
+university are unfortunately pyrrhic</p>
 <h1 id="news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
 the Pride</h1>
 <p>Politics are infiltrating areas of technology: * Rust toolchains on
@@ -1440,6 +1432,8 @@ https://academy.novelbits.io/register/annual-membership?_gl=1<em>15qz5rp</em>_ga
 https://lance.handmade.network/blog/p/8491-automated_crash_reporting_in_basically_one_400-line_function#26634
 in embedded, how are metrics transmitted remotely, i.e. via bluetooth to
 phone than web? too much power if directly to web?</p>
+<p>something related to HIL (hardware-in-loop testing)
+https://blog.golioth.io/golioth-hil-testing-part1/?mc_cid=da33e3796b&amp;mc_eid=UNIQID</p>
 <p>something related to systems testing with aardvark SPI/I2C adapter
 (more tutorials with bus pirate) 10:00 time mark:
 https://www.youtube.com/watch?v=N60WSQc-G_8&amp;list=PLTG9uzDd_HQ84wVz0DwQ5_mwf1GnpY6LB&amp;index=11
@@ -1462,7 +1456,10 @@ http://graphics.stanford.edu/~seander/bithacks.html</p>
 <p>is power profiler kit specific to each board necessary, e.g. nordic,
 stm32?</p>
 <p>blogs: https://dmitry.gr/?r=05.Projects
-https://tratt.net/laurie/blog/ http://stevehanov.ca/blog/</p>
+https://tratt.net/laurie/blog/ http://stevehanov.ca/blog/
+https://thephd.dev/ https://www.embeddedrelated.com/blogs.php
+memfault</p>
+<p>https://embeddedartistry.com/fieldatlas/embedded-software-development-maturity-model/?mc_cid=da33e3796b&amp;mc_eid=UNIQID</p>
 <p>Seems that IAR compiler produces smaller, faster code than gcc?</p>
 <p>Fallback to: https://grep.app/search when searching for code snippets
 on github?</p>
@@ -2478,5 +2475,33 @@ for STLs in general across all languages. Some may have bloatness from
 other areas, e.g. C++ templates To avoid the compiler having to generate
 a large export table of all functions, make them <code>static</code> To
 avoid large amounts of linking, have a unity build.</p>
+<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
+<p>I decided to try and implement ctime in Bash for pedagogical
+purposes. My first task was to write and read a binary file. Googling
+how to do this in Bash returned the consensus, “use another language”.
+Often when I read this, I’m not deterred. I have encountered similar
+naysayers before when it comes to directly using Xlib. However, when it
+came to wanting structures to read and write to (essential for binary
+work), I found Bash was empty. With this understanding, I realised more
+generally that the usefulness of scripting languages are limited.
+Specifically, they should be limited to basic tasks that involve
+searching or external tool usage. I suppose my biggest use case of Bash
+is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
+interactions. C is a simple language and if you understand it’s
+low-level capabilities, you can do many things. However, despite this
+recognition, I did come upon certain procedures to follow when working
+with Bash scripts.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
 </body>
 </html>
