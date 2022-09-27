@@ -263,19 +263,99 @@ the Pride</a></li>
 id="toc-language-of-the-people">Language of the People</a></li>
 <li><a href="#embedded-workflow" id="toc-embedded-workflow">Embedded
 Workflow</a></li>
-<li><a href="#array-away" id="toc-array-away">Array Away</a>
-<ul>
-<li><a href="#matching-pairs" id="toc-matching-pairs">Matching
-Pairs</a></li>
-<li><a href="#sorting-squared-array"
-id="toc-sorting-squared-array">Sorting Squared Array</a></li>
-<li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
-Winner</a></li>
-</ul></li>
+<li><a href="#check-if-nvidia-driver-is-installed"
+id="toc-check-if-nvidia-driver-is-installed">Check if nvidia driver is
+installed</a></li>
+<li><a href="#install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts"
+id="toc-install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts">Install
+CUDA toolkit 11.3 Upgrade 1 for Ubuntu 20.04 LTS</a></li>
 <li><a href="#the-scripting-awakening"
 id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 </ul>
 </nav>
+<p>The diverse software landscape of Linux distros means that we don’t
+know what version of each</p>
+<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
+download, must get link with email. STM32CubeIDE is woefully slow.
+Maximising to full screen just blurs out half Once installed, a series
+of pop-up menus just keep appearing spontaneously as it has to download
+more to satisfy a simple create project To download qtcreator well known
+bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
+command line arguments and mirror parsing,
+e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
+http://ftp.jaist.ac.jp/pub/qtproject</p>
+<p>My god, installing cubemx is awful. require email. password setting
+for account fails.</p>
+<p>QTcreator does not honour system .gdbinit file, have to manually set
+breakpoints and dissassembly flavour QTCreator doesn’t show console
+output. Tick ‘run in terminal’ crashes on startup</p>
+<p>Before even using the program, installing is bad. Install pandoc. It
+requires a pdf engine, e.g. xelatex that must be separately installed
+Which name is not found with traditional
+<code>sudo apt install xelatex</code>, it’s in
+<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
+package name to install a missing dependency is what I use ubuntu stack
+exchange mostly for…..</p>
+<p>Firefox just forces restart</p>
+<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
+<p>sound output varies significantly across different hardware. so, to
+detect possible sound bugs we may need to invest in a good piece of
+sound hardware</p>
+<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
+flexibility with pulse, e.g. can disable it if only needing one
+application at time, or can redirect it to another sound card) audio is
+a mess in linux</p>
+<p>due to disconnected nature of x11 and scheduling, must vsync.
+sleeping isn’t an option due default to round-robin scheduling policy
+(switching to real-time scheduling is not suitable for general-os). we
+could improve by setting niceness (however must be sudo) as not real
+time, we can’t control a lot of things, e.g. could be USB latency, adobe
+photoshop in background, etc. on say raspberry pi could program GPIO
+pins to have a accurate poll for a joystick.</p>
+<p>sound on linux is absurd (tribal knowledge). even the people on the
+mailing list don’t know how it works. constantly saying, don’t do this,
+use a library… often times, source code is the documentation, so good
+luck spending months on how to operate low level. return when threading
+is involved.</p>
+<p>x11 is more complicated than it needs to be. like many OS commands,
+it should do a lot of the dirty work for you, as no-one knows all the
+minutiae. it’s bad to think that OSs are getting harder to work with.
+however, it is unfair to pick on X11, as their are other apis (even
+modern) that are just as bad, even worse. x11 is particular annoying in
+that if it crashes, even launching a virtual terminal may not work as
+keys aren’t registered</p>
+<p>if only eclispe cdt debugger was good. it terminates for no reason
+when running (can sometimes be fixed by switching to run mode and then
+back to debug). sometimes have to restart to fix. run-to-line doesn’t
+work when inside sub-routine. memory browser crashes on entering
+address. doesn’t give information on stack overflows.</p>
+<p>firefox will unexpectanctly say we updated in the background and you
+must restart or tab crashed etc.</p>
+<p>Online help forums for QTCreator useless. In reality, only core devs
+would be able to answer your question thoroughly So, this is where I see
+the benefit of mailing lists</p>
+<p>Often Ubuntu audio mixer just stops working and generates fuzz and
+have to restart</p>
+<p>Firefox facebook video chat. For some reason just mysteriously stops
+working. says to restart, did that work, nope! both rev every fucking
+second is probably why.</p>
+<p>Unfortunate just resign yourself to choosing the software with fewest
+or manageable ‘quirks’ (bugs to offensive…)</p>
+<p>How on earth can something so frequently used like TeX have such
+poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
+text as text. If different file extension, will perform different
+parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
+<p>FreeCAD have to click in particular order for symmetry,
+e.g. point-line-point</p>
+<p>QTcreator so complicated to run cross-debugger, have to write down
+steps</p>
+<p>Tim Berners-Lee envisioned a universal place for information
+exchange. Unfortunately the freedom of creativity has resulted in much
+of the Web being intrusive and hindering</p>
+<p>Order of arguments matter in docker, for some reason –rm must be
+before -it</p>
+<p>default firefox credential store overwrote bitwarden password.
+ugh</p>
 <p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
 1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
 really only applicable for perhaps a logic gate or 0.1hz square wave)
@@ -1643,6 +1723,41 @@ sorts should always be used for automated testing?) Ask philip johnston
 on embedded artistry regarding widespread testing, e.g. multiple
 adapters?</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<p>YouTube: NerdyRodent</p>
+<p>sudo apt-get update sudo apt-get -y upgrade sudo apt-get -y
+install<br />
+gcc<br />
+make<br />
+pkg-config<br />
+apt-transport-https<br />
+ca-certificates</p>
+<p>if ! [ -f /etc/modprobe.d/blacklist-nouveau.conf ]; then echo
+“nouveau is not blacklisted, doing so and rebooting”</p>
+<p># Blacklist nouveau and rebuild kernel initramfs echo “blacklist
+nouveau options nouveau modeset=0” &gt;&gt; blacklist-nouveau.conf sudo
+mv blacklist-nouveau.conf /etc/modprobe.d/blacklist-nouveau.conf sudo
+update-initramfs -u # NOTE: fter rebooting we need to run this file
+again sudo reboot fi</p>
+<h1 id="check-if-nvidia-driver-is-installed">Check if nvidia driver is
+installed</h1>
+<p>if ! [ -f /usr/bin/nvidia-smi ]; then echo “nvidia driver is not
+installed, installing” # Install NVIDIA Linux toolkit 510.54 wget
+https://us.download.nvidia.com/XFree86/Linux-x86_64/510.54/NVIDIA-Linux-x86_64-510.54.run
+chmod +x NVIDIA-Linux-x86_64-510.54.run sudo bash
+./NVIDIA-Linux-x86_64-510.54.run rm NVIDIA-Linux-x86_64-510.54.run
+fi</p>
+<h1
+id="install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts">Install
+CUDA toolkit 11.3 Upgrade 1 for Ubuntu 20.04 LTS</h1>
+<p>wget
+https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin
+/etc/apt/preferences.d/cuda-repository-pin-600 wget
+https://developer.download.nvidia.com/compute/cuda/11.3.1/local_installers/cuda-repo-ubuntu2004-11-3-local_11.3.1-465.19.01-1_amd64.deb
+sudo dpkg -i
+cuda-repo-ubuntu2004-11-3-local_11.3.1-465.19.01-1_amd64.deb sudo
+apt-key add /var/cuda-repo-ubuntu2004-11-3-local/7fa2af80.pub sudo
+apt-get update sudo apt-get -y install cuda</p>
 <p>ssh-add -L or simply look in ~/.ssh directory (this is essential for
 private key)</p>
 <p>seems that packaged things in the cloud aren’t all that flexible,
@@ -1651,100 +1766,255 @@ e.g. ML-in-a-box cannot have independent components updated</p>
 <p>have to use -O and enclose with “” for wget</p>
 <p>annonyingly have to remove open source noveu driver also install cuda
 not from apt repository</p>
-<h1 id="array-away">Array Away</h1>
-<h2 id="matching-pairs">Matching Pairs</h2>
-<p>A quadratically scaling solution is intuitive However, as we know
-every match is unique, linearly scaling solution obtained with a hash
-map. C++ STL implementation of hash tables are sets (just keys) and maps
-Unordered variants are raw hash maps Ordered use self-balancing
-red-black-tree yielding logarithmic time Simplest hashing function
-<code>(x &gt;&gt; 4 + 12) &amp; (size - 1)</code> Important to keep in
-mind we are executing on a physical machine and that Big-Oh is a
-‘zero-cost abstraction’ world. For example, the extra overhead of
-introducing a hashmap (memory allocations/copies) will result in this
-being slower for small lists (also no dynamic memory allocations in ISR)
-This is why C++ STL uses hybrid introsort</p>
-<h2 id="sorting-squared-array">Sorting Squared Array</h2>
-<p>Quadratic insertion/bubble sort preferable for small lists Loglinear
-divide-and-conquer merge/quick for medium Linear radix for large</p>
-<h2 id="tournament-winner">Tournament Winner</h2>
-<p>In cases space and size parameters different Can join linear
-operations populate and min/max determination</p>
-<!-- SPDX-License-Identifier: zlib-acknowledgement -->
-<p>https://marketplace.fedevel.education/itemDetail.html?itemtype=course&amp;dbid=1569757838995&amp;instrid=us-east-2_KpwYC7yK5:45f6c01d-ccc8-43e0-8f33-c5a70caf707f</p>
-<p>Adventures in Creation</p>
-<p>can import .stl files and make basic extrusions/pockets</p>
-<p>rpi4-case: * container part - container_body · container_body_base:
-(centrifically locked; select outer points first) · inlet: vertically
-constrain construction line to external geometry * lid part · make
-container sketches visible · defining geometry<br />
-(link -&gt; union -&gt; transform/create-mesh-shape -&gt; move)</p>
-<p>shaft-in-wheel: * revolution pad tool * polar pattern for duplicating
-holes around centre domino: * symmetry sketch around centre line *
-mirror feature for say entire pad mirroring</p>
-<p>when creating lid lips, factor in printer tolerance, say 0.4mm also,
-add chamfer/fillet to lip edge</p>
-<p>rename pads and pockets</p>
-<p>Spreadsheet (have dimensions to make parametric): if want to access
-parameteric sketch constraint, &lt;<Sketch>&gt;.Constraints.name
-(IMPORTANT: even though variable, make sure to reference it off the
-sketch) GIVE OPTIONAL NAME SO CAN REFERENCE FROM .Constraints! (formula
-typecasting may be necessary, e.g. (value<em>1mm)) </em>
-printer_tolerance * container_l/w/h * board_offset_x/y * case_thickness
-* base_thickness * hole_diametre_percent_ratio
-(e.g. &lt;<Internal>&gt;.Constraints.height *
-hole_diametre_percent_ratio) * global_chamfer</p>
-<p>1.75mm PLA (polylactic acid) into 0.4mm nozzle</p>
-<p>0.15mm layer height speed/quality 15% infill gyroid
-integrity/speed/usage</p>
-<p>supports required for model that does not print over itself</p>
-<p>export g-code (like printer ISA?) to sd card</p>
-<p>supports necessary for complex geometries like overhangs, greater
-than 45°, etc. put supports everywhere by default? (perhaps add blockers
-to this?) maybe just use everywhere to get a feel for it, then manually
-add enforcers?</p>
-<p>can also use printrun usb-b interface to print without SD card?</p>
-<table style="width:8%;">
+<p>as python concept of CWD is strange, must run from outside
+directory</p>
+<table>
 <colgroup>
-<col style="width: 8%" />
+<col style="width: 100%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>most solder has flux core (typically rosin) to remove oxide films,
-i.e. wetting the metal (to remove dirt/grease will require cloth or
-steel brush) Sn/Pb (60/40) lower boiling point and shinier finish (cone
-shaped) then non-leaded. fumes are flux as boiling point of lead
-(≈1700°C) much higher fume extractor at top</th>
+<th style="text-align: left;">Euler, lower CFG scale makes image more
+honest to original</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Don’t restrict right side of bell curve Let your aces be aces Being
+<td style="text-align: left;">most solder has flux core (typically
+rosin) to remove oxide films, i.e. wetting the metal (to remove
+dirt/grease will require cloth or steel brush) Sn/Pb (60/40) lower
+boiling point and shinier finish (cone shaped) then non-leaded. fumes
+are flux as boiling point of lead (≈1700°C) much higher fume extractor
+at top</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">like most metal products, the iron has
+core (Cu, Fe) and plating metals (Cr, Sn)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lead is if course bad if ingested
+lead-free developed due to landfill leeching of disposed
+electronics</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wire guage is diametre use solid wire as
+easier to work with than stranded (which handles flexing better, so
+better for final projects)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">when heated, oxidation of solder iron tip
+is greatly accelerated thereby losing conductivity, wetting, etc.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rusting is a form of corrosion (damage
+slowy by chemical reaction) as rust is technically iron oxide, only iron
+can rust (giving electrons) however, other metals can corrode e.g. less
+reactive copper corrodes more slowly e.g. more reactive aluminium
+corrodes, however the oxide is tough and not flaky</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">silicon mat, brass wool (routinely
+removing stuck solder debris and rust), chisel-head (conical head other
+10%), gloves, glasses</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">300°C-350°C: lead 350°C-400°C:
+non-lead</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">iron temp. of 325°C good compromise</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tin by touching tip with solder and
+thrusting into wool. repeat twice tin regularly</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">heat materials with iron and apply solder
+to junction soldering station has feedback/adjustable/regulated
+temperature tin the tip every session</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">## THT 1mm gauges components typically
+higher thermal capacity, ∴ higher temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">## SMD flux pen 0.6mm gauge</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grounding strap with 1Mohm resistor to
+ensure same potential as board for sensitive electronics (not really
+necessary for dev-boards)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"># Workflow Preparation Mentality: ## Git
+usage: TODO(Ryan): collate into bash aliases * use gcd function enter
+habit to know if out of date * git commit aliases showing diff * find
+parents of hash: <code>git rev-list --parents -n 1 &lt;hash&gt;</code> *
+locate file content:
+<code>git log -S'content' -- file_name | tr '\n' ' '</code> * locate
+file added/deleted/modified/renamed:
+<code>git log --diff-filter=A -- foo.js</code> * previous commit
+messages:
+<code>git show --color -s --format='%C(yellow)(%as)%C(reset) %s' -5 | tr '~' ' '</code>
+<strong>merge commit with previous commit</strong>:
+<code>git rebase -i HEAD~n</code> a standard rebase will apply commits
+on top of interactive rebase to perform squashing on most recent
+<strong>merge conflict resolution</strong>:
+<code>git mergetool</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Working with modern software is going to
+be a pain at some point. Have to stay strong and not belittle situation,
+rather accept it and move on. At times, have to get off high horse and
+roll up your sleeves.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Linux issues: 1. runtime configurability
+(difficult part not API, but what to do when settings aren’t exact,
+i.e. what to fall back on when abstraction not there). 2. multiple
+binaries Although possible to dynamically load core libraries like
+xlib/wayland/alsa and support a minimum set of APIs, this is essentially
+what SDL does. However, system/user configurability is huge in linux.
+There is simply too much runtime variability to test for all users.
+Furthermore, multiple CRT to support, e.g. muslc for Alpine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">One way to solve variability is to use the
+Steam Runtime, which is a collection of .so files and configuration that
+is less subject to user configuration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Linux desktop suffers from binary
+compatibility nightmare, e.g. 15 binaries to support all. This is
+because libraries like glibc are happy to break abi to get minor
+improvements, e.g spec says this so let’s do it even though no one
+cares</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C STL has one version for each compiler +
+os. also, some compilers might not fully implement the STL feature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">With an undeclared identifier in a unity
+build, just reorder #includes in main file</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cross platform naming, e.g. With libc,
+libraries is more of a discipline thing There are no absolutes, just
+tradeoffs for solving your problem, e.g raw vs smart pointers Often
+issue is not hard code, it’s because the problem is messy, I. E.
+Unwritten assumptions, external constraints, users want lots of generic
+functionality. So often interesting at the same time, very
+annoying.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Data structures don’t correspond to layout
+in memory, e.g. When would you want awful cache locality of linked
+list</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frameworks change all the time,
+fundamentals not so much, e.g how things glue together</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">compression orientated program think about
+concept compression, rather than code compression. e.g. might be at such
+a small code size that there is no concept to really compress</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">combinations: 2ⁿ-1, max: 2ⁿ introducing
+negatives we effectively remove one bit numbers represented in twos
+complement to handle addition/subtraction of negatives and positives.
+not because of representation, e.g. sign bit would work fine when saying
+complement, it’s with respect to negative number handling: ones ➞ invert
+all bits in positive number to get negative. therefore have -0 twos ➞
+adding a positive and its negative will get a 2 in each place. think
+about the MSB as the negative place, hence why -1 is all 1s</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FPGA (matrix of CLBs) reprogrammable (as
+oppose to ASIC) IC with HDL. Better for parallel processing?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">dave’s garage, what’s a creel</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Switching between laptop and desktop as
+uni student meant merge conflicts were common. So, know how to fix with
+$(git mergetool) and have it as a rebase</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Github issue and pull request template
+files
+(https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/?mc_cid=a5a0d2dbbf&amp;mc_eid=UNIQID)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Terminal + Editor + Window manager</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Important to have linux source so as to
+view Documentation folder $(make kernelversion)
+https://www.youtube.com/watch?v=Jl_0W4o0xao</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(Serial Advanced Technology Attachment)
+important that these are sustained speeds, so for small file sizes
+expect a lot less as seconds smaller note that storage space advertised
+with S.I units, whilst OS works with binary</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RAM potentially hundreds of cycles (CAS
+latency and cache retrieval process) (important to note that RAM CAS is
+only say 20% of total latency as will check traverse cache and than copy
+it to cache)
+https://sites.utexas.edu/jdm4372/2011/03/10/memory-latency-components/
+In general: check if in L1. If not go check in L2 and mark least
+recently accessed L1 for move to L2. bubbles up to L3 until need for
+memory access which will go to memory controller etc.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">so, ram frequency gives max. throughput
+however latency of ram also important</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(cache latency from wikichip)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">generic is referencing Ubuntu specific
+kernel compilation (could also have -lowlatency etc.) (generic does not
+include a lot of modules in kernel to alleviate RAM, so use modprobe)
+(-41 is build number, i.e how many times compiled) (the compiler,
+linker, libc are all specific to linux OS used, e.g. compiled with
+different settings, different versions, etc.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">$(grub-install -V) /etc/default/grub
+(GRUB_CMDLINE_LINUX_DEFAULT=““); $(update-grub); $(cat /proc/cmdline)
+(acpi_enforce_resources=lax boot parameter to allow decode-dimms to find
+ram chip) Tentative to make boot changes, e.g. kernel parameters due to
+previous issues whereby performing a grub install on a loopback device
+affected the system’s existing EFI GUID. To alleviate these concerns,
+carry copy of ubuntu on USB to mount and backup regularly</td>
+</tr>
+</tbody>
+</table>
+<p>Don’t restrict right side of bell curve Let your aces be aces Being
 an ace involves having an opinion Most influential software written
 largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
 to maintain it. Fallacy about solo programmer productivity requiring
 large teams. Design by committee pushes design to middle of bell curve
-as opposing views average out</td>
-</tr>
-<tr class="even">
-<td>Cpu try to guess what instructions ahead (preemptive). Cost of
+as opposing views average out</p>
+<p>Cpu try to guess what instructions ahead (preemptive). Cost of
 incorrect reflushing expensive. So want to get rid of conditional jumps.
 Ideally replace with conditional movs or arithmetic branch less
 techniques. Endianness (register view), twos complement (-1 all 1s)
-Branch less programming is essentially SIMD</td>
-</tr>
-<tr class="odd">
-<td>What simd instructions available to cpu? If variable clock speed,
-cpu could detect not using all cores and increase single core clock</td>
-</tr>
-<tr class="even">
-<td>Flops calculated with best instruction set? Not memory bound is best
+Branch less programming is essentially SIMD</p>
+<p>What simd instructions available to cpu? If variable clock speed, cpu
+could detect not using all cores and increase single core clock</p>
+<p>Flops calculated with best instruction set? Not memory bound is best
 case for hyper threading Intel speeds optimised for gpr arithmetic,
 boolean and flops Why is Intel shr instruction so slow? Intel
-deliberately makes mmx slow</td>
-</tr>
-</tbody>
-</table>
+deliberately makes mmx slow —–</p>
 <p>For intel CPUs, i3-i7 of same generation will have same
 micro-architecture. Just more cache, hyperthreading, cores, die size
 etc.</p>
@@ -2596,88 +2866,5 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
-<p>The diverse software landscape of Linux distros means that we don’t
-know what version of each</p>
-<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
-download, must get link with email. STM32CubeIDE is woefully slow.
-Maximising to full screen just blurs out half Once installed, a series
-of pop-up menus just keep appearing spontaneously as it has to download
-more to satisfy a simple create project To download qtcreator well known
-bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
-command line arguments and mirror parsing,
-e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
-http://ftp.jaist.ac.jp/pub/qtproject</p>
-<p>My god, installing cubemx is awful. require email. password setting
-for account fails.</p>
-<p>QTcreator does not honour system .gdbinit file, have to manually set
-breakpoints and dissassembly flavour QTCreator doesn’t show console
-output. Tick ‘run in terminal’ crashes on startup</p>
-<p>Before even using the program, installing is bad. Install pandoc. It
-requires a pdf engine, e.g. xelatex that must be separately installed
-Which name is not found with traditional
-<code>sudo apt install xelatex</code>, it’s in
-<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
-package name to install a missing dependency is what I use ubuntu stack
-exchange mostly for…..</p>
-<p>Firefox just forces restart</p>
-<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
-<p>sound output varies significantly across different hardware. so, to
-detect possible sound bugs we may need to invest in a good piece of
-sound hardware</p>
-<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
-flexibility with pulse, e.g. can disable it if only needing one
-application at time, or can redirect it to another sound card) audio is
-a mess in linux</p>
-<p>due to disconnected nature of x11 and scheduling, must vsync.
-sleeping isn’t an option due default to round-robin scheduling policy
-(switching to real-time scheduling is not suitable for general-os). we
-could improve by setting niceness (however must be sudo) as not real
-time, we can’t control a lot of things, e.g. could be USB latency, adobe
-photoshop in background, etc. on say raspberry pi could program GPIO
-pins to have a accurate poll for a joystick.</p>
-<p>sound on linux is absurd (tribal knowledge). even the people on the
-mailing list don’t know how it works. constantly saying, don’t do this,
-use a library… often times, source code is the documentation, so good
-luck spending months on how to operate low level. return when threading
-is involved.</p>
-<p>x11 is more complicated than it needs to be. like many OS commands,
-it should do a lot of the dirty work for you, as no-one knows all the
-minutiae. it’s bad to think that OSs are getting harder to work with.
-however, it is unfair to pick on X11, as their are other apis (even
-modern) that are just as bad, even worse. x11 is particular annoying in
-that if it crashes, even launching a virtual terminal may not work as
-keys aren’t registered</p>
-<p>if only eclispe cdt debugger was good. it terminates for no reason
-when running (can sometimes be fixed by switching to run mode and then
-back to debug). sometimes have to restart to fix. run-to-line doesn’t
-work when inside sub-routine. memory browser crashes on entering
-address. doesn’t give information on stack overflows.</p>
-<p>firefox will unexpectanctly say we updated in the background and you
-must restart or tab crashed etc.</p>
-<p>Online help forums for QTCreator useless. In reality, only core devs
-would be able to answer your question thoroughly So, this is where I see
-the benefit of mailing lists</p>
-<p>Often Ubuntu audio mixer just stops working and generates fuzz and
-have to restart</p>
-<p>Firefox facebook video chat. For some reason just mysteriously stops
-working. says to restart, did that work, nope! both rev every fucking
-second is probably why.</p>
-<p>Unfortunate just resign yourself to choosing the software with fewest
-or manageable ‘quirks’ (bugs to offensive…)</p>
-<p>How on earth can something so frequently used like TeX have such
-poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
-text as text. If different file extension, will perform different
-parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
-<p>FreeCAD have to click in particular order for symmetry,
-e.g. point-line-point</p>
-<p>QTcreator so complicated to run cross-debugger, have to write down
-steps</p>
-<p>Tim Berners-Lee envisioned a universal place for information
-exchange. Unfortunately the freedom of creativity has resulted in much
-of the Web being intrusive and hindering</p>
-<p>Order of arguments matter in docker, for some reason –rm must be
-before -it</p>
-<p>default firefox credential store overwrote bitwarden password.
-ugh</p>
 </body>
 </html>
