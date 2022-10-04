@@ -232,8 +232,6 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#the-scripting-awakening"
-id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
 <li><a href="#rage-against-the-machine"
 id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
@@ -274,119 +272,10 @@ installed</a></li>
 <li><a href="#install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts"
 id="toc-install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts">Install
 CUDA toolkit 11.3 Upgrade 1 for Ubuntu 20.04 LTS</a></li>
+<li><a href="#the-scripting-awakening"
+id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 </ul>
 </nav>
-<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
-<p>I decided to try and implement ctime in Bash for pedagogical
-purposes. My first task was to write and read a binary file. Googling
-how to do this in Bash returned the consensus, “use another language”.
-Often when I read this, I’m not deterred. I have encountered similar
-naysayers before when it comes to directly using Xlib. However, when it
-came to wanting structures to read and write to (essential for binary
-work), I found Bash was empty. With this understanding, I realised more
-generally that the usefulness of scripting languages are limited.
-Specifically, they should be limited to basic tasks that involve
-searching or external tool usage. I suppose my biggest use case of Bash
-is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
-interactions. C is a simple language and if you understand it’s
-low-level capabilities, you can do many things. However, despite this
-recognition, I did come upon certain procedures to follow when working
-with Bash scripts.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
-<p>The diverse software landscape of Linux distros means that we don’t
-know what version of each</p>
-<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
-download, must get link with email. STM32CubeIDE is woefully slow.
-Maximising to full screen just blurs out half Once installed, a series
-of pop-up menus just keep appearing spontaneously as it has to download
-more to satisfy a simple create project To download qtcreator well known
-bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
-command line arguments and mirror parsing,
-e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
-http://ftp.jaist.ac.jp/pub/qtproject</p>
-<p>My god, installing cubemx is awful. require email. password setting
-for account fails.</p>
-<p>QTcreator does not honour system .gdbinit file, have to manually set
-breakpoints and dissassembly flavour QTCreator doesn’t show console
-output. Tick ‘run in terminal’ crashes on startup</p>
-<p>Before even using the program, installing is bad. Install pandoc. It
-requires a pdf engine, e.g. xelatex that must be separately installed
-Which name is not found with traditional
-<code>sudo apt install xelatex</code>, it’s in
-<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
-package name to install a missing dependency is what I use ubuntu stack
-exchange mostly for…..</p>
-<p>Firefox just forces restart</p>
-<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
-<p>sound output varies significantly across different hardware. so, to
-detect possible sound bugs we may need to invest in a good piece of
-sound hardware</p>
-<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
-flexibility with pulse, e.g. can disable it if only needing one
-application at time, or can redirect it to another sound card) audio is
-a mess in linux</p>
-<p>due to disconnected nature of x11 and scheduling, must vsync.
-sleeping isn’t an option due default to round-robin scheduling policy
-(switching to real-time scheduling is not suitable for general-os). we
-could improve by setting niceness (however must be sudo) as not real
-time, we can’t control a lot of things, e.g. could be USB latency, adobe
-photoshop in background, etc. on say raspberry pi could program GPIO
-pins to have a accurate poll for a joystick.</p>
-<p>sound on linux is absurd (tribal knowledge). even the people on the
-mailing list don’t know how it works. constantly saying, don’t do this,
-use a library… often times, source code is the documentation, so good
-luck spending months on how to operate low level. return when threading
-is involved.</p>
-<p>x11 is more complicated than it needs to be. like many OS commands,
-it should do a lot of the dirty work for you, as no-one knows all the
-minutiae. it’s bad to think that OSs are getting harder to work with.
-however, it is unfair to pick on X11, as their are other apis (even
-modern) that are just as bad, even worse. x11 is particular annoying in
-that if it crashes, even launching a virtual terminal may not work as
-keys aren’t registered</p>
-<p>if only eclispe cdt debugger was good. it terminates for no reason
-when running (can sometimes be fixed by switching to run mode and then
-back to debug). sometimes have to restart to fix. run-to-line doesn’t
-work when inside sub-routine. memory browser crashes on entering
-address. doesn’t give information on stack overflows.</p>
-<p>firefox will unexpectanctly say we updated in the background and you
-must restart or tab crashed etc.</p>
-<p>Online help forums for QTCreator useless. In reality, only core devs
-would be able to answer your question thoroughly So, this is where I see
-the benefit of mailing lists</p>
-<p>Often Ubuntu audio mixer just stops working and generates fuzz and
-have to restart</p>
-<p>Firefox facebook video chat. For some reason just mysteriously stops
-working. says to restart, did that work, nope! both rev every fucking
-second is probably why.</p>
-<p>Unfortunate just resign yourself to choosing the software with fewest
-or manageable ‘quirks’ (bugs to offensive…)</p>
-<p>How on earth can something so frequently used like TeX have such
-poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
-text as text. If different file extension, will perform different
-parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
-<p>FreeCAD have to click in particular order for symmetry,
-e.g. point-line-point</p>
-<p>QTcreator so complicated to run cross-debugger, have to write down
-steps</p>
-<p>Tim Berners-Lee envisioned a universal place for information
-exchange. Unfortunately the freedom of creativity has resulted in much
-of the Web being intrusive and hindering</p>
-<p>Order of arguments matter in docker, for some reason –rm must be
-before -it</p>
-<p>default firefox credential store overwrote bitwarden password.
-ugh</p>
 <p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
 1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
 really only applicable for perhaps a logic gate or 0.1hz square wave)
@@ -690,6 +579,9 @@ Javascript…</p>
 <p>IPv6 classic example of second-system effect</p>
 <p>Windows have to enable hidden file extensions to not enter a .txt
 file</p>
+<p>Although I’m in favour of an OS wrapper, these don’t give you all the
+control you need and you end up having to write your own OS specific
+code</p>
 <ul>
 <li><p>cool idea of SDR (software defined radio) and RF analyser
 https://greatscottgadgets.com/sdr/1/
@@ -1113,6 +1005,11 @@ decide to patent something</p>
 <p>Good news first ever drug to slow down cognitive decline of
 Alzheimer’s</p>
 <p>DreamFusion 2D-to-3D looks promising</p>
+<p>Will future cars will be synced with mobile OSs from Apple or
+Android?</p>
+<p>Unfortunately malware spreads through low-hanging CVEs or social
+engineering</p>
+<p>Memory market collapse, i.e. a type of chip market</p>
 <h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
 <p>Xcode cloud subscription. oh no wasting so much time on naming of new
 processes, e.g. ‘Developer Experience Infrastructure’</p>
@@ -1492,6 +1389,14 @@ on r² and √2 without gamma correction, resultant image will look very
 dim (due to nature of monitor gamma curve) so with rgb values, preface
 with linear or srgb</p>
 <p>IMPORTANT: ALWAYS PROVIDE EXAMPLE!</p>
+<p>https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/?mc_cid=3835da293a&amp;mc_eid=UNIQID</p>
+<p>Go through talks on memfault.com blog</p>
+<p>Simulator testing gives much faster turn-around times, can add
+sanitisers without memory concerns, pass peripheral data in from file,
+draw to window instead of display etc.</p>
+<p>For memory allocator, set to 0 on free in debug builds? Investigate
+gcc tunables, e.g. in debug build: export MALLOC_PERTURB_=<span
+class="math inline">((</span>RANDOM % 255 + 1))</p>
 <p>network game (with some testing tools):
 https://github.com/TheSandvichMaker/netgame</p>
 <p>TODO: how to calculate: “Its power supply system can supply up to
@@ -1661,7 +1566,11 @@ stm32?</p>
 <p>blogs: https://dmitry.gr/?r=05.Projects
 https://tratt.net/laurie/blog/ http://stevehanov.ca/blog/
 https://thephd.dev/ https://www.embeddedrelated.com/blogs.php
-https://lemon.rip/ https://jpieper.com/ memfault</p>
+https://lemon.rip/ https://jpieper.com/ https://www.embeddedrelated.com/
+https://patternsinthemachine.net/category/general/
+https://embeddeduse.com/
+https://martinfowler.com/articles/patterns-of-distributed-systems/?mc_cid=3835da293a&amp;mc_eid=UNIQID</p>
+<p>memfault</p>
 <p>https://embeddedartistry.com/fieldatlas/embedded-software-development-maturity-model/?mc_cid=da33e3796b&amp;mc_eid=UNIQID</p>
 <p>Seems that IAR compiler produces smaller, faster code than gcc?</p>
 <p>Fallback to: https://grep.app/search when searching for code snippets
@@ -1777,8 +1686,12 @@ adapters?</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
 <p>person image to 3d model: https://www.youtube.com/watch?v=6DOsWaxcHEM
 better auto-rigging: https://www.youtube.com/watch?v=XsAT3s8nrPE better
-person prints: https://www.youtube.com/watch?v=xSkyLuRnt4g MonsterMash
-2d-3d animation</p>
+person prints: https://www.youtube.com/watch?v=xSkyLuRnt4g</p>
+<p>can put ourselves into images, but have to train with ≈20GB VRAM
+using diffusers</p>
+<p>text to human animation:
+https://github.com/GuyTevet/motion-diffusion-model</p>
+<p>MonsterMash 2d-3d animation</p>
 <p>HEGEMONY</p>
 <p>OhMyPrints WallApp, canvas photo prints</p>
 <p>sudo apt-get update sudo apt-get -y upgrade sudo apt-get -y
@@ -2898,5 +2811,123 @@ multiple translation units, possible one might only have function
 declaration and not definition) (issues may occur with slower
 incremental builds when including 3rd party libraries; yet, can still
 work around this)</p>
+<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
+<p>I decided to try and implement ctime in Bash for pedagogical
+purposes. My first task was to write and read a binary file. Googling
+how to do this in Bash returned the consensus, “use another language”.
+Often when I read this, I’m not deterred. I have encountered similar
+naysayers before when it comes to directly using Xlib. However, when it
+came to wanting structures to read and write to (essential for binary
+work), I found Bash was empty. With this understanding, I realised more
+generally that the usefulness of scripting languages are limited.
+Specifically, they should be limited to basic tasks that involve
+searching or external tool usage. I suppose my biggest use case of Bash
+is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
+interactions. C is a simple language and if you understand it’s
+low-level capabilities, you can do many things. However, despite this
+recognition, I did come upon certain procedures to follow when working
+with Bash scripts.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
+<p>The diverse software landscape of Linux distros means that we don’t
+know what version of each</p>
+<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
+download, must get link with email. STM32CubeIDE is woefully slow.
+Maximising to full screen just blurs out half Once installed, a series
+of pop-up menus just keep appearing spontaneously as it has to download
+more to satisfy a simple create project To download qtcreator well known
+bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
+command line arguments and mirror parsing,
+e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
+http://ftp.jaist.ac.jp/pub/qtproject</p>
+<p>My god, installing cubemx is awful. require email. password setting
+for account fails.</p>
+<p>QTcreator does not honour system .gdbinit file, have to manually set
+breakpoints and dissassembly flavour QTCreator doesn’t show console
+output. Tick ‘run in terminal’ crashes on startup</p>
+<p>Before even using the program, installing is bad. Install pandoc. It
+requires a pdf engine, e.g. xelatex that must be separately installed
+Which name is not found with traditional
+<code>sudo apt install xelatex</code>, it’s in
+<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
+package name to install a missing dependency is what I use ubuntu stack
+exchange mostly for…..</p>
+<p>Firefox just forces restart</p>
+<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
+<p>sound output varies significantly across different hardware. so, to
+detect possible sound bugs we may need to invest in a good piece of
+sound hardware</p>
+<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
+flexibility with pulse, e.g. can disable it if only needing one
+application at time, or can redirect it to another sound card) audio is
+a mess in linux</p>
+<p>due to disconnected nature of x11 and scheduling, must vsync.
+sleeping isn’t an option due default to round-robin scheduling policy
+(switching to real-time scheduling is not suitable for general-os). we
+could improve by setting niceness (however must be sudo) as not real
+time, we can’t control a lot of things, e.g. could be USB latency, adobe
+photoshop in background, etc. on say raspberry pi could program GPIO
+pins to have a accurate poll for a joystick.</p>
+<p>sound on linux is absurd (tribal knowledge). even the people on the
+mailing list don’t know how it works. constantly saying, don’t do this,
+use a library… often times, source code is the documentation, so good
+luck spending months on how to operate low level. return when threading
+is involved.</p>
+<p>x11 is more complicated than it needs to be. like many OS commands,
+it should do a lot of the dirty work for you, as no-one knows all the
+minutiae. it’s bad to think that OSs are getting harder to work with.
+however, it is unfair to pick on X11, as their are other apis (even
+modern) that are just as bad, even worse. x11 is particular annoying in
+that if it crashes, even launching a virtual terminal may not work as
+keys aren’t registered</p>
+<p>if only eclispe cdt debugger was good. it terminates for no reason
+when running (can sometimes be fixed by switching to run mode and then
+back to debug). sometimes have to restart to fix. run-to-line doesn’t
+work when inside sub-routine. memory browser crashes on entering
+address. doesn’t give information on stack overflows.</p>
+<p>firefox will unexpectanctly say we updated in the background and you
+must restart or tab crashed etc.</p>
+<p>Online help forums for QTCreator useless. In reality, only core devs
+would be able to answer your question thoroughly So, this is where I see
+the benefit of mailing lists</p>
+<p>Often Ubuntu audio mixer just stops working and generates fuzz and
+have to restart</p>
+<p>Firefox facebook video chat. For some reason just mysteriously stops
+working. says to restart, did that work, nope! both rev every fucking
+second is probably why.</p>
+<p>Unfortunate just resign yourself to choosing the software with fewest
+or manageable ‘quirks’ (bugs to offensive…)</p>
+<p>How on earth can something so frequently used like TeX have such
+poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
+text as text. If different file extension, will perform different
+parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
+<p>FreeCAD have to click in particular order for symmetry,
+e.g. point-line-point</p>
+<p>QTcreator so complicated to run cross-debugger, have to write down
+steps</p>
+<p>Tim Berners-Lee envisioned a universal place for information
+exchange. Unfortunately the freedom of creativity has resulted in much
+of the Web being intrusive and hindering</p>
+<p>Order of arguments matter in docker, for some reason –rm must be
+before -it</p>
+<p>default firefox credential store overwrote bitwarden password.
+ugh</p>
+<p>Have so many Ubuntu variants when in reality just different packages
+installed (possibly different kernel parameters), e.g. mate, xubuntu,
+lbuntu, studio</p>
+<p>Ad division of companies seem to have greatest control over
+design</p>
+<p>Go on a news website and try to watch a video. after watching an
+obtrusive ad, video starts, skip to 30% of way, the same ad repeats…</p>
 </body>
 </html>
