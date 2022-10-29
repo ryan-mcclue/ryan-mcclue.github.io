@@ -232,6 +232,8 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#the-scripting-awakening"
+id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
 <li><a href="#rage-against-the-machine"
 id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
@@ -272,10 +274,594 @@ installed</a></li>
 <li><a href="#install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts"
 id="toc-install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts">Install
 CUDA toolkit 11.3 Upgrade 1 for Ubuntu 20.04 LTS</a></li>
-<li><a href="#the-scripting-awakening"
-id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 </ul>
 </nav>
+<p>time -p; getrusage();</p>
+<p>callbacks less CPU intensive than polling</p>
+<p>Saying one instruction is faster than the other ignores context of
+execution. e.g. mul and add same latency, however due to pipelining mul
+execution unit might be full TLS vs atomics, e.g. TLS is series of
+instructions determined by OS and compiler. Atomics depend on how other
+cores are run and synchronising necessary with other cores So, must
+measure which is faster for particular situation</p>
+<p>use $(time) for single line, use $(ctime)</p>
+<p>Can pin a thread to a core</p>
+<p>Can run programs in kernel space with eBPF</p>
+<p>Frequent context-switching will give terrible cache coherency</p>
+<p>adding <code>restrict</code> also useful to prevent aliasing and
+thereby might allow compiler to vectorise say array loops</p>
+<p>Before cpus increased in single thread execution speed. Now more
+cores. It’s a topic of research to convert single threaded into
+multithreaded for emulation. This is why emulation of something like the
+GameCube (powerpc) is slow. Furthermore, due to hardware irregularities
+that programs relied on may take hundreds of instructions to emulate If
+actually a simple translation, then should run close to native speed.
+This is reality of emulating hardware with hardware</p>
+<p>CISC gives reduced cache pressure for high-intensive, sustained
+loops</p>
+<p>log2(n) number of bits for decimal
+https://en.algorithmica.org/hpc/cpu-cache/associativity/</p>
+<p>using genetic algorithm/machine learning to optimise for us
+https://zeux.io/2020/01/22/learning-from-data/</p>
+<p>Cpu try to guess what instructions ahead (preemptive). Cost of
+incorrect reflushing expensive. So want to get rid of conditional jumps.
+Ideally replace with conditional movs or arithmetic branch less
+techniques. Endianness (register view), twos complement (-1 all 1s)
+Branch less programming is essentially SIMD</p>
+<p>If variable clock speed, cpu could detect not using all cores and
+increase single core clock</p>
+<p>Not memory bound is best case for hyper threading Intel speeds
+optimised for GPR arithmetic, boolean and flops Intel deliberately makes
+mmx slow</p>
+<p>Low cache associativity means fast lookup but a lot of misses and
+thus eviction policy like LRU</p>
+<p>Count cycles to counteract possible thermal throttling Hyperthreads
+useful only if different execution unit Cpu reads memory from cache and
+ram in cache lines (due to programmer access patterns). Each item in
+cache set is cache line size</p>
+<p>if apple computers use RISC ARM in M1, why CISC necessary? (only
+because on Intel?) emphasis of CISC simplify assembly (e.g. more
+addressing modes), thereby reducing size of binary? (reduce
+instructions) and increase cache coherency RISC will require less
+transistors to implement complex hardware but will make optimising
+harder for compiler? single cycle instructions (reduce cycles per
+instruction)</p>
+<p>when looking at a pointer, to optimise compiler must know whether it
+can assume it points to a local var or not. so, easier to eliminate
+aliasing with non-pointers</p>
+<p>when viewing from application in a sandboxed environment like a
+phone, total RAM less than installed as portion reserved for kernel</p>
+<p>simplistically RAM 50ns and HDD 10µs? faster to read than write</p>
+<p>2.5bln * 8 (simd) * n (execution units) * 2 (cores) assuming
+instructions have throughput of 1 so 64 / 4 gives how many floats per
+second from L1 cache in general, not streaming from memory the entire
+time (would probably hit a cache bandwidth limit)</p>
+<p>// undefined behaviour if not true ALWAYS_INLINE void assume(bool
+cond) { if(!(c)) {__builtin_unreachable()}; } times when manual inlining
+is required: https://www.youtube.com/watch?v=B2BFbs0DJzw</p>
+<p>Unless your in web where everything takes years to load, as single
+threaded performance is largely stagnant you will have to utilise
+parallelism if want performance. This is very difficult and like single
+threaded code generic libraries which can actually be very specific will
+create bloated in performing code based. Multithreading is building up a
+new discipline to single threaded. There are a lot of pitfalls for
+performance (balancing want things local, however must share to utilise)
+If you care about performance for anything, you should care about cache
+misses Memory bandwidth and caches are major reasons for a cup attaining
+performance. You have to think about where does memory actually live and
+how is it transferred around</p>
+<p>Optimiser allows for lexical scoping of stack variables. However, for
+optimiser to inline will have to get rid of pointers to prevent
+aliasing</p>
+<p>stack and heap memory are the same physical thing, so only more
+efficient if memory was hot, i.e. recently touched</p>
+<p>Computer faster than you think, e.g instructions, clock cycles,
+cores. Very large With M2 drive should be quick</p>
+<p>may be easier for optimising compiler to work with things passed by
+value as oppose to pointer. so, if need to modify something may have to
+return the value in a functional programming style. however, this is
+error prone. compiler cannot optimise pointers, e.g. if setting two
+values to same pointer, compiler cannot say that both the values are the
+same as another pointer may point to the same address. this is
+aliasing.</p>
+<p>we see contiguous memory in virtual memory, however in physical
+memory it is almost certainly going to be fragmented</p>
+<p>compilers can auto-vectorize loops for us (and other operations if we
+perform say 20 of them). so, floats will be twice as fast as doubles
+(more space, even though same latency and throughput)</p>
+<p>optimising is a very precise process. only do when you have code that
+is working and you know will keep. games by their very nature are about
+responsiveness, so optimisation and low-latency is important. I like
+programming with this as a mentality.</p>
+<p>with pure compiler optimisations, i.e. code we have not optimised
+ourselves, a 2x increase is not unexpected. (code we optimised not as
+much)</p>
+<p>optimise for worst case (looking out on whole world) not best case
+(in front of wall, don’t render what is behind). we care about highest
+framerate, not lowest.</p>
+<p>virtually never use lookup tables as ram memory is often 100x slower
+(so unless you can’t compute in 100 of instructions)</p>
+<ol type="1">
+<li>Optimisation (this is rarely done due to time involved) Do
+back-of-envelope calculations; look at algorithm to see if wasteful;
+benchmark to see if hitting theoretical calculations and then use
+timings etc. to isolate why our code isn’t hitting these theoretical
+numbers Very importantly need to know what the theoretical maximum is,
+which will be dependent on the program, e.g bounded by number of bytes
+sent to graphics card, kernel stdout etc.</li>
+<li>Non-pessimisation (do this all the time) Don’t introduce unecessary
+work (interpreter; complex libraries; constructs like
+polymorphism/classes people have convinced themselves are necessary) for
+the CPU to do to solve the problem</li>
+<li>Fake optimisation (very bad philosophy) Repeating context-specific
+statements e.g. use memcpy as it’s optimised (however the speed of
+something is so context specific, so non-statement), arrays are faster
+than linked lists (again, so dependent on what your usage patterns
+are)</li>
+</ol>
+<p>When many people say too much effort involved in optimisation, they
+are generally thinking of point 1</p>
+<p>sometimes things should be running faster than they should, however
+only so much we can replace e.g. the structure of many OSs are based on
+legacy code, so simply outputting to stdout may go through shell then
+kernel etc. also, may have to deal with pessimised libraries. in these
+cases: * isolate bad code, i.e. draw hard boundary between your code and
+theirs by caching calls to them * do as little modification to the data
+coming in from them (no need to say put in a string class etc.)</p>
+<p>People think that it’s slow, but it won’t crash (because of
+interpreter) Performance is critical in getting people excited about
+what you do, e.g. windows ce was laggy, iphone performant but less
+features changes the market low latency is more desirable, even if less
+features</p>
+<p>count number of math ops in function and control flow logic that is
+evaluated branches can get problematic if they’re unpredictable</p>
+<p>inspecting measurements of microarchitecture consider latency and
+throughtput (how much does it cost to start again) so, FMUL may have
+latency of 11, however throughput of 0.5, so can start 2 every cycle,
+i.e. issue again (cpus these days are incredibly overlapped even if
+single-threaded) so throughput is more of what we care about for
+sustained execution, e.g. in a loop</p>
+<p>however, these numbers are all assuming the data is in the chip. it’s
+just as important to see how long it takes to get data to the chip. look
+at cache parameters for microarchitecture; how many cycles to get from
+l1 cache, l2 cache, etc. when get to main memory potentially hundreds of
+cycles</p>
+<p>bandwidth of L1 cache say is 80 bytes/cycle, so can get 20 floats per
+cycle (however, based on size of L1 cache, not really sustainable for
+large data)</p>
+<p>http://igoro.com/archive/gallery-of-processor-cache-effects/</p>
+<p>(could just shortcut this and just see if flops is recorded for our
+chip)</p>
+<p>so, using these rough numbers we should be able to look at an
+algorithm (and dissect what operations it’s performing, like FMULs),
+know how much data it’s taking, and give a rough estimate as to how long
+it could optimally take (will never hit optimal however) IT’S CRITICAL
+TO KNOW HOW FAST SOMETHING SHOULD RUN</p>
+<p>REASONS SOFTWARE IS SLOW: 1. No back-of-envelope calculations (people
+aren’t concerned that they are running up to 1000 times slower thn what
+the hardware is capable of) These calculations involve say looking at
+number of math ops to be performed in the algoirthm and comparing that
+to the perfect hardware limit 2. Reusing code (20LOC is a lot; use
+things that do what you want to do, but not in the way you want them to
+be done; often piling up code that is ill-fitting to what the task was,
+e.g. we know this isn’t a regular ray cast, it’s a ray cast that is
+always looking down) 3. When writing, thinking of goals ancillary to
+task (not many places taught how to actually write code; all high level
+abstractions about clean code there are thinking about templates/classes
+etc. not just what does the computer actually have to do to do this
+task?) (there is no metric for clean code; it’s just some fictional
+thing people made up)</p>
+<p>WHENEVER UNDERSTANDING CODE EXAMPLES: 1. COMPILE AND STEP INTO (NOT
+OVER) IN DEBUGGER AND MAKE HIGH LEVEL STEPS PERFORMED look at these
+steps for duplicated/unecessary work (may pollute cache). (perhaps even
+asking why was the code written the way it was) could we gather things
+up in a prepass, i.e. outside of loop? if allocating memory each cycle
+that’s game over for performance. do we actually have to perform the
+same action to get the same result, e.g. a full raycast is not
+necessary, just segment on grid O(n·m) is multiplicative, not linear
+O(n). big oh is just indication of how it scales. could be less given
+some input threshold now, once code reduced, look at minimising number
+of ops</p>
+<p>cpu front end is figuring out what work it has to do,
+i.e. instruction decoding</p>
+<p>e.g simd struct is 288 bytes, 4.5 cache lines, able to store 8
+triangles</p>
+<p>understanding assembly language is essential in understanding why the
+code might not be performing well</p>
+<p>branch prediction necessary to ensure that the front-end can keep
+going and not have to wait on the back-end</p>
+<p>execution ports execute uops. however, the days of assembly language
+registers actually mapping to real registers is gone. instead, the
+registers from the uops are passed through a register allocation table
+(if we have say 16 general purpose registers, table has about 192
+entries; so a lot more) in the back-end this is because in many
+programs, things can happen in any order. so to take advantage of this,
+the register allocation table stores dependency chains of operations
+(wikichips.org for diagram) from execution port, could be fed back into
+scheduler or to load/store in actual memory</p>
+<p>when looking at assembly, when we say from memory, we actually mean
+from the L1 cache</p>
+<p>xmm is a sse register (4 wide, 16 bytes); m128 is a memory operand of
+128 bits ymm is 8 wide 1<em>p01 + 1</em>p23 is saying issue 1 microop on
+either port0 or port1 and one microop on either port2 or port3 so, we
+could issue the same instruction multiple times, i.e. throughput of
+0.5</p>
+<p>microop fusion is where a microop doesn’t count for your penalty as
+it’s fused with another. with combined memory ops,
+e.g. <code>vsubps ymm8, ymm3, ymmword ptr [rdx]</code> this is the case
+so, if a compiler were to separate this out into a mov and then a sub,
+not only does this put unecessary strain on the front-end decoder it
+also removes microop fusion as they are now separate microops (important
+to point out that I’m not the world best optimiser, or the worlds best
+optimisers assistant, so perhaps best not to outrightly say bad codegen,
+just say makes nervous)</p>
+<p>godbolt.org good for comparing compiler outputs and possible
+detecting a spurious load etc.</p>
+<p>macrop fusion is where you have an instruction that the front-end
+will handle for you, e.g. add and a jne will merge to addjne which will
+just send the 1 microp of add through</p>
+<p>uica.uops.info gives percentage of time instruction was on a port
+(this is useful for determining bottle-necks, e.g. series of
+instructions all require port 1 and 2, so cannot paralleise easily) so,
+although best case say is issue instruction every 4 cycles, this
+bottleneck will give higher throughput</p>
+<p>some levels of abstraction are necessary and good, e.g. higher level
+languages to assembly</p>
+<p>Optimise: gather stats -&gt; make estimate -&gt; analyse efficiency
+and performance</p>
+<p>file size https://justine.lol/sizetricks
+https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/236630#236630</p>
+<p>more important to understand how CPU and memory work than language
+involved in an OS, you will get given a zero-page due to security
+concerns</p>
+<p>likely() macros for branch prediction compiler optimisations
+(https://akkadia.org/drepper/cpumemory.pdf, pg 56)</p>
+<p>recording information: We want to understand where slow with vtune,
+amd uprof, arm performance reports Next, determine if IO bound, memory
+bound etc.</p>
+<p>To determine performance must have some stable metric, e.g. ops/sec
+to compare to e.g measure total time and number of operations
+Hyper-threading useful in alleviating memory latency, e.g. one thread is
+waiting to get content from RAM, the other hyper-thread can execute
+However, as we are not memory bound (just going through pixel by pixel
+and not generating anything intermediate; will all probably stay in L1
+cache), we are probably saturating the core’s ALUs, so hyper-threading
+not as useful</p>
+<p>Inspecting the assembly of our most expensive loop, we see that
+rand() is not inlined and is a call festival. This must be replaced
+Essentially we are looking for mathematical functions that could be
+inlined and aren’t that are in our hot-path. When you want something to
+be fast, it should not be calling anything. If it does, probably made a
+mistake Also note that using SIMD instructions, however not to their
+widest extent, i.e. single scalar ‘ss’. Want to replace with ‘ps’ packed
+scalar</p>
+<p>we have the option of constructor/destructor pairs if we want to
+determine best possible time if all caches align etc. ‘hunt for
+mininum’, e.g. record mininum time execution in loop iteration or re-run
+if smaller time yielded alternatively, we could develop a statistical
+breakdown of values (could see moments when kernel switches us out
+etc.)</p>
+<p>(IMPORTANT save out configuration and timing information for various
+optimisation stages, e.g. ./app &gt; 17-04-2022-image.txt)</p>
+<p>agnerfog optimise website ‘what’s a creel’</p>
+<p>threading Observe CPU percentage use is not close to 100% For
+multithreading, often have to pack into 64 bit value to perform single
+operation on it,
+e.g. <code>delta = (val1 &lt;&lt; 32 | val2); interlocked_add(&amp;val, delta)</code></p>
+<p>When making multi-threaded, segregate task by writing prototype
+‘chunk’ function, e.g. <code>render_tile</code> Then write a for loop
+combining these chunk functions Before entering the chunk function, good
+to have a configuration printout, e.g. num chunks, num cores, chunk dim,
+chunk size, etc.</p>
+<p>When dividing a whole into pieces, an uneven divisor will give less
+than what’s needed. so <code>(total + divisor - 1) / divisor</code> to
+ensure always enough. We will want this calculation to be in the last
+dividing operation, e.g. tile_width then tile_count calculated, so use
+on tile_count Associated with this calculation is clamping to handle
+adding extra exceeding original dimensions For getting proper place in
+chunk, call function wrapper for pointer location per row</p>
+<p>(May have to inline functions?) Next we want to pass each chunk onto
+a queue and then dequeue them from each logical core? So, have a
+WorkOrder that will store all information required to perform operation
+on chunk, i.e. all parameters in <code>render_chunk</code> function (may
+also store entropy for each chunk, i.e. random number series) Then a
+WorkQueue that contains an array of WorkOrders with total number
+equalling number of chunks So, the original loop iterating of chunks now
+just populates the WorkOrders Now in a while loop that runs while there
+are still chunks to execute, we call the <code>render_chunk</code>
+function and pass in the WorkQueue The <code>render_chunk</code>
+function will increment the next_work_order_index and return true if
+more to be done</p>
+<p>When spawning the actual worker thread functions, have same while
+loop calling the <code>render_chunk</code> function as for core 0 (the
+amount of threads to spawn would think should be equal to number of
+logical cores? however exceeding them may increase performance?) (this
+debate of manually prescribing the core count applies to the chunk size
+as well. perhaps the sweet-spot for my machine in balancing context
+switching and drain out is to manually prescribe their size as oppose to
+computing them off the core count) (Collating information into the
+WorkQueue struct helsp for printing out configuration) (Setting up this
+way, we can easily turn multithreading off)</p>
+<p>As creating threads will require platform specific, put prototypes in
+main.h and the implementations in linux_main.cpp Then include
+linux_main.cpp based on macro definition of platform in the build script
+at the bottom of main.cpp</p>
+<p>hyperthreading, architecture specific information becomes more
+important when in a situation where memory is constrained in relation to
+the cache (hyper-threads share same L1-L2 cache)</p>
+<p>volatile says code other than what is generated by this compiler run,
+could modify this value. it’s required for multithreaded, as compiler
+may not re-read value that it may have cached in a register if changed
+elsewhere when incrementing volatiles, must use a
+locked_add_and_return_previous_value (could return new value, just be
+clear)</p>
+<p>simd clamp can be re-written as min() and max() combination, which
+are instructions in SSE Although looking at the system monitor shows
+cpus maxed out, we could be wasting cycles, e.g. not using SIMD</p>
+<p>Define lane width, and divide with this to get the new loop count Go
+through loop and loft used values e.g. lane_r32, lane_v3, lane_u32
+(IMPORTANT at first we are only concerned with getting single values to
+work, later can worry about n-wide loading of values) (TODO the current
+code has the slots for each lane generated, rather than unpacked. look
+at handmade hero for this unpacking mode) If parameters to functions,
+loft them also (not functions? just parameters? however we do
+random_bilateral_lane() so yes to functions?) If using struct or struct
+member references, take out values and loft them also,
+e.g. sphere.radius == lane_r32 sphere_r; (group struct remappings
+together) Remap if statement conditions into a lane_u32 mask and remove
+enclosing brace hierarchy (IMPORTANT you can still have if statements if
+they apply to lanes, e.g. if mask_is_zeroed() break;) (TODO for
+mask_is_zeroed() we want the masks to be either all 1’s or 0’s) (call
+mask_is_zeroed() on all masks to early out as often as possible to get a
+speed up) Once lofted all if statements, &amp; all the masks into a
+single mask (it seems if there is large amounts of code inside the if
+statements, you don’t want to do it this way and rather check if needing
+to execute?) (IMPORTANT to only &amp; dependent masks, e.g. if there is
+an intermediate if like a pick_mask or clamp, then don’t include it, but
+do the conditional assign directly on this mask) Then enclose remaining
+assignments in a conditional assignment function using this single mask?
+(conditional_assign(&amp;var, final_mask, value); this uses positive
+mask to get source and negative mask to get dest?) (also discover the
+work around to perform binary operations on floating point numbers) So,
+by end of this all values operated upon should be a lane type? (can have
+some scalar types if appropriate) We may have situation where some items
+in a lane may finish before others. So, introduce a lane_mask variable
+that indicates this. To indicate say a break, we can do (lane_mask =
+lane_mask &amp; (hit_value == 0)); For incrementing, will have to
+introduce an incrementor value that will be zeroed out for the
+appropriate lane item that has finished. Have horizontal_add()? Next
+once everything remapped create a lane.h. Here, typedef the lane types
+to their single variants to ensure working before adding actual simd
+instructions Also do simd helper functions like horizontal_add(),
+mask_is_zeroed() in one dimension first Wrap the single lane helper
+functions and types in an if depending on the lane width set (IMPORTANT
+any functions that we are to SIMD, place here. if it comes that we want
+actual scalar, then rename with func_lane prefix)</p>
+<p>for simd typically have to organically transition from AOS to SOA</p>
+<p>Debug in single lane, single threaded mode (easier and debugger
+works) However, can increase lane width as needed (threading not so
+much?)</p>
+<p>For bitwise SIMD instructions, the compiler does not need to know how
+we are segmenting the register, e.g. 4x8, 8x8 etc. as the same result is
+obtained performing on the entire register at once. So they only provide
+one version of it, i.e. no epi32 only si128 Naming convention have
+types: <code>__m128 (float), __m128i (integer), __m128d (double)</code>
+and names in functions:
+<code>epi32/si128 (integer), ps (float), pd (double)</code> Overload
+operators on actual wide lane structs (IMPORTANT remember to do both
+orders, e.g. (val / scalar) and (scalar / val)) Also have conversion
+functions</p>
+<p>Lane agnostic functions go at bottom (like +=, -=, &amp;=, most v3
+functionality) (IMPORTANT it seems we can replace logical &amp;&amp; and
+|| with binary for same functionality in simd)</p>
+<p>(IMPORTANT simd does not handle unsigned conversions, may have to cut
+off sign bit, e.g. &gt;&gt; 1)</p>
+<p>process of casting type to pointer to access individual bytes or
+containing elements (used in file reading too)</p>
+<p>(IMPORTANT masks in SIMD will either be all 1’s or 0’s. perhaps have
+a specific name for this to distinguish?)</p>
+<p>(IMPORTANT seems that not all operations are provided in SSE, like
+!=, so have to implement with some bitwise operations)</p>
+<p>SIMD allows divide by zeros by default? (because nature of SIMD have
+to allow divide by zeroes?)</p>
+<p>To get over the fact that C doesn’t allow &amp; floating point,
+reinterpret bit paradigm <code>*(u32 *)&amp;a</code> as oppose to cast
+(IMPORTANT in SIMD cast is reinterpreting bits, so the opposite of cast
+in C)</p>
+<p>caching https://akkadia.org/drepper/cpumemory.pdf 1. know cache sizes
+to have data fit in it 2. know cache line sizes to ensure data is close
+together (may have to separate components of structs to allow loops to
+access less cache lines) i.e. understand what you operate on frequently.
+may also have to align struct 3. simple, linear access patterns (or
+prefetch instructions) for things larger than cache size</p>
+<p>inline assembly (raw syscalls from github) HAVE TO INSPECT/VERIFY
+ASSEMBLY IS SANE FIRST THEN LOOK AT TIMING INFORMATION inspecting
+compiler generated assembly loops, look for JMP to ascertain looping
+condition due to macro-op fusion (relevent to say Skylake), e.g. cmp-jmp
+non-programmable instructions could be executed by the cpu similarly,
+instructions that only exist on the frontend but exist programmatically
+e.g. xmm to xmm might just be a renaming in register allocation table
+also due to concurrent port usage, can identify parts of code as
+relatively ‘free’ struct access typically off a [base pointer] in
+assembly, 1.0f might be large number e.g. 1065353216 in assembly loop,
+repeated instructions may be due to loop unrolling we might see: *
+superfluous loading of values off stack * more instructions required,
+e.g not efficiently using SIMD (often this exposes the misconception
+that compilers are better than programmers; so better to handwrite
+intrinsics)</p>
+<p>comparing unoptimised assembly to ‘wc’ see noticeable speed increase.
+example of non-pessimisation</p>
+<p>Following the basic principles of non-pessimisation, I make a note of
+the huge amount of cruft in the C STL. The output buffering, hidden
+<code>malloc()</code> ‘optimisations’ (uncommitted memory, encounter
+expensive page faults later; prefer reliability/clarity over
+edge-performance benefits), OS line ending conversions, non-obvious use
+of mutexes etc. Whilst these may seem like minor inconveniences, they
+can be insidious for performance, e.g. <code>rand()</code> has a huge
+call-stack that if we replace with a simple xor shift, results in 3x
+speed up. Although easy to criticise, it may be the situation that the
+CRT had to be that way because of C standards. To isolate use of the
+CRT, wrap in functions so we can hopefully replace with system calls,
+intrinisics, etc. Although generally okay to use STL, it forces you to
+use their patterns (e.g. memory allocation, locks etc.). This is true
+for STLs in general across all languages. Some may have bloatness from
+other areas, e.g. C++ templates To avoid the compiler having to generate
+a large export table of all functions, make them <code>static</code> To
+avoid large amounts of linking and ∴ increase compilation time, have a
+unity build. Furthermore, garunteed ability to inline functions (as with
+multiple translation units, possible one might only have function
+declaration and not definition) (issues may occur with slower
+incremental builds when including 3rd party libraries; yet, can still
+work around this possibly using ccache)</p>
+<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
+<p>I decided to try and implement ctime in Bash for pedagogical
+purposes. My first task was to write and read a binary file. Googling
+how to do this in Bash returned the consensus, “use another language”.
+Often when I read this, I’m not deterred. I have encountered similar
+naysayers before when it comes to directly using Xlib. However, when it
+came to wanting structures to read and write to (essential for binary
+work), I found Bash was empty. With this understanding, I realised more
+generally that the usefulness of scripting languages are limited.
+Specifically, they should be limited to basic tasks that involve
+searching or external tool usage. I suppose my biggest use case of Bash
+is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
+interactions. C is a simple language and if you understand it’s
+low-level capabilities, you can do many things. However, despite this
+recognition, I did come upon certain procedures to follow when working
+with Bash scripts.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
+<p>The diverse software landscape of Linux distros means that we don’t
+know what version of each</p>
+<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
+download, must get link with email. STM32CubeIDE is woefully slow.
+Maximising to full screen just blurs out half Once installed, a series
+of pop-up menus just keep appearing spontaneously as it has to download
+more to satisfy a simple create project To download qtcreator well known
+bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
+command line arguments and mirror parsing,
+e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
+http://ftp.jaist.ac.jp/pub/qtproject</p>
+<p>My god, installing cubemx is awful. require email. password setting
+for account fails.</p>
+<p>QTcreator does not honour system .gdbinit file, have to manually set
+breakpoints and dissassembly flavour QTCreator doesn’t show console
+output. Tick ‘run in terminal’ crashes on startup</p>
+<p>Before even using the program, installing is bad. Install pandoc. It
+requires a pdf engine, e.g. xelatex that must be separately installed
+Which name is not found with traditional
+<code>sudo apt install xelatex</code>, it’s in
+<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
+package name to install a missing dependency is what I use ubuntu stack
+exchange mostly for…..</p>
+<p>Firefox just forces restart</p>
+<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
+<p>sound output varies significantly across different hardware. so, to
+detect possible sound bugs we may need to invest in a good piece of
+sound hardware</p>
+<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
+flexibility with pulse, e.g. can disable it if only needing one
+application at time, or can redirect it to another sound card) audio is
+a mess in linux</p>
+<p>due to disconnected nature of x11 and scheduling, must vsync.
+sleeping isn’t an option due default to round-robin scheduling policy
+(switching to real-time scheduling is not suitable for general-os). we
+could improve by setting niceness (however must be sudo) as not real
+time, we can’t control a lot of things, e.g. could be USB latency, adobe
+photoshop in background, etc. on say raspberry pi could program GPIO
+pins to have a accurate poll for a joystick.</p>
+<p>sound on linux is absurd (tribal knowledge). even the people on the
+mailing list don’t know how it works. constantly saying, don’t do this,
+use a library… often times, source code is the documentation, so good
+luck spending months on how to operate low level. return when threading
+is involved.</p>
+<p>x11 is more complicated than it needs to be. like many OS commands,
+it should do a lot of the dirty work for you, as no-one knows all the
+minutiae. it’s bad to think that OSs are getting harder to work with.
+however, it is unfair to pick on X11, as their are other apis (even
+modern) that are just as bad, even worse. x11 is particular annoying in
+that if it crashes, even launching a virtual terminal may not work as
+keys aren’t registered</p>
+<p>if only eclispe cdt debugger was good. it terminates for no reason
+when running (can sometimes be fixed by switching to run mode and then
+back to debug). sometimes have to restart to fix. run-to-line doesn’t
+work when inside sub-routine. memory browser crashes on entering
+address. doesn’t give information on stack overflows.</p>
+<p>firefox will unexpectanctly say we updated in the background and you
+must restart or tab crashed etc.</p>
+<p>Online help forums for QTCreator useless. In reality, only core devs
+would be able to answer your question thoroughly So, this is where I see
+the benefit of mailing lists</p>
+<p>Often Ubuntu audio mixer just stops working and generates fuzz and
+have to restart</p>
+<p>Firefox facebook video chat. For some reason just mysteriously stops
+working. says to restart, did that work, nope! both rev every fucking
+second is probably why.</p>
+<p>Unfortunate just resign yourself to choosing the software with fewest
+or manageable ‘quirks’ (bugs to offensive…)</p>
+<p>How on earth can something so frequently used like TeX have such
+poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
+text as text. If different file extension, will perform different
+parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
+<p>FreeCAD have to click in particular order for symmetry,
+e.g. point-line-point</p>
+<p>QTcreator so complicated to run cross-debugger, have to write down
+steps</p>
+<p>Tim Berners-Lee envisioned a universal place for information
+exchange. Unfortunately the freedom of creativity has resulted in much
+of the Web being intrusive and hindering</p>
+<p>Order of arguments matter in docker, for some reason –rm must be
+before -it</p>
+<p>default firefox credential store overwrote bitwarden password.
+ugh</p>
+<p>Have so many Ubuntu variants when in reality just different packages
+installed (possibly different kernel parameters), e.g. mate, xubuntu,
+lbuntu, studio</p>
+<p>Ad division of companies seem to have greatest control over
+design</p>
+<p>Go on a news website and try to watch a video. after watching an
+obtrusive ad, video starts, skip to 30% of way, the same ad repeats…</p>
+<p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
+1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
+really only applicable for perhaps a logic gate or 0.1hz square wave)
+can debug PWM, I2C Ensure BNC connector is plugged in correctly (affect
+probe compensation; similar to banana plugs in multimeter not being
+plugged in correctly) Continous triggering enables us to view from start
+point, i.e. static image not free flowing. Will show before and after
+trigger point, i.e. start in centre of screen No real issue with
+oscilloscope blowing up if testing battery powered/isolated DC power
+supply. With USB powered, ground must be on ground! Otherwise will short
+USB and that port will probably break</p>
+<p>Normal-mode triggering the best of both worlds</p>
+<p>Using RS232 (recommended standard) decoder functionality (there is
+also SPI/I2C decoding).
+https://www.youtube.com/watch?v=SarsWOCMvjg&amp;t=76s Also investigate
+PWM</p>
+<p>IMPORTANT: ensure offset dials are correct first, i.e. at 0 so 0 is
+centre with menu, end-arrows can still be pressed even if not visible
+change to 24mega points for memory when just wanting wave length (not
+zooming in?)</p>
+<p>math -&gt; decoder on; event table on (make sure zoomed out enough to
+view multiple packets (this will increase memory automatically?);
+increase baud also)</p>
+<p>single-shot triggering contact bounce first then ringing as stablises
+(makes it a balancing act between selecting triggering level for button
+press and release) Multimeter measure power consumption of MCU? (stm32
+nucleo boards have convenient IDD jumper) verify signal ringing
+(e.g. clock signal), i.e. inspect ramp-up/down (measure time to
+completely bottom out)</p>
+<p>Bus Pirate has PIC as a SOIC (surface outline integrated circuit)
+package</p>
 <h1 id="resilience">Resilience</h1>
 <p>TACKLING DIFFICULT PROBLEM – HOTLOADING FILE MODIFICATION TIME BEING
 READ TOO EARLY. MISINTERPRETING TIMESPEC NANOSEC</p>
@@ -685,6 +1271,7 @@ projects</p>
 <h1
 id="important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
 FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</h1>
+<p>Intel thunderbolt faster than USB C (ports look very similar)</p>
 <p>red team is security offensive, blue is defensive</p>
 <p>TODO: vulkan compute shader vs CUDA?</p>
 <p>CMAKE: 1. inclusive library (<code>add_subdirectory()</code>,
@@ -1150,7 +1737,7 @@ or Google</p>
 <p>Will NFC for door locks take hold?</p>
 <p>AI for vaccine development sounds promising</p>
 <p>Are the petabit speeds of research optical chip really that useful if
-hardware can’t process that fast?</p>
+hardware can’t process that fast? Will radio only get us so far?</p>
 <p>Probably better to use url-shortener service for sharing links</p>
 <p>Perhaps explainpaper.com could break into reading programming
 papers</p>
@@ -1158,6 +1745,14 @@ papers</p>
 app-stores, taking revenue percentage of adds on apps, etc.</p>
 <p>Bioengineered plants seem promising in say absorbing air
 pollutants</p>
+<p>Amazon continue to kibosh any semblance of non-monolopy now getting
+into home insurance</p>
+<p>Raptor Lake overclock to over 8GHz (however with liquid
+nitrogen…)</p>
+<p>With development of cheaper more powerful hardware, companies
+introducing more ‘gaming’ brands e.g. Phillips new gaming monitor</p>
+<p>Another cautionary tale to not update with Apple update nerfing ANC
+earphones</p>
 <h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
 <p>Xcode cloud subscription. oh no wasting so much time on naming of new
 processes, e.g. ‘Developer Experience Infrastructure’</p>
@@ -2642,591 +3237,5 @@ string literals stored in the data segment.</p>
 <p>Endianness comes into play when reading/writing from disk (e.g. file
 type magic value) and working directly with <code>u8 *</code>
 (e.g. iterating through bytes of a u32)</p>
-<p>time -p; getrusage();</p>
-<p>callbacks less CPU intensive than polling</p>
-<p>Saying one instruction is faster than the other ignores context of
-execution. e.g. mul and add same latency, however due to pipelining mul
-execution unit might be full TLS vs atomics, e.g. TLS is series of
-instructions determined by OS and compiler. Atomics depend on how other
-cores are run and synchronising necessary with other cores So, must
-measure which is faster for particular situation</p>
-<p>use $(time) for single line, use $(ctime)</p>
-<p>Can pin a thread to a core</p>
-<p>Can run programs in kernel space with eBPF</p>
-<p>Frequent context-switching will give terrible cache coherency</p>
-<p>adding <code>restrict</code> also useful to prevent aliasing and
-thereby might allow compiler to vectorise say array loops</p>
-<p>Before cpus increased in single thread execution speed. Now more
-cores. It’s a topic of research to convert single threaded into
-multithreaded for emulation. This is why emulation of something like the
-GameCube (powerpc) is slow. Furthermore, due to hardware irregularities
-that programs relied on may take hundreds of instructions to emulate If
-actually a simple translation, then should run close to native speed.
-This is reality of emulating hardware with hardware</p>
-<p>CISC gives reduced cache pressure for high-intensive, sustained
-loops</p>
-<p>log2(n) number of bits for decimal
-https://en.algorithmica.org/hpc/cpu-cache/associativity/</p>
-<p>using genetic algorithm/machine learning to optimise for us
-https://zeux.io/2020/01/22/learning-from-data/</p>
-<p>Cpu try to guess what instructions ahead (preemptive). Cost of
-incorrect reflushing expensive. So want to get rid of conditional jumps.
-Ideally replace with conditional movs or arithmetic branch less
-techniques. Endianness (register view), twos complement (-1 all 1s)
-Branch less programming is essentially SIMD</p>
-<p>If variable clock speed, cpu could detect not using all cores and
-increase single core clock</p>
-<p>Not memory bound is best case for hyper threading Intel speeds
-optimised for GPR arithmetic, boolean and flops Intel deliberately makes
-mmx slow</p>
-<p>Low cache associativity means fast lookup but a lot of misses and
-thus eviction policy like LRU</p>
-<p>Count cycles to counteract possible thermal throttling Hyperthreads
-useful only if different execution unit Cpu reads memory from cache and
-ram in cache lines (due to programmer access patterns). Each item in
-cache set is cache line size</p>
-<p>if apple computers use RISC ARM in M1, why CISC necessary? (only
-because on Intel?) emphasis of CISC simplify assembly (e.g. more
-addressing modes), thereby reducing size of binary? (reduce
-instructions) and increase cache coherency RISC will require less
-transistors to implement complex hardware but will make optimising
-harder for compiler? single cycle instructions (reduce cycles per
-instruction)</p>
-<p>when looking at a pointer, to optimise compiler must know whether it
-can assume it points to a local var or not. so, easier to eliminate
-aliasing with non-pointers</p>
-<p>when viewing from application in a sandboxed environment like a
-phone, total RAM less than installed as portion reserved for kernel</p>
-<p>simplistically RAM 50ns and HDD 10µs? faster to read than write</p>
-<p>2.5bln * 8 (simd) * n (execution units) * 2 (cores) assuming
-instructions have throughput of 1 so 64 / 4 gives how many floats per
-second from L1 cache in general, not streaming from memory the entire
-time (would probably hit a cache bandwidth limit)</p>
-<p>// undefined behaviour if not true ALWAYS_INLINE void assume(bool
-cond) { if(!(c)) {__builtin_unreachable()}; } times when manual inlining
-is required: https://www.youtube.com/watch?v=B2BFbs0DJzw</p>
-<p>Unless your in web where everything takes years to load, as single
-threaded performance is largely stagnant you will have to utilise
-parallelism if want performance. This is very difficult and like single
-threaded code generic libraries which can actually be very specific will
-create bloated in performing code based. Multithreading is building up a
-new discipline to single threaded. There are a lot of pitfalls for
-performance (balancing want things local, however must share to utilise)
-If you care about performance for anything, you should care about cache
-misses Memory bandwidth and caches are major reasons for a cup attaining
-performance. You have to think about where does memory actually live and
-how is it transferred around</p>
-<p>Optimiser allows for lexical scoping of stack variables. However, for
-optimiser to inline will have to get rid of pointers to prevent
-aliasing</p>
-<p>stack and heap memory are the same physical thing, so only more
-efficient if memory was hot, i.e. recently touched</p>
-<p>Computer faster than you think, e.g instructions, clock cycles,
-cores. Very large With M2 drive should be quick</p>
-<p>may be easier for optimising compiler to work with things passed by
-value as oppose to pointer. so, if need to modify something may have to
-return the value in a functional programming style. however, this is
-error prone. compiler cannot optimise pointers, e.g. if setting two
-values to same pointer, compiler cannot say that both the values are the
-same as another pointer may point to the same address. this is
-aliasing.</p>
-<p>we see contiguous memory in virtual memory, however in physical
-memory it is almost certainly going to be fragmented</p>
-<p>compilers can auto-vectorize loops for us (and other operations if we
-perform say 20 of them). so, floats will be twice as fast as doubles
-(more space, even though same latency and throughput)</p>
-<p>optimising is a very precise process. only do when you have code that
-is working and you know will keep. games by their very nature are about
-responsiveness, so optimisation and low-latency is important. I like
-programming with this as a mentality.</p>
-<p>with pure compiler optimisations, i.e. code we have not optimised
-ourselves, a 2x increase is not unexpected. (code we optimised not as
-much)</p>
-<p>optimise for worst case (looking out on whole world) not best case
-(in front of wall, don’t render what is behind). we care about highest
-framerate, not lowest.</p>
-<p>virtually never use lookup tables as ram memory is often 100x slower
-(so unless you can’t compute in 100 of instructions)</p>
-<ol type="1">
-<li>Optimisation (this is rarely done due to time involved) Do
-back-of-envelope calculations; look at algorithm to see if wasteful;
-benchmark to see if hitting theoretical calculations and then use
-timings etc. to isolate why our code isn’t hitting these theoretical
-numbers Very importantly need to know what the theoretical maximum is,
-which will be dependent on the program, e.g bounded by number of bytes
-sent to graphics card, kernel stdout etc.</li>
-<li>Non-pessimisation (do this all the time) Don’t introduce unecessary
-work (interpreter; complex libraries; constructs like
-polymorphism/classes people have convinced themselves are necessary) for
-the CPU to do to solve the problem</li>
-<li>Fake optimisation (very bad philosophy) Repeating context-specific
-statements e.g. use memcpy as it’s optimised (however the speed of
-something is so context specific, so non-statement), arrays are faster
-than linked lists (again, so dependent on what your usage patterns
-are)</li>
-</ol>
-<p>When many people say too much effort involved in optimisation, they
-are generally thinking of point 1</p>
-<p>sometimes things should be running faster than they should, however
-only so much we can replace e.g. the structure of many OSs are based on
-legacy code, so simply outputting to stdout may go through shell then
-kernel etc. also, may have to deal with pessimised libraries. in these
-cases: * isolate bad code, i.e. draw hard boundary between your code and
-theirs by caching calls to them * do as little modification to the data
-coming in from them (no need to say put in a string class etc.)</p>
-<p>People think that it’s slow, but it won’t crash (because of
-interpreter) Performance is critical in getting people excited about
-what you do, e.g. windows ce was laggy, iphone performant but less
-features changes the market low latency is more desirable, even if less
-features</p>
-<p>count number of math ops in function and control flow logic that is
-evaluated branches can get problematic if they’re unpredictable</p>
-<p>inspecting measurements of microarchitecture consider latency and
-throughtput (how much does it cost to start again) so, FMUL may have
-latency of 11, however throughput of 0.5, so can start 2 every cycle,
-i.e. issue again (cpus these days are incredibly overlapped even if
-single-threaded) so throughput is more of what we care about for
-sustained execution, e.g. in a loop</p>
-<p>however, these numbers are all assuming the data is in the chip. it’s
-just as important to see how long it takes to get data to the chip. look
-at cache parameters for microarchitecture; how many cycles to get from
-l1 cache, l2 cache, etc. when get to main memory potentially hundreds of
-cycles</p>
-<p>bandwidth of L1 cache say is 80 bytes/cycle, so can get 20 floats per
-cycle (however, based on size of L1 cache, not really sustainable for
-large data)</p>
-<p>http://igoro.com/archive/gallery-of-processor-cache-effects/</p>
-<p>(could just shortcut this and just see if flops is recorded for our
-chip)</p>
-<p>so, using these rough numbers we should be able to look at an
-algorithm (and dissect what operations it’s performing, like FMULs),
-know how much data it’s taking, and give a rough estimate as to how long
-it could optimally take (will never hit optimal however) IT’S CRITICAL
-TO KNOW HOW FAST SOMETHING SHOULD RUN</p>
-<p>REASONS SOFTWARE IS SLOW: 1. No back-of-envelope calculations (people
-aren’t concerned that they are running up to 1000 times slower thn what
-the hardware is capable of) These calculations involve say looking at
-number of math ops to be performed in the algoirthm and comparing that
-to the perfect hardware limit 2. Reusing code (20LOC is a lot; use
-things that do what you want to do, but not in the way you want them to
-be done; often piling up code that is ill-fitting to what the task was,
-e.g. we know this isn’t a regular ray cast, it’s a ray cast that is
-always looking down) 3. When writing, thinking of goals ancillary to
-task (not many places taught how to actually write code; all high level
-abstractions about clean code there are thinking about templates/classes
-etc. not just what does the computer actually have to do to do this
-task?) (there is no metric for clean code; it’s just some fictional
-thing people made up)</p>
-<p>WHENEVER UNDERSTANDING CODE EXAMPLES: 1. COMPILE AND STEP INTO (NOT
-OVER) IN DEBUGGER AND MAKE HIGH LEVEL STEPS PERFORMED look at these
-steps for duplicated/unecessary work (may pollute cache). (perhaps even
-asking why was the code written the way it was) could we gather things
-up in a prepass, i.e. outside of loop? if allocating memory each cycle
-that’s game over for performance. do we actually have to perform the
-same action to get the same result, e.g. a full raycast is not
-necessary, just segment on grid O(n·m) is multiplicative, not linear
-O(n). big oh is just indication of how it scales. could be less given
-some input threshold now, once code reduced, look at minimising number
-of ops</p>
-<p>cpu front end is figuring out what work it has to do,
-i.e. instruction decoding</p>
-<p>e.g simd struct is 288 bytes, 4.5 cache lines, able to store 8
-triangles</p>
-<p>understanding assembly language is essential in understanding why the
-code might not be performing well</p>
-<p>branch prediction necessary to ensure that the front-end can keep
-going and not have to wait on the back-end</p>
-<p>execution ports execute uops. however, the days of assembly language
-registers actually mapping to real registers is gone. instead, the
-registers from the uops are passed through a register allocation table
-(if we have say 16 general purpose registers, table has about 192
-entries; so a lot more) in the back-end this is because in many
-programs, things can happen in any order. so to take advantage of this,
-the register allocation table stores dependency chains of operations
-(wikichips.org for diagram) from execution port, could be fed back into
-scheduler or to load/store in actual memory</p>
-<p>when looking at assembly, when we say from memory, we actually mean
-from the L1 cache</p>
-<p>xmm is a sse register (4 wide, 16 bytes); m128 is a memory operand of
-128 bits ymm is 8 wide 1<em>p01 + 1</em>p23 is saying issue 1 microop on
-either port0 or port1 and one microop on either port2 or port3 so, we
-could issue the same instruction multiple times, i.e. throughput of
-0.5</p>
-<p>microop fusion is where a microop doesn’t count for your penalty as
-it’s fused with another. with combined memory ops,
-e.g. <code>vsubps ymm8, ymm3, ymmword ptr [rdx]</code> this is the case
-so, if a compiler were to separate this out into a mov and then a sub,
-not only does this put unecessary strain on the front-end decoder it
-also removes microop fusion as they are now separate microops (important
-to point out that I’m not the world best optimiser, or the worlds best
-optimisers assistant, so perhaps best not to outrightly say bad codegen,
-just say makes nervous)</p>
-<p>godbolt.org good for comparing compiler outputs and possible
-detecting a spurious load etc.</p>
-<p>macrop fusion is where you have an instruction that the front-end
-will handle for you, e.g. add and a jne will merge to addjne which will
-just send the 1 microp of add through</p>
-<p>uica.uops.info gives percentage of time instruction was on a port
-(this is useful for determining bottle-necks, e.g. series of
-instructions all require port 1 and 2, so cannot paralleise easily) so,
-although best case say is issue instruction every 4 cycles, this
-bottleneck will give higher throughput</p>
-<p>some levels of abstraction are necessary and good, e.g. higher level
-languages to assembly</p>
-<p>Optimise: gather stats -&gt; make estimate -&gt; analyse efficiency
-and performance</p>
-<p>file size https://justine.lol/sizetricks
-https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/236630#236630</p>
-<p>more important to understand how CPU and memory work than language
-involved in an OS, you will get given a zero-page due to security
-concerns</p>
-<p>likely() macros for branch prediction compiler optimisations
-(https://akkadia.org/drepper/cpumemory.pdf, pg 56)</p>
-<p>recording information: We want to understand where slow with vtune,
-amd uprof, arm performance reports Next, determine if IO bound, memory
-bound etc.</p>
-<p>To determine performance must have some stable metric, e.g. ops/sec
-to compare to e.g measure total time and number of operations
-Hyper-threading useful in alleviating memory latency, e.g. one thread is
-waiting to get content from RAM, the other hyper-thread can execute
-However, as we are not memory bound (just going through pixel by pixel
-and not generating anything intermediate; will all probably stay in L1
-cache), we are probably saturating the core’s ALUs, so hyper-threading
-not as useful</p>
-<p>Inspecting the assembly of our most expensive loop, we see that
-rand() is not inlined and is a call festival. This must be replaced
-Essentially we are looking for mathematical functions that could be
-inlined and aren’t that are in our hot-path. When you want something to
-be fast, it should not be calling anything. If it does, probably made a
-mistake Also note that using SIMD instructions, however not to their
-widest extent, i.e. single scalar ‘ss’. Want to replace with ‘ps’ packed
-scalar</p>
-<p>we have the option of constructor/destructor pairs if we want to
-determine best possible time if all caches align etc. ‘hunt for
-mininum’, e.g. record mininum time execution in loop iteration or re-run
-if smaller time yielded alternatively, we could develop a statistical
-breakdown of values (could see moments when kernel switches us out
-etc.)</p>
-<p>(IMPORTANT save out configuration and timing information for various
-optimisation stages, e.g. ./app &gt; 17-04-2022-image.txt)</p>
-<p>agnerfog optimise website ‘what’s a creel’</p>
-<p>threading Observe CPU percentage use is not close to 100% For
-multithreading, often have to pack into 64 bit value to perform single
-operation on it,
-e.g. <code>delta = (val1 &lt;&lt; 32 | val2); interlocked_add(&amp;val, delta)</code></p>
-<p>When making multi-threaded, segregate task by writing prototype
-‘chunk’ function, e.g. <code>render_tile</code> Then write a for loop
-combining these chunk functions Before entering the chunk function, good
-to have a configuration printout, e.g. num chunks, num cores, chunk dim,
-chunk size, etc.</p>
-<p>When dividing a whole into pieces, an uneven divisor will give less
-than what’s needed. so <code>(total + divisor - 1) / divisor</code> to
-ensure always enough. We will want this calculation to be in the last
-dividing operation, e.g. tile_width then tile_count calculated, so use
-on tile_count Associated with this calculation is clamping to handle
-adding extra exceeding original dimensions For getting proper place in
-chunk, call function wrapper for pointer location per row</p>
-<p>(May have to inline functions?) Next we want to pass each chunk onto
-a queue and then dequeue them from each logical core? So, have a
-WorkOrder that will store all information required to perform operation
-on chunk, i.e. all parameters in <code>render_chunk</code> function (may
-also store entropy for each chunk, i.e. random number series) Then a
-WorkQueue that contains an array of WorkOrders with total number
-equalling number of chunks So, the original loop iterating of chunks now
-just populates the WorkOrders Now in a while loop that runs while there
-are still chunks to execute, we call the <code>render_chunk</code>
-function and pass in the WorkQueue The <code>render_chunk</code>
-function will increment the next_work_order_index and return true if
-more to be done</p>
-<p>When spawning the actual worker thread functions, have same while
-loop calling the <code>render_chunk</code> function as for core 0 (the
-amount of threads to spawn would think should be equal to number of
-logical cores? however exceeding them may increase performance?) (this
-debate of manually prescribing the core count applies to the chunk size
-as well. perhaps the sweet-spot for my machine in balancing context
-switching and drain out is to manually prescribe their size as oppose to
-computing them off the core count) (Collating information into the
-WorkQueue struct helsp for printing out configuration) (Setting up this
-way, we can easily turn multithreading off)</p>
-<p>As creating threads will require platform specific, put prototypes in
-main.h and the implementations in linux_main.cpp Then include
-linux_main.cpp based on macro definition of platform in the build script
-at the bottom of main.cpp</p>
-<p>hyperthreading, architecture specific information becomes more
-important when in a situation where memory is constrained in relation to
-the cache (hyper-threads share same L1-L2 cache)</p>
-<p>volatile says code other than what is generated by this compiler run,
-could modify this value. it’s required for multithreaded, as compiler
-may not re-read value that it may have cached in a register if changed
-elsewhere when incrementing volatiles, must use a
-locked_add_and_return_previous_value (could return new value, just be
-clear)</p>
-<p>simd clamp can be re-written as min() and max() combination, which
-are instructions in SSE Although looking at the system monitor shows
-cpus maxed out, we could be wasting cycles, e.g. not using SIMD</p>
-<p>Define lane width, and divide with this to get the new loop count Go
-through loop and loft used values e.g. lane_r32, lane_v3, lane_u32
-(IMPORTANT at first we are only concerned with getting single values to
-work, later can worry about n-wide loading of values) (TODO the current
-code has the slots for each lane generated, rather than unpacked. look
-at handmade hero for this unpacking mode) If parameters to functions,
-loft them also (not functions? just parameters? however we do
-random_bilateral_lane() so yes to functions?) If using struct or struct
-member references, take out values and loft them also,
-e.g. sphere.radius == lane_r32 sphere_r; (group struct remappings
-together) Remap if statement conditions into a lane_u32 mask and remove
-enclosing brace hierarchy (IMPORTANT you can still have if statements if
-they apply to lanes, e.g. if mask_is_zeroed() break;) (TODO for
-mask_is_zeroed() we want the masks to be either all 1’s or 0’s) (call
-mask_is_zeroed() on all masks to early out as often as possible to get a
-speed up) Once lofted all if statements, &amp; all the masks into a
-single mask (it seems if there is large amounts of code inside the if
-statements, you don’t want to do it this way and rather check if needing
-to execute?) (IMPORTANT to only &amp; dependent masks, e.g. if there is
-an intermediate if like a pick_mask or clamp, then don’t include it, but
-do the conditional assign directly on this mask) Then enclose remaining
-assignments in a conditional assignment function using this single mask?
-(conditional_assign(&amp;var, final_mask, value); this uses positive
-mask to get source and negative mask to get dest?) (also discover the
-work around to perform binary operations on floating point numbers) So,
-by end of this all values operated upon should be a lane type? (can have
-some scalar types if appropriate) We may have situation where some items
-in a lane may finish before others. So, introduce a lane_mask variable
-that indicates this. To indicate say a break, we can do (lane_mask =
-lane_mask &amp; (hit_value == 0)); For incrementing, will have to
-introduce an incrementor value that will be zeroed out for the
-appropriate lane item that has finished. Have horizontal_add()? Next
-once everything remapped create a lane.h. Here, typedef the lane types
-to their single variants to ensure working before adding actual simd
-instructions Also do simd helper functions like horizontal_add(),
-mask_is_zeroed() in one dimension first Wrap the single lane helper
-functions and types in an if depending on the lane width set (IMPORTANT
-any functions that we are to SIMD, place here. if it comes that we want
-actual scalar, then rename with func_lane prefix)</p>
-<p>for simd typically have to organically transition from AOS to SOA</p>
-<p>Debug in single lane, single threaded mode (easier and debugger
-works) However, can increase lane width as needed (threading not so
-much?)</p>
-<p>For bitwise SIMD instructions, the compiler does not need to know how
-we are segmenting the register, e.g. 4x8, 8x8 etc. as the same result is
-obtained performing on the entire register at once. So they only provide
-one version of it, i.e. no epi32 only si128 Naming convention have
-types: <code>__m128 (float), __m128i (integer), __m128d (double)</code>
-and names in functions:
-<code>epi32/si128 (integer), ps (float), pd (double)</code> Overload
-operators on actual wide lane structs (IMPORTANT remember to do both
-orders, e.g. (val / scalar) and (scalar / val)) Also have conversion
-functions</p>
-<p>Lane agnostic functions go at bottom (like +=, -=, &amp;=, most v3
-functionality) (IMPORTANT it seems we can replace logical &amp;&amp; and
-|| with binary for same functionality in simd)</p>
-<p>(IMPORTANT simd does not handle unsigned conversions, may have to cut
-off sign bit, e.g. &gt;&gt; 1)</p>
-<p>process of casting type to pointer to access individual bytes or
-containing elements (used in file reading too)</p>
-<p>(IMPORTANT masks in SIMD will either be all 1’s or 0’s. perhaps have
-a specific name for this to distinguish?)</p>
-<p>(IMPORTANT seems that not all operations are provided in SSE, like
-!=, so have to implement with some bitwise operations)</p>
-<p>SIMD allows divide by zeros by default? (because nature of SIMD have
-to allow divide by zeroes?)</p>
-<p>To get over the fact that C doesn’t allow &amp; floating point,
-reinterpret bit paradigm <code>*(u32 *)&amp;a</code> as oppose to cast
-(IMPORTANT in SIMD cast is reinterpreting bits, so the opposite of cast
-in C)</p>
-<p>caching https://akkadia.org/drepper/cpumemory.pdf 1. know cache sizes
-to have data fit in it 2. know cache line sizes to ensure data is close
-together (may have to separate components of structs to allow loops to
-access less cache lines) i.e. understand what you operate on frequently.
-may also have to align struct 3. simple, linear access patterns (or
-prefetch instructions) for things larger than cache size</p>
-<p>inline assembly (raw syscalls from github) HAVE TO INSPECT/VERIFY
-ASSEMBLY IS SANE FIRST THEN LOOK AT TIMING INFORMATION inspecting
-compiler generated assembly loops, look for JMP to ascertain looping
-condition due to macro-op fusion (relevent to say Skylake), e.g. cmp-jmp
-non-programmable instructions could be executed by the cpu similarly,
-instructions that only exist on the frontend but exist programmatically
-e.g. xmm to xmm might just be a renaming in register allocation table
-also due to concurrent port usage, can identify parts of code as
-relatively ‘free’ struct access typically off a [base pointer] in
-assembly, 1.0f might be large number e.g. 1065353216 in assembly loop,
-repeated instructions may be due to loop unrolling we might see: *
-superfluous loading of values off stack * more instructions required,
-e.g not efficiently using SIMD (often this exposes the misconception
-that compilers are better than programmers; so better to handwrite
-intrinsics)</p>
-<p>comparing unoptimised assembly to ‘wc’ see noticeable speed increase.
-example of non-pessimisation</p>
-<p>Following the basic principles of non-pessimisation, I make a note of
-the huge amount of cruft in the C STL. The output buffering, hidden
-<code>malloc()</code> ‘optimisations’ (uncommitted memory, encounter
-expensive page faults later; prefer reliability/clarity over
-edge-performance benefits), OS line ending conversions, non-obvious use
-of mutexes etc. Whilst these may seem like minor inconveniences, they
-can be insidious for performance, e.g. <code>rand()</code> has a huge
-call-stack that if we replace with a simple xor shift, results in 3x
-speed up. Although easy to criticise, it may be the situation that the
-CRT had to be that way because of C standards. To isolate use of the
-CRT, wrap in functions so we can hopefully replace with system calls,
-intrinisics, etc. Although generally okay to use STL, it forces you to
-use their patterns (e.g. memory allocation, locks etc.). This is true
-for STLs in general across all languages. Some may have bloatness from
-other areas, e.g. C++ templates To avoid the compiler having to generate
-a large export table of all functions, make them <code>static</code> To
-avoid large amounts of linking and ∴ increase compilation time, have a
-unity build. Furthermore, garunteed ability to inline functions (as with
-multiple translation units, possible one might only have function
-declaration and not definition) (issues may occur with slower
-incremental builds when including 3rd party libraries; yet, can still
-work around this possibly using ccache)</p>
-<h1 id="the-scripting-awakening">The Scripting Awakening</h1>
-<p>I decided to try and implement ctime in Bash for pedagogical
-purposes. My first task was to write and read a binary file. Googling
-how to do this in Bash returned the consensus, “use another language”.
-Often when I read this, I’m not deterred. I have encountered similar
-naysayers before when it comes to directly using Xlib. However, when it
-came to wanting structures to read and write to (essential for binary
-work), I found Bash was empty. With this understanding, I realised more
-generally that the usefulness of scripting languages are limited.
-Specifically, they should be limited to basic tasks that involve
-searching or external tool usage. I suppose my biggest use case of Bash
-is for enhancing my terminal (.bashrc) and vim (<code>:.!</code>)
-interactions. C is a simple language and if you understand it’s
-low-level capabilities, you can do many things. However, despite this
-recognition, I did come upon certain procedures to follow when working
-with Bash scripts.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
-<p>The diverse software landscape of Linux distros means that we don’t
-know what version of each</p>
-<p>STM32CubeMX (this justs generates code, IDE is full fledged) to
-download, must get link with email. STM32CubeIDE is woefully slow.
-Maximising to full screen just blurs out half Once installed, a series
-of pop-up menus just keep appearing spontaneously as it has to download
-more to satisfy a simple create project To download qtcreator well known
-bug that it selects the wrong mirror, 3MBps to 30kbs. Have to decipher
-command line arguments and mirror parsing,
-e.g. ./qt-unified-linux-x64-4.3.0-1-online.run –mirror
-http://ftp.jaist.ac.jp/pub/qtproject</p>
-<p>My god, installing cubemx is awful. require email. password setting
-for account fails.</p>
-<p>QTcreator does not honour system .gdbinit file, have to manually set
-breakpoints and dissassembly flavour QTCreator doesn’t show console
-output. Tick ‘run in terminal’ crashes on startup</p>
-<p>Before even using the program, installing is bad. Install pandoc. It
-requires a pdf engine, e.g. xelatex that must be separately installed
-Which name is not found with traditional
-<code>sudo apt install xelatex</code>, it’s in
-<code>texlive-xetex</code> and is 100MB… Searching for the appropriate
-package name to install a missing dependency is what I use ubuntu stack
-exchange mostly for…..</p>
-<p>Firefox just forces restart</p>
-<p>gpus have introduced a whole host of undocumented NDA annoyances</p>
-<p>sound output varies significantly across different hardware. so, to
-detect possible sound bugs we may need to invest in a good piece of
-sound hardware</p>
-<p>in linux, x11 is mixer for drm, pulse a mixer for alsa (more
-flexibility with pulse, e.g. can disable it if only needing one
-application at time, or can redirect it to another sound card) audio is
-a mess in linux</p>
-<p>due to disconnected nature of x11 and scheduling, must vsync.
-sleeping isn’t an option due default to round-robin scheduling policy
-(switching to real-time scheduling is not suitable for general-os). we
-could improve by setting niceness (however must be sudo) as not real
-time, we can’t control a lot of things, e.g. could be USB latency, adobe
-photoshop in background, etc. on say raspberry pi could program GPIO
-pins to have a accurate poll for a joystick.</p>
-<p>sound on linux is absurd (tribal knowledge). even the people on the
-mailing list don’t know how it works. constantly saying, don’t do this,
-use a library… often times, source code is the documentation, so good
-luck spending months on how to operate low level. return when threading
-is involved.</p>
-<p>x11 is more complicated than it needs to be. like many OS commands,
-it should do a lot of the dirty work for you, as no-one knows all the
-minutiae. it’s bad to think that OSs are getting harder to work with.
-however, it is unfair to pick on X11, as their are other apis (even
-modern) that are just as bad, even worse. x11 is particular annoying in
-that if it crashes, even launching a virtual terminal may not work as
-keys aren’t registered</p>
-<p>if only eclispe cdt debugger was good. it terminates for no reason
-when running (can sometimes be fixed by switching to run mode and then
-back to debug). sometimes have to restart to fix. run-to-line doesn’t
-work when inside sub-routine. memory browser crashes on entering
-address. doesn’t give information on stack overflows.</p>
-<p>firefox will unexpectanctly say we updated in the background and you
-must restart or tab crashed etc.</p>
-<p>Online help forums for QTCreator useless. In reality, only core devs
-would be able to answer your question thoroughly So, this is where I see
-the benefit of mailing lists</p>
-<p>Often Ubuntu audio mixer just stops working and generates fuzz and
-have to restart</p>
-<p>Firefox facebook video chat. For some reason just mysteriously stops
-working. says to restart, did that work, nope! both rev every fucking
-second is probably why.</p>
-<p>Unfortunate just resign yourself to choosing the software with fewest
-or manageable ‘quirks’ (bugs to offensive…)</p>
-<p>How on earth can something so frequently used like TeX have such
-poor/cryptic parsing error information Furthermore, pandoc doesn’t treat
-text as text. If different file extension, will perform different
-parsing e.g. inserts ‘hidden’ YAML header if markdown file</p>
-<p>FreeCAD have to click in particular order for symmetry,
-e.g. point-line-point</p>
-<p>QTcreator so complicated to run cross-debugger, have to write down
-steps</p>
-<p>Tim Berners-Lee envisioned a universal place for information
-exchange. Unfortunately the freedom of creativity has resulted in much
-of the Web being intrusive and hindering</p>
-<p>Order of arguments matter in docker, for some reason –rm must be
-before -it</p>
-<p>default firefox credential store overwrote bitwarden password.
-ugh</p>
-<p>Have so many Ubuntu variants when in reality just different packages
-installed (possibly different kernel parameters), e.g. mate, xubuntu,
-lbuntu, studio</p>
-<p>Ad division of companies seem to have greatest control over
-design</p>
-<p>Go on a news website and try to watch a video. after watching an
-obtrusive ad, video starts, skip to 30% of way, the same ad repeats…</p>
-<p>240V/50Hz mains. oscilloscope default noise is mains (200MHz,
-1Gsamples/sec as oppose to multimeter which is maybe 10samples/sec so
-really only applicable for perhaps a logic gate or 0.1hz square wave)
-can debug PWM, I2C Ensure BNC connector is plugged in correctly (affect
-probe compensation; similar to banana plugs in multimeter not being
-plugged in correctly) Continous triggering enables us to view from start
-point, i.e. static image not free flowing. Will show before and after
-trigger point, i.e. start in centre of screen No real issue with
-oscilloscope blowing up if testing battery powered/isolated DC power
-supply. With USB powered, ground must be on ground! Otherwise will short
-USB and that port will probably break</p>
-<p>Normal-mode triggering the best of both worlds</p>
-<p>Using RS232 (recommended standard) decoder functionality (there is
-also SPI/I2C decoding).
-https://www.youtube.com/watch?v=SarsWOCMvjg&amp;t=76s Also investigate
-PWM</p>
-<p>IMPORTANT: ensure offset dials are correct first, i.e. at 0 so 0 is
-centre with menu, end-arrows can still be pressed even if not visible
-change to 24mega points for memory when just wanting wave length (not
-zooming in?)</p>
-<p>math -&gt; decoder on; event table on (make sure zoomed out enough to
-view multiple packets (this will increase memory automatically?);
-increase baud also)</p>
-<p>single-shot triggering contact bounce first then ringing as stablises
-(makes it a balancing act between selecting triggering level for button
-press and release) Multimeter measure power consumption of MCU? (stm32
-nucleo boards have convenient IDD jumper) verify signal ringing
-(e.g. clock signal), i.e. inspect ramp-up/down (measure time to
-completely bottom out)</p>
-<p>Bus Pirate has PIC as a SOIC (surface outline integrated circuit)
-package</p>
 </body>
 </html>
