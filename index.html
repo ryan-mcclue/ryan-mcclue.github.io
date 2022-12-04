@@ -169,6 +169,13 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#news---scaling-the-libra"
+id="toc-news---scaling-the-libra">NEWS - Scaling the Libra</a></li>
+<li><a href="#news---sagging-arrow" id="toc-news---sagging-arrow">NEWS -
+Sagging Arrow</a></li>
+<li><a href="#news---leo-the-lion-enters-the-pride"
+id="toc-news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
+the Pride</a></li>
 <li><a href="#news---goat-in-current"
 id="toc-news---goat-in-current">NEWS - Goat in Current</a></li>
 <li><a href="#news---a-virgin-woman" id="toc-news---a-virgin-woman">NEWS
@@ -185,6 +192,277 @@ id="toc-install-cuda-toolkit-11.3-upgrade-1-for-ubuntu-20.04-lts">Install
 CUDA toolkit 11.3 Upgrade 1 for Ubuntu 20.04 LTS</a></li>
 </ul>
 </nav>
+<h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
+<p>Xcode cloud subscription. oh no wasting so much time on naming of new
+processes, e.g. ‘Developer Experience Infrastructure’</p>
+<p>Another billionaire investing in a ‘utopian cities’ seems more
+dystopic than anything. Promulgation of venture capitalists, angel
+investors, etc.</p>
+<p>PIC have weird instruction set, so generally have to use with
+assembly over C compiler (no good free compiler) So, use AVR for low-end
+like just LED driving? e.g. TLC5971</p>
+<p>time-of-flight sensor like an infrared radar</p>
+<p>over-current and over-voltage detectors for when using charging
+devices, e.g USB-C charger? so, perhaps investigate/understand voltage
+regulators? also have UVLO (undervoltage-lockout)</p>
+<p>new USB-PD (power delivery) interface more power from USB-C</p>
+<p>I can see machine learning ‘appropriate’ in say cleaning up random
+noise, e.g. brain signals</p>
+<p>interesting set of questions to inspect a software engineering
+workplace:
+https://neverworkintheory.org/2022/08/30/software-engineering-research-questions.html?utm_source=tldrnewsletter</p>
+<p>things like database accelerator library indicative of normal
+software not being fast</p>
+<p>MOSFETs are a type of transistor. different transistors for say
+quick-switching, low signal, high frequency, amplifier etc.</p>
+<p>USB-4, PCI5, DDR5 emerging standards.</p>
+<p>Could buy a GPU for running interesting machine learning applications
+like Stable Diffusion (prompt engineers, oh dear…) https://www.krea.ai/
+GPU structure similar to CPUs, e.g have cache, GDDR6 memory (more simple
+parrellisation)</p>
+<p>float-toy nice web visualistion tool</p>
+<p>interestingly CRT can scale better than fixed-set resolution LCD</p>
+<p>new TV monitor combination QD-OLED curved monitors less fatiguing as
+physically matches our eye’s shape flexible/bendable monitors no one
+asked for…</p>
+<p>cool looking completely submerged server desktops. pure water is a
+very good insulator (our tap water will have chlorine for example)
+obtained via ozone treatment</p>
+<p>the Nintendo DSi implemented augmented reality virtual reality is
+completely immersive</p>
+<p>how does wireless charging work without a pad, i.e. no induction
+charging? interesting power sharing from phone to watch</p>
+<p>trie -&gt; gzip. still have to decode and resulting memory same as
+before compression succinct data structures are designed to not have to
+be decoded, i.e. everything is stored as bits. ∴ uses a lot less memory
+(however, only for larger datasets)</p>
+<p>compound literals issues with debugger and maintanence</p>
+<p>C11 static assertions, how to use? performance improvements? static
+const char sound_signature[] = { #embed &lt;sdk/jump.wav&gt; };
+static_assert((sizeof(sound_signature) / sizeof(*sound_signature)) &gt;=
+4, “There should be at least 4 elements in this array.”); anonymous
+structs int fnc(int arr[static 2])</p>
+<p>C23 can prevent VLA by defining constexpr true, false keywords
+nullptr (it’s a pointer not number) enum e : unsigned short { x }; digit
+separators function attributes</p>
+<p>smarter devices not necessarily better, e.g. printer’s with
+end-of-life software</p>
+<p>lol, ferrocene is a developing rust toolchain</p>
+<p>PLC more expensive microcontroller that is more versatile,
+e.g. handle voltage overload (often used in assembly lines)</p>
+<p>removing shared pointers probably gives later code in the pipeline a
+small cache boost as all the data is now co-located excessive logging
+cause for bad performance excessive heap usage bad for performance if on
+an OS note there is static, stack and heap memory areas</p>
+<p>lol, killedbygoogle.com. perhaps not wise to rely on new services</p>
+<p>is self-administration the only benefit of an inhaled COVID
+vaccine?</p>
+<p>doesn’t seem like quantum computers will be able to solve any
+practical tasks (unless program exploits quantum parrelism to a large
+extent)</p>
+<p>cloud computing with containers growing, e.g. AWS/Azure ➞ Kubernetes
+➞ docker</p>
+<p>it’s sad, but you really could do a stand-up of modern software
+projects, e.g. “introducing Goliath, an automatic external dependency
+manager. under the hood we use a Nextrus package manager. can be
+scripted with Freasy language extension of Frosty core language”</p>
+<p>seems a lot of phones adding satellite connectivity even though it’s
+much slower</p>
+<p>although space travel seems like the future, how to cope with serious
+health affects like space radiation</p>
+<p>opening up web pages from tech news sites just awful. inudated with
+floating content-blocking video ads, permanent marquee ads embedded
+beween paragraphs and browser title bar flashing with bot message
+notification, bot message popup, cookies accept bar, …</p>
+<p>asciinema useful terminal recording tool with website to host</p>
+<p>potential for sim-locking being a thing of the past with a push to
+eSIM cards</p>
+<p>New AI that can edit videos with textual prompts The dramatic shift
+in technology that mobile and cloud devices have brought is being
+realised by natural language processing As text is seen as a universal
+input in a lot of Unix programs, interesting possibilities.</p>
+<p>eyes convert photons to electrochemical signal transduction converts
+one energy form to another CCD (charged couple device; less noise, more
+power, lower speed) and CMOS (consumer grade) common camera sensors
+digital cameras convert photons to array of pixels, represented as
+voltage levels quad pixel camera sensor combines four adjacent pixels in
+this array</p>
+<p>round design of new Nvidia GPU may be evidence for the 20-year
+cyclical nature of fashion</p>
+<p>amazing new 6GHz stock speed Intel CPU</p>
+<p>although all crypto is ponzi scheme, it seems the goals of Ethereum
+to perform secure financial transactions is headed in a better direction
+than BitCoin. furthermore following The Merge, it does not rely on power
+hungry mining. this is in term has led to a lot of 2nd-hand GPUs
+flooding the market</p>
+<p>avx512 cant actually get performance stated by Intel ‘marketing’ as
+it causes heat up and cpu thermal throttles</p>
+<p>good to see some work being done on the interopability of digital
+wallets</p>
+<p>in general, Occum’s razor approach to muscular issues</p>
+<p>smart power homes whereby the source of the power can be discerned,
+i.e. if it’s clean or not. extends to phone chargers with knowledge of
+this</p>
+<p>interesting Github Copilot Labs able to do rough translations between
+languages</p>
+<p>good to see (in some ways) hardware vendors pushing for AI standards
+to allow for greater optimisation</p>
+<p>ATM machines can be targeted for card-skimmers</p>
+<p>possibility of sprite animation in terminal using chafa tool to
+create ascii block art</p>
+<p>Intel new naming scheme confusing using brand name as category,
+i.e. ‘Intel Processor’ instead of ‘Pentium’</p>
+<p>YouTube no respect for customers, running clandenstine experiment
+running up to 5 ads at the start instead of spacing them out
+Furthermore, Mozilla researchers found that buttons like ‘Stop
+recommending’, ‘Dislike’ have next to no effect</p>
+<p>Growing space economy with NASA ISS becoming privatised</p>
+<p>Gaming phones with extended fans/cooling and amenable gripping
+features</p>
+<p>I suppose it would be kind of cool to travel in a plane going Mach
+1</p>
+<p>There can be such extremes in software, e.g. from programming
+hardware in FPGA to writing natural-language descriptions for an AI to
+convert to code</p>
+<p>Cool 3D printing pens, although slow, can be used to say repair a
+chipped brick</p>
+<p>Cool USB SAMD boards (possible malware creation)</p>
+<p>Amazing creations from AI from still images, videos, digital
+assistants: https://threadreaderapp.com/thread/1572210382944538624.html
+Companies like DeepMind, OpenAI chatbot AI used in UI testing GPU DLSS
+(deep learning super sampling) is AI upscaling</p>
+<p>Finally, alleviating ambigious USB 4.0 v2.0 naming scheme with
+devices having clear USB 40Gbps, 240W printed on them</p>
+<p>Compelled to investigate a service like paperspace in order to run
+OpenAI and other AI projects</p>
+<p>Promising Framework laptop build to easily repair in mind. However,
+subpar experience</p>
+<p>Teachers are fired for moonlighting</p>
+<p>Record breaking DDos attacks, 17.2million requests per second,
+3.4terabits per second, 809million packets per second</p>
+<p>Google have size to challenge Dolby with new HD audio standard.
+However, whilst seeming altruistic, is just so they don’t have to pay
+Dolby licensing fees in their hardware</p>
+<p>Interesting Domain Brokerage services to allow you to get already
+used domains</p>
+<p>Amount limiting will not work to prevent MFA fatigue attacks</p>
+<p>Record-breaking figures acheived with overclocking can be decieving
+as may employ high-end coolers or even liquid nitrogen</p>
+<p>Still Windows updates break things, e.g. NVidia drivers</p>
+<p>The inundation of Javascript web frameworks has provided a learning
+point for adopting new technologies. In general, stick to familiar
+technologies and only adopted bleeding edge later</p>
+<p>Cool application of IoT:
+https://hackaday.com/2015/11/24/building-the-infinite-matrix-of-tamagotchis/</p>
+<p>Although lower-res, CDs aren’t lossy compressed like Bluetooth or
+spotify.</p>
+<p>Amazing gigabit speeds being sold for ISPs</p>
+<p>Sad that bariatrics is even a field of medicine</p>
+<p>Serverless is just a term for a caching server closer to clients</p>
+<p>In the same unrequested vein as foldable PCs, now have slidable
+PCs</p>
+<p>Perhaps the going through graphical ASMR programming videos the
+‘enjoyable’ remedy</p>
+<p>More encompassing/combined sensors, e.g. AI vision sensor, gesture
+detection sensor</p>
+<p>Increased power of technology, developing perhaps faster interfaces,
+e.g. search by photo, speech, etc.</p>
+<p>sextempber cornucopia of condoms don’t have to be nostradamus to work
+out parents parking in effect, most people’s journey to learning is
+bespoke my engineering mind (which has been molded by experience)
+results in largely ad hoc responses many positive social dealings at
+university are unfortunately pyrrhic</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<h1 id="news---sagging-arrow">NEWS - Sagging Arrow</h1>
+<p>I believe decoding brain waves into functional output is major change
+in my future</p>
+<p>Unikernel has applications bundled inside kernel (so like eBPF) for
+high performance</p>
+<p>Amusing Dead Internet Theory that the Internet died around 2016 and
+is now largely bots</p>
+<p>Oh dear, javascript smart watch</p>
+<p>Interesting 3D print to make diffusing sheet for say LEDs to create
+different ambiences</p>
+<p>AI now being used to improve compression algorithms</p>
+<p>Amazing potential of ‘molecular computers’ to make drugs with precise
+traits (could extend to human’s gaining amazing a priori skills)</p>
+<p>JPEG XL better compression and lossy + lossless mode</p>
+<p>Again, Microsoft updates not working. This time, not actually
+properly applying vulnerability update</p>
+<p>Interesting can just buy off the shelf drone and attach something
+like an ESP32 to send data back to us</p>
+<p>Cool program that sort of gamifies video conferencing allowing for
+individual chats: gather.town</p>
+<p>Like ‘Scrum Certification’ now with Matter have an official
+certification process</p>
+<p>Good work being done in legislating IoT labels, e.g. like nutrition
+labels that give information sensor data collected by device</p>
+<p>Have GPU microarchitectures like RNDA.</p>
+<p>Chiplets seem future of shrinking size and expanding computing power,
+now seen in GPUs</p>
+<p>VSR (virtual super technology) has GPU scale to 4K and then downscale
+if necessary to monitor’s resolution However, if want say 8K gaming,
+will require a DisplayPort cable</p>
+<p>Robots beginning to see more everyday use, e.g. waiters. Also, have
+robots learn in the field, e.g. Texas University have robots walking
+around campus</p>
+<p>Resistive RAM uses analog memory cells to store more information with
+less energy</p>
+<p>GPT-4 upcoming text generation AI Perhaps text-to-speech, language
+transcription too diverse to solve without AI, e.g. deepgram program</p>
+<p>Although some people experience myocarditis after COVID vaccine,
+myocarditis long been linked to a number of viral infections</p>
+<p>Borg like spacecraft, i.e. cubesat now in orbit</p>
+<p>Silicon carbide power supplies more efficient</p>
+<p>AI requires high quality data, i.e. created by skilled individuals.
+Also requires unique data. Might not have enough unique data in the
+future</p>
+<p>Unfortunate that Intel releasing software-defined-silicon,
+i.e. pay-as-you-go to enable certain hardware features</p>
+<p>Not even subtle that ads are no longer targeted for you, but rather
+shills</p>
+<p>Prompt engineers for many AI generators, e.g. text-davinci-3</p>
+<p>GPU AI DLSS improve performance by offloading frame generation</p>
+<p>Biodegradable sensors made out of organic circuitry proof of
+concept</p>
+<p>Watching me sleep on the floor is watching how the sausage is made in
+regards to my posture</p>
+<p>Serendipitously obtain a bokeh photo with my outdated phone
+camera</p>
+<h1 id="news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
+the Pride</h1>
+<p>Politics are infiltrating areas of technology: * Rust toolchains on
+embedded. Rust developers have explicitly tweeted saying technology will
+always be political * NASA Artemis Accords have first line stating
+primary focus on women and person of colour on Moon Leads down the path
+of FSF, and in fact any cultural revolution which thinks it can do
+whatever it wants in the name of the people. Although perhaps ad
+hominem, experience has shown that they’re all polite until they’re
+not.</p>
+<p>Seems in with big-tech, marketing is often more important than the
+underlying technology. 170km ‘The Line’ ecotopia, metaverse, telsa etc.
+They make wild claims and the general public has no way of knowing the
+facts behind them (perception vs reality) A scary thought is that in
+this age, possible for self-sustaining narratives capable of deflecting
+facts</p>
+<p>ARMs open-model allowed vendors to implement custom MPUs that saw in
+gain dominance over oher RISCs like MIPS and AVR.</p>
+<p>Tech companies becoming conglomerate monopolies, e.g. tiktok music,
+apple tv etc.</p>
+<p>Much like the C++ standards committee, concerns of ‘ivory tower’
+nature of smart home Matter standards</p>
+<p>Seeing consequences of covid semiconductor demand in chip shortages.
+Exacerbated by increase usage in automotive industry and large
+dependence on foundries in Taiwan</p>
+<p>Annoyed at the web: * Seemingly lack of awareness of bloated and
+abstracted infrastructure * New technologies in the sphere are just
+sensationalised titles with little substance e.g. homescreen social
+media, css layout model and js frameworks</p>
+<p>The importance of programming to a physical machine is paramount. The
+underlying technology is always changing, e.g. arcade machines,
+consoles, phones, watches, plastic 4bit processors</p>
+<p>EU lawmakers want USB-C for all mobile devices to reduce e-waste.
+Makes me postulate a technocracy.</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
 <h1 id="news---goat-in-current">NEWS - Goat in Current</h1>
 <p>Time-of-flight sensors can be used to detect water levels</p>
@@ -406,6 +684,9 @@ for it (e.g. resolution of 8 gives 100% duty cycle of 255)</p>
 <pre><code>red_led_duty_cycle(pwm_max_val - red_component);
 green_led_duty_cycle(pwm_max_val - green_component);
 blue_led_duty_cycle(pwm_max_val - blue_component);</code></pre>
+<p>TODO: is brightness of PWM determined by duty cycle? If so, then a
+PWM LED fade should just be duty cycle, or should it be colour as
+well?</p>
 <p>DISPLAY: useful to display FPS (might only need to display this say,
 every 250ms as oppose to every frame), power consumption (perhaps
 unscaled power, i.e. power if not performing alterations; perhaps only
@@ -467,6 +748,7 @@ colour colour_fraction(colour_in, fraction)
   fraction = min(1.0f, fraction);
   return colour.fadeToBlack(255 * (1.0f - fraction));
 }
+// IMPORTANT: so, in addition to &#39;sub-pixel&#39; drawing, also have automatic blending
 void draw_pixel(ipos, pixel_len, colour)
 {
   first_pixel_avail = 1.0f - (fpos - (int)fpos); // get fractional part
@@ -510,7 +792,8 @@ struct BouncingBallEffect
 {
   u32 output_led_strip_len;
   u32 fade_rate;
-  b32 mirrored;
+  b32 reversed (draw from len inwards; i = size - 1 - i); // common parameter for effects
+  b32 mirrored (size = size / 2); // common parameter for effects
   r32 time_since_last_bounce;
   r32 ball_speed;
   r32 dampening; // value closer to 1 preserves more energy (0.9f - i / pow(num_balls, 2))
@@ -538,7 +821,36 @@ print(&quot; &quot; * sin(freq * i) + &quot;ryan&quot;) // map sin() to our desi
 // could also have sawtooth(), cubic() etc. </code></pre>
 <p>#define cli() nvic_globalirq_disable() #define sei()
 nvic_globalirq_enable()</p>
-<pre><code>// fractional drawing required for smooth &#39;slow-motion&#39; effects?</code></pre>
+<pre><code>// fractional drawing required for smooth &#39;slow-motion&#39; effects
+
+blend_amount_self = 2, blend_amount_neighbour1 = 3 (take 2 parts of itself, 3 parts of neighbour)
+blend_total = 5;
+
+// for parameters essentially / for setting relative to length,
+// + for offset, and * for a scaling factor
+
+// cool
+for (u32 i = 0; i &lt; size; ++i)
+  heat[i] = max(0L, heat[i] - random(0, ((cooling * 10) / size) + 2));
+
+// move heat up
+for (u32 i = 0; i &lt; size; ++i)
+  heat[i] = (heat[i] * blend_self + heat[(i + 1) % size] * blend_neighbour) / blend_total;
+
+// ignite a spark
+for (u32 i = 0; i &lt; num_sparks; ++i)
+{
+  if (random(255) &lt; sparking_threshold_probability)
+  {
+    u32 y = size - 1 - random(spark_height);
+    heat[y] = heat[y] + random(160, 255);
+  }
+}
+
+// convert heat to colour
+for (u32 i = 0; i &lt; size; ++i)
+  colour = map_colour_to_red(heat[i]);
+  draw_pixels(i, 1, colour);</code></pre>
 <p>IMPORTANT: for a preemptive multitasking kernel like linux, a call to
 pthread_yeild() (allow other threads to run on CPU) is not necessary.
 however, for embedded, maybe</p>
@@ -2540,44 +2852,50 @@ reason for having some many containers is that the build systems for
 each project is incredibly complex and requires many dependencies</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">Sometimes have to rephrase something for
+the compiler to generate more optimal code, e.g. div /= 2; div /= 2;
+will generate more efficient instruciton that div &gt;&gt; 2 for
+avr_gcc</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">* vinegar and bicarb for walls and drain
 cleaning</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* cool idea of SDR (software defined
 radio) and RF analyser https://greatscottgadgets.com/sdr/1/
 https://github.com/ainfosec/FISSURE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">* how does quantum computing work?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* what frequencies/technologies are
 regulated like in ISM; by extension what other regulations are
 there?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">* why floating point inaccuracies</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* examples of hardware virtualisation
 instructions/codecs? (e.g. multiway MMU?)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">* vulkan renderer:
 https://www.youtube.com/watch?v=BR2my8OE1Sc&amp;list=PL0JVLUVCkk-l7CWCn3-cdftR0oajugYvd&amp;index=1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* how does something like red hat and
 android get around gplv2 of linux kernel</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">* the SIG introduces bluetooth 5 which
 states higher data rate, long range BLE etc. are their decisions
 informed on techonology advances (seems not to be the case with 4G
 LTE…)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* Understand memory alignment and cost of
 unaligned accesses? (ABI defines alignment of C types?) (is it due to
 common programmer workflows and less transistors required?) for modern
@@ -2587,13 +2905,13 @@ specify alignment (declspec() for stack, aligned_malloc for heap) why
 not just always automatically align things? conserve space? when to use
 these alignment extensions? when doing performance timing/tuning?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">* is distinction between a unicast (device
 to device), multicast (device to some devices), broadcast (device to all
 devices) only discernable in packet format, i.e. must be parsed by
 network card first? are signal strength changed?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">* Software laws, e. G. Have 4k in name,
 but image quality 1080p, Elon musk making false claims, Most dash cams
 same SoC, and image sensor, just different housing Garmon products to
@@ -2603,54 +2921,54 @@ misleading: M1 chip faster (only faster than Intel based macs), we don’t
 track in ‘traditional’ ways, tiktok keylogger technology exists but not
 using</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: favourites tab for morning viewing
 videos: common sense skeptic; techquickie; handmade podcast; network
 next</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Resident Name Unit Number / 17 High Street
 University Terraces Kensington NSW 2033 Australia</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">chefgood: 20 x $209 mymusclechef: 20 x
 $219 WELCOME20</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">dinner + lunch: $220 breakfast: $100 rent:
 $345 phone: $70</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">leftover: $265</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">salary: ≈$52,000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">fortnightly: $1400 + quarterly: $4000 =
 weekly: $1000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">communicating with busy people:
 https://threadreaderapp.com/thread/1562510420644343810.html</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">thread local storage could be implemented
 hyper-threaded cpu?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">computer science papers
 https://blog.acolyer.org/</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">QUESTIONS:</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">security so vast and not something I want
 to devote time to:
 https://leveleffect.referralrock.com/l/JOHNHAMMON07/</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">the constellation we can’t see as it’s
 blocked by the sign is the zodiac sign for that month not new territory
 to regain interest in the past, e.g. renaissance grew interest in
@@ -2664,16 +2982,16 @@ crab leo (july) -&gt; lion virgo (august) -&gt; woman libra (september)
 (november) -&gt; archer’s arrow capricorn (december) -&gt; goat aquarius
 (january) -&gt; water bearer pisces (feburary) -&gt; opposing fish</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">IS IT POSSIBLE THAT AN ASSEMBLY
 INSTRUCTION LIKE RDTSCP COULD BE TRAPPED BY PROGRAM LOADER?
 https://eli.thegreenplace.net/2011/01/27/how-debuggers-work-part-2-breakpoints</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NOTE(importance of reading programming
 papers…. after handmade finished)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">vector math routines (obtaining cross
 product from column vector form) when drawing vectors in a physical
 sense, keep in mind they are rooted at the origin (even if drawings show
@@ -2699,17 +3017,17 @@ hadamard function (IMPORTANT have reciprocal square root approximation
 which is there specifically for normalisation. much faster cycle count
 and latency than square root)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">noise is randomness. white noise is
 complete randomness. blue noise (harder to generate) is randomness with
 limitations on how close together points can be (more uniform)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">pride cometh before the fall! six of one,
 half a dozen of the other. have our cake and eat it too ad
 infinatum</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Borrowing money: clear you’re the right
 person to give the money to. Clear you understand what you’re doing and
 the game process is figured out. Proof of you will complete it. Here is
@@ -2717,86 +3035,86 @@ the game, why I’m good at it, why people will like it and why I’m going
 to succeed at developing it Interview ability to explain problems you
 have encountered on projects</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"># IMPORTANT: FOR ALL TOPICS INCLUDED, HAVE
 SOME MENTION ON WALLPAPER</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Intel thunderbolt faster than USB C (ports
 look very similar)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">red team is security offensive, blue is
 defensive</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: vulkan compute shader vs CUDA?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">CMAKE: 1. inclusive library
 (<code>add_subdirectory()</code>, <code>include_directories()</code>,
 <code>target_link_libraries()</code>) 2. standalone library</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">investigate structure of (C libraries used
 etc.): https://whitebox.handmade.network/
 https://azmr.itch.io/whitebox</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">rmgui?:
 https://www.youtube.com/watch?v=k4Xd59kzouI</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">font-rendering with stb:
 https://todool.handmade.network/blog/p/8561-rendering_glyphs_from_a_storage_buffer#26937</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(sign) (exponent) (significand/mantissa) 1
 * 2² * 0.1234</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Required software developer traits:
 https://adamj.eu/tech/2022/06/17/mike-actons-expectations-of-professional-software-engineers/?utm_source=tldrnewsletter</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Debugger stepping into kernel
 functions?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">RAID is method of combining multiple disks
 together so appear like one disk called an array. Various types,
 e.g. RAID0 (striping) some parts of file in multiple disks, RAID1
 (mirroring) each disk is duplicate so could give speed increase
 etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">How do containerised/sandboxed
 applications like Flatpak work on linux?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">data science:
 https://tigyog.app/d/C-I1weB9CpTH/r/everyday-data-science</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">https://asciinema.org/a/421164</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CSESoc cochlear is a principal sponsor.
 how does this differ to major and minor sponsors?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">5ATM is 5 atmospheres. 1 atmosphere is
 about 10m (however calculated when motionless) 50m for 10 minutes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">RFC documents contain technical
 specifications for Internet techologies, e.g. IP, UDP, etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Data deduplication means to remove
 duplicates</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">OAuth (open authentication) exchanges
 tokens to authorise access; specifically use personal access token with
 OAuth scope ‘repo’ for github to grant circleci push priveleges (have to
@@ -2804,34 +3122,34 @@ add this add environment variable to circleci) tokens ability to ‘scope’
 gives them an advantage over ssh keys typically used by RESTful
 services</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">1. to use Google APIs create Google Cloud
 Console project and grant particular API access to it 2. create OAuth
 credentials to access API</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">so the authorisation part is to establish
 the ‘scope’ of the tokens</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">with OAuth: 1. consent screen to obtain
 token this will be a GET request, whose location will be described by
 the standard ‘discovery document’
 (https://accounts.google.com/.well-known/openid-configuration)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">authorization_endpoint:
 “https://accounts.google.com/o/oauth2/v2/auth”</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">tokens obtained will be short-lived, i.e
 2-5 minutes so will have to refresh</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(a consent screen only required if
 accessing another users data?)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(client id and client secret are like our
 login and password) 1. get authorisation code GET
 https://accounts.google.com/o/oauth2/v2/auth?
@@ -2840,26 +3158,26 @@ client_id=937397032650-rmntctql9qo8o85cscd85l2hvo9v1818.apps.googleusercontent.c
 &amp;scope=https://www.googleapis.com/auth/photoslibrary
 &amp;response_type=code</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(have to submit verification request to
 get write access?)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">google scopes:
 https://developers.google.com/identity/protocols/oauth2/scopes#photoslibrary</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(particular methods relevent to the API we
 want to use will require different scope levels)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">2. exchange code for access token</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">PCI usually for attaching peripherals to
 motherboards, e.g. network/audio/usb/graphics controller cards</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">RESTful urls respond to CRUD requests in a
 standard way so, a url is an access point to a resource e.g, following
 REST: * GET example.com/users will return list of resource, i.e. all
@@ -2868,11 +3186,11 @@ example.com/users/1 return single resource * PUT example.com/users/1
 update single resource * DELETE example.com/users/1 delete single
 resource</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">curl defaults to GET headers with -H
 “Pragma: no-cache”</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">## Screens Touch screen types need some
 external input to complete circuit Resistive works by pressure pushing
 down plastic&lt;-electric coating-&gt;glass Unresponsive, durable, cheap
@@ -2882,21 +3200,21 @@ conductor due to impure ion water in us), charge flows through us and
 back to the phone, changing the electric current Things electrically
 similar to our fingers are sausages, banana peels</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">1080i/p interlaced means display even and
 odd rows for each frame (due to bandwith, not used anymore) progressive
 will display each row sequentially for a given frame</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">4k means horizontal resolution of
 approximately 4000 pixels. standard different for say television and
 projection industry</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">plasma is superheated matter, i.e. ionised
 gas</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">LED is the backlight, as oppose to
 fluorescent (LCD still used within this). so really LED LCD. IPS
 (in-plane switching), TFT (thin film transistor) are examples of LCD
@@ -2904,32 +3222,32 @@ panel technology OLED produces own light, i.e. current passed through an
 OLED diode to produce light. LTPO (low-temperature polycrystalline
 oxide)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">nit is a measure of luminance,
 i.e. intensity of light (brightness is how we percieve luminance ∴
 subjective). higher nit display are more easily viewable in a wider
 array of lighting conditions (e.g. combat the sun’s light reflecting off
 the surface)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">e-ink less power than LCD as only uses
 power when arrangment of colours changes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## Wireless SMS are stored as clear text
 by provider SS7 (signaling system number 7) protocol connects various
 phone networks across the world This protocol is old and has been
 attacked many times</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">leaked emails from large companies,
 probably from internal mail server?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cloudflare (what are they?) ban kiwi farms
 forums, so they move to Russian servers. how does this help?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">RFID (radio frequency identification) no
 line of sight required (can read through objects unlike barcode) Also
 read multiple objects at once. RFID tag. Greater read range (shop
@@ -2937,49 +3255,49 @@ security) A QR code is just a 2d barcode with more bandwidth. Laser
 readers quicker. NFC for low-power data transfer. NFC tag. (payment
 systems)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TV standards Americas: NTSC (30fps, less
 scanlines per frame) 4.4MHz Europe, Asia, Australia: PAL (Phase
 alternate line) (25fps) 2.5MHz</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">sound waves 20Hz - 20kHz (sonar; sound
 navigation and ranging) ultrasonic (radio waves largely absorbed in
 seawater due conductiveness)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">more easily focused as longer wavelength
 to not bend around corners radio waves 10Hz - 300GHz (true radio would
 be FM radio) higher frequency means more information can be conveyed
 radio waves bounce off ionosphere (long range)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">microwaves make up majority of the
 spectrum of radio waves microwaves 300MHz - 300GHz (radar) divided into
 bands, e.g. C-band, L-band, etc.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">infrared waves 300GHz - 300THz (object
 detection) heat emission</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">visible light (lasers; weather dependent)
 lidar</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">UV</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ionising x-rays</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">ionising gamma-rays</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ISM (industrial, scientific and medical)
 bands exclude telecommunication frequencies</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">4G (generation) type of cellular
 technology. define min/max upload/download rates as many cell towers
 cannot fully support the bandwidth capabilities outlined by 4G, use the
@@ -2987,21 +3305,21 @@ term 4G LTE (long term evolution) to indicate implement some of 4G
 features. now have 4G LTE cat 13 to indicate featurs implemented around
 1800MHz</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">does version 5.0 expand upon enhanced data
 rate, i.e. bluetooth classic bandwidth? seems higher that higher than
 6GHz requires license? ISM range? (why bluetooth considered part of
 ISM?)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">GNSS (Global Navigation Satellite Systems)
 constellations (GPS:US, GLONASS:Russia, Galileo:EU, Beido:China) all
 location providing services. implement different frequencies, etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">lower frequency, longer range</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">telecommunications standards: * GSM
 (global system for mobile communications) - uses SIM (subscriber
 identification module) cards to authenticate and authorise access I
@@ -3009,7 +3327,7 @@ suppose eSIM would make SIM-locking easier to overcome Phone number
 linked/contained within SIM, however can be reassigned * CDMA (code
 division multiple access) - uses ESN (electronic serial number)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Udp (head of line blocking) + client
 server (p2p unreliable as internet path optimised for cost/closest
 exchange point) + dedicated (peoples home Internet don’t normally have
@@ -3018,7 +3336,7 @@ high egress bandwidth charge) and bare metal (fixed bandwidth rate set
 into price) Matchmaking, host migration difficult as hard to measure
 what user has good connection, e.g. Whats there NAT type?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## Power LiPo is lithium-ion poly. uses
 polymer electrolyte instead of liquid. lipo more expensive, shorter
 lifespan, less energy, more robust li-poly battery is rechargeable (so
@@ -3032,38 +3350,38 @@ charge cycles affect battery life LiPo is lithium-ion poly. uses polymer
 electrolyte instead of liquid. lipo more expensive, shorter lifespan,
 less energy, more robust</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">## Memory eMMC is the interface as well
 eMMC precursor to SD. TF (transflash) more commonly known as micro-SD
 card cheaper than SSD, yet slower still uses NAND flash technology</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">QSPI can be used without CPU with data
 queues</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">## Bootstrap UEFI (interface between
 firmwire and system; essentially interface to boot into things) ACPI
 (data format to convey firmwire information) the ESP will have EGI
 entries that point to a UUID of where to boot one of these will be grub
 binary like shimx64.efi</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## Formats fat for esp (because FAT
 simple, open and supported virtually everywhere) vfat is driver
 (typically for fat32)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ext4 for system (supports larger file
 sizes) (ntfs microsoft proprietary) most filesystems will use a
 self-balancing tree to index files</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## Unix KVM kernel based virtual machine
 allows linux kernel to act as hypervisor ∴ type 1 hypervisor (virtualbox
 type 2, i.e. run atop an OS) Often see with KVM/QEMU (virt-manager)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Contempt culture (language
 wars)-change-systemd Original Unix borne out of want for simplicity over
 competing systems Terminal type writer something you should ask your
@@ -3081,41 +3399,41 @@ not exactly violating Unix philosphy Some disparity between systemd idea
 and its inplementation Major component of systemd is service manager,
 I.e init system to bootstrap user space</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">system level software systemd () cron (job
 scheduler)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">in a sense, LTS involves significant
 backports</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">hardlink to inode (therefore impervious to
 file name change, deletion, etc.) softlink to file name</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">a directory is a mapping of filenames to
 inodes (for ext4 atleast?)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">journaling is regularly writing operations
 that are to be performed in RAM to disk area of memory known as journal.
 then apply these changes to disk when necessary this overhead makes them
 slower, but more robust on crashes as can read journal to ascertain
 whether certain operations finished performing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">the metadata stored by inode determined by
 filesystem in use e.g. fat32 won’t store permissions, last modification
 time fat32 also no journaling or soft-links inode references file
 metadata (pointer to data, permissions, access time). this allows
 concurrent modification of the file</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">UUID/GUID (universally/globally)
 16bytes</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">premptive scheduler will swap processes
 based on specific criteria. most are round-robin, i.e. has process is
 run for a predefined time slice CFS does not use heuristics (ad hoc
@@ -3123,7 +3441,7 @@ guide), ∴ more straightforward uses rb-tree. so, as task inserted onto
 this is logarithmic, ∴ this is cost of context switch each node key is
 <code>(time process as run on CPU) * (process niceness)</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## CPU cpu contains clock. each tick marks
 a step in the fetch(signal sent along address bus as specified by PC;
 instruction or data sent along data bus)- so, whenever interacting with
@@ -3133,27 +3451,27 @@ fetch-executes. this is von-neumann bottleneck most modern computers are
 modified-harvard, in that the L1 caches have separate instruction and
 data regions. therefore, they can be read simultaneously</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">decode-execute cycle an accumulator
 register is term used to indicate typical register that holds results of
 large arithmetic</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">von-neumann instruction, data in RAM
 instructions+data share data bus between CPU and RAM, so they have to be
 fetched separately</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">harvard instruction, data separate</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">in reality, all CPUs are von-neumann
 presented to the user and harvard at the low-level. it’s only harvard
 from the pipeline/cache stage modified harvard could also mean
 instruction and data bus, but unified memory so, the variation amongst
 harvard architectures is in how one transitions to the other</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Procedure Call Standard for the Arm
 Architecture (AAPCS). Part of ABI for ARM (also part of ABI is
 debugging, dynamic linking semantics etc.) From this we can garner say,
@@ -3163,27 +3481,27 @@ restrictions mean that passing a double word has to be even-odd register
 pair, so ordering of parameters important So, call standard important
 for ordering and number of parameters?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">When people say vector operations, they
 mean SIMD</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">endianness only relevent when reading and
 writing to memory addresses and interpreting the bytes overall,
 endianness usefulness determined by majority of operations performed,
 e.g. converting string to int easier in big-endian e.g. little-endian
 easier to read values of variable length (address does not change)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">CISC gives reduced cache pressure for
 high-intensive, sustained loops</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">memory model: visibility and consistency
 of changes to data stored in memory necessary for understanding multiple
 thread execution</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">hardware (from machine code to execution
 on the CPU): * sequential consistency (ideal as easy to understand,
 however doesn’t maximise hardware speed) * x86-TSO (total store order).
@@ -3202,7 +3520,7 @@ update at same time furthermore, the order of the writes can be
 reordered furthermore, processors are allowed to delay reads until
 writes later in the instruction stream</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">language (from source to machine code) so,
 C11 memory model is in relation to rearranging of loads/stores in
 assembly for optimisations? (so is a weak model?) mainly in reference to
@@ -3210,57 +3528,57 @@ the behaviour of atomics to synchronise programs so, language memory
 model will abstract away hardware memory model?
 https://research.swtch.com/plmm</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## ARM cortex-a53 is a synthesisable IP
 core sold to other semiconductor companies (stm, nxp, etc.) as licensed
 IP core, the amount of cache will vary e.g. 8-64Kb?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">FPU is a VFPv3-D16 implementation of the
 ARMv7 floating-point architecture</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">details hidden due to IP nature,
 e.g. LPDDR3 memory controller from CPU is all we can know?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">## Ports (audio visual) HDMI-A, C (mini),
 D (micro) USB-A,USB-B,USB-B(mini) USB-C is USB3.0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">3.5mm audio jack (3 pole; 4 pole for added
 microphone)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ethernet CAT backwards compatible.
 connector called RJ45 telephone cable is called RJ11</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">IEC power cords (kettleplug,
 cloverleaf)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">DC barrel jack</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">## Legalities anti-trust laws don’t
 prevent monopolies, they prevent attempting to monopolise illegal,
 e.g. Microsoft attempting to monopolise browser market</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">permissive (MIT, BSD, Apache, zlib) gives
 users more freedom to say relicense, include closed source software,
 etc. generally just attribution licenses (in that this is only
 enforcement)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">weak copyleft (LPGL) (glibc) applies to
 files of library not your entire codebase, i.e. must still release your
 version of the library used so, dynamic linking makes this easier for
 keeping your source closed if static, must make a few extra steps to
 ensure the LGPL parts are available, e.g. publish object files</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">copyleft (GPL) enforces devlopers wants
 the for code on users, so the software stays under the same license.
 encounter more licensing restrictions. GPLv3 tiviosiataion, issue for
@@ -3269,167 +3587,167 @@ deals with hardware/system locks) code signing issues? so, GPL infects
 your software, enforces even if just a library usage to release whole
 project as GPLv3 (so source code released)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">although android technically open-source,
 most of the software run on it isn’t</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">creative commons is a set of licenses that
 make explicit requirements for users, e.g. CC BY-NC, CC BY-SA, etc.
 unlike MIT, Apache includes a user non-litigation, so users can’t
 initiate litigation if the creators decide to patent something</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">RENDERING: rendering is the process of
 creating the 2D/3D model, i.e. the drawing onto the monitor ray tracing
 solves transparency issues, it’s just substantially slower than standard
 projection rasterisation (so future is ray tracing)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">3D works by emulating a simplified model
 of how a single human eye views space</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">A single point of light from the sun
 hitting a single object will reflect in multiple straight line
 directions/paths</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">rasterisation is taking polygon and
 converting to pixels eventually will have to convert say 3D position to
 2D (as all rendering is fundamentally this)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">lens refract light to central focal
 point</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">1. perspective projection (assume viewer
 is some distance away from screen, similar triangles)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"># NEWS - Wrestle the Scorpion</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Make-A-Video AI seems promising</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Good news first ever drug to slow down
 cognitive decline of Alzheimer’s. Also drug to slow down ALS. Perhaps
 prolonging drugs first step?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">DreamFusion 2D-to-3D looks promising</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Will future cars will be synced with
 mobile OSs from Apple or Android? Already seeing start of this with CCC
 (Car Connectivity Consortium) pushing smartphone car unlocking</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Unfortunately malware spreads through
 low-hanging CVEs or social engineering</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Memory market collapse, i.e. a type of
 chip market</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">How nice that Apple’s anti-tracking
 crackdown only applies to third-party apps</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">With the growth of hardware, really seems
 that adaptive learning algorithms are going to be used instead of
 solving the problem explicitly Perhaps AI solving the most-optimal
 implemention of an algorithm is more appetising for me</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">More companies branching into GPUs with AI
 functionality, e.g. Intel Arc, Acer etc. Furthermore, more companies
 branching into VR, e.g. Lenovo, Facebook etc.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Is a smart ring really any better than a
 smart watch?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">As you would expect, Raptor Lake CPUs
 faster single thread speed at a lower wattage</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Will it be common place for impaired
 actors like Bruce Willis to sell likeness for deepfakes? In China, using
 virtual influencers.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Again, YouTube offers another thorn;
 restricting 4K access to subscribers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">MCUs that support OTA firmware updates
 will typically have built-in key storage</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Although decentralisation sounds good (own
 cell network etc.), it requires user maintenance which people will pay
 others to do and we’re back to square one in a way</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">How does Google Tensor G2 chip with
 various CPU architectures, e.g. Cortex-A78, Cortex-A55, Cortex-X1
 work?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">OS’s designed for wearables, e.g. WearOS
 for Android. I suppose wearables have become an established device class
 target?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">It really isn’t tinfoil hat mentality to
 be wary of updating unless necessary, e.g. most recent kernel patch
 affected Intel graphics displays</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Floating pod homes in Panama no one asked
 for.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">In a literal sense Moore’s law is dead,
 however chiplets pose interesting alternatives</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Character.ai chatbot creator. In fact, AI
 editor/generators for most artforms seems to exist (video runwayml)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">The fluidity of OSs continues with new
 Ubuntu 22.04 replacing PulseAudio with PipeWire, X11 with Wayland.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Having a live session USB is essential to
 always give root access to filesystem</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Can now get Ubuntu Pro for free, which is
 just extends LTS to 10 years</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Fast GUI file searching with fsearch</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Xbox streaming game console. High network
 speeds seems to make cloud gaming more affordable. However, don’t like
 the idea of constant network connectivity and the power of the provider
 to shut you out.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">15th Century greatest appearance of
 ‘geniuses’. Despite access to information, genius declined. Seems that
 require proffesional tutors at young age to instill a human social
 engagement</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Thanks to TCC compiler, can compile C in
 memory and load it, hence using it in some way like a scripting language
 However, this can create serious security holes. Could still use in a
@@ -3438,107 +3756,107 @@ C++/C (and well anything that compiles to webassembly) in browser as a
 sandbox. Could use with wasmer library Indeed, with WASM, can compile a
 native library and use it on the browser like SQLite3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">With the steady proliferation of VR
 gaming, it’s a good thing I was not young during this time</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">DynamicPixelTuning (DPT) promises to make
 every pixel capable of outputting all colours. Therefore, get 3 times
 resolution than having combined rgb pixels</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Very helpful ranger preview in conjunction
 with <code>rc.conf</code> and <code>scope.sh</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Apple more like a bank with savings
 account for Apple Card</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Interesting new Danish political party
 with decisions made by AI. I think AI as a collaborator is
 promising</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Despite new phones offering a plethora of
 new features, don’t assume that they are bug-free, e.g. pixel phone
 crash detection malfunctioning on roller coaster, not allowing dialling
 to 000, etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Realise you can overclock RAM with Intel
 XMP (extreme memory profile)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Although you hear new Apple and Microsoft
 chips, almost certainly ARM under the hood</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Intel NUC (next-unit-computing) just
 marketing term for small form factors</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Although largely unecessary now, Nvidia
 has lite hash rate which impedes peformance in order to get GPUs into
 hands of gamers</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">The decline of the lone app, as Microsoft
 365 leviathan</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">I see AR being more useful than VR,
 e.g. hololens for soldiers</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Meta headset will use eye-tracking to
 position ads</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Perhaps an emeritus professor I’m more
 willing to listen to.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">What I used to take as prima facie from
 news outlets, now no longer</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Unfortantely UNSW basketball CC’d not
 BCC’d</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">To no one’s surprise, Windows updates nerf
 ryzen performance</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Marketing plug for cloud gaming consoles
 when in fact standard phones can do the same thing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">With improved network performance, perhaps
 cheaper to offload calculations to powerful servers (VDI: virtual
 desktop infrastructure)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">NB-IoT (narrowband, i.e. low power). Also
 have CoAP (constrained application protocol) for embedded devices to
 access Internet</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Easy to fall prey to the act of not adding
 anything useful to a product, but simply adding IoT and calling it
 smart, e.g. smart condom</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">HDR (high dynamic range) refers to colour
 spectrum. Implemented in technologies such as Dobly Vision Dolby Atmos
 is a surround sound technology</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">RCS seems to be better than SMS</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Not really decentralisation with cloud, as
 many services just operated by a handful of large companies (not what
 DARPA intended!) Cloud is really just reduced complexity. It excels when
@@ -3549,606 +3867,53 @@ computing on demand (no complexity) when in reality, just renting
 computers at a higher premium Let your talents to your own machines,
 rather than Amazon or Google</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Will NFC for door locks take hold?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">AI for vaccine development sounds
 promising</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Are the petabit speeds of research optical
 chip really that useful if hardware can’t process that fast? Will radio
 only get us so far?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Probably better to use url-shortener
 service for sharing links</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Perhaps explainpaper.com could break into
 reading programming papers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">More firm on not using Apple, e.g. Apple
 not allowing other app-stores, taking revenue percentage of adds on
 apps, etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Bioengineered plants seem promising in say
 absorbing air pollutants</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Amazon continue to kibosh any semblance of
 non-monolopy now getting into home insurance</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Raptor Lake overclock to over 8GHz
 (however with liquid nitrogen…)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">With development of cheaper more powerful
 hardware, companies introducing more ‘gaming’ brands e.g. Phillips new
 gaming monitor</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Another cautionary tale to not update with
 Apple update nerfing ANC earphones</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"># NEWS - Scaling the Libra Xcode cloud
-subscription. oh no wasting so much time on naming of new processes,
-e.g. ‘Developer Experience Infrastructure’</td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">Another billionaire investing in a
-‘utopian cities’ seems more dystopic than anything. Promulgation of
-venture capitalists, angel investors, etc.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PIC have weird instruction set, so
-generally have to use with assembly over C compiler (no good free
-compiler) So, use AVR for low-end like just LED driving?
-e.g. TLC5971</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">time-of-flight sensor like an infrared
-radar</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">over-current and over-voltage detectors
-for when using charging devices, e.g USB-C charger? so, perhaps
-investigate/understand voltage regulators? also have UVLO
-(undervoltage-lockout)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">new USB-PD (power delivery) interface more
-power from USB-C</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">I can see machine learning ‘appropriate’
-in say cleaning up random noise, e.g. brain signals</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">interesting set of questions to inspect a
-software engineering workplace:
-https://neverworkintheory.org/2022/08/30/software-engineering-research-questions.html?utm_source=tldrnewsletter</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">things like database accelerator library
-indicative of normal software not being fast</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">MOSFETs are a type of transistor.
-different transistors for say quick-switching, low signal, high
-frequency, amplifier etc.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">USB-4, PCI5, DDR5 emerging standards.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Could buy a GPU for running interesting
-machine learning applications like Stable Diffusion (prompt engineers,
-oh dear…) https://www.krea.ai/ GPU structure similar to CPUs, e.g have
-cache, GDDR6 memory (more simple parrellisation)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">float-toy nice web visualistion tool</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">interestingly CRT can scale better than
-fixed-set resolution LCD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">new TV monitor combination QD-OLED curved
-monitors less fatiguing as physically matches our eye’s shape
-flexible/bendable monitors no one asked for…</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">cool looking completely submerged server
-desktops. pure water is a very good insulator (our tap water will have
-chlorine for example) obtained via ozone treatment</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">the Nintendo DSi implemented augmented
-reality virtual reality is completely immersive</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">how does wireless charging work without a
-pad, i.e. no induction charging? interesting power sharing from phone to
-watch</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">trie -&gt; gzip. still have to decode and
-resulting memory same as before compression succinct data structures are
-designed to not have to be decoded, i.e. everything is stored as bits. ∴
-uses a lot less memory (however, only for larger datasets)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">compound literals issues with debugger and
-maintanence</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">C11 static assertions, how to use?
-performance improvements? static const char sound_signature[] = { #embed
-&lt;sdk/jump.wav&gt; }; static_assert((sizeof(sound_signature) /
-sizeof(*sound_signature)) &gt;= 4, “There should be at least 4 elements
-in this array.”); anonymous structs int fnc(int arr[static 2])</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">C23 can prevent VLA by defining constexpr
-true, false keywords nullptr (it’s a pointer not number) enum e :
-unsigned short { x }; digit separators function attributes</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">smarter devices not necessarily better,
-e.g. printer’s with end-of-life software</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">lol, ferrocene is a developing rust
-toolchain</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PLC more expensive microcontroller that is
-more versatile, e.g. handle voltage overload (often used in assembly
-lines)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">removing shared pointers probably gives
-later code in the pipeline a small cache boost as all the data is now
-co-located excessive logging cause for bad performance excessive heap
-usage bad for performance if on an OS note there is static, stack and
-heap memory areas</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">lol, killedbygoogle.com. perhaps not wise
-to rely on new services</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">is self-administration the only benefit of
-an inhaled COVID vaccine?</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">doesn’t seem like quantum computers will
-be able to solve any practical tasks (unless program exploits quantum
-parrelism to a large extent)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">cloud computing with containers growing,
-e.g. AWS/Azure ➞ Kubernetes ➞ docker</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">it’s sad, but you really could do a
-stand-up of modern software projects, e.g. “introducing Goliath, an
-automatic external dependency manager. under the hood we use a Nextrus
-package manager. can be scripted with Freasy language extension of
-Frosty core language”</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">seems a lot of phones adding satellite
-connectivity even though it’s much slower</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">although space travel seems like the
-future, how to cope with serious health affects like space
-radiation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">opening up web pages from tech news sites
-just awful. inudated with floating content-blocking video ads, permanent
-marquee ads embedded beween paragraphs and browser title bar flashing
-with bot message notification, bot message popup, cookies accept bar,
-…</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">asciinema useful terminal recording tool
-with website to host</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">potential for sim-locking being a thing of
-the past with a push to eSIM cards</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">New AI that can edit videos with textual
-prompts The dramatic shift in technology that mobile and cloud devices
-have brought is being realised by natural language processing As text is
-seen as a universal input in a lot of Unix programs, interesting
-possibilities.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">eyes convert photons to electrochemical
-signal transduction converts one energy form to another CCD (charged
-couple device; less noise, more power, lower speed) and CMOS (consumer
-grade) common camera sensors digital cameras convert photons to array of
-pixels, represented as voltage levels quad pixel camera sensor combines
-four adjacent pixels in this array</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">round design of new Nvidia GPU may be
-evidence for the 20-year cyclical nature of fashion</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">amazing new 6GHz stock speed Intel
-CPU</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">although all crypto is ponzi scheme, it
-seems the goals of Ethereum to perform secure financial transactions is
-headed in a better direction than BitCoin. furthermore following The
-Merge, it does not rely on power hungry mining. this is in term has led
-to a lot of 2nd-hand GPUs flooding the market</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">avx512 cant actually get performance
-stated by Intel ‘marketing’ as it causes heat up and cpu thermal
-throttles</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">good to see some work being done on the
-interopability of digital wallets</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">in general, Occum’s razor approach to
-muscular issues</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">smart power homes whereby the source of
-the power can be discerned, i.e. if it’s clean or not. extends to phone
-chargers with knowledge of this</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">interesting Github Copilot Labs able to do
-rough translations between languages</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">good to see (in some ways) hardware
-vendors pushing for AI standards to allow for greater optimisation</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ATM machines can be targeted for
-card-skimmers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">possibility of sprite animation in
-terminal using chafa tool to create ascii block art</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Intel new naming scheme confusing using
-brand name as category, i.e. ‘Intel Processor’ instead of ‘Pentium’</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">YouTube no respect for customers, running
-clandenstine experiment running up to 5 ads at the start instead of
-spacing them out Furthermore, Mozilla researchers found that buttons
-like ‘Stop recommending’, ‘Dislike’ have next to no effect</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Growing space economy with NASA ISS
-becoming privatised</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Gaming phones with extended fans/cooling
-and amenable gripping features</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">I suppose it would be kind of cool to
-travel in a plane going Mach 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">There can be such extremes in software,
-e.g. from programming hardware in FPGA to writing natural-language
-descriptions for an AI to convert to code</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cool 3D printing pens, although slow, can
-be used to say repair a chipped brick</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cool USB SAMD boards (possible malware
-creation)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Amazing creations from AI from still
-images, videos, digital assistants:
-https://threadreaderapp.com/thread/1572210382944538624.html Companies
-like DeepMind, OpenAI chatbot AI used in UI testing GPU DLSS (deep
-learning super sampling) is AI upscaling</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Finally, alleviating ambigious USB 4.0
-v2.0 naming scheme with devices having clear USB 40Gbps, 240W printed on
-them</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Compelled to investigate a service like
-paperspace in order to run OpenAI and other AI projects</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Promising Framework laptop build to easily
-repair in mind. However, subpar experience</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Teachers are fired for moonlighting</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Record breaking DDos attacks, 17.2million
-requests per second, 3.4terabits per second, 809million packets per
-second</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Google have size to challenge Dolby with
-new HD audio standard. However, whilst seeming altruistic, is just so
-they don’t have to pay Dolby licensing fees in their hardware</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Interesting Domain Brokerage services to
-allow you to get already used domains</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Amount limiting will not work to prevent
-MFA fatigue attacks</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Record-breaking figures acheived with
-overclocking can be decieving as may employ high-end coolers or even
-liquid nitrogen</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Still Windows updates break things,
-e.g. NVidia drivers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">The inundation of Javascript web
-frameworks has provided a learning point for adopting new technologies.
-In general, stick to familiar technologies and only adopted bleeding
-edge later</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cool application of IoT:
-https://hackaday.com/2015/11/24/building-the-infinite-matrix-of-tamagotchis/</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Although lower-res, CDs aren’t lossy
-compressed like Bluetooth or spotify.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Amazing gigabit speeds being sold for
-ISPs</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Sad that bariatrics is even a field of
-medicine</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Serverless is just a term for a caching
-server closer to clients</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">In the same unrequested vein as foldable
-PCs, now have slidable PCs</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Perhaps the going through graphical ASMR
-programming videos the ‘enjoyable’ remedy</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">More encompassing/combined sensors,
-e.g. AI vision sensor, gesture detection sensor</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Increased power of technology, developing
-perhaps faster interfaces, e.g. search by photo, speech, etc.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">sextempber cornucopia of condoms don’t
-have to be nostradamus to work out parents parking in effect, most
-people’s journey to learning is bespoke my engineering mind (which has
-been molded by experience) results in largely ad hoc responses many
-positive social dealings at university are unfortunately pyrrhic</td>
-</tr>
-<tr class="odd">
-<td
-style="text-align: left;"><!-- SPDX-License-Identifier: zlib-acknowledgement -->
-# NEWS - Sagging Arrow I believe decoding brain waves into functional
-output is major change in my future</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Unikernel has applications bundled inside
-kernel (so like eBPF) for high performance</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Amusing Dead Internet Theory that the
-Internet died around 2016 and is now largely bots</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Oh dear, javascript smart watch</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Interesting 3D print to make diffusing
-sheet for say LEDs to create different ambiences</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">AI now being used to improve compression
-algorithms</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Amazing potential of ‘molecular computers’
-to make drugs with precise traits (could extend to human’s gaining
-amazing a priori skills)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">JPEG XL better compression and lossy +
-lossless mode</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Again, Microsoft updates not working. This
-time, not actually properly applying vulnerability update</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Interesting can just buy off the shelf
-drone and attach something like an ESP32 to send data back to us</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cool program that sort of gamifies video
-conferencing allowing for individual chats: gather.town</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Like ‘Scrum Certification’ now with Matter
-have an official certification process</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Good work being done in legislating IoT
-labels, e.g. like nutrition labels that give information sensor data
-collected by device</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Have GPU microarchitectures like
-RNDA.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Chiplets seem future of shrinking size and
-expanding computing power, now seen in GPUs</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">VSR (virtual super technology) has GPU
-scale to 4K and then downscale if necessary to monitor’s resolution
-However, if want say 8K gaming, will require a DisplayPort cable</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Robots beginning to see more everyday use,
-e.g. waiters. Also, have robots learn in the field, e.g. Texas
-University have robots walking around campus</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Resistive RAM uses analog memory cells to
-store more information with less energy</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">GPT-4 upcoming text generation AI Perhaps
-text-to-speech, language transcription too diverse to solve without AI,
-e.g. deepgram program</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Although some people experience
-myocarditis after COVID vaccine, myocarditis long been linked to a
-number of viral infections</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Borg like spacecraft, i.e. cubesat now in
-orbit</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Silicon carbide power supplies more
-efficient</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">AI requires high quality data,
-i.e. created by skilled individuals. Also requires unique data. Might
-not have enough unique data in the future</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Unfortunate that Intel releasing
-software-defined-silicon, i.e. pay-as-you-go to enable certain hardware
-features</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Not even subtle that ads are no longer
-targeted for you, but rather shills</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Prompt engineers for many AI generators,
-e.g. text-davinci-3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">GPU AI DLSS improve performance by
-offloading frame generation</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Biodegradable sensors made out of organic
-circuitry proof of concept</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Watching me sleep on the floor is watching
-how the sausage is made in regards to my posture</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Serendipitously obtain a bokeh photo with
-my outdated phone camera</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"># NEWS - Leo the Lion Enters the Pride
-Politics are infiltrating areas of technology: * Rust toolchains on
-embedded. Rust developers have explicitly tweeted saying technology will
-always be political * NASA Artemis Accords have first line stating
-primary focus on women and person of colour on Moon Leads down the path
-of FSF, and in fact any cultural revolution which thinks it can do
-whatever it wants in the name of the people. Although perhaps ad
-hominem, experience has shown that they’re all polite until they’re
-not.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Seems in with big-tech, marketing is often
-more important than the underlying technology. 170km ‘The Line’
-ecotopia, metaverse, telsa etc. They make wild claims and the general
-public has no way of knowing the facts behind them (perception vs
-reality) A scary thought is that in this age, possible for
-self-sustaining narratives capable of deflecting facts</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">ARMs open-model allowed vendors to
-implement custom MPUs that saw in gain dominance over oher RISCs like
-MIPS and AVR.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Tech companies becoming conglomerate
-monopolies, e.g. tiktok music, apple tv etc.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Much like the C++ standards committee,
-concerns of ‘ivory tower’ nature of smart home Matter standards</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Seeing consequences of covid semiconductor
-demand in chip shortages. Exacerbated by increase usage in automotive
-industry and large dependence on foundries in Taiwan</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Annoyed at the web: * Seemingly lack of
-awareness of bloated and abstracted infrastructure * New technologies in
-the sphere are just sensationalised titles with little substance
-e.g. homescreen social media, css layout model and js frameworks</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">The importance of programming to a
-physical machine is paramount. The underlying technology is always
-changing, e.g. arcade machines, consoles, phones, watches, plastic 4bit
-processors</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">EU lawmakers want USB-C for all mobile
-devices to reduce e-waste. Makes me postulate a technocracy.</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;"># Workflow Preparation Mentality: ## Git
 usage: TODO(Ryan): collate into bash aliases * possible git notes to
 append to commits: $(git notes add -m ‘Acked-by: <a
@@ -4168,30 +3933,30 @@ on top of interactive rebase to perform squashing on most recent
 <strong>merge conflict resolution</strong>:
 <code>git mergetool</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">If wanting to create a new implementation
 of a function, perhaps don’t just delete it entirely, rather change its
 name to func_old()</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">seems have CI for deploying or
 testing</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ingress (act of entering), egress used for
 traffic</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">C is good as in the beginning you always
 want the results. In the end all you want is control (writing OS instead
 of libc will also allow for more powerful API)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: with multithreading, be aware of
 cache byte line invalidation (which is an action of cache
 coherency)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">compiler assumes will not go into
 undefined behaviour. so anything that puts in UB state is considered
 unreachable (so x/0 is akin to <code>__builtin_unreachable()</code>)?
@@ -4199,25 +3964,25 @@ u16 will be promoted to i32 if it fits (bugs with comparison) AS-IF
 (a.k.a equivalence) rule means a bug may appear before it has happened
 due to reordering</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">uninitialised data has an indeterminant
 state. so, c[0] != c[0]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">struct padding is undefined,
 i.e. compiler’s don’t have to do it?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">in C memory objects are not contiguous so,
 &amp;a == &amp;b will be optimised away (avoid by casting to integers)
 are C fat pointers even worth caring about? only really C++ member
 functions etc.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td
 style="text-align: left;">https://www.youtube.com/watch?v=w3_e9vZj7D8&amp;t=15s</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">strive for value orientated (less
 pointers), i.e. use structs by value; so return them and use as
 arguments. removes aliasing and x86 passes small structs into registers,
@@ -4225,38 +3990,38 @@ so never hit memory and if optimised and inline function, goes away
 entirely (is this the case for 32bit arm?) (in C++ this in justified due
 to hidden copy constructors)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">error handling, have the function log
 internal errors such as errno errors. at the call site, just set .valid
 field in return struct to false so, for a series of consecutive calls
 that could return errors, only check the last one (all functions will
 check the .valid field)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Avoid using most of libc as it’s old, bad
 design (strtok global state, rand locking) and generally slow. There are
 some useful, e.g. memcpy, fixed ints and math</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Best to store length of string, so don’t
 have to traverse it with strlen() and negatively affect the cache
 std::string allocates on heap (in fact, a lot of C++ have implicit
 constructors, more so from implicit conversions)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: best practices and use cases of
 logging</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">IMPORTANT: With these approaches, we feel
 like writing in a completely new language</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">C has moved ahead of no typedefs, forward
 declarations C empty function argument is vararg C has designated
 initialisers (gcc extension has this as well)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">C like performance like vegan meat. If you
 want it, go for the real thing C not literally a high level assembly
 language as compilers do a lot of transformations Similarly, assembly is
@@ -4265,170 +4030,170 @@ AS-IF rule, i.e. as long as EVENTUALLY equals the same. (in this only a
 C compiler, hence why it’s fast?) So, if not observable (e.g. volatile,
 io, graphics, etc.) could perform instruction reordering/removal</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">coroutine is function that can be
 suspended at any point, and resume later</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">if consuming a list each iteration, use
 doubly linked list to reset (e.g. event consumption)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">for any list, stack, queue etc. will wrap
 in a struct that has first and last pointers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">although sh in containers (alpine linux),
 the ubiquity of bash (if git on windows, then have bash) use its
 features</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">if global, decide if actually global or
 thread-local</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: investigate analysing core dump
 files (when becomes necessary)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Updating compiler symlinks: $(sudo ln
 -vfns /usr/bin/gcc-10 /usr/bin/gcc)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: breakpoint/error function print out
 line information only in debug builds</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Files from templates are developed on each
 project, thereby iteratively improving</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: Andrew Reece (rethinking doxygen
 youtube live streams)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: doesn’t asynchronous programming
 just make things harder to debug? is performance of say linux io_uring
 any better than synchronous?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO(Ryan): Investigate useful POSIX C
 functions, e.g. nftw() (netfw.h), getaddrinfo() (netdb.h) Also, some
 require the definition of cryptic macros to be included</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: aaron codes, code yao (leetcode
 walkthroughs)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: way to reduce transparency of active
 window dynamically?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">DIFFERENCE IN APPROACH TO WORKING ON TEAM
 AND STAGE OF PROJECT on a team, ‘proper’ commit should change one thing
 and have accompanying tests. So, write explorative code on branch and
 merge when done</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">have a _COUNT at the end of every
 enum</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">perhaps start with this:
 https://github.com/TheSandvichMaker/netgame and improve with glenn
 fielder? glenn fielder networking codersblock javidx9 mmo (possible
 informative videos: https://www.youtube.com/watch?v=jmHQa5P7hC8,
 https://www.youtube.com/watch?v=9OjIDko1uzc)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">techlinked + michel tunnell (this week in
 linux)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">does mesa stack include open-source
 drivers for NVIDIA. so, support opengl and vulkan?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">sudo and pipes doesn’t work. to allow gdb
 to attach: $(sudo bash -c “echo 0 &gt;
 /proc/sys/kernel/yama/ptrace_scope”) sudo -i; sudo vim
 /etc/sysctl.d/10-ptrace.conf IMPORTANT(This seems to work): sudo
 /sbin/setcap CAP_SYS_PTRACE=+eip /usr/bin/gdb</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: GO THROUGH https://www.rfleury.com/
 articles and implement!!!! mr4thdimension (allen webster) youtube videos
 https://mr4th.com/</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: With strncpy and such, get some
 indication if didn’t write entire buffer, i.e. input buffer too
 small</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: variable sized data structures that
 use memory arena with no holes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: use sanitisers from get go (may
 catch when mallocs less than a page)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: structure code for cross-platform
 from get go</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: terminator tab autoopen for project
 (include file in project source)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: avoid using magic numbers for
 various buffer sizes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: prefix discriminated union
 fields</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: write more comments on code that is
 ‘exploratory’, e.g. ASSUMES static size, IGNORES clearing other fields,
 etc.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Good error messages say what happened and
 why, provide reassurance, are empathetic, and help users fix the
 problem.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">When working with array, always check if
 length &gt; 0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">For production, probably want to
 <code>dlopen()</code> to provide fallbacks for missing libraries</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: some sort of code review on merge
 requests</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: writing expansive tests (perhaps
 look at zeux github?)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">always in software development will have
 things that aren’t working optimally. know they are there. will later go
 back and fix them when required (e.g. when in quality improving mode).
 just know this will always happen</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Working with modern software is going to
 be a pain at some point. Have to stay strong and not belittle situation,
 rather accept it and move on. At times, have to get off high horse and
 roll up your sleeves.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Linux issues: 1. runtime configurability
 (difficult part not API, but what to do when settings aren’t exact,
 i.e. what to fall back on when abstraction not there). 2. multiple
@@ -4438,27 +4203,27 @@ what SDL does. However, system/user configurability is huge in linux.
 There is simply too much runtime variability to test for all users.
 Furthermore, multiple CRT to support, e.g. muslc for Alpine</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">One way to solve variability is to use the
 Steam Runtime, which is a collection of .so files and configuration that
 is less subject to user configuration</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Linux desktop suffers from binary
 compatibility nightmare, e.g. 15 binaries to support all. This is
 because libraries like glibc are happy to break abi to get minor
 improvements, e.g spec says this so let’s do it even though no one
 cares</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">C STL has one version for each compiler +
 os. also, some compilers might not fully implement the STL feature</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">With an undeclared identifier in a unity
 build, just reorder #includes in main file</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Cross platform naming, e.g. With libc,
 libraries is more of a discipline thing There are no absolutes, just
 tradeoffs for solving your problem, e.g raw vs smart pointers Often
@@ -4467,21 +4232,21 @@ Unwritten assumptions, external constraints, users want lots of generic
 functionality. So often interesting at the same time, very
 annoying.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Data structures don’t correspond to layout
 in memory, e.g. When would you want awful cache locality of linked
 list</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Frameworks change all the time,
 fundamentals not so much, e.g how things glue together</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">compression orientated program think about
 concept compression, rather than code compression. e.g. might be at such
 a small code size that there is no concept to really compress</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">combinations: 2ⁿ-1, max: 2ⁿ introducing
 negatives we effectively remove one bit numbers represented in twos
 complement to handle addition/subtraction of negatives and positives.
@@ -4491,38 +4256,38 @@ all bits in positive number to get negative. therefore have -0 twos ➞
 adding a positive and its negative will get a 2 in each place. think
 about the MSB as the negative place, hence why -1 is all 1s</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">FPGA (matrix of CLBs) reprogrammable (as
 oppose to ASIC) IC with HDL. Better for parallel processing?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">dave’s garage, what’s a creel</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Switching between laptop and desktop as
 uni student meant merge conflicts were common. So, know how to fix with
 $(git mergetool) and have it as a rebase</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Github issue and pull request template
 files
 (https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/?mc_cid=a5a0d2dbbf&amp;mc_eid=UNIQID)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Terminal + Editor + Window manager</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Important to have linux source so as to
 view Documentation folder $(make kernelversion)
 https://www.youtube.com/watch?v=Jl_0W4o0xao</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(Serial Advanced Technology Attachment)
 important that these are sustained speeds, so for small file sizes
 expect a lot less as seconds smaller note that storage space advertised
 with S.I units, whilst OS works with binary</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">RAM potentially hundreds of cycles (CAS
 latency and cache retrieval process) (important to note that RAM CAS is
 only say 20% of total latency as will check traverse cache and than copy
@@ -4532,14 +4297,14 @@ In general: check if in L1. If not go check in L2 and mark least
 recently accessed L1 for move to L2. bubbles up to L3 until need for
 memory access which will go to memory controller etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">so, ram frequency gives max. throughput
 however latency of ram also important</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(cache latency from wikichip)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">generic is referencing Ubuntu specific
 kernel compilation (could also have -lowlatency etc.) (generic does not
 include a lot of modules in kernel to alleviate RAM, so use modprobe)
@@ -4547,7 +4312,7 @@ include a lot of modules in kernel to alleviate RAM, so use modprobe)
 linker, libc are all specific to linux OS used, e.g. compiled with
 different settings, different versions, etc.)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">$(grub-install -V) /etc/default/grub
 (GRUB_CMDLINE_LINUX_DEFAULT=““); $(update-grub); $(cat /proc/cmdline)
 (acpi_enforce_resources=lax boot parameter to allow decode-dimms to find
