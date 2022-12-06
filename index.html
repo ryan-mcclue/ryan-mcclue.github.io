@@ -3392,7 +3392,10 @@ detect water levels</td>
 <tr class="odd">
 <td style="text-align: left;">AI in sensors used to alter configuration
 to optimise power consumption AI generated voice, text. Disney can now
-alter age In summary, generative AI everywhere.</td>
+alter age In summary, generative AI everywhere. In fact, with ChatGPT
+being able to explain technical concepts, birth of AGI (artificial
+general intelligence) (perhaps this could be used as a sort of offline
+search engine)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">EMV (europay, mastercard and visa) secure
@@ -3732,52 +3735,57 @@ gamma curve) so with rgb values, preface with linear or srgb</td>
 <td style="text-align: left;">IMPORTANT: ALWAYS PROVIDE EXAMPLE!</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">no heap allocation, just use statically
+allocated pools:
+https://mcuoneclipse.com/2022/11/06/how-to-make-sure-no-dynamic-memory-is-used/?mc_cid=26981ac7f4&amp;mc_eid=UNIQID</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Fast Fourier Transform (FFTs) are often
 used with DACs to create a spectrum analyser which allows for subsequent
 beat detection?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">an adapter board would handle power and
 signal conversion</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: DSI vs USB vs HDMI?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">tiny solid-state batteries more efficient
 that coin cell batteries; useful for wearables</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: go through
 https://embedded.fm/blog/embedded-wednesdays</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Dagger CI in code not YAML Qucs-S for
 SPICE, free circuit simulator GUI</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: possible program usage of
 syncthing</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">bipartite ring buffer more efficient?
 TODO: seems with RTOS emphasis on ‘tasks’, will require understanding
 job queues https://www.aosabook.org/en/freertos.html</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">filters relating to a pedometer:
 https://www.aosabook.org/en/500L/a-pedometer-in-the-real-world.html</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: richard braun embedded (useful C has
 functions)
 https://www.twitch.tv/videos/233685076?filter=all&amp;sort=time</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">I only touch low-voltage 5V side, the high
 ‘dangerous’ voltage side I leave to hardware engineers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: rhymu ‘rusty keyboard’ series
 addressable rgb, each LED has serial chip with a serial port in and
 serial port out that it funnels through the chain
@@ -3790,14 +3798,14 @@ display?) IMPORTANT: chip cost may be $4, board cost $15 go with ARM
 (although ESP32 much more powerful than Atmel, e.g. RAM, peripherals,
 frequency similar cost)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">LEDS: tricolor led can be any 3 colours.
 RGB LED is specific colours we power level appropriate from cable, board
 will enter program mode automatically resolution of PWM setup dependent
 on the frequency set up for it (e.g. resolution of 8 gives 100% duty
 cycle of 255)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">DISPLAY: useful to display FPS (might only
 need to display this say, every 250ms as oppose to every frame), power
 consumption (perhaps unscaled power, i.e. power if not performing
@@ -3812,39 +3820,39 @@ drawable display and character display? ``` // Moire pattern for (u32 x
 = 0; x &lt; display_width; ++x) draw_line(x, 0, display_width - x,
 display_height);</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// Cocentric circles for (u32 r_count = 0;
 r_count &lt; 3; r_count += 1) draw_circle_outline(x, y, r_count);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// rainbow light_led(led_i, colour_val +=
 10);</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// Marquee (draw colour, then draw moving
 black spots) for (u32 i = scroll % 5; i &lt; num_leds; ++i) set_led(i,
 black);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// stars leds[random(leds_len)] =
 colours[random(colours_len)]; delay_ms(200); // might be better to draw
 a single LED each pass and use a LOCAL_PERSIST to // keep track of how
 many times function is called as have delay</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// comet u32 trailer_pixel_fade_amount =
 128; u32 num_core_pixels = 5; u32 delta_hue = 4; r32 comet_speed =
 0.5f;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// instead of clearing all LEDs, reduce
 brightness, i.e. incrementally fade to black led_fade_to_black(leds, i,
 amount);</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">u32 hue = HUE_RED; hue += delta_hue;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">i32 direction = -1; u32 pos = 0; pos +=
 (direction * comet_speed); // IMPORTANT: to get a ‘smooth’ effect,
 require floating point speed multiplier // IMPORTANT: so, animation
@@ -3855,7 +3863,7 @@ when calculating values, the natural derivation may prove too large or
 too small, // e.g. cur_time - prev_time. so, add something like a
 ‘speed_knob’ that will / or *</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// IMPORTANT: floating point coordinates
 only one part of smoothness. // also require fractional drawing // this
 means that drawing 0.25 of a pixel will be 0.25 of its original colour
@@ -3867,41 +3875,41 @@ blending void draw_pixels(ipos, pixel_len, colour) { first_pixel_avail =
 min(first_pixel_avail, pixel_len); remaining = min(count, strip_len -
 fpos); ipos = fpos;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">if (remaining &gt; 0.0f) { // ipos =
 get_pixel_order(); set_led(ipos++, colour_fraction(colour,
 first_pixel_avail)); remaining -= first_pixel_avail; }</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">while (remaining &gt; 1.0f) {
 set_led(ipos++, colour); remaining–; }</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">if (remaining &gt; 0.0f) { set_led(ipos++,
 colour_fraction(colour, remaining)); } } // IMPORTANT: now increment by
 say 0.1 instead of 1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// draw comet block // the delay() value
 will probably be specific to the CPU frequency</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// Check how fast we can draw this out
 over I2C (want something like get_ms()) // use weighted average to
 prevent value flickering, i.e. jumping (it will take some number of
 frames to stabilise as starts at 0) weighted_average = prev_value * 0.9
 + new_value * 0.1; (probably use LOCAL_PERSIST) ```</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">``` free-fall: v = sqrt(-2 * gravity *
 distance_fallen);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">r32 gravity = -9.81f; r32 start_height =
 1; r32 impact_velocity = free_fall(start_height); r32 speed_knob =
 4.0f;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">struct BouncingBallEffect { u32
 output_led_strip_len; u32 fade_rate; b32 reversed (draw from len
 inwards; i = size - 1 - i); // common parameter for effects b32 mirrored
@@ -3910,7 +3918,7 @@ time_since_last_bounce; r32 ball_speed; r32 dampening; // value closer
 to 1 preserves more energy (0.9f - i / pow(num_balls, 2)) u32 colour;
 };</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">time_since_last_bounce = time() -
 clock_at_last_bounce; // constant acceleration function (here gravity is
 decellerating us) // this could be considered an easing function
@@ -3919,78 +3927,78 @@ ball_speed * time_since_last_bounce; if (ball_height &lt; 0) // bounce {
 ball_height = 0; ball_speed = dampening * ball_speed; if (ball_speed
 &lt; 0.01f) ball_speed = initial_ball_speed; }</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">position = (ball_height * (strip_len - 1)
 / start_height); set_led(position, colour); // IMPORTANT: as no need for
 explicit collisiong detection, // if we do additive colours, led[i] +=
 colour; we get mixing if (mirrored) set_led(strip_len - 1 - position,
 colour);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">print(” ” * sin(freq * i) + “ryan”) // map
 sin() to our desired range // could also have sawtooth(), cubic() etc.
 ``` #define cli() nvic_globalirq_disable() #define sei()
 nvic_globalirq_enable()</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">``` // fractional drawing required for
 smooth ‘slow-motion’ effects</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">blend_amount_self = 2,
 blend_amount_neighbour1 = 3 (take 2 parts of itself, 3 parts of
 neighbour) blend_total = 5;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// for parameters essentially / for
 setting relative to length, // + for offset, and * for a scaling
 factor</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// cool for (u32 i = 0; i &lt; size; ++i)
 heat[i] = max(0L, heat[i] - random(0, ((cooling * 10) / size) +
 2));</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// move heat up for (u32 i = 0; i &lt;
 size; ++i) heat[i] = (heat[i] * blend_self + heat[(i + 1) % size] *
 blend_neighbour) / blend_total;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">// ignite a spark for (u32 i = 0; i &lt;
 num_sparks; ++i) { if (random(255) &lt; sparking_threshold_probability)
 { u32 y = size - 1 - random(spark_height); heat[y] = heat[y] +
 random(160, 255); } }</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// convert heat to colour for (u32 i = 0;
 i &lt; size; ++i) colour = map_colour_to_red(heat[i]); draw_pixels(i, 1,
 colour); ```</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">``` FAN_STRIP_SIZE = 16; NUM_FANS = 3;
 ZERO_PIXEL_OFFSET = 4; (how much have to rotate by for 0th pixel to be
 on bottom)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">enum PIXEL_ORDER { PIXEL_ORDER_SEQUENTIAL
 = 1 &lt;&lt; 0, PIXEL_ORDER_REVERSE = 1 &lt;&lt; 1,
 PIXEL_ORDER_BOTTOM_UP = 1 &lt;&lt; 2, PIXEL_ORDER_TOP_DOWN = 1 &lt;&lt;
 3, PIXEL_ORDER_LEFT_RIGHT = 1 &lt;&lt; 4, PIXEL_ORDER_RIGHT_LEFT = 1
 &lt;&lt; 5, };</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">u32 get_pixel_order(i32 pos, PIXEL_ORDER
 order) { // this allows negative indexing, i.e. -1 is last while (pos
 &lt; 0) pos += FAN_SIZE;</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">u32 offset = (pos + ZERO_PIXEL_OFFSET) %
 FAN_STRIP_SIZE; u32 reverse_offset = (pos + FAN_STRIP_SIZE -
 ZERO_PIXEL_OFFSET) % FAN_STRIP_SIZE; // start in particular fan, e.g. 0,
 16, 32, 48, 64, etc. u32 fan_base = pos - (pos % FAN_STRIP_SIZE);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">switch (order) { case
 PIXEL_ORDER_SEQUENTIAL: return fan_base + offset; case
 PIXEL_ORDER_REVERSE: return fan_base + FAN_STRIP_SIZE - 1 -
@@ -3998,7 +4006,7 @@ reverse_offset; case PIXEL_ORDER_BOTTOM_UP: return fan_base +
 FAN_STRIP_SIZE - 1 - (VERTICAL_LOOKUP[pos % FAN_STRIP_SIZE] +
 ZERO_PIXEL_OFFSET) % FAN_STRIP_SIZE; } }</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">// IMPORTANT: connecting multiple strips
 is daisy chaining, so still same output // allow for offset from
 fan_index, and also just passing number treating all fans together //
@@ -4007,9 +4015,22 @@ NUM_FANS; ++i) draw_fan_pixels(sin(x), 1, red,
 PIXEL_ORDER_LEFT_TO_RIGHT, i); for (u32 i = 0; i &lt; NUM_PIXELS; ++i)
 draw_fan_pixels(sin(x), 1, red, PIXEL_ORDER_LEFT_TO_RIGHT, 0); ```</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">``` wire strippers +/- affects tension
+which will affect any wire braiding put heat shrink on before wire
+soldering will often twist multiple common wires (e.g. ground) together
+and solder to single ground source (have gloves on for this) wiring can
+be too fine for holding a particular amperage? TODO: look into sleeving
+wires TODO: something like loctite threadlocker is a liquid that
+prevents threads loosening due to vibration</td>
+</tr>
 <tr class="even">
-<td
-style="text-align: left;"><code>wire strippers +/- affects tension which will affect any wire braiding put heat shrink on before wire soldering can twist multiple ground wires together and solder to single ground source</code></td>
+<td style="text-align: left;">Adhesive tape (with conductive pads on
+end) on bottom of LED strip stick wires to. Then solder end tips to
+connect bottom to top (have some electrical tape for this) Also, buy
+wires merged together and only pull apart the end points With
+multimeter, verify that no short circuit by checking continuity amongst
+wires ```</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">IMPORTANT: for a preemptive multitasking
