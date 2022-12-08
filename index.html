@@ -1827,15 +1827,25 @@ then wrap dependent values in function, e.g. set_width() ```</td>
 FOR GREATER FLEXIBILITY</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">IMPORTANT: A GOOD PROGRAMMER WANTS TO
+WRITE CODE. WHEN PEOPLE SAY TOO HARD, THIS IS AN OPPORTUNITY TO LEARN
+BUILD YOUR MOUNTAIN THAT WILL NOT AGE. YOU WILL BE A EXPERT THAT CAN FIX
+IT, BECAUSE YOU WROTE IT WHEN YOU WRITE A PIECE OF TECHNOLOGY DON’T VIEW
+IT AS STANDALONE, VIEW IT AS CREATING AN EVER HIGHER MOUNTAIN THAT WILL
+ALLOW YOU TO CREATE GREATER THINGS IN THE FUTURE IN CONTRAST, AN
+APPLICATION SHOULD BE A SMALL HOUSE; TECHNOLOGY STACK A MOUNTAIN LEARN
+BY IMPLEMENTING</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Think about your code running for
 decades</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: with multithreading, be aware of
 cache byte line invalidation (which is an action of cache
 coherency)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">compiler assumes will not go into
 undefined behaviour. so anything that puts in UB state is considered
 unreachable (so x/0 is akin to <code>__builtin_unreachable()</code>)?
@@ -1843,25 +1853,26 @@ u16 will be promoted to i32 if it fits (bugs with comparison) AS-IF
 (a.k.a equivalence) rule means a bug may appear before it has happened
 due to reordering</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">uninitialised data has an indeterminant
 state. so, c[0] != c[0]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">struct padding is undefined,
 i.e. compiler’s don’t have to do it?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">in C memory objects are not contiguous so,
 &amp;a == &amp;b will be optimised away (avoid by casting to integers)
-are C fat pointers even worth caring about? only really C++ member
-functions etc.</td>
-</tr>
-<tr class="odd">
-<td
-style="text-align: left;">https://www.youtube.com/watch?v=w3_e9vZj7D8&amp;t=15s</td>
+(however a != b will work even if pointers, it’s the address of that
+causes issues) are C fat pointers even worth caring about? only really
+C++ member functions etc.</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">TODO: if requiring software square root,
+use Carmack’s square root function?</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">strive for value orientated (less
 pointers), i.e. use structs by value; so return them and use as
 arguments. removes aliasing and x86 passes small structs into registers,
@@ -1869,38 +1880,38 @@ so never hit memory and if optimised and inline function, goes away
 entirely (is this the case for 32bit arm?) (in C++ this in justified due
 to hidden copy constructors)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">error handling, have the function log
 internal errors such as errno errors. at the call site, just set .valid
 field in return struct to false so, for a series of consecutive calls
 that could return errors, only check the last one (all functions will
 check the .valid field)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Avoid using most of libc as it’s old, bad
 design (strtok global state, rand locking) and generally slow. There are
 some useful, e.g. memcpy, fixed ints and math</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Best to store length of string, so don’t
 have to traverse it with strlen() and negatively affect the cache
 std::string allocates on heap (in fact, a lot of C++ have implicit
 constructors, more so from implicit conversions)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: best practices and use cases of
 logging</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">IMPORTANT: With these approaches, we feel
 like writing in a completely new language</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">C has moved ahead of no typedefs, forward
 declarations C empty function argument is vararg C has designated
 initialisers (gcc extension has this as well)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">C like performance like vegan meat. If you
 want it, go for the real thing C not literally a high level assembly
 language as compilers do a lot of transformations Similarly, assembly is
@@ -1909,7 +1920,7 @@ AS-IF rule, i.e. as long as EVENTUALLY equals the same. (is this only a
 C compiler, hence why it’s fast?) So, if not observable (e.g. volatile,
 io, graphics, etc.) could perform instruction reordering/removal</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: volatile vs atomics? atomic means we
 either read all of it, or none of it (i.e. don’t read if some other
 thread is writing to it) architectures have specific atomic
@@ -1924,14 +1935,14 @@ full fence is release and acquire, i.e cannot move up or down atomics
 are not just instructions to compiler to not reorder, but also hardware
 instructions related to cache flushing etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">C standard as at least 6 pages of
 undefined behaviour could be more, in fact anything not explicit defined
 is undefined. there could be more undefined behaviour waiting to be
 noticed. it’s just because C is 50 year old language that many corner
 cases explored</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">compiler assumes that code that is
 undefined behaviour cannot be reached and so will optimise away wrapping
 is undefined for signed values, so can optimise this away in that case
@@ -1939,170 +1950,170 @@ is undefined for signed values, so can optimise this away in that case
 optimise away if
 <code>u32_val &lt;&lt;= x; if (x &gt;= 32) ...</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">coroutine is function that can be
 suspended at any point, and resume later</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">if consuming a list each iteration, use
 doubly linked list to reset (e.g. event consumption)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">for any list, stack, queue etc. will wrap
 in a struct that has first and last pointers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">although sh in containers (alpine linux),
 the ubiquity of bash (if git on windows, then have bash) use its
 features</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">if global, decide if actually global or
 thread-local</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: investigate analysing core dump
 files (when becomes necessary)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Updating compiler symlinks: $(sudo ln
 -vfns /usr/bin/gcc-10 /usr/bin/gcc)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: breakpoint/error function print out
 line information only in debug builds</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Files from templates are developed on each
 project, thereby iteratively improving</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: Andrew Reece (rethinking doxygen
 youtube live streams)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: doesn’t asynchronous programming
 just make things harder to debug? is performance of say linux io_uring
 any better than synchronous?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO(Ryan): Investigate useful POSIX C
 functions, e.g. nftw() (netfw.h), getaddrinfo() (netdb.h) Also, some
 require the definition of cryptic macros to be included</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: aaron codes, code yao (leetcode
 walkthroughs)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: way to reduce transparency of active
 window dynamically?</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">DIFFERENCE IN APPROACH TO WORKING ON TEAM
 AND STAGE OF PROJECT on a team, ‘proper’ commit should change one thing
 and have accompanying tests. So, write explorative code on branch and
 merge when done</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">have a _COUNT at the end of every
 enum</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">perhaps start with this:
 https://github.com/TheSandvichMaker/netgame and improve with glenn
 fielder? glenn fielder networking codersblock javidx9 mmo (possible
 informative videos: https://www.youtube.com/watch?v=jmHQa5P7hC8,
 https://www.youtube.com/watch?v=9OjIDko1uzc)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">techlinked + michel tunnell (this week in
 linux)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">does mesa stack include open-source
 drivers for NVIDIA. so, support opengl and vulkan?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">sudo and pipes doesn’t work. to allow gdb
 to attach: $(sudo bash -c “echo 0 &gt;
 /proc/sys/kernel/yama/ptrace_scope”) sudo -i; sudo vim
 /etc/sysctl.d/10-ptrace.conf IMPORTANT(This seems to work): sudo
 /sbin/setcap CAP_SYS_PTRACE=+eip /usr/bin/gdb</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: GO THROUGH https://www.rfleury.com/
 articles and implement!!!! mr4thdimension (allen webster) youtube videos
 https://mr4th.com/</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: With strncpy and such, get some
 indication if didn’t write entire buffer, i.e. input buffer too
 small</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: variable sized data structures that
 use memory arena with no holes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: use sanitisers from get go (may
 catch when mallocs less than a page)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: structure code for cross-platform
 from get go</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: terminator tab autoopen for project
 (include file in project source)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: avoid using magic numbers for
 various buffer sizes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: prefix discriminated union
 fields</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: write more comments on code that is
 ‘exploratory’, e.g. ASSUMES static size, IGNORES clearing other fields,
 etc.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Good error messages say what happened and
 why, provide reassurance, are empathetic, and help users fix the
 problem.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">When working with array, always check if
 length &gt; 0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">For production, probably want to
 <code>dlopen()</code> to provide fallbacks for missing libraries</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">TODO: some sort of code review on merge
 requests</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">TODO: writing expansive tests (perhaps
 look at zeux github?)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">always in software development will have
 things that aren’t working optimally. know they are there. will later go
 back and fix them when required (e.g. when in quality improving mode).
 just know this will always happen</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Working with modern software is going to
 be a pain at some point. Have to stay strong and not belittle situation,
 rather accept it and move on. At times, have to get off high horse and
 roll up your sleeves.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Linux issues: 1. runtime configurability
 (difficult part not API, but what to do when settings aren’t exact,
 i.e. what to fall back on when abstraction not there). 2. multiple
@@ -2112,27 +2123,27 @@ what SDL does. However, system/user configurability is huge in linux.
 There is simply too much runtime variability to test for all users.
 Furthermore, multiple CRT to support, e.g. muslc for Alpine</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">One way to solve variability is to use the
 Steam Runtime, which is a collection of .so files and configuration that
 is less subject to user configuration</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Linux desktop suffers from binary
 compatibility nightmare, e.g. 15 binaries to support all. This is
 because libraries like glibc are happy to break abi to get minor
 improvements, e.g spec says this so let’s do it even though no one
 cares</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">C STL has one version for each compiler +
 os. also, some compilers might not fully implement the STL feature</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">With an undeclared identifier in a unity
 build, just reorder #includes in main file</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Cross platform naming, e.g. With libc,
 libraries is more of a discipline thing There are no absolutes, just
 tradeoffs for solving your problem, e.g raw vs smart pointers Often
@@ -2141,21 +2152,21 @@ Unwritten assumptions, external constraints, users want lots of generic
 functionality. So often interesting at the same time, very
 annoying.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Data structures don’t correspond to layout
 in memory, e.g. When would you want awful cache locality of linked
 list</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Frameworks change all the time,
 fundamentals not so much, e.g how things glue together</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">compression orientated program think about
 concept compression, rather than code compression. e.g. might be at such
 a small code size that there is no concept to really compress</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">combinations: 2ⁿ-1, max: 2ⁿ introducing
 negatives we effectively remove one bit numbers represented in twos
 complement to handle addition/subtraction of negatives and positives.
@@ -2165,38 +2176,38 @@ all bits in positive number to get negative. therefore have -0 twos ➞
 adding a positive and its negative will get a 2 in each place. think
 about the MSB as the negative place, hence why -1 is all 1s</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">FPGA (matrix of CLBs) reprogrammable (as
 oppose to ASIC) IC with HDL. Better for parallel processing?</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">dave’s garage, what’s a creel</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Switching between laptop and desktop as
 uni student meant merge conflicts were common. So, know how to fix with
 $(git mergetool) and have it as a rebase</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Github issue and pull request template
 files
 (https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/?mc_cid=a5a0d2dbbf&amp;mc_eid=UNIQID)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Terminal + Editor + Window manager</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Important to have linux source so as to
 view Documentation folder $(make kernelversion)
 https://www.youtube.com/watch?v=Jl_0W4o0xao</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">(Serial Advanced Technology Attachment)
 important that these are sustained speeds, so for small file sizes
 expect a lot less as seconds smaller note that storage space advertised
 with S.I units, whilst OS works with binary</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">RAM potentially hundreds of cycles (CAS
 latency and cache retrieval process) (important to note that RAM CAS is
 only say 20% of total latency as will check traverse cache and than copy
@@ -2206,14 +2217,14 @@ In general: check if in L1. If not go check in L2 and mark least
 recently accessed L1 for move to L2. bubbles up to L3 until need for
 memory access which will go to memory controller etc.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">so, ram frequency gives max. throughput
 however latency of ram also important</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">(cache latency from wikichip)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">generic is referencing Ubuntu specific
 kernel compilation (could also have -lowlatency etc.) (generic does not
 include a lot of modules in kernel to alleviate RAM, so use modprobe)
@@ -2221,7 +2232,7 @@ include a lot of modules in kernel to alleviate RAM, so use modprobe)
 linker, libc are all specific to linux OS used, e.g. compiled with
 different settings, different versions, etc.)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">$(grub-install -V) /etc/default/grub
 (GRUB_CMDLINE_LINUX_DEFAULT=““); $(update-grub); $(cat /proc/cmdline)
 (acpi_enforce_resources=lax boot parameter to allow decode-dimms to find
