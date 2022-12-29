@@ -232,6 +232,27 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#language-of-the-people"
+id="toc-language-of-the-people">Language of the People</a></li>
+<li><a href="#embedded-workflow" id="toc-embedded-workflow">Embedded
+Workflow</a>
+<ul>
+<li><a href="#e-commerce" id="toc-e-commerce">E-COMMERCE</a></li>
+</ul></li>
+<li><a href="#news---wrestle-the-scorpion"
+id="toc-news---wrestle-the-scorpion">NEWS - Wrestle the
+Scorpion</a></li>
+<li><a href="#news---scaling-the-libra"
+id="toc-news---scaling-the-libra">NEWS - Scaling the Libra</a></li>
+<li><a href="#news---sagging-arrow" id="toc-news---sagging-arrow">NEWS -
+Sagging Arrow</a></li>
+<li><a href="#news---leo-the-lion-enters-the-pride"
+id="toc-news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
+the Pride</a></li>
+<li><a href="#news---goat-in-current"
+id="toc-news---goat-in-current">NEWS - Goat in Current</a></li>
+<li><a href="#news---a-virgin-woman" id="toc-news---a-virgin-woman">NEWS
+- A Virgin Woman</a></li>
 <li><a href="#check-if-nvidia-driver-is-installed"
 id="toc-check-if-nvidia-driver-is-installed">Check if nvidia driver is
 installed</a></li>
@@ -247,6 +268,9 @@ id="toc-sorting-squared-array">Sorting Squared Array</a></li>
 <li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
 Winner</a></li>
 </ul></li>
+<li><a href="#leetcode-everyday" id="toc-leetcode-everyday">LEETCODE
+EVERYDAY</a></li>
+<li><a href="#workflow" id="toc-workflow">Workflow</a></li>
 <li><a
 href="#important-for-all-topics-included-have-some-mention-on-wallpaper"
 id="toc-important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
@@ -281,9 +305,1524 @@ FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</a></li>
 id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
 <li><a href="#resilience" id="toc-resilience">Resilience</a></li>
 <li><a href="#rage-against-the-machine"
-id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
+id="toc-rage-against-the-machine">Rage Against the Machine</a>
+<ul>
+<li><a href="#tht" id="toc-tht">THT</a></li>
+<li><a href="#smd" id="toc-smd">SMD</a></li>
+</ul></li>
 </ul>
 </nav>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<p>TODO: rxi microui library demo</p>
+<p>Interesting Trenchboom 2 quake map file level editor (easy to
+parse?)</p>
+<p><code>!!</code> operator to 0 or 1:
+<code>t += ((F32)!!(flags &amp; flag) - t) * rate;</code></p>
+<p>IMPORTANT: dlclose() will only unload if reference count 0. So, with
+thread_local variables will not actually unload</p>
+<p>niagara renderer first 3D game:
+https://www.pardcode.com/cpp-3d-game-tutorial-series</p>
+<p>TODO: Windows WM_PAINT when window moved/obscured, main loop
+otherwise therefore, 2 places to possibly draw. does X11 have this
+also?</p>
+<p>resilio sync video downloads:
+https://hero.handmade.network/forums/code-discussion/t/3242-downloading_videos_using_resilio_sync_formerly_bittorrent_sync</p>
+<p>hotloading metaprogramming</p>
+<p>X11 copy and paste:
+https://handmade.network/forums/articles/t/8544-implementing_copy_paste_in_x11
+font rasteriser:
+https://handmade.network/forums/wip/t/7610-reading_ttf_files_and_rasterizing_them_using_a_handmade_approach</p>
+<p>Often legacy supported code adds lots of corner cases, e.g. opengl
+i.e don’t have consistent performance characteristics</p>
+<p>immediate mode and retained mode are about lifetimes. for immediate,
+the caller does not need to know about the lifetime of an object.</p>
+<p>discovering for linux docs (xlib, alsa) are code and for development
+may have to add to groups (uinput)</p>
+<p>plugins just be .so files that are loaded with dlsym()</p>
+<p>Use of discriminated unions and type fields for type sharing</p>
+<p>Visualising essential for debugging insidious problems… Print rows of
+text aligned Conversion from single-state to recording data over time
+will require memory which we will cast to appropriate state structure,
+e.g. DebugState state structures will have
+<code>b32 is_initialised</code> field which will initialise a memory
+arena Then have CounterState and CounterSnapshot (move per frame data
+into this) Each frame, copy over src to dst (with a rolling buffer) In
+the rendering of the records, to display snapshots, generate statistics
+like min, max, avg. These will be converged into a Statistic struct for
+each value Have helper function for begin, update and end statistic with
+value Now we have max, loop over again to generate graph height scale
+and say red colour scale Alternatively we could have absolute height
+scale, e.g <code>total / 0.033f</code> (So in drawing, will typically
+have ‘raw’ structures that just have data, and will then loop over these
+again to generate relationships to actually draw from etc.)</p>
+<p>(TODO: UI have layout and font information…) Drawing have left_edge,
+top_edge Drawing charts, define chart_height, bar_width, bar_spacing
+etc. in pixels Can draw single pixel height reference line Cycle through
+colours with <code>arr[index % ARRAY_COUNT(arr)]</code></p>
+<p>Drawing just take state, and input. After base drawing, look at input
+and alter if appropriate</p>
+<p>Draw routines with origin vector and vector axis (basis vectors) Axis
+that aren’t perpendicular causes shearing</p>
+<p>artist creates in SRGB space (in photoshop) so if we do any math on
+it (like a lerp), will have to convert it to linear space and then back
+to srgb for the monitor (if we were to just blit directly, it would be
+fine) to emulate complicated curves, could table drive it we compromise
+on r² and √2 without gamma correction, resultant image will look very
+dim (due to nature of monitor gamma curve) so with rgb values, preface
+with linear or srgb</p>
+<p>IMPORTANT: ALWAYS PROVIDE EXAMPLE!</p>
+<p>TODO: incorporate rss reader feeder.co into morning routine</p>
+<p>TODO: wolfsound youtube for some audio DSP</p>
+<p>TODO: Fun graphical displays https://tcc.lovebyte.party/ YouTube
+LoveByte and FieldFX byte jams</p>
+<p>TODO: how to best architect timing requirements given that ISR should
+be small? e.g. this executes every 1 second, this every 500ms etc.</p>
+<p>Thermal imaging coupled with camera more ‘deterministic/maintainable’
+than AI vision</p>
+<p>There are of course international standards (IEC 60601, or IEC 62304)
+that you have to follow in order to get your device CE/FDA approval.
+These standards usually require to provide a lot of documentation and to
+pass a series of tests in order to verify that your device is working as
+intended and it’s not dangerous.</p>
+<p>could even be simplex (one way only) full-duplex can still be serial,
+requiring at least two wires serial (synchronous with clock data;
+asynchronous) + parallel</p>
+<p>BUTTON BOX 3D PRINT: * print out small test part with holes to test
+if button/screw/etc. inserts fit correctly * consider leaving holes in
+3D scaffolding for making wiring easier * for stylistic finish, can
+print a separate plate with different resin and attach with hot glue *
+will have a bottom plate to account for wiring (have threaded inserts
+(male-to-female) to account for box moving about when pressing a button)
+1. solder wires to buttons 2. solder wires to mcu 3. secure mcu</p>
+<p>no heap allocation, just use statically allocated pools:
+https://mcuoneclipse.com/2022/11/06/how-to-make-sure-no-dynamic-memory-is-used/?mc_cid=26981ac7f4&amp;mc_eid=UNIQID</p>
+<p>Fast Fourier Transform (FFTs) are often used with DACs to create a
+spectrum analyser which allows for subsequent beat detection?</p>
+<p>an adapter board would handle power and signal conversion</p>
+<p>TODO: DSI vs USB vs HDMI?</p>
+<p>tiny solid-state batteries more efficient that coin cell batteries;
+useful for wearables</p>
+<p>TODO: go through https://embedded.fm/blog/embedded-wednesdays</p>
+<p>Dagger CI in code not YAML Qucs-S for SPICE, free circuit simulator
+GUI</p>
+<p>TODO: possible program usage of syncthing</p>
+<p>bipartite ring buffer more efficient? TODO: seems with RTOS emphasis
+on ‘tasks’, will require understanding job queues
+https://www.aosabook.org/en/freertos.html</p>
+<p>filters relating to a pedometer:
+https://www.aosabook.org/en/500L/a-pedometer-in-the-real-world.html</p>
+<p>TODO: richard braun embedded (useful C has functions)
+https://www.twitch.tv/videos/233685076?filter=all&amp;sort=time</p>
+<p>I only touch low-voltage 5V side, the high ‘dangerous’ voltage side I
+leave to hardware engineers</p>
+<p>TODO: rhymu ‘rusty keyboard’ series</p>
+<p>TODO: FreeRTOS spectrum analyzer, i.e. using ‘tasks’:
+https://www.youtube.com/watch?v=f_zt7zdGJCA</p>
+<p>https://iosoft.blog/2020/09/29/raspberry-pi-multi-channel-ws2812/
+addressable rgb, each LED has serial chip with a serial port in and
+serial port out that it funnels through the chain (interesting option of
+having a light display at sunset) using PlatformIO (python under the
+hood) very slow. perhaps though, it’s useful for finding libraries or
+possible environment options to explore like unit testing
+BOARD-SELECTION: (want a board with WiFi and a builtin display?)
+IMPORTANT: chip cost may be $4, board cost $15 go with ARM (although
+ESP32 much more powerful than Atmel, e.g. RAM, peripherals, frequency
+similar cost)</p>
+<p>LEDS: tricolor led can be any 3 colours. RGB LED is specific colours
+we power level appropriate from cable, board will enter program mode
+automatically resolution of PWM setup dependent on the frequency set up
+for it (e.g. resolution of 8 gives 100% duty cycle of 255)</p>
+<pre><code>red_led_duty_cycle(pwm_max_val - red_component);
+green_led_duty_cycle(pwm_max_val - green_component);
+blue_led_duty_cycle(pwm_max_val - blue_component);</code></pre>
+<p>TODO: is brightness of PWM determined by duty cycle? If so, then a
+PWM LED fade should just be duty cycle, or should it be colour as
+well?</p>
+<p>DISPLAY: useful to display FPS (might only need to display this say,
+every 250ms as oppose to every frame), power consumption (perhaps
+unscaled power, i.e. power if not performing alterations; perhaps only
+bright LED is power throttling) technology, size, connection as various
+permutations of these, have various controller permutations
+e.g. SH1107_I2C, SSD1306_SPI, etc. (we probably want a library to draw
+lines, shapes, fonts, etc.) I2C developed by Phillips to allow multiple
+chips on a board to communicate with only 3 wires (id is passed on bus)
+(number of devices is limited by address space; typically 128
+addresses?) price difference between a shape drawable display and
+character display?</p>
+<pre><code>// Moire pattern
+for (u32 x = 0; x &lt; display_width; ++x)
+  draw_line(x, 0, display_width - x, display_height);
+
+// Cocentric circles
+for (u32 r_count = 0; r_count &lt; 3; r_count += 1)
+  draw_circle_outline(x, y, r_count);
+
+// rainbow
+light_led(led_i, colour_val += 10);
+
+// Marquee (draw colour, then draw moving black spots)
+for (u32 i = scroll % 5; i &lt; num_leds; ++i) set_led(i, black);
+
+// stars
+leds[random(leds_len)] = colours[random(colours_len)];
+delay_ms(200);
+// might be better to draw a single LED each pass and use a LOCAL_PERSIST to
+// keep track of how many times function is called as have delay
+
+// comet
+u32 trailer_pixel_fade_amount = 128;
+u32 num_core_pixels = 5;
+u32 delta_hue = 4;
+r32 comet_speed = 0.5f;
+
+// instead of clearing all LEDs, reduce brightness, i.e. incrementally fade to black
+led_fade_to_black(leds, i, amount);
+
+u32 hue = HUE_RED;
+hue += delta_hue;
+
+i32 direction = -1;
+u32 pos = 0;
+pos += (direction * comet_speed); 
+// IMPORTANT: to get a &#39;smooth&#39; effect, require floating point speed multiplier
+// IMPORTANT: so, animation stages are u32, r32, then easing (kinematics/lerp)/cycling(sin) etc.
+// IMPORTANT: gradual colour blending to clear, instead of instant colour clear
+// IMPORTANT: then move to perhaps altering colour
+// IMPORTANT: when calculating values, the natural derivation may prove too large or too small,
+// e.g. cur_time - prev_time. so, add something like a &#39;speed_knob&#39; that will / or *
+
+// IMPORTANT: floating point coordinates only one part of smoothness.
+// also require fractional drawing
+// this means that drawing 0.25 of a pixel will be 0.25 of its original colour
+colour colour_fraction(colour_in, fraction)
+{
+  fraction = min(1.0f, fraction);
+  return colour.fadeToBlack(255 * (1.0f - fraction));
+}
+// IMPORTANT: so, in addition to &#39;sub-pixel&#39; drawing, also have automatic blending
+void draw_pixels(ipos, pixel_len, colour)
+{
+  first_pixel_avail = 1.0f - (fpos - (int)fpos); // get fractional part
+  first_pixel_avail = min(first_pixel_avail, pixel_len);
+  remaining = min(count, strip_len - fpos);
+  ipos = fpos;
+
+  if (remaining &gt; 0.0f)
+  {
+    // ipos = get_pixel_order();
+    set_led(ipos++, colour_fraction(colour, first_pixel_avail));
+    remaining -= first_pixel_avail;
+  }
+
+  while (remaining &gt; 1.0f)
+  {
+    set_led(ipos++, colour);
+    remaining--;
+  }
+
+  if (remaining &gt; 0.0f)
+  {
+    set_led(ipos++, colour_fraction(colour, remaining));
+  }
+}
+// IMPORTANT: now increment by say 0.1 instead of 1
+
+// draw comet block
+// the delay() value will probably be specific to the CPU frequency
+
+// Check how fast we can draw this out over I2C (want something like get_ms())
+// use weighted average to prevent value flickering, i.e. jumping (it will take some number of frames to stabilise as starts at 0)
+weighted_average = prev_value * 0.9 + new_value * 0.1; (probably use LOCAL_PERSIST)</code></pre>
+<pre><code>free-fall: v = sqrt(-2 * gravity * distance_fallen);
+
+r32 gravity = -9.81f;
+r32 start_height = 1;
+r32 impact_velocity = free_fall(start_height);
+r32 speed_knob = 4.0f;
+
+struct BouncingBallEffect
+{
+  u32 output_led_strip_len;
+  u32 fade_rate;
+  b32 reversed (draw from len inwards; i = size - 1 - i); // common parameter for effects
+  b32 mirrored (size = size / 2); // common parameter for effects
+  r32 time_since_last_bounce;
+  r32 ball_speed;
+  r32 dampening; // value closer to 1 preserves more energy (0.9f - i / pow(num_balls, 2))
+  u32 colour;
+};
+
+time_since_last_bounce = time() - clock_at_last_bounce;
+// constant acceleration function (here gravity is decellerating us)
+// this could be considered an easing function
+ball_height = 0.5 * gravity * pow(time_since_last_bounce, 2.0f) + ball_speed * time_since_last_bounce;
+if (ball_height &lt; 0) // bounce
+{
+  ball_height = 0;
+  ball_speed = dampening * ball_speed;
+  if (ball_speed &lt; 0.01f) ball_speed = initial_ball_speed;
+}
+
+position = (ball_height * (strip_len - 1) / start_height);
+set_led(position, colour); 
+// IMPORTANT: as no need for explicit collisiong detection, 
+// if we do additive colours, led[i] += colour; we get mixing
+if (mirrored) set_led(strip_len - 1 - position, colour);
+
+print(&quot; &quot; * sin(freq * i) + &quot;ryan&quot;) // map sin() to our desired range
+// could also have sawtooth(), cubic() etc. </code></pre>
+<p>#define cli() nvic_globalirq_disable() #define sei()
+nvic_globalirq_enable()</p>
+<pre><code>// fractional drawing required for smooth &#39;slow-motion&#39; effects
+
+blend_amount_self = 2, blend_amount_neighbour1 = 3 (take 2 parts of itself, 3 parts of neighbour)
+blend_total = 5;
+
+// for parameters essentially / for setting relative to length,
+// + for offset, and * for a scaling factor
+
+// cool
+for (u32 i = 0; i &lt; size; ++i)
+  heat[i] = max(0L, heat[i] - random(0, ((cooling * 10) / size) + 2));
+
+// move heat up
+for (u32 i = 0; i &lt; size; ++i)
+  heat[i] = (heat[i] * blend_self + heat[(i + 1) % size] * blend_neighbour) / blend_total;
+
+// ignite a spark
+for (u32 i = 0; i &lt; num_sparks; ++i)
+{
+  if (random(255) &lt; sparking_threshold_probability)
+  {
+    u32 y = size - 1 - random(spark_height);
+    heat[y] = heat[y] + random(160, 255);
+  }
+}
+
+// convert heat to colour
+for (u32 i = 0; i &lt; size; ++i)
+  colour = map_colour_to_red(heat[i]);
+  draw_pixels(i, 1, colour);</code></pre>
+<pre><code>FAN_STRIP_SIZE = 16;
+NUM_FANS = 3;
+ZERO_PIXEL_OFFSET = 4; (how much have to rotate by for 0th pixel to be on bottom)
+
+enum PIXEL_ORDER
+{
+  PIXEL_ORDER_SEQUENTIAL = 1 &lt;&lt; 0,
+  PIXEL_ORDER_REVERSE = 1 &lt;&lt; 1,
+  PIXEL_ORDER_BOTTOM_UP = 1 &lt;&lt; 2,
+  PIXEL_ORDER_TOP_DOWN = 1 &lt;&lt; 3,
+  PIXEL_ORDER_LEFT_RIGHT = 1 &lt;&lt; 4,
+  PIXEL_ORDER_RIGHT_LEFT = 1 &lt;&lt; 5,
+};
+
+u32 get_pixel_order(i32 pos, PIXEL_ORDER order)
+{
+  // this allows negative indexing, i.e. -1 is last
+  while (pos &lt; 0) pos += FAN_SIZE;
+
+  u32 offset = (pos + ZERO_PIXEL_OFFSET) % FAN_STRIP_SIZE;
+  u32 reverse_offset = (pos + FAN_STRIP_SIZE - ZERO_PIXEL_OFFSET) % FAN_STRIP_SIZE;
+  // start in particular fan, e.g. 0, 16, 32, 48, 64, etc.
+  u32 fan_base = pos - (pos % FAN_STRIP_SIZE);
+
+  switch (order)
+  {
+    case PIXEL_ORDER_SEQUENTIAL:
+      return fan_base + offset;
+    case PIXEL_ORDER_REVERSE:
+      return fan_base + FAN_STRIP_SIZE - 1 - reverse_offset;
+    case PIXEL_ORDER_BOTTOM_UP:
+      return fan_base + FAN_STRIP_SIZE - 1 - (VERTICAL_LOOKUP[pos % FAN_STRIP_SIZE] + ZERO_PIXEL_OFFSET) % FAN_STRIP_SIZE;
+  }
+}
+
+// IMPORTANT: connecting multiple strips is daisy chaining, so still same output
+// allow for offset from fan_index, and also just passing number treating all fans together
+// IMPORTANT: optional arguments, use struct
+for (u32 i = 0; i &lt; NUM_FANS; ++i)
+   draw_fan_pixels(sin(x), 1, red, PIXEL_ORDER_LEFT_TO_RIGHT, i);
+for (u32 i = 0; i &lt; NUM_PIXELS; ++i)
+   draw_fan_pixels(sin(x), 1, red, PIXEL_ORDER_LEFT_TO_RIGHT, 0);</code></pre>
+<p>boustrophodon: 0 &gt; 1 &gt; 2 &gt; 3 &gt; 4 | 8 &lt; 7 &lt; 6 &lt; 5
+&lt;– IMPORTANT: LED matrix arranged as boustrophodon columns if (x % 2
+== 0) return (x * height) + y; else return (x * height) + (height - 1 -
+y);</p>
+<p>FFT divides samples into frequency buckets logarithmic scale employed
+in spectrum analyser to account for high frequency range being more
+greatly separated than low frequency</p>
+<pre><code>
+wire strippers +/- affects tension which will affect any wire braiding
+put heat shrink on before wire soldering
+will often twist multiple common wires (e.g. ground) together and solder to single ground source
+(have gloves on for this)
+wiring can be too fine for holding a particular amperage?
+TODO: look into sleeving wires
+TODO: something like loctite threadlocker is a liquid that prevents threads loosening due to vibration 
+
+Adhesive tape (with conductive pads on end) on bottom of LED strip stick wires to. Then solder end tips to connect bottom to top
+(have some electrical tape for this)
+Also, buy wires merged together and only pull apart the end points
+With multimeter, verify that no short circuit by checking continuity amongst wires 
+
+Critical section means non concurrent access to this code. 
+Acheived with a mutex obtain and lock pair?</code></pre>
+<p>Modern OS will have code memory write protected for security reasons.
+Bare metal can do this however</p>
+<p>IMPORTANT: for a preemptive multitasking kernel like linux, a call to
+pthread_yeild() (allow other threads to run on CPU) is not necessary.
+however, for embedded, maybe</p>
+<p>LEDS: WS2812B is standard. Neopixel brand. Each chip is RGB LED with
+MCU. probably has low drop-out regulator onboard so can pass 5V to 3.3V
+can buy as grids or strips have a library to generate the square wave
+forms, e.g. FastLED</p>
+<p>by powering board with pins, can ensure enough current is passing to
+it can simultaneously connect USB cable and will defer to power pins
+over it?</p>
+<p>With power, still have to be careful if say, setting max brightness
+and all LEDS to white seems it’s common to have GBR as format? TODO:
+only in video 4 are power calculations done? (have a function to limit
+max watts of power drawn?)</p>
+<p>// #define AT_MOST_N_MILLIS(NAME,N) static AtMostNMillis NAME(N); if(
+NAME ) // operator bool() { return ready(); }</p>
+<p>8BIT MATH (another reason to inspect assembly): // qadd8( i, j) ==
+MIN( (i + j), 0xFF ) (saturated add) // qsub8( i, j) == MAX( (i - j), 0
+) // mul8( i, j) == (i * j) &amp; 0xff // add8( i, j) == (i + j) &amp;
+0xff // sub8( i, j) == (i - j) &amp; 0xff // sin8( x) == (sin( (x/128.0)
+* pi) * 128) + 128 // cos8( x) == (cos( (x/128.0) * pi) * 128) + 128 #if
+QADD8_C == 1 unsigned int t = i + j; if( t &gt; 255) t = 255; return t;
+#elif QADD8_ARM_DSP_ASM == 1 asm volatile( “uqadd8 %0, %0, %1” : “+r”
+(i) : “r” (j)); return i; #endif</p>
+<p>TODO: gdb scripts https://github.com/espressif/freertos-gdb</p>
+<p>TODO: is an IoT cloud data store like ThingSpeak used
+commercially?</p>
+<p>TODO: investigate Renode for embedded testing</p>
+<p>TODO: networking with containers:
+https://iximiuz.com/en/series/computer-networking-fundamentals/</p>
+<p>TODO: look at embeddedartistry course developments for ‘building
+testable embedded systems’</p>
+<p>TODO: working with time-series data</p>
+<p>LIN protocol for vehicles (seems to be a host of protocols specific
+to automotives)</p>
+<p>trimpot a.k.a potentiometer</p>
+<p>MEMS (micro-electromechanical systems) motion sensor</p>
+<p>TODO: using in-built security features of chip, e.g. AES-256</p>
+<p>buck converter steps down DC-DC voltage, while stepping up current
+(various step-down mechanisms in relation to AC/DC and
+voltage/current)</p>
+<p>although bluetooth LE say 50m distance, a repeater can be used (and
+really for any RF)</p>
+<p>TODO: profiling not your application
+https://linus.schreibt.jetzt/posts/qemu-9p-performance.html</p>
+<p>TODO:
+https://dev.to/taugustyn/call-stack-logger-function-instrumentation-as-a-way-to-trace-programs-flow-of-execution-419a</p>
+<p>MIPI (mobile industry processor interface) DSI</p>
+<p>TODO: outdoor project:
+https://hackaday.io/project/186064-green-detect look into further
+hackaday.io/projects</p>
+<p>TODO: embed LEDs onto 3D printed board</p>
+<p>contrasting telephoto and wide angle lens</p>
+<p>TODO: differences between ribbon cable and normal</p>
+<p>TODO: TPM (trusted platform module) for embedded
+https://www.amazon.com/Trusted-Platform-Module-Basics-Technology/dp/0750679603</p>
+<p>TODO: freeRTOS
+https://www.digikey.com/en/maker/projects/getting-started-with-stm32-introduction-to-freertos/ad275395687e4d85935351e16ec575b1</p>
+<p>TODO: bootlin courses</p>
+<p>TODO: relay connected to a maglock</p>
+<p>TODO: GPS tracking, LORAwan (long range, low power), satelitte
+connection, etc.</p>
+<p>TODO: 3D printing; outdoor case enclosure</p>
+<p>Digital laser dust sensor (particulates in the air). PM1 being worst
+as most fine TODO: DC vs stepper motor? TODO: what is the use case for a
+motor driver such as L298 Dual H-Bridge Motor Driver and Tic T500 USB
+Multi-Interface Stepper Motor Controller (circuitry without MCU?) driver
+lines are diode protected from back EMF?</p>
+<p>Growth of ‘enviro sensor kits’, i.e. test air quality etc. to create
+smart home or garden Growth of ‘IoT’ sensor kits/smart home Growth of
+‘AI sensors’ (Perhaps more relevent to me is power/energy and automation
+and sensing) Growth of ‘IoT’ sensor kits Growth of sensor compounding,
+e.g. video now with LiDAR to detect depth, gesture detection sensor</p>
+<p>H-bridge is IC that switches voltage polarity, e.g. run DC motors
+forwards or backwards Rectifier converts AC to DC (transformer is high
+voltage AC to low voltage AC)</p>
+<p>TODO: is something like SerialStudio necessary for visualisation?
+Could not live stream gnuplot?</p>
+<p>TODO: domestica course on creative coding. css, html graphics also
+for 2D animations?</p>
+<p>TODO: Hackaday for project inspiration</p>
+<p>Marketing refers to some MCU work as physical computing</p>
+<p>TODO: investigate both AVR github and gists:
+https://github.com/BobBurns</p>
+<p>CFFI to create a python interface for C for something say like a
+console session?</p>
+<p>TODO: Perhaps for a machine just targeting embedded development, use
+WSL to easily use GUI debugger apps?</p>
+<p>TODO: Essentials of putting metadata section in firmware binary, such
+as version string! (particularly so test runners can utilise this
+information)</p>
+<p>Might see GNSS + INS (inertial navigation system; i.e using IMU as
+well)</p>
+<p>Perhaps if gaffer low-level correctness, searching for web API design
+message types?</p>
+<p>TODO: amplifiers, e.g. class-D etc. MEMs accelerometers for vibration
+detection in cars</p>
+<p>TODO: RTC is external to oscillator?</p>
+<p>Analog LED is single colour Digital LED allows controlling each
+colour separately (so, a.k.a e.g addressable APA102 LEDs) This is done
+through an LED chip (think WS2812B LED chip for NeoPixel)</p>
+<p>A channel in a sensor is quantity measured. So an acceleration sensor
+could have 3 channels, 1 for each axes</p>
+<p>DSP: http://www.dspguide.com/pdfbook.htm terms like THD (total
+harmonic distribution), PFC (power factor correction), HV (high
+voltage)</p>
+<p>circuit design in software (perhaps parallel with Robert Feranc?):
+https://www.jitx.com/</p>
+<p>https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/?mc_cid=3835da293a&amp;mc_eid=UNIQID</p>
+<p>Go through talks on memfault.com blog</p>
+<p>Simulator testing gives much faster turn-around times, can add
+sanitisers without memory concerns, pass peripheral data in from file,
+draw to window instead of display etc.</p>
+<p>For memory allocator, set to 0 on free in debug builds? Investigate
+gcc tunables, e.g. in debug build: export MALLOC_PERTURB_=<span
+class="math inline">((</span>RANDOM % 255 + 1))</p>
+<p>network game (with some testing tools):
+https://github.com/TheSandvichMaker/netgame</p>
+<p>TODO: how to calculate: “Its power supply system can supply up to
+4200 mAh and run for more than 5 hours” SiC (silicon carbide) power
+module Whole area in power management (also leads onto safety
+regulations, e.g. SIL)</p>
+<p>use time-series database where everything is stored ordered (as
+oppose to relational based on set thoery whose order is determined in
+clauses. also get full SQL support here and can store more data
+types)</p>
+<p>investigate automated ‘agriculture’, e.g smart argicultural kit,
+automatic pot plant watering, etc.</p>
+<p>databases useful for tracking time series IoT sensor data</p>
+<p>how to overclock and underclock? how are these different to adjusting
+clock scalers?</p>
+<p>awesome escape puzzles:
+https://www.youtube.com/c/PlayfulTechnology</p>
+<p>investigate cpu fault handling:
+https://github.com/tobermory/faultHandling-cortex-m</p>
+<p>DC motor: raw PWM signal and ground signal controls speed high rpm,
+continous rotation (e.g. fans, cars) servo: dc-motor + gearing set +
+control circuit + position sensor signal controls position limited to
+180° accurate rotation (e.g. robot arms) stepper: can be made to move
+precise well defined ‘steps’, i.e. jumps between electromagnets position
+fundamental (e.g. 3D printers)</p>
+<p>AVR used in lower-end (8bit) as less complex, cheaper than ARM</p>
+<p>TODO: working with thumb instructions TODO: best practices monitoring
+systems in the field (4G?)</p>
+<p>note, if using newlib, will still have a _start</p>
+<p>May compile for different architectures in embedded for different
+product lines e.g. low-end fit bit, high-end fitbit</p>
+<p>Compile with different compilers to see performance benefits at end.
+Also possible may have to use a particular compiler for specific
+hardware.</p>
+<p>In reality, don’t want an RTOS if timing very critical. Most MCU
+don’t even have multiple cores so adding software overhead (or are there
+additional hardware to emulate cores?) Even without RTOS, will most
+likely have some timer and separation of tasks. Main overall benefit of
+RTOS is consistent driver interfaces across multiple mcus (useful for
+say complex bluetooth/ethernet stacks etc.) Most mcus are overpowered
+for what they do, so using an RTOS is probably a good idea.</p>
+<p>tamper response usually done with a button on the board that gets
+activated when case opens this will trigger an interrupt handled by RTC
+(real time clock)</p>
+<p>cpu has modes like Stop mode that is a power saving mode.</p>
+<p>battery balancing relevent to multiple cells TP4056 Lithium Battery
+Charging Board?</p>
+<p>we want performant, reliable software.</p>
+<p>testing should have coverage information also</p>
+<p>verification: requirements validation: does it solve problem
+authenticate: identity authorise: privelege token something used to
+authorise</p>
+<p>HTML not turing-complete, i.e. can’t perform data manipulations</p>
+<p>working with new ISA think about registers and addressing modes</p>
+<p>robot ➞ renode (why not just qemu with shell scripts perhaps?) seems
+that robot/renode parsing of UART cleaner?</p>
+<p>https://www.youtube.com/watch?v=-Ecf7lb4aZ0 latches ➞ flip flops (or
+latches are a type of flip-flop?) several latches combined together form
+a register D-type latch in SRAM (caches) DRAM uses transistor and
+capacitor</p>
+<p>embedded systems special purpose, constrained, often real time
+(product may be released in regulated environment standardsd,
+e.g. automotive, rail, defence, medical etc.) challenges are testabilty
+and software/hardware comprimises for optimisation problem solving,
+e.g. bit-banging or cheap mcu, external timer or in-built timer, adding
+hardware increases power consumption, e.g. ray tracing card or just
+rasterisation, big.LITTLE clusters 1/4 scalar performance for 1/2 power
+consumption good tradeoff</p>
+<p>what would a segfault ➞ coredump look like on bare-metal?</p>
+<p>C type qualifiers are idempotent,
+e.g. <code>const const const int</code> is fine sparse + smatch static
+analysis tools that give named address spaces (near, far pointers)</p>
+<p>synchronisation constructs: * lock (only one thread access at a time)
+* mutex (lock that can be shared by multiple processes) * semaphore (can
+allow many threads access at a time)</p>
+<p>is ARM nested interrupt by default?</p>
+<p>C atomics just insert barriers?</p>
+<p>function reentrant if can be swapped out and its execution rentered
+functions that operate on global structures and employ lock-based
+sychronisation (could encounter deadlocks if called from signal handler)
+(and are thread-safe) like malloc and printf are not reentrant</p>
+<p>qemu useful over native for when word-size different. also, assembly
+inspection</p>
+<p>TODO: DSP, RTOS, wireless + IoT, battery/power, peripheral protocols
+(USB, LCD, etc.), CODECS, optimisations particular to MCUs, assembly
+knowledge, sql, c++ stl, python systems testing (continous integration),
+bootloaders</p>
+<p>ARM, RISC-V, xtensa</p>
+<h1 id="language-of-the-people">Language of the People</h1>
+<p>https://drh.github.io/lcc/</p>
+<p>Garbage collection replaces us with a ‘search’ of our memory and
+decides when to free So really only use if you can’t figure out when to
+free something This search is not free</p>
+<p>No language implements a feature that determines a memory footprint,
+i.e. how much memory we use</p>
+<p>Know OS specific forking (process launching), file
+checking/reading/writing, IPCs</p>
+<p>Steps for adding new feature: create a new file, e.g. commands.c and
+include it in main.c (order it before things that will use it) then do a
+git commit. This gets us off on a nice feeling In new file, create
+function with barebones functionality that can then be inserted into
+location and called/tested</p>
+<p>Simple word parser use
+<code>at[1] != '\0' &amp;&amp; at[1] == 'a'</code></p>
+<p>Simple single line parser: First separate by whitespace with
+<code>while (at[0] != '\0'); break</code> and
+<code>eat_spaces(), find_ch_from_left()</code></p>
+<p>3D printing ideas: https://www.youtube.com/c/3DSage/videos</p>
+<p>michael ee for RTOS:
+https://www.youtube.com/playlist?list=PLLYZoEqwvzM35p2Kc7bk7bkwxLtTVwpvy</p>
+<p>A real time scheduling algorithm is deterministic (not necessarily
+fast), i.e. it absolutely must (soft time is it should) (real time
+processing means virtually immediately) So, a higher priority task will
+preempt lower priority tasks FreeRTOS will have a default idle task
+created by the kernel that is always running (this idle task gives
+indication of a low-power mode for free?)</p>
+<p>middleware extends OS functionality, drivers give OS
+functionality</p>
+<p>freeRTOS makes money through some commercial licenses (with support),
+middleware (tcp/ip stacks, cli etc.)</p>
+<p>TODO: setting freeRTOS interrupt priorities is sometimes done wrong?
+tasks are usually infinite loops</p>
+<p>freeRTOS is more barebones (only 3 files) and effectively just a
+scheduler (so has timers, priorities) and communication primitives
+between threads In most embedded programs, sensors are monitored
+periodically. Time and functionality are closely related For small
+programs super loop is fine. However, when creating large programs, this
+time dependency greatly increases complexity. So, a priority based
+real-time scheduler can be used to reduce this time complexity.
+(priority over time-slice more efficient in most cases, as if not
+operating, can go to sleep) In addition, schedular allows for logical
+separation of components (concurrent team development) Also allows easy
+utilisation of changing hardware, e.g. multiple processor cores COTS
+(commercial-off-the-shelf) as opposed to bespoke</p>
+<p>SEPARATE API CALLS TO AVOID LOW PRIORITY CORRUPTING BY BEING
+INTERRUPTED BY HIGH PRIORITY Define a context structure that will hold
+api call information</p>
+<p>typedef struct file_api_params_s { uint8_t api_opcode; uint8_t
+control_opcode; uint8_t file_handle; semaphore sem; void * param1;
+size_t param2; } file_api_params_t;</p>
+<p>Depending on the RTOS you can actually define your messages and
+message pool ahead of time - or you’ll be providing a pointer to the
+parameter structure in your message file_api_params_t file_api_pool[n];
+//where n = number of tasks that can access the file system + 1;</p>
+<p>Each api function does the following: - allocates a free param
+structure from the pool - populates the parameters from the api call -
+initializes the semaphore - allocates and initializes a message to send
+to the file system task - adds the message to the queue - wait for the
+semaphore</p>
+<p>The filesystem task does the following: - waits for messages from the
+message queue - checks the message validity and that the sender still is
+valid (for some systems that have bad behavior if the semaphore api does
+not check for validity) - performs the requested operation - increments
+the semaphore - goes back to waiting for a message So, filesystem task
+is assigned high priority</p>
+<p>If taskA dependent on taskB, taskB should be of higher priority than
+taskA</p>
+<p>zephyr more of an RTOS a step towards linux with lots of drivers
+e.g. LVGL, LittleFS, etc. (with this comes a lot more configuration
+hassle)</p>
+<p>TODO: zephyr series (perhaps better to do this first as an RTOS as
+more modern resources than FreeRTOS?) https://training.golioth.io/
+https://blog.golioth.io/zephyr-threads-work-queues-message-queues-and-how-we-use-them/?mc_cid=f6bdf458d1&amp;mc_eid=UNIQID
+https://blog.golioth.io/taking-the-next-step-debugging-with-segger-ozone-and-systemview-on-zephyr/</p>
+<p>lego technics for gear ideas:
+https://www.youtube.com/playlist?list=PLJTMHMAVxQmvTGatIj-X2rJrN8aGJEaQD</p>
+<p>want to make something like stargate wheel</p>
+<p>first step in embedded debugging commandments; thou shalt check
+voltage (e.g. check 5V going to LCD by placing multimeter on soldered
+pin heads)</p>
+<p>we can see in x86 (wikichips), instruction and data separate from L2
+cache arm SoC block diagram (datasheet), see d-bus and i-bus to RAM
+introduce things like CCM (core coupled cache) and ART (adaptive
+real-time accelerator) that add some more harvard like instruction
+things essentially, more busses instead of more cores like in x86,
+(i.e. a lot more than just a CPU to be concerned with) also have more
+debug hardware don’t really know why cortex-m4 has MPU</p>
+<p>AXIM, AHB and APB ARM specific will have a bus matrix (which allows
+different peripherals to communicate via master and slave ports by
+requesting and sending data) off this, have AHB (higher frequency and
+higher bandwidth). like to think of AHB as host bus as it feeds into
+APBs via a bridge. APB1 normally half frequency of APB2 we can see that
+DMA can go directly to APB without going through bus matrix So, relevent
+for speed and clock concerns going through which bus? Also to know if we
+are DMA’ing something and CPUing something, they are not going to be
+fighting on the same bus, i.e. spread out load lower power peripherals
+on lower frequency busses? this level of knowledge further emphasises
+need to know hardware to understand what is going on</p>
+<h1 id="embedded-workflow">Embedded Workflow</h1>
+<p>https://go.memfault.com/debugging-embedded-devices-in-production-virtual-panel?mc_cid=32b3cae3e7&amp;mc_eid=UNIQID
+https://go.memfault.com/embedded-device-observability-metrics-panel-recording?mc_cid=32b3cae3e7&amp;mc_eid=UNIQID</p>
+<p>use specifically for understanding mesh networks in context of
+bluetooth?:
+https://academy.novelbits.io/register/annual-membership?_gl=1<em>15qz5rp</em>_ga<em>NzM2MjQ4ODUzLjE2NTY0OTIwNjc.</em>_ga_FTRKLL78BY*MTY1OTU3OTAxNS4xLjEuMTY1OTU3OTIyMy4w&amp;_ga=2.149910452.341656361.1659579015-736248853.1656492067</p>
+<p>https://interrupt.memfault.com/blog/ota-delta-updates?utm_campaign=Interrupt%20Blog&amp;utm_medium=email&amp;_hsmi=222505339&amp;_hsenc=p2ANqtz-9kmqPywlKxifduWJneXhUh1h_RQ4bf-v41o2qF8iBciZYc9beFlhwM4EiOVbP3DKUl8kxc_4GOIdpzvkJi5iOGzgwSWA&amp;utm_content=222505339&amp;utm_source=hs_email</p>
+<p>automated crash reporting:
+https://lance.handmade.network/blog/p/8491-automated_crash_reporting_in_basically_one_400-line_function#26634
+in embedded, how are metrics transmitted remotely, i.e. via bluetooth to
+phone than web? too much power if directly to web?</p>
+<p>something related to HIL (hardware-in-loop testing)
+https://blog.golioth.io/golioth-hil-testing-part1/?mc_cid=da33e3796b&amp;mc_eid=UNIQID</p>
+<p>something related to systems testing with aardvark SPI/I2C adapter
+(more tutorials with bus pirate) 10:00 time mark:
+https://www.youtube.com/watch?v=N60WSQc-G_8&amp;list=PLTG9uzDd_HQ84wVz0DwQ5_mwf1GnpY6LB&amp;index=11
+seems indepth bus pirate manual is on git?
+http://dangerousprototypes.com/docs/Bus_Pirate
+https://learn.sparkfun.com/tutorials/bus-pirate-v36a-hookup-guide/all
+(look for device specific tutorials on bus pirate website)
+http://www.starlino.com/bus_pirate_i2c_tutorial.html</p>
+<p>seems that RMII (reduced media-independent interface) is a pin layout
+to connect MAC devices (flexible in implementation). Can be implemented
+to support say an RJ45 connector</p>
+<p>stm32 datasheet and reference manual (documents of different depths
+about same mcu) nomenclature will have ‘Application Notes’ that detail
+specific features like CCM RAM datasheet will often be related to a
+family, e.g. stm32f429xx. therefore, at the front will have a table
+comparing memory, number of gpios, etc. for particulars</p>
+<p>bit twiddling:
+http://graphics.stanford.edu/~seander/bithacks.html</p>
+<p>interesting courses: https://pikuma.com/courses</p>
+<p>is power profiler kit specific to each board necessary, e.g. nordic,
+stm32?</p>
+<p>software-blogs: https://www.gingerbill.org/article/
+https://www.rfleury.com/</p>
+<p>https://linuxafterdark.net/ podcast</p>
+<p>embedded-blogs: https://patternsinthemachine.net/
+https://blog.feabhas.com/ https://blog.st.com/
+https://dmitry.gr/?r=05.Projects https://tratt.net/laurie/blog/
+http://stevehanov.ca/blog/ https://thephd.dev/
+https://www.embeddedrelated.com/blogs.php https://lemon.rip/
+https://jpieper.com/ https://www.embeddedrelated.com/
+https://patternsinthemachine.net/category/general/
+https://embeddeduse.com/
+https://martinfowler.com/articles/patterns-of-distributed-systems/?mc_cid=3835da293a&amp;mc_eid=UNIQID</p>
+<p>memfault</p>
+<p>https://embeddedartistry.com/fieldatlas/embedded-software-development-maturity-model/?mc_cid=da33e3796b&amp;mc_eid=UNIQID</p>
+<p>Seems that IAR compiler produces smaller, faster code than gcc?</p>
+<p>Fallback to: https://grep.app/search when searching for code snippets
+on github?</p>
+<p>UART is protocol for sending/recieving bits. RS232 specifies voltage
+levels</p>
+<p>DSP:
+https://www.youtube.com/playlist?list=PLTNEB0-EzPluXh0d_5zRprbgRfgkrYxfO</p>
+<p>Wifi/Ethernet:
+https://www.youtube.com/watch?v=dumqa78j1sg&amp;t=1046s</p>
+<p>Lora/Nrf/IoT connections:
+https://www.youtube.com/watch?v=mB7LsiscM78</p>
+<p>courses: https://www.youtube.com/watch?v=dnfuNT1dPiM&amp;t=25s
+https://www.udemy.com/course/mastering-microcontroller-with-peripheral-driver-development/?ranMID=39197&amp;ranEAID=YuKpx7UHSEk&amp;ranSiteID=YuKpx7UHSEk-VcxzUKL7wAR1VyB2muQaaQ&amp;LSNPUBID=YuKpx7UHSEk&amp;utm_source=aff-campaign&amp;utm_medium=udemyads
+https://www.udemy.com/course/microcontroller-dma-programming-fundamentals-to-advanced/?ranMID=39197&amp;ranEAID=YuKpx7UHSEk&amp;ranSiteID=YuKpx7UHSEk-85NcF8rkTsNIoMCfETBU3g&amp;LSNPUBID=YuKpx7UHSEk&amp;utm_source=aff-campaign&amp;utm_medium=udemyads
+https://www.udemy.com/course/mastering-rtos-hands-on-with-freertos-arduino-and-stm32fx/?ranMID=39197&amp;ranEAID=YuKpx7UHSEk&amp;ranSiteID=YuKpx7UHSEk-qjeQee0Iel.PZ6z63nXsmw&amp;LSNPUBID=YuKpx7UHSEk&amp;utm_source=aff-campaign&amp;utm_medium=udemyads</p>
+<p>memory align up: sbrk((x + 7) &amp; ~7); sbrk() is system call malloc
+uses?</p>
+<p>silicon mainly obtained from quartz. electric arc when insulator air
+is supplied enough energy to ionise</p>
+<ol type="1">
+<li><strong>Documentation</strong> Generalities such as <em>Debug
+Interface</em> or <em>Procedure Call Standard</em> Architecture
+specifics such as <em>armv7m</em> Micro-architecture specifics such as
+<em>cortex-m4</em> Micro-controller specifics such as
+<em>stm32f429zi</em> Board specifics such as pin-out diagram and
+schematic</li>
+<li><strong>BSP</strong> This can be done via an IDE such as STM32CubeMX
+to create an example project Makefile. Alternatively can be done via a
+command line application such as libopencm3.</li>
+<li><strong>Targets</strong> Disable hardware fpu instructions and
+enable libgloss for simulator. Ensure main() call ordering mock test
+working Enable nano libc with no system calls for target</li>
+<li><strong>Flashing and Debugging</strong> Coordinate
+<em>JLink/STLink</em> probe and board pin-outs Ascertain board debug
+firmware and determine if reflashing required,
+e.g. <em>STLinkReflash</em> Preferable to use debugger software such as
+<em>Ozone</em> that automates flashing. If not, determine flash software
+such as <em>JLinkExe</em>, <em>stlink-tools</em>, <em>openocd</em>,
+<em>nrfjprog</em> etc. Coordinate debugger software such as
+<em>QTCreator</em> with qemu gdb server</li>
+<li><strong>Hardware Tools</strong> Measure voltage, current,
+resistance/continuity/diode with multimeter? Oscilloscope for … Logic
+analyser for, SPI and I2C</li>
+</ol>
+<p>(HSPI is high speed parallel interface)</p>
+<ol start="6" type="1">
+<li><strong>Protocol</strong> USB port probably in-built serial
+port</li>
+</ol>
+<p>astable means no stable states, i.e. is not predominatley low or
+high, e.g. square wave, sine wave etc. oscillator generates wave (could
+be for carrier or clock)</p>
+<p>RC (resistor-capacitor) oscillator generates sine wave by charging
+and discharging periodically (555 astable timer) internal mcu
+oscillators typically RC, so subject to frequency variability</p>
+<p>Max out the HCLK in the clock diagram as we are not running off
+battery. Will have clock sources, e.g. HSI, HSE, PLL. output of these is
+SYSCLK. SYSCLK is what would use to calculate cpu instruction
+cycles.</p>
+<p>a clock is an oscillator with a counter that records number of cycles
+since being initialised</p>
+<p>Crystal generates stable frequency PLL is type of clock circuit that
+allows for high frequency, reliable clock generation (setup also affords
+easy clock duplication and clock manipulation) So, PLL system could have
+RC or crystal input Feeding into it is a reference input (typically a
+crystal oscillator) which goes into a voltage controlled oscillator to
+output frequency The feedback of the output frequency into the initial
+phase detector can be changed Adding dividers/pre-scalers into this
+circuit allows to get programmable voltage. So, a combination of stable
+crystal (however generate relatively slow signal, e.g. 100MHz) and high
+frequency RC oscillators (a type of VCO; voltage controlled
+oscillator)</p>
+<p>openocd -f /usr/share/openocd/scripts/interface/jlink.cfg -f
+/usr/share/openocd/scripts/target/stm32f4x.cfg should open a tcp port on
+3333 for gdb</p>
+<p>Seems that an RTOS is a multiprocessing kernel that allows the user
+to control its scheduling priority?</p>
+<p>The CPU architecture will have an exception (a cpu interrupt) model.
+Here, reset behaviour will be defined. the 32 bit arm cortex-m4 has FPU
+(a application, m for microcontroller, r high performance real time)
+TODO(Ryan): avr vs arm vs rsic-v vs x86 vs powerpc vs sparc vs mips
+(what motivations brought about these architectures?) as often harvard
+archicture (why?) Von Neumann, RAM (variables, data, stack) + ROM
+(code/constants) + I/O all on same CPU bus. Harvard has ICode bus for
+ROM, and a SystemBus for RAM + I/O. This allows operations to occur
+simultaneously. So, why use Von Neumann? it is labelled as an evaluation
+board different boards use different ICDI (in-circuit debug interfaces)
+to flash through SWD via usb-b e.g. texas instruments use stellaris,
+stm32 ST-link is fixed point used anymore? TODO(Ryan): Why is a floating
+pin also called high impedance? To avoid power dissipation and unknown
+state, drive with external source, e.g. ground or voltage.</p>
+<p>Pull-up/down resistors are to used for unconnected input pins to
+avoid floating state So, a pull-down will have the pin (when in an
+unconnected state) to ground, i.e. 0V when switch is not on</p>
+<p>IMPORTANT: Although enabling internal resistors, must look at board
+schematic as external resistors might overrule</p>
+<p>Vdd (drain, power supply to chip) Vcc (collector, subsection of chip,
+i.e. supply voltage of circuit) Vss (sink, ground) Vee (emitter,
+ground)</p>
+<p>the sparsity of linux can make configuration vary e.g bluez stack
+-&gt; modify policies</p>
+<p>for long range, LoRa or sigfox essentially tradeoffs between power
+and data rate ieee 802.11 group for WLANs (wifi - high data rate),
+802.15 for WPANs; 802.15.1 (bluetooth - le variant - heavily used in
+audio), 802.15.4 low data rate (zigbee implements this standard)</p>
+<p>unlike windows msdn, linux documentation is mostly source code (not
+good as if not fast/easy, not used). so, essential to have something
+like ctags and compile from source (sed -e “s/-Werror//g” -i *.make)
+source and unit tests are documentation in many linux sources</p>
+<p>xor with itself sets to 0</p>
+<p>“1’s and 0’s” + matej youtube channels</p>
+<p>https://embeddedartistry.com/blog/2018/06/04/demystifying-microcontroller-gpio-settings/?mc_cid=c443ecbc14&amp;mc_eid=UNIQID
+https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/?mc_cid=c443ecbc14&amp;mc_eid=UNIQID</p>
+<p>unit test notes from udemy</p>
+<p>Aardvark adapter essential for automated testing (so, an adapter of
+sorts should always be used for automated testing?) Ask philip johnston
+on embedded artistry regarding widespread testing, e.g. multiple
+adapters?</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<ol type="1">
+<li>SPEED:</li>
+</ol>
+<ul>
+<li>create models with newest sensors straight away</li>
+<li>create new models all-the-time</li>
+</ul>
+<ol start="2" type="1">
+<li>A BUSINESS IS SOMETHING THAT MAKES MONEY. THIS IS NUMBER 1 PRIORITY
+NOT MONEY OUT</li>
+</ol>
+<ul>
+<li>MUST KNOW HOW PEOPLE ARE GOING TO PAY YOU, E.G. PAYPAL, STRIPE AND
+HOW ARE YOU GOING TO CONVINCE THEM (OFFER THEM A PROMISE, E.G YOU WILL
+…)</li>
+<li>don’t think about what costs money, e.g. make logo, make website,
+registered trademark if no one paying you, not a business think about
+what brings money in</li>
+<li>have a website with models, prices and advertising “sorry because of
+such high demand, have to wait few extra weeks for product” “in
+meantime, here is a free gift”</li>
+<li>money fixes problems, i.e. can go back and fix other problems that
+cost money later, e.g. getting a registered trademark, getting an office
+(money in is vanity)</li>
+<li>you don’t need fancy things until PEOPLE START PAYING YOU MONEY</li>
+<li>at least if no one buys from advertising, you haven’t lost
+anything</li>
+</ul>
+<ol start="3" type="1">
+<li>START BUSINESSES CHEAPLY. DON’T SPEND ON FULFILLMENT, SPEND MORE ON
+MONEY IN FIRST</li>
+</ol>
+<ul>
+<li>when you have large amounts of money, can make a lot of
+mistakes</li>
+<li>allows you to see what is viable without risk</li>
+<li>can have cheap/basic products first then make better later</li>
+</ul>
+<ol start="4" type="1">
+<li>UTILISE FAMILY AND FRIENDS.</li>
+</ol>
+<ul>
+<li>they can work for free at the start.</li>
+<li>younger people more knowledgable of social media, e.g. tiktok</li>
+</ul>
+<ol start="5" type="1">
+<li><p>COMMAND PHYSICAL RESPECT</p></li>
+<li><p>SELL TO EXISTING CUSTOMERS</p></li>
+</ol>
+<ul>
+<li>add-on product</li>
+<li>email all customers on database with a discounted offer</li>
+</ul>
+<ol start="7" type="1">
+<li>WORRY ABOUT LEGAL WHEN RICH</li>
+</ol>
+<ul>
+<li>all we need is a domain and a website</li>
+</ul>
+<p>42:00 https://www.youtube.com/watch?v=rRzM7MkppEo</p>
+<p class="heading" id="section"></p>
+<h2 id="e-commerce">E-COMMERCE</h2>
+<p>find products from amazon, etsy, ebay, etc. however, only sell with
+aliexpress as offers dropshipping methods, i.e. no packaging alibaba is
+wholesale not dropshipping, i.e. must buy in bulk</p>
+<p>paid ads on facebook, instagram, tiktok</p>
+<p>for supplier, can get faster than aliexpress however cost more</p>
+<p>add x3 markup on product</p>
+<p>(buying in bulk will get faster shipping times) manually -&gt; DSers
+app to automate purchases -&gt; sourcing agent be upfront with customers
+regarding shipping time at the start (we are just testing,
+i.e. consistent sales and proof of demand at the start, so long shipping
+times are fine. just mention in FAQ or shipping policy etc.) (get
+customisable product later, i.e. branded box as will have to pay in bulk
+on Alibaba for them to do this)</p>
+<p>Handling Returns: 1. damaged: get user to send photo, have them keep
+the product, get supplier to ship another 2. ok: ask user to pay for
+shipping costs back to you. then refund them</p>
+<p>TikTok film yourself using a product, see if video can go viral
+(whole skill in itself)</p>
+<p>ads spend $50 per day. around $150-$200 to test a product until find
+a winner</p>
+<p>front-loaded time investment. once found good product, 30-60min per
+day of ads (ads manager, metrics, etc.) 2-3 hours a day overall spend
+daily time on product research (DEVELOP SKILLS TO FIND A PRODUCT THAT IS
+WANTED AS A GOOD PRODUCT IS KEY), copyrighting, competitors, etc.</p>
+<p>niche store</p>
+<p>targeting impulse buyers, not value shoppers (so, sell under $100)
+show innovative product with wow factor, they buy on the spot</p>
+<p>if product out of stock, refund and send them a 10% discount code</p>
+<p>BRANDING: get product that solves problem or adds value to their life
+in a meaningful way high perceived value can it not be bought in stores
+targeted to customer niche lightweight and easy to ship possible to add
+markup pick something that you have expertise in, allowing for easier
+market research - health (back pain, sun-burn); pet supplies needs to
+have WOW/UNIQUE-factor to GRAB ATTENTION IN AD</p>
+<p>Have 5-10 products on website to build trust. Only put ads in for one
+HERO PRODUCT at a time</p>
+<p>DAILY RESEARCH TO SELECT PRODUCTS: TIME CONSUMING PROCESS TO
+UNDERSTAND MARKET REGULAR ACTIVITY, NO OFF SWITCH - manual (see what
+products are selling well on websites); Google Trends to verify search
+volume for product - social media ads (follow big theme instagram pages,
+initiate checkout to get ad algorithm to follow) - (START WITH THIS: spy
+tools (combine previous 2)) - IMPORTANT: The only way to know if will
+work is to test with your own ads. These are just indicators - identify
+how much competitor selling for by reverse searching image As gain
+experience, will see products over and over again, i.e. product
+saturation (Google Trends can show this)</p>
+<h1 id="news---wrestle-the-scorpion">NEWS - Wrestle the Scorpion</h1>
+<p>Make-A-Video AI seems promising</p>
+<p>Good news first ever drug to slow down cognitive decline of
+Alzheimer’s. Also drug to slow down ALS. Perhaps prolonging drugs first
+step?</p>
+<p>DreamFusion 2D-to-3D looks promising</p>
+<p>Will future cars will be synced with mobile OSs from Apple or
+Android? Already seeing start of this with CCC (Car Connectivity
+Consortium) pushing smartphone car unlocking</p>
+<p>Unfortunately malware spreads through low-hanging CVEs or social
+engineering</p>
+<p>Memory market collapse, i.e. a type of chip market</p>
+<p>How nice that Apple’s anti-tracking crackdown only applies to
+third-party apps</p>
+<p>With the growth of hardware, really seems that adaptive learning
+algorithms are going to be used instead of solving the problem
+explicitly Perhaps AI solving the most-optimal implemention of an
+algorithm is more appetising for me</p>
+<p>More companies branching into GPUs with AI functionality, e.g. Intel
+Arc, Acer etc. Furthermore, more companies branching into VR,
+e.g. Lenovo, Facebook etc.</p>
+<p>Is a smart ring really any better than a smart watch?</p>
+<p>As you would expect, Raptor Lake CPUs faster single thread speed at a
+lower wattage</p>
+<p>Will it be common place for impaired actors like Bruce Willis to sell
+likeness for deepfakes? In China, using virtual influencers.</p>
+<p>Again, YouTube offers another thorn; restricting 4K access to
+subscribers</p>
+<p>MCUs that support OTA firmware updates will typically have built-in
+key storage</p>
+<p>Although decentralisation sounds good (own cell network etc.), it
+requires user maintenance which people will pay others to do and we’re
+back to square one in a way</p>
+<p>How does Google Tensor G2 chip with various CPU architectures,
+e.g. Cortex-A78, Cortex-A55, Cortex-X1 work?</p>
+<p>OS’s designed for wearables, e.g. WearOS for Android. I suppose
+wearables have become an established device class target?</p>
+<p>It really isn’t tinfoil hat mentality to be wary of updating unless
+necessary, e.g. most recent kernel patch affected Intel graphics
+displays</p>
+<p>Floating pod homes in Panama no one asked for.</p>
+<p>In a literal sense Moore’s law is dead, however chiplets pose
+interesting alternatives</p>
+<p>Character.ai chatbot creator. In fact, AI editor/generators for most
+artforms seems to exist (video runwayml)</p>
+<p>The fluidity of OSs continues with new Ubuntu 22.04 replacing
+PulseAudio with PipeWire, X11 with Wayland.</p>
+<p>Having a live session USB is essential to always give root access to
+filesystem</p>
+<p>Can now get Ubuntu Pro for free, which is just extends LTS to 10
+years</p>
+<p>Fast GUI file searching with fsearch</p>
+<p>Xbox streaming game console. High network speeds seems to make cloud
+gaming more affordable. However, don’t like the idea of constant network
+connectivity and the power of the provider to shut you out.</p>
+<p>15th Century greatest appearance of ‘geniuses’. Despite access to
+information, genius declined. Seems that require proffesional tutors at
+young age to instill a human social engagement</p>
+<p>Thanks to TCC compiler, can compile C in memory and load it, hence
+using it in some way like a scripting language However, this can create
+serious security holes. Could still use in a sandboxed process,
+e.g. with libseccomp WASM allows to run a subset of C++/C (and well
+anything that compiles to webassembly) in browser as a sandbox. Could
+use with wasmer library Indeed, with WASM, can compile a native library
+and use it on the browser like SQLite3</p>
+<p>With the steady proliferation of VR gaming, it’s a good thing I was
+not young during this time</p>
+<p>DynamicPixelTuning (DPT) promises to make every pixel capable of
+outputting all colours. Therefore, get 3 times resolution than having
+combined rgb pixels</p>
+<p>Very helpful ranger preview in conjunction with <code>rc.conf</code>
+and <code>scope.sh</code></p>
+<p>Apple more like a bank with savings account for Apple Card</p>
+<p>Interesting new Danish political party with decisions made by AI. I
+think AI as a collaborator is promising</p>
+<p>Despite new phones offering a plethora of new features, don’t assume
+that they are bug-free, e.g. pixel phone crash detection malfunctioning
+on roller coaster, not allowing dialling to 000, etc.</p>
+<p>Realise you can overclock RAM with Intel XMP (extreme memory
+profile)</p>
+<p>Although you hear new Apple and Microsoft chips, almost certainly ARM
+under the hood</p>
+<p>Intel NUC (next-unit-computing) just marketing term for small form
+factors</p>
+<p>Although largely unecessary now, Nvidia has lite hash rate which
+impedes peformance in order to get GPUs into hands of gamers</p>
+<p>The decline of the lone app, as Microsoft 365 leviathan</p>
+<p>I see AR being more useful than VR, e.g. hololens for soldiers</p>
+<p>Meta headset will use eye-tracking to position ads</p>
+<p>Perhaps an emeritus professor I’m more willing to listen to.</p>
+<p>What I used to take as prima facie from news outlets, now no
+longer</p>
+<p>Unfortantely UNSW basketball CC’d not BCC’d</p>
+<p>To no one’s surprise, Windows updates nerf ryzen performance</p>
+<p>Marketing plug for cloud gaming consoles when in fact standard phones
+can do the same thing</p>
+<p>With improved network performance, perhaps cheaper to offload
+calculations to powerful servers (VDI: virtual desktop
+infrastructure)</p>
+<p>NB-IoT (narrowband, i.e. low power). Also have CoAP (constrained
+application protocol) for embedded devices to access Internet</p>
+<p>Easy to fall prey to the act of not adding anything useful to a
+product, but simply adding IoT and calling it smart, e.g. smart
+condom</p>
+<p>HDR (high dynamic range) refers to colour spectrum. Implemented in
+technologies such as Dobly Vision Dolby Atmos is a surround sound
+technology</p>
+<p>RCS seems to be better than SMS</p>
+<p>Not really decentralisation with cloud, as many services just
+operated by a handful of large companies (not what DARPA intended!)
+Cloud is really just reduced complexity. It excels when application
+simple and low traffic (managing a large application in the cloud is
+just as difficult as on bare metal) Or, your traffic patterns are
+unpredictable Otherwise, paying an unjustified premium Sold as computing
+on demand (no complexity) when in reality, just renting computers at a
+higher premium Let your talents to your own machines, rather than Amazon
+or Google</p>
+<p>Will NFC for door locks take hold?</p>
+<p>AI for vaccine development sounds promising</p>
+<p>Are the petabit speeds of research optical chip really that useful if
+hardware can’t process that fast? Will radio only get us so far?</p>
+<p>Probably better to use url-shortener service for sharing links</p>
+<p>Perhaps explainpaper.com could break into reading programming
+papers</p>
+<p>More firm on not using Apple, e.g. Apple not allowing other
+app-stores, taking revenue percentage of adds on apps, etc.</p>
+<p>Bioengineered plants seem promising in say absorbing air
+pollutants</p>
+<p>Amazon continue to kibosh any semblance of non-monolopy now getting
+into home insurance</p>
+<p>Raptor Lake overclock to over 8GHz (however with liquid
+nitrogen…)</p>
+<p>With development of cheaper more powerful hardware, companies
+introducing more ‘gaming’ brands e.g. Phillips new gaming monitor</p>
+<p>Another cautionary tale to not update with Apple update nerfing ANC
+earphones</p>
+<h1 id="news---scaling-the-libra">NEWS - Scaling the Libra</h1>
+<p>Xcode cloud subscription. oh no wasting so much time on naming of new
+processes, e.g. ‘Developer Experience Infrastructure’</p>
+<p>Another billionaire investing in a ‘utopian cities’ seems more
+dystopic than anything. Promulgation of venture capitalists, angel
+investors, etc.</p>
+<p>PIC have weird instruction set, so generally have to use with
+assembly over C compiler (no good free compiler) So, use AVR for low-end
+like just LED driving? e.g. TLC5971</p>
+<p>time-of-flight sensor like an infrared radar</p>
+<p>over-current and over-voltage detectors for when using charging
+devices, e.g USB-C charger? so, perhaps investigate/understand voltage
+regulators? also have UVLO (undervoltage-lockout)</p>
+<p>new USB-PD (power delivery) interface more power from USB-C</p>
+<p>I can see machine learning ‘appropriate’ in say cleaning up random
+noise, e.g. brain signals</p>
+<p>interesting set of questions to inspect a software engineering
+workplace:
+https://neverworkintheory.org/2022/08/30/software-engineering-research-questions.html?utm_source=tldrnewsletter</p>
+<p>things like database accelerator library indicative of normal
+software not being fast</p>
+<p>MOSFETs are a type of transistor. different transistors for say
+quick-switching, low signal, high frequency, amplifier etc.</p>
+<p>USB-4, PCI5, DDR5 emerging standards.</p>
+<p>Could buy a GPU for running interesting machine learning applications
+like Stable Diffusion (prompt engineers, oh dear…) https://www.krea.ai/
+GPU structure similar to CPUs, e.g have cache, GDDR6 memory (more simple
+parrellisation)</p>
+<p>float-toy nice web visualistion tool</p>
+<p>interestingly CRT can scale better than fixed-set resolution LCD</p>
+<p>new TV monitor combination QD-OLED curved monitors less fatiguing as
+physically matches our eye’s shape flexible/bendable monitors no one
+asked for…</p>
+<p>cool looking completely submerged server desktops. pure water is a
+very good insulator (our tap water will have chlorine for example)
+obtained via ozone treatment</p>
+<p>the Nintendo DSi implemented augmented reality virtual reality is
+completely immersive</p>
+<p>how does wireless charging work without a pad, i.e. no induction
+charging? interesting power sharing from phone to watch</p>
+<p>trie -&gt; gzip. still have to decode and resulting memory same as
+before compression succinct data structures are designed to not have to
+be decoded, i.e. everything is stored as bits. ∴ uses a lot less memory
+(however, only for larger datasets)</p>
+<p>compound literals issues with debugger and maintanence</p>
+<p>C11 static assertions, how to use? performance improvements? static
+const char sound_signature[] = { #embed &lt;sdk/jump.wav&gt; };
+static_assert((sizeof(sound_signature) / sizeof(*sound_signature)) &gt;=
+4, “There should be at least 4 elements in this array.”); anonymous
+structs int fnc(int arr[static 2])</p>
+<p>C23 can prevent VLA by defining constexpr true, false keywords
+nullptr (it’s a pointer not number) enum e : unsigned short { x }; digit
+separators function attributes</p>
+<p>smarter devices not necessarily better, e.g. printer’s with
+end-of-life software</p>
+<p>lol, ferrocene is a developing rust toolchain</p>
+<p>PLC more expensive microcontroller that is more versatile,
+e.g. handle voltage overload (often used in assembly lines)</p>
+<p>removing shared pointers probably gives later code in the pipeline a
+small cache boost as all the data is now co-located excessive logging
+cause for bad performance excessive heap usage bad for performance if on
+an OS note there is static, stack and heap memory areas</p>
+<p>lol, killedbygoogle.com. perhaps not wise to rely on new services</p>
+<p>is self-administration the only benefit of an inhaled COVID
+vaccine?</p>
+<p>doesn’t seem like quantum computers will be able to solve any
+practical tasks (unless program exploits quantum parrelism to a large
+extent)</p>
+<p>cloud computing with containers growing, e.g. AWS/Azure ➞ Kubernetes
+➞ docker</p>
+<p>it’s sad, but you really could do a stand-up of modern software
+projects, e.g. “introducing Goliath, an automatic external dependency
+manager. under the hood we use a Nextrus package manager. can be
+scripted with Freasy language extension of Frosty core language”</p>
+<p>seems a lot of phones adding satellite connectivity even though it’s
+much slower</p>
+<p>although space travel seems like the future, how to cope with serious
+health affects like space radiation</p>
+<p>opening up web pages from tech news sites just awful. inudated with
+floating content-blocking video ads, permanent marquee ads embedded
+beween paragraphs and browser title bar flashing with bot message
+notification, bot message popup, cookies accept bar, …</p>
+<p>asciinema useful terminal recording tool with website to host</p>
+<p>potential for sim-locking being a thing of the past with a push to
+eSIM cards</p>
+<p>New AI that can edit videos with textual prompts The dramatic shift
+in technology that mobile and cloud devices have brought is being
+realised by natural language processing As text is seen as a universal
+input in a lot of Unix programs, interesting possibilities.</p>
+<p>eyes convert photons to electrochemical signal transduction converts
+one energy form to another CCD (charged couple device; less noise, more
+power, lower speed) and CMOS (consumer grade) common camera sensors
+digital cameras convert photons to array of pixels, represented as
+voltage levels quad pixel camera sensor combines four adjacent pixels in
+this array</p>
+<p>round design of new Nvidia GPU may be evidence for the 20-year
+cyclical nature of fashion</p>
+<p>amazing new 6GHz stock speed Intel CPU</p>
+<p>although all crypto is ponzi scheme, it seems the goals of Ethereum
+to perform secure financial transactions is headed in a better direction
+than BitCoin. furthermore following The Merge, it does not rely on power
+hungry mining. this is in term has led to a lot of 2nd-hand GPUs
+flooding the market</p>
+<p>avx512 cant actually get performance stated by Intel ‘marketing’ as
+it causes heat up and cpu thermal throttles</p>
+<p>good to see some work being done on the interopability of digital
+wallets</p>
+<p>in general, Occum’s razor approach to muscular issues</p>
+<p>smart power homes whereby the source of the power can be discerned,
+i.e. if it’s clean or not. extends to phone chargers with knowledge of
+this</p>
+<p>interesting Github Copilot Labs able to do rough translations between
+languages</p>
+<p>good to see (in some ways) hardware vendors pushing for AI standards
+to allow for greater optimisation</p>
+<p>ATM machines can be targeted for card-skimmers</p>
+<p>possibility of sprite animation in terminal using chafa tool to
+create ascii block art</p>
+<p>Intel new naming scheme confusing using brand name as category,
+i.e. ‘Intel Processor’ instead of ‘Pentium’</p>
+<p>YouTube no respect for customers, running clandenstine experiment
+running up to 5 ads at the start instead of spacing them out
+Furthermore, Mozilla researchers found that buttons like ‘Stop
+recommending’, ‘Dislike’ have next to no effect</p>
+<p>Growing space economy with NASA ISS becoming privatised</p>
+<p>Gaming phones with extended fans/cooling and amenable gripping
+features</p>
+<p>I suppose it would be kind of cool to travel in a plane going Mach
+1</p>
+<p>There can be such extremes in software, e.g. from programming
+hardware in FPGA to writing natural-language descriptions for an AI to
+convert to code</p>
+<p>Cool 3D printing pens, although slow, can be used to say repair a
+chipped brick</p>
+<p>Cool USB SAMD boards (possible malware creation)</p>
+<p>Amazing creations from AI from still images, videos, digital
+assistants: https://threadreaderapp.com/thread/1572210382944538624.html
+Companies like DeepMind, OpenAI chatbot AI used in UI testing GPU DLSS
+(deep learning super sampling) is AI upscaling</p>
+<p>Finally, alleviating ambigious USB 4.0 v2.0 naming scheme with
+devices having clear USB 40Gbps, 240W printed on them</p>
+<p>Compelled to investigate a service like paperspace in order to run
+OpenAI and other AI projects</p>
+<p>Promising Framework laptop build to easily repair in mind. However,
+subpar experience</p>
+<p>Teachers are fired for moonlighting</p>
+<p>Record breaking DDos attacks, 17.2million requests per second,
+3.4terabits per second, 809million packets per second</p>
+<p>Google have size to challenge Dolby with new HD audio standard.
+However, whilst seeming altruistic, is just so they don’t have to pay
+Dolby licensing fees in their hardware</p>
+<p>Interesting Domain Brokerage services to allow you to get already
+used domains</p>
+<p>Amount limiting will not work to prevent MFA fatigue attacks</p>
+<p>Record-breaking figures acheived with overclocking can be decieving
+as may employ high-end coolers or even liquid nitrogen</p>
+<p>Still Windows updates break things, e.g. NVidia drivers</p>
+<p>The inundation of Javascript web frameworks has provided a learning
+point for adopting new technologies. In general, stick to familiar
+technologies and only adopted bleeding edge later</p>
+<p>Cool application of IoT:
+https://hackaday.com/2015/11/24/building-the-infinite-matrix-of-tamagotchis/</p>
+<p>Although lower-res, CDs aren’t lossy compressed like Bluetooth or
+spotify.</p>
+<p>Amazing gigabit speeds being sold for ISPs</p>
+<p>Sad that bariatrics is even a field of medicine</p>
+<p>Serverless is just a term for a caching server closer to clients</p>
+<p>In the same unrequested vein as foldable PCs, now have slidable
+PCs</p>
+<p>Perhaps the going through graphical ASMR programming videos the
+‘enjoyable’ remedy</p>
+<p>More encompassing/combined sensors, e.g. AI vision sensor, gesture
+detection sensor</p>
+<p>Increased power of technology, developing perhaps faster interfaces,
+e.g. search by photo, speech, etc.</p>
+<p>sextempber cornucopia of condoms don’t have to be nostradamus to work
+out parents parking in effect, most people’s journey to learning is
+bespoke my engineering mind (which has been molded by experience)
+results in largely ad hoc responses many positive social dealings at
+university are unfortunately pyrrhic</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<h1 id="news---sagging-arrow">NEWS - Sagging Arrow</h1>
+<p>I believe decoding brain waves into functional output is major change
+in my future</p>
+<p>Unikernel has applications bundled inside kernel (so like eBPF) for
+high performance</p>
+<p>Amusing Dead Internet Theory that the Internet died around 2016 and
+is now largely bots</p>
+<p>Oh dear, javascript smart watch</p>
+<p>Interesting 3D print to make diffusing sheet for say LEDs to create
+different ambiences</p>
+<p>AI now being used to improve compression algorithms</p>
+<p>Amazing potential of ‘molecular computers’ to make drugs with precise
+traits (could extend to human’s gaining amazing a priori skills)</p>
+<p>JPEG XL better compression and lossy + lossless mode</p>
+<p>Again, Microsoft updates not working. This time, not actually
+properly applying vulnerability update</p>
+<p>Interesting can just buy off the shelf drone and attach something
+like an ESP32 to send data back to us</p>
+<p>Cool program that sort of gamifies video conferencing allowing for
+individual chats: gather.town</p>
+<p>Like ‘Scrum Certification’ now with Matter have an official
+certification process</p>
+<p>Good work being done in legislating IoT labels, e.g. like nutrition
+labels that give information sensor data collected by device</p>
+<p>Have GPU microarchitectures like RNDA.</p>
+<p>Chiplets seem future of shrinking size and expanding computing power,
+now seen in GPUs They can be easily be recombined to create custom
+designs</p>
+<p>VSR (virtual super technology) has GPU scale to 4K and then downscale
+if necessary to monitor’s resolution However, if want say 8K gaming,
+will require a DisplayPort cable</p>
+<p>Robots beginning to see more everyday use, e.g. waiters. Also, have
+robots learn in the field, e.g. Texas University have robots walking
+around campus</p>
+<p>Resistive RAM uses analog memory cells to store more information with
+less energy</p>
+<p>GPT-4 upcoming text generation AI Perhaps text-to-speech, language
+transcription too diverse to solve without AI, e.g. deepgram program</p>
+<p>Although some people experience myocarditis after COVID vaccine,
+myocarditis long been linked to a number of viral infections</p>
+<p>Borg like spacecraft, i.e. cubesat now in orbit</p>
+<p>Silicon carbide power supplies more efficient</p>
+<p>AI requires high quality data, i.e. created by skilled individuals.
+Also requires unique data. Might not have enough unique data in the
+future</p>
+<p>Unfortunate that Intel releasing software-defined-silicon,
+i.e. pay-as-you-go to enable certain hardware features</p>
+<p>Not even subtle that ads are no longer targeted for you, but rather
+shills</p>
+<p>Prompt engineers for many AI generators, e.g. text-davinci-3</p>
+<p>GPU AI DLSS improve performance by offloading frame generation</p>
+<p>Biodegradable sensors made out of organic circuitry proof of
+concept</p>
+<p>Watching me sleep on the floor is watching how the sausage is made in
+regards to my posture</p>
+<p>Serendipitously obtain a bokeh photo with my outdated phone
+camera</p>
+<h1 id="news---leo-the-lion-enters-the-pride">NEWS - Leo the Lion Enters
+the Pride</h1>
+<p>Politics are infiltrating areas of technology: * Rust toolchains on
+embedded. Rust developers have explicitly tweeted saying technology will
+always be political * NASA Artemis Accords have first line stating
+primary focus on women and person of colour on Moon Leads down the path
+of FSF, and in fact any cultural revolution which thinks it can do
+whatever it wants in the name of the people. Although perhaps ad
+hominem, experience has shown that they’re all polite until they’re
+not.</p>
+<p>Seems in with big-tech, marketing is often more important than the
+underlying technology. 170km ‘The Line’ ecotopia, metaverse, telsa etc.
+They make wild claims and the general public has no way of knowing the
+facts behind them (perception vs reality) A scary thought is that in
+this age, possible for self-sustaining narratives capable of deflecting
+facts</p>
+<p>ARMs open-model allowed vendors to implement custom MPUs that saw in
+gain dominance over oher RISCs like MIPS and AVR.</p>
+<p>Tech companies becoming conglomerate monopolies, e.g. tiktok music,
+apple tv etc.</p>
+<p>Much like the C++ standards committee, concerns of ‘ivory tower’
+nature of smart home Matter standards</p>
+<p>Seeing consequences of covid semiconductor demand in chip shortages.
+Exacerbated by increase usage in automotive industry and large
+dependence on foundries in Taiwan</p>
+<p>Annoyed at the web: * Seemingly lack of awareness of bloated and
+abstracted infrastructure * New technologies in the sphere are just
+sensationalised titles with little substance e.g. homescreen social
+media, css layout model and js frameworks</p>
+<p>The importance of programming to a physical machine is paramount. The
+underlying technology is always changing, e.g. arcade machines,
+consoles, phones, watches, plastic 4bit processors</p>
+<p>EU lawmakers want USB-C for all mobile devices to reduce e-waste.
+Makes me postulate a technocracy.</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<h1 id="news---goat-in-current">NEWS - Goat in Current</h1>
+<p>Time-of-flight sensors can be used to detect water levels</p>
+<p>EMV (europay, mastercard and visa) secure payment technology embedded
+in credit card chip</p>
+<p>Waited till USB-C becoming standard to introduce reversible USB-A
+(achieved with movable plastic divider and duplicated pins) Intel
+thunderbolt faster than USB-C, yet ports still look very similar</p>
+<p>AI in sensors used to alter configuration to optimise power
+consumption AI generated voice, text. Disney can now alter age AI
+parsing of voice (natural language processing) In summary, generative AI
+everywhere. In fact, with ChatGPT being able to explain technical
+concepts, birth of AGI (artificial general intelligence) Perhaps this
+could be used as a sort of offline search engine. In fact, ChatGPT
+generate prompt for DALLE Whilst ChatGPT solves problems considering
+computers as generalised machines, it seems eventually it will get
+there. So, embedded probably the last the be tackled due to unique
+systems</p>
+<p>Genetic engineering in flora seems more appetising,
+e.g. drought-resistance wheat, air purifing plants</p>
+<p>Batcat tool is cat with syntax highlighting</p>
+<p>Skeptical of announcements made by budget-starved laboratories
+(e.g. universities) about breakthroughs for technologies decades away,
+e.g. fusion There are often caveats and furthermore, commerciality is
+most likely decades away</p>
+<p>Seems that bipartisan government action required to fix rats nest of
+drivers in modern OSs in a similar vein to EU enforcing anti-competitive
+laws on Apple to allow third-party apps, USB-C etc.</p>
+<p>Have to be careful not to engage in technological contempt culture,
+e.g. language wars. As technology changes rapidly, address changes with
+temperance</p>
+<p>If social media was all RSS (really simple syndication), things would
+be much simpler</p>
+<p>We are in a ‘gig’ economy, i.e. contract work</p>
+<p>Example of Apple silicon is M1 chip. Placing some Apple silicon
+inside new removable monitors to use less power from attached
+computer</p>
+<p>Optical computing, i.e. analog uses less power excel at linear
+algebra. Makes them ideal for machine learning</p>
+<p>Is prompt engineering now an important skill, as oppose to a sad
+state of affairs?</p>
+<p>Would controlling the weather be nice? e.g. releasing sulfur to
+reflect more sunlight</p>
+<p>Medical developments not just better treatments but also easier
+detection, e.g. Alzheimer via blood test</p>
+<p>Home appliances with WiFi connectivity allow for remote updates</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<h1 id="news---a-virgin-woman">NEWS - A Virgin Woman</h1>
+<p>Thread is new low-power protocol for Matter (and therefore IoT
+devices, i.e. mesh network). Similar to Zigbee and Z-Wave</p>
+<p>hierarchy:topology p2p:(mesh, bus) client-server:star</p>
+<p>Advent of more software in cars has led to subscription based
+services, e.g. heated seats. However, adding software increases
+complexity: * Will lack of connectivity (e.g., no cell coverage where
+you’re at) mean that the features are disabled until you get back into
+cell range? * Can the servers be DOS’d so that nobody’s seat heaters
+work? * If I pay for a subscription and sell a car, does the
+subscription stay with the car? Or will it be like Tesla’s approach,
+where the new owner has to pay to unlock the software features, even if
+the previous owner paid? * What if there is a bug on the server that
+incorrectly reports my subscription status? Will I be refunded, fully or
+partially? * What happens when you can’t get in touch with customer
+support because your subscription isn’t being properly detected on the
+hardware? * What happens if the hardware breaks, but you’ve paid for the
+subscription? Is repair to heated seats covered under terms of the
+subscription, or will that be pushed to owners? * What happens if this
+strategy is used by a smaller company than BMW, who suddenly goes out of
+business and bricks your otherwise perfectly working hardware due to
+shutting down servers?</p>
+<p>Are big-tech companies realising the flaws in their ‘Simplicity
+Sprints’ culture? Slowing hiring, realising they have way too many
+employees</p>
+<p>BCI (brain computer interfaces) are a real future</p>
+<p>Unfortunate that ‘true security’ makes things more complex and
+inconvenient, e.g. yubikey</p>
+<p>Physics head-scratcher: dark matter makes up 80% of universe, yet we
+can’t detect it?</p>
+<p>Meta releasing AI chatbot to wild has again resulted in racist and
+sexist comments</p>
+<p>More evidence of contrasting quality between modern hardware and
+software with worldwide Google outage caused by software update</p>
+<p>Oncall software engineers akin to casual teachers</p>
+<p>What are FPGAs and how do they allow the creation of hardware for
+emulating old games like GBA? EU enforcing USB-C forces Apple to switch
+to USB-C. Yay!</p>
+<p>Oh dear, Java is not dying out (state of the octoverse)</p>
+<p>Realise I’m highly misanthropic Frequent STMicroelectronics
+newsletter coverage of IoT (and the many, many protocols) and machine
+learning indicative of trend in industry</p>
+<p>Hi-fi audio. Newer terms to mean higher fidelity/data resolution new
+OLED TVs (contrast, blacks). QLED/QNED (brightness) is a adding a
+‘quantom dot’ layer into the white LED backlight LCD sandwich</p>
+<p>5.1 means 5 speakers, 1 subwoofer woofer, subwoofer, speaker,
+tweeter</p>
+<p>Things getting smaller and more data, e.g. ‘normal’ sized VR
+headsets</p>
+<p>I really don’t see fold phones as necessary…</p>
+<p>Are we moving down the road of homogenous, e.g. specifically target
+CPU or GPU or hetereogenous programming, e.g. CUDA</p>
+<p>Although a update pathway is provided from 20.04 to 22.04, I’m
+reluctant to do so due to possible configuration issues. Why I chose LTS
+5 year support (2025)</p>
+<p>Interesting maglev trains reach amazing speeds and produce minimal
+noise due to lack of friction</p>
+<p>Interesting blood transfusions from older mice to younger mice, the
+younger mice display characteristics of old mice</p>
+<p>Bitcoin is a Ponzi scheme as almost no one actually uses it in
+transactions, and is purely speculative. Does not create anything.
+Interesting manifestation of capitalism.</p>
+<p>Moore’s law number of transistors doubles every 2 years. Although not
+strictly true, general trend is holding. Proebsting’s law states that
+compiler improvements will double program performance every 18 years.
+Therefore, cautious about the performance benefits a compiler brings.
+Focusing on programmer productivity is more fruitful In general, newer
+compilers take longer to compile, but produce slightly faster code maybe
+20% faster.</p>
+<p>Cyberdecks are evidence that the trend of going smaller isn’t always
+aesthetic</p>
+<p>Growing trend to have workstations operate in the cloud or
+containerisation. For testing yes, for development however?</p>
+<p>Strive towards much more potent nuclear fusion (100million°C)
+reactors as oppose to nuclear fission (neutron splits Uranium, same as
+original nuclear bombs)</p>
+<p>Amazing that certain old rpm harddrives were susceptible to crashing
+when ‘Rhythm Nation’ played as the resonant frequency was the same</p>
+<p>Streaming outnumbering cable and broadcast TV</p>
+<p>ripgrep a much faster and user friendly grep! unar will automatically
+handle pesky non-folder archives</p>
+<p>Interesting to see if mir wayland will take over xlib x11</p>
+<p>Although the open nature of RISC-V gives it some economical
+advantages, historically the ISA has not been the major driving factor
+in widespread adoption. Rather, who invests the most in R&amp;D,
+e.g. many places will develop ARM, with RISC-V go on your own.</p>
+<p>Security an ever present issue, e.g. every Ubuntu weekly newsletter
+get a list a security updates</p>
+<p>Privacy laws prevent recording keystrokes in app, however can record
+other information like time between keypresses etc. to identify you,
+e.g. TikTok</p>
+<p>Chiplets connection of chips. So, can build chiplets that aren’t SoC,
+e.g. just CPUs and SoCs without chiplets Intel R&amp;D into chiplet
+technology stacking presents it as a future possibility (Apple already
+uses it with two M1 max chips to M1 ultra)</p>
+<p>ACM (Association for Computing Machinery) Turing Award is essentially
+Nobel Prize for Computer Science. Not applicable for me as awards
+largely for academic contributions like papers/reports published e.g
+data abstraction (Liskov substitution, Byzantine fault tolerance),
+parallel computing (OpenMP standard). In some sense, the modern day
+Booles and Babbages I’m more concerned with engineering feats in
+software products.</p>
+<p>An unfortunate reality of open tech, AI being used to make paywalls
+‘smarter’</p>
+<p>Read a Google research project on removing noise in photos.
+Investigate source to test and am completely put off by the amount of
+dependencies involved: conda (why not just whole hog and docker),
+python, jax for TPU (python to tensor processing unit), external
+repositories This also applied to the ‘amazing’ AI image generator
+Stable Diffusion (I suppose high VRAM requirements also) Docker has uses
+in CI</p>
+<p>AI for everything dogma is becomming more pervasive with ‘clusters’
+to train model. Although Tesla can build a supercomputer to train, like
+all dogmas, not applicable to everything (readability, debugging goes
+down)</p>
+<p>Even air-gapped computers are not safe from sniffing</p>
+<p>Seems that any in-demand tech device subject to bot scalping</p>
+<p>As Moore’s law is widening, i.e. was 2 years now 4 years, companies
+creating own hardware, e.g. YouTube chip to handle transcoding</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
 <p>sudo apt-get update sudo apt-get -y upgrade sudo apt-get -y
 install<br />
@@ -372,507 +1911,398 @@ Technology)</li>
 <li>COMP3121 (Algorithms and Programming Techniques)</li>
 </ul>
 <p>144UoC total: – COMP3900 (Computer Science Project)</p>
-<p>time -p; getrusage();</p>
-<p>callbacks less CPU intensive than polling</p>
-<p>Saying one instruction is faster than the other ignores context of
-execution. e.g. mul and add same latency, however due to pipelining mul
-execution unit might be full TLS vs atomics, e.g. TLS is series of
-instructions determined by OS and compiler. Atomics depend on how other
-cores are run and synchronising necessary with other cores So, must
-measure which is faster for particular situation</p>
-<p>use $(time) for single line, use $(ctime)</p>
-<p>Can pin a thread to a core</p>
-<p>Can run programs in kernel space with eBPF</p>
-<p>Frequent context-switching will give terrible cache coherency</p>
-<p>adding <code>restrict</code> also useful to prevent aliasing and
-thereby might allow compiler to vectorise say array loops</p>
-<p>Before cpus increased in single thread execution speed. Now more
-cores. It’s a topic of research to convert single threaded into
-multithreaded for emulation. This is why emulation of something like the
-GameCube (powerpc) is slow. Furthermore, due to hardware irregularities
-that programs relied on may take hundreds of instructions to emulate If
-actually a simple translation, then should run close to native speed.
-This is reality of emulating hardware with hardware</p>
-<p>CISC gives reduced cache pressure for high-intensive, sustained
-loops</p>
-<p>log2(n) number of bits for decimal
-https://en.algorithmica.org/hpc/cpu-cache/associativity/</p>
-<p>using genetic algorithm/machine learning to optimise for us
-https://zeux.io/2020/01/22/learning-from-data/</p>
-<p>Cpu try to guess what instructions ahead (preemptive). Cost of
-incorrect reflushing expensive. So want to get rid of conditional jumps.
-Ideally replace with conditional movs or arithmetic branch less
-techniques. Endianness (register view), twos complement (-1 all 1s)
-Branch less programming is essentially SIMD</p>
-<p>If variable clock speed, cpu could detect not using all cores and
-increase single core clock</p>
-<p>Not memory bound is best case for hyper threading Intel speeds
-optimised for GPR arithmetic, boolean and flops Intel deliberately makes
-mmx slow</p>
-<p>Low cache associativity means fast lookup but a lot of misses and
-thus eviction policy like LRU</p>
-<p>Count cycles to counteract possible thermal throttling Hyperthreads
-useful only if different execution unit Cpu reads memory from cache and
-ram in cache lines (due to programmer access patterns). Each item in
-cache set is cache line size</p>
-<p>if apple computers use RISC ARM in M1, why CISC necessary? (only
-because on Intel?) emphasis of CISC simplify assembly (e.g. more
-addressing modes), thereby reducing size of binary? (reduce
-instructions) and increase cache coherency RISC will require less
-transistors to implement complex hardware but will make optimising
-harder for compiler? single cycle instructions (reduce cycles per
-instruction)</p>
-<p>when looking at a pointer, to optimise compiler must know whether it
-can assume it points to a local var or not. so, easier to eliminate
-aliasing with non-pointers</p>
-<p>when viewing from application in a sandboxed environment like a
-phone, total RAM less than installed as portion reserved for kernel</p>
-<p>simplistically RAM 50ns and HDD 10µs? faster to read than write</p>
-<p>2.5bln * 8 (simd) * n (execution units) * 2 (cores) assuming
-instructions have throughput of 1 so 64 / 4 gives how many floats per
-second from L1 cache in general, not streaming from memory the entire
-time (would probably hit a cache bandwidth limit)</p>
-<p>// undefined behaviour if not true ALWAYS_INLINE void assume(bool
-cond) { if(!(c)) {__builtin_unreachable()}; } times when manual inlining
-is required: https://www.youtube.com/watch?v=B2BFbs0DJzw</p>
-<p>Unless your in web where everything takes years to load, as single
-threaded performance is largely stagnant you will have to utilise
-parallelism if want performance. This is very difficult and like single
-threaded code generic libraries which can actually be very specific will
-create bloated in performing code based. Multithreading is building up a
-new discipline to single threaded. There are a lot of pitfalls for
-performance (balancing want things local, however must share to utilise)
-If you care about performance for anything, you should care about cache
-misses Memory bandwidth and caches are major reasons for a cup attaining
-performance. You have to think about where does memory actually live and
-how is it transferred around</p>
-<p>Optimiser allows for lexical scoping of stack variables. However, for
-optimiser to inline will have to get rid of pointers to prevent
-aliasing</p>
-<p>stack and heap memory are the same physical thing, so only more
-efficient if memory was hot, i.e. recently touched</p>
-<p>Computer faster than you think, e.g instructions, clock cycles,
-cores. Very large With M2 drive should be quick</p>
-<p>may be easier for optimising compiler to work with things passed by
-value as oppose to pointer. so, if need to modify something may have to
-return the value in a functional programming style. however, this is
-error prone. compiler cannot optimise pointers, e.g. if setting two
-values to same pointer, compiler cannot say that both the values are the
-same as another pointer may point to the same address. this is
-aliasing.</p>
-<p>we see contiguous memory in virtual memory, however in physical
-memory it is almost certainly going to be fragmented</p>
-<p>compilers can auto-vectorize loops for us (and other operations if we
-perform say 20 of them). so, floats will be twice as fast as doubles
-(more space, even though same latency and throughput)</p>
-<p>optimising is a very precise process. only do when you have code that
-is working and you know will keep. games by their very nature are about
-responsiveness, so optimisation and low-latency is important. I like
-programming with this as a mentality.</p>
-<p>with pure compiler optimisations, i.e. code we have not optimised
-ourselves, a 2x increase is not unexpected. (code we optimised not as
-much)</p>
-<p>optimise for worst case (looking out on whole world) not best case
-(in front of wall, don’t render what is behind). we care about highest
-framerate, not lowest.</p>
-<p>virtually never use lookup tables as ram memory is often 100x slower
-(so unless you can’t compute in 100 of instructions)</p>
-<ol type="1">
-<li>Optimisation (this is rarely done due to time involved) Do
-back-of-envelope calculations; look at algorithm to see if wasteful;
-benchmark to see if hitting theoretical calculations and then use
-timings etc. to isolate why our code isn’t hitting these theoretical
-numbers Very importantly need to know what the theoretical maximum is,
-which will be dependent on the program, e.g bounded by number of bytes
-sent to graphics card, kernel stdout etc.</li>
-<li>Non-pessimisation (do this all the time) Don’t introduce unecessary
-work (interpreter; complex libraries; constructs like
-polymorphism/classes people have convinced themselves are necessary) for
-the CPU to do to solve the problem</li>
-<li>Fake optimisation (very bad philosophy) Repeating context-specific
-statements e.g. use memcpy as it’s optimised (however the speed of
-something is so context specific, so non-statement), arrays are faster
-than linked lists (again, so dependent on what your usage patterns are)
-IMPORTANT: In programming, preface the suitability of something to a
-particular environment/context</li>
-</ol>
-<p>When many people say too much effort involved in optimisation, they
-are generally thinking of point 1</p>
-<p>sometimes things should be running faster than they should, however
-only so much we can replace e.g. the structure of many OSs are based on
-legacy code, so simply outputting to stdout may go through shell then
-kernel etc. also, may have to deal with pessimised libraries. in these
-cases: * isolate bad code, i.e. draw hard boundary between your code and
-theirs by caching calls to them * do as little modification to the data
-coming in from them (no need to say put in a string class etc.)</p>
-<p>People think that it’s slow, but it won’t crash (because of
-interpreter) Performance is critical in getting people excited about
-what you do, e.g. windows ce was laggy, iphone performant but less
-features changes the market low latency is more desirable, even if less
-features</p>
-<p>count number of math ops in function and control flow logic that is
-evaluated branches can get problematic if they’re unpredictable</p>
-<p>inspecting measurements of microarchitecture consider latency and
-throughtput (how much does it cost to start again) so, FMUL may have
-latency of 11, however throughput of 0.5, so can start 2 every cycle,
-i.e. issue again (cpus these days are incredibly overlapped even if
-single-threaded) so throughput is more of what we care about for
-sustained execution, e.g. in a loop</p>
-<p>however, these numbers are all assuming the data is in the chip. it’s
-just as important to see how long it takes to get data to the chip. look
-at cache parameters for microarchitecture; how many cycles to get from
-l1 cache, l2 cache, etc. when get to main memory potentially hundreds of
-cycles</p>
-<p>bandwidth of L1 cache say is 80 bytes/cycle, so can get 20 floats per
-cycle (however, based on size of L1 cache, not really sustainable for
-large data)</p>
-<p>http://igoro.com/archive/gallery-of-processor-cache-effects/</p>
-<p>(could just shortcut this and just see if flops is recorded for our
-chip)</p>
-<p>so, using these rough numbers we should be able to look at an
-algorithm (and dissect what operations it’s performing, like FMULs),
-know how much data it’s taking, and give a rough estimate as to how long
-it could optimally take (will never hit optimal however) IT’S CRITICAL
-TO KNOW HOW FAST SOMETHING SHOULD RUN</p>
-<p>REASONS SOFTWARE IS SLOW: 1. No back-of-envelope calculations (people
-aren’t concerned that they are running up to 1000 times slower thn what
-the hardware is capable of) These calculations involve say looking at
-number of math ops to be performed in the algoirthm and comparing that
-to the perfect hardware limit 2. Reusing code (20LOC is a lot; use
-things that do what you want to do, but not in the way you want them to
-be done; often piling up code that is ill-fitting to what the task was,
-e.g. we know this isn’t a regular ray cast, it’s a ray cast that is
-always looking down) 3. When writing, thinking of goals ancillary to
-task (not many places taught how to actually write code; all high level
-abstractions about clean code there are thinking about templates/classes
-etc. not just what does the computer actually have to do to do this
-task?) (there is no metric for clean code; it’s just some fictional
-thing people made up)</p>
-<p>WHENEVER UNDERSTANDING CODE EXAMPLES: 1. COMPILE AND STEP INTO (NOT
-OVER) IN DEBUGGER AND MAKE HIGH LEVEL STEPS PERFORMED look at these
-steps for duplicated/unecessary work (may pollute cache). (perhaps even
-asking why was the code written the way it was) could we gather things
-up in a prepass, i.e. outside of loop? if allocating memory each cycle
-that’s game over for performance. do we actually have to perform the
-same action to get the same result, e.g. a full raycast is not
-necessary, just segment on grid O(n·m) is multiplicative, not linear
-O(n). big oh is just indication of how it scales. could be less given
-some input threshold (big oh ignores constants, hence looking at
-aymptotic behaviour, i.e. limiting behaviour) now, once code reduced,
-look at minimising number of ops</p>
-<p>cpu front end is figuring out what work it has to do,
-i.e. instruction decoding</p>
-<p>e.g simd struct is 288 bytes, 4.5 cache lines, able to store 8
-triangles</p>
-<p>understanding assembly language is essential in understanding why the
-code might not be performing well</p>
-<p>branch prediction necessary to ensure that the front-end can keep
-going and not have to wait on the back-end</p>
-<p>execution ports execute uops. however, the days of assembly language
-registers actually mapping to real registers is gone. instead, the
-registers from the uops are passed through a register allocation table
-(if we have say 16 general purpose registers, table has about 192
-entries; so a lot more) in the back-end this is because in many
-programs, things can happen in any order. so to take advantage of this,
-the register allocation table stores dependency chains of operations
-(wikichips.org for diagram) from execution port, could be fed back into
-scheduler or to load/store in actual memory</p>
-<p>when looking at assembly, when we say from memory, we actually mean
-from the L1 cache</p>
-<p>xmm is a sse register (4 wide, 16 bytes); m128 is a memory operand of
-128 bits ymm is 8 wide 1<em>p01 + 1</em>p23 is saying issue 1 microop on
-either port0 or port1 and one microop on either port2 or port3 so, we
-could issue the same instruction multiple times, i.e. throughput of
-0.5</p>
-<p>microop fusion is where a microop doesn’t count for your penalty as
-it’s fused with another. with combined memory ops,
-e.g. <code>vsubps ymm8, ymm3, ymmword ptr [rdx]</code> this is the case
-so, if a compiler were to separate this out into a mov and then a sub,
-not only does this put unecessary strain on the front-end decoder it
-also removes microop fusion as they are now separate microops (important
-to point out that I’m not the world best optimiser, or the worlds best
-optimisers assistant, so perhaps best not to outrightly say bad codegen,
-just say makes nervous)</p>
-<p>godbolt.org good for comparing compiler outputs and possible
-detecting a spurious load etc.</p>
-<p>macrop fusion is where you have an instruction that the front-end
-will handle for you, e.g. add and a jne will merge to addjne which will
-just send the 1 microp of add through</p>
-<p>uica.uops.info gives percentage of time instruction was on a port
-(this is useful for determining bottle-necks, e.g. series of
-instructions all require port 1 and 2, so cannot paralleise easily) so,
-although best case say is issue instruction every 4 cycles, this
-bottleneck will give higher throughput</p>
-<p>some levels of abstraction are necessary and good, e.g. higher level
-languages to assembly</p>
-<p>Optimise: gather stats -&gt; make estimate -&gt; analyse efficiency
-and performance</p>
-<p>file size https://justine.lol/sizetricks
-https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/236630#236630</p>
-<p>more important to understand how CPU and memory work than language
-involved in an OS, you will get given a zero-page due to security
-concerns</p>
-<p>likely() macros for branch prediction compiler optimisations
-(https://akkadia.org/drepper/cpumemory.pdf, pg 56)</p>
-<p>recording information: We want to understand where slow with vtune,
-amd uprof, arm performance reports Next, determine if IO bound, memory
-bound etc.</p>
-<p>To determine performance must have some stable metric, e.g. ops/sec
-to compare to e.g measure total time and number of operations
-Hyper-threading useful in alleviating memory latency, e.g. one thread is
-waiting to get content from RAM, the other hyper-thread can execute
-However, as we are not memory bound (just going through pixel by pixel
-and not generating anything intermediate; will all probably stay in L1
-cache), we are probably saturating the core’s ALUs, so hyper-threading
-not as useful</p>
-<p>Inspecting the assembly of our most expensive loop, we see that
-rand() is not inlined and is a call festival. This must be replaced
-Essentially we are looking for mathematical functions that could be
-inlined and aren’t that are in our hot-path. When you want something to
-be fast, it should not be calling anything. If it does, probably made a
-mistake Also note that using SIMD instructions, however not to their
-widest extent, i.e. single scalar ‘ss’. Want to replace with ‘ps’ packed
-scalar</p>
-<p>we have the option of constructor/destructor pairs if we want to
-determine best possible time if all caches align etc. ‘hunt for
-mininum’, e.g. record mininum time execution in loop iteration or re-run
-if smaller time yielded alternatively, we could develop a statistical
-breakdown of values (could see moments when kernel switches us out
-etc.)</p>
-<p>(IMPORTANT save out configuration and timing information for various
-optimisation stages, e.g. ./app &gt; 17-04-2022-image.txt)</p>
-<p>agnerfog optimise website ‘what’s a creel’</p>
-<p>threading Observe CPU percentage use is not close to 100% For
-multithreading, often have to pack into 64 bit value to perform single
-operation on it,
-e.g. <code>delta = (val1 &lt;&lt; 32 | val2); interlocked_add(&amp;val, delta)</code></p>
-<p>When making multi-threaded, segregate task by writing prototype
-‘chunk’ function, e.g. <code>render_tile</code> Then write a for loop
-combining these chunk functions Before entering the chunk function, good
-to have a configuration printout, e.g. num chunks, num cores, chunk dim,
-chunk size, etc.</p>
-<p>When dividing a whole into pieces, an uneven divisor will give less
-than what’s needed. so <code>(total + divisor - 1) / divisor</code> to
-ensure always enough. We will want this calculation to be in the last
-dividing operation, e.g. tile_width then tile_count calculated, so use
-on tile_count Associated with this calculation is clamping to handle
-adding extra exceeding original dimensions For getting proper place in
-chunk, call function wrapper for pointer location per row</p>
-<p>(May have to inline functions?) Next we want to pass each chunk onto
-a queue and then dequeue them from each logical core? So, have a
-WorkOrder that will store all information required to perform operation
-on chunk, i.e. all parameters in <code>render_chunk</code> function (may
-also store entropy for each chunk, i.e. random number series) Then a
-WorkQueue that contains an array of WorkOrders with total number
-equalling number of chunks So, the original loop iterating of chunks now
-just populates the WorkOrders Now in a while loop that runs while there
-are still chunks to execute, we call the <code>render_chunk</code>
-function and pass in the WorkQueue The <code>render_chunk</code>
-function will increment the next_work_order_index and return true if
-more to be done</p>
-<p>When spawning the actual worker thread functions, have same while
-loop calling the <code>render_chunk</code> function as for core 0 (the
-amount of threads to spawn would think should be equal to number of
-logical cores? however exceeding them may increase performance?) (this
-debate of manually prescribing the core count applies to the chunk size
-as well. perhaps the sweet-spot for my machine in balancing context
-switching and drain out is to manually prescribe their size as oppose to
-computing them off the core count) (Collating information into the
-WorkQueue struct helsp for printing out configuration) (Setting up this
-way, we can easily turn multithreading off)</p>
-<p>As creating threads will require platform specific, put prototypes in
-main.h and the implementations in linux_main.cpp Then include
-linux_main.cpp based on macro definition of platform in the build script
-at the bottom of main.cpp</p>
-<p>hyperthreading, architecture specific information becomes more
-important when in a situation where memory is constrained in relation to
-the cache (hyper-threads share same L1-L2 cache)</p>
-<p>volatile says code other than what is generated by this compiler run,
-could modify this value. it’s required for multithreaded, as compiler
-may not re-read value that it may have cached in a register if changed
-elsewhere when incrementing volatiles, must use a
-locked_add_and_return_previous_value (could return new value, just be
-clear)</p>
-<p>simd clamp can be re-written as min() and max() combination, which
-are instructions in SSE Although looking at the system monitor shows
-cpus maxed out, we could be wasting cycles, e.g. not using SIMD</p>
-<p>Define lane width, and divide with this to get the new loop count Go
-through loop and loft used values e.g. lane_r32, lane_v3, lane_u32
-(IMPORTANT at first we are only concerned with getting single values to
-work, later can worry about n-wide loading of values) (TODO the current
-code has the slots for each lane generated, rather than unpacked. look
-at handmade hero for this unpacking mode) If parameters to functions,
-loft them also (not functions? just parameters? however we do
-random_bilateral_lane() so yes to functions?) If using struct or struct
-member references, take out values and loft them also,
-e.g. sphere.radius == lane_r32 sphere_r; (group struct remappings
-together) Remap if statement conditions into a lane_u32 mask and remove
-enclosing brace hierarchy (IMPORTANT you can still have if statements if
-they apply to lanes, e.g. if mask_is_zeroed() break;) (TODO for
-mask_is_zeroed() we want the masks to be either all 1’s or 0’s) (call
-mask_is_zeroed() on all masks to early out as often as possible to get a
-speed up) Once lofted all if statements, &amp; all the masks into a
-single mask (it seems if there is large amounts of code inside the if
-statements, you don’t want to do it this way and rather check if needing
-to execute?) (IMPORTANT to only &amp; dependent masks, e.g. if there is
-an intermediate if like a pick_mask or clamp, then don’t include it, but
-do the conditional assign directly on this mask) Then enclose remaining
-assignments in a conditional assignment function using this single mask?
-(conditional_assign(&amp;var, final_mask, value); this uses positive
-mask to get source and negative mask to get dest?) (also discover the
-work around to perform binary operations on floating point numbers) So,
-by end of this all values operated upon should be a lane type? (can have
-some scalar types if appropriate) We may have situation where some items
-in a lane may finish before others. So, introduce a lane_mask variable
-that indicates this. To indicate say a break, we can do (lane_mask =
-lane_mask &amp; (hit_value == 0)); For incrementing, will have to
-introduce an incrementor value that will be zeroed out for the
-appropriate lane item that has finished. Have horizontal_add()? Next
-once everything remapped create a lane.h. Here, typedef the lane types
-to their single variants to ensure working before adding actual simd
-instructions Also do simd helper functions like horizontal_add(),
-mask_is_zeroed() in one dimension first Wrap the single lane helper
-functions and types in an if depending on the lane width set (IMPORTANT
-any functions that we are to SIMD, place here. if it comes that we want
-actual scalar, then rename with func_lane prefix)</p>
-<p>for simd typically have to organically transition from AOS to SOA</p>
-<p>Debug in single lane, single threaded mode (easier and debugger
-works) However, can increase lane width as needed (threading not so
-much?)</p>
-<p>For bitwise SIMD instructions, the compiler does not need to know how
-we are segmenting the register, e.g. 4x8, 8x8 etc. as the same result is
-obtained performing on the entire register at once. So they only provide
-one version of it, i.e. no epi32 only si128 Naming convention have
-types: <code>__m128 (float), __m128i (integer), __m128d (double)</code>
-and names in functions:
-<code>epi32/si128 (integer), ps (float), pd (double)</code> Overload
-operators on actual wide lane structs (IMPORTANT remember to do both
-orders, e.g. (val / scalar) and (scalar / val)) Also have conversion
-functions</p>
-<p>Lane agnostic functions go at bottom (like +=, -=, &amp;=, most v3
-functionality) (IMPORTANT it seems we can replace logical &amp;&amp; and
-|| with binary for same functionality in simd)</p>
-<p>(IMPORTANT simd does not handle unsigned conversions, may have to cut
-off sign bit, e.g. &gt;&gt; 1)</p>
-<p>process of casting type to pointer to access individual bytes or
-containing elements (used in file reading too)</p>
-<p>(IMPORTANT masks in SIMD will either be all 1’s or 0’s. perhaps have
-a specific name for this to distinguish?)</p>
-<p>(IMPORTANT seems that not all operations are provided in SSE, like
-!=, so have to implement with some bitwise operations)</p>
-<p>SIMD allows divide by zeros by default? (because nature of SIMD have
-to allow divide by zeroes?)</p>
-<p>To get over the fact that C doesn’t allow &amp; floating point,
-reinterpret bit paradigm <code>*(u32 *)&amp;a</code> as oppose to cast
-(IMPORTANT in SIMD cast is reinterpreting bits, so the opposite of cast
-in C)</p>
-<p>caching https://akkadia.org/drepper/cpumemory.pdf 1. know cache sizes
-to have data fit in it 2. know cache line sizes to ensure data is close
-together (may have to separate components of structs to allow loops to
-access less cache lines) i.e. understand what you operate on frequently.
-may also have to align struct 3. simple, linear access patterns (or
-prefetch instructions) for things larger than cache size</p>
-<p>inline assembly (raw syscalls from github) HAVE TO INSPECT/VERIFY
-ASSEMBLY IS SANE FIRST THEN LOOK AT TIMING INFORMATION inspecting
-compiler generated assembly loops, look for JMP to ascertain looping
-condition due to macro-op fusion (relevent to say Skylake), e.g. cmp-jmp
-non-programmable instructions could be executed by the cpu similarly,
-instructions that only exist on the frontend but exist programmatically
-e.g. xmm to xmm might just be a renaming in register allocation table
-also due to concurrent port usage, can identify parts of code as
-relatively ‘free’ struct access typically off a [base pointer] in
-assembly, 1.0f might be large number e.g. 1065353216 in assembly loop,
-repeated instructions may be due to loop unrolling we might see: *
-superfluous loading of values off stack * more instructions required,
-e.g not efficiently using SIMD (often this exposes the misconception
-that compilers are better than programmers; so better to handwrite
-intrinsics)</p>
-<p>comparing unoptimised assembly to ‘wc’ see noticeable speed increase.
-example of non-pessimisation</p>
-<p>Following the basic principles of non-pessimisation, I make a note of
-the huge amount of cruft in the C STL. The output buffering, hidden
-<code>malloc()</code> ‘optimisations’ (uncommitted memory, encounter
-expensive page faults later; prefer reliability/clarity over
-edge-performance benefits), OS line ending conversions, non-obvious use
-of mutexes etc. Whilst these may seem like minor inconveniences, they
-can be insidious for performance, e.g. <code>rand()</code> has a huge
-call-stack that if we replace with a simple xor shift, results in 3x
-speed up. Although easy to criticise, it may be the situation that the
-CRT had to be that way because of C standards. To isolate use of the
-CRT, wrap in functions so we can hopefully replace with system calls,
-intrinisics, etc. Although generally okay to use STL, it forces you to
-use their patterns (e.g. memory allocation, locks etc.). This is true
-for STLs in general across all languages. Some may have bloatness from
-other areas, e.g. C++ templates To avoid the compiler having to generate
-a large export table of all functions, make them <code>static</code> To
-avoid large amounts of linking and ∴ increase compilation time, have a
-unity build. Furthermore, garunteed ability to inline functions (as with
-multiple translation units, possible one might only have function
-declaration and not definition) (issues may occur with slower
-incremental builds when including 3rd party libraries; yet, can still
-work around this possibly using ccache)</p>
-<!-- SPDX-License-Identifier: zlib-acknowledgement -->
-<p>https://marketplace.fedevel.education/itemDetail.html?itemtype=course&amp;dbid=1569757838995&amp;instrid=us-east-2_KpwYC7yK5:45f6c01d-ccc8-43e0-8f33-c5a70caf707f</p>
-<p>when creating lid lips, factor in printer tolerance, say 0.4mm</p>
-<p>Spreadsheet (have dimensions to make parametric): if want to access
-parameteric sketch constraint, &lt;<Sketch>&gt;.Constraints.name
-(IMPORTANT: even though variable, make sure to reference it off the
-sketch) GIVE OPTIONAL NAME SO CAN REFERENCE FROM .Constraints! (formula
-typecasting may be necessary, e.g. (value<em>1mm)) </em>
-printer_tolerance * container_l/w/h * board_offset_x/y * case_thickness
-* base_thickness * hole_diametre_percent_ratio
-(e.g. &lt;<Internal>&gt;.Constraints.height *
-hole_diametre_percent_ratio) * global_chamfer</p>
-<p>1.75mm PLA (polylactic acid) into 0.4mm nozzle</p>
-<p>0.15mm layer height speed/quality 15% infill gyroid
-integrity/speed/usage</p>
-<p>supports required for model that does not print over itself</p>
-<p>export g-code (like printer ISA?) to sd card</p>
-<p>supports necessary for complex geometries like overhangs, greater
-than 45°, etc. put supports everywhere by default? (perhaps add blockers
-to this?) maybe just use everywhere to get a feel for it, then manually
-add enforcers?</p>
-<p>can also use printrun usb-b interface to print without SD card?</p>
+<h1 id="leetcode-everyday">LEETCODE EVERYDAY</h1>
+<p>TODO: add reddit and hackernews to daily link trawl</p>
+<p>TODO: merge ‘verify’ and ‘plotting’ into misc/ folders of
+repositories</p>
+<h1 id="workflow">Workflow</h1>
+<p>Preparation Mentality: ## Git usage: TODO(Ryan): collate into bash
+aliases * possible git notes to append to commits: $(git notes add -m
+‘Acked-by: <a href="mailto:tyler@tylercipriani.com"
+class="email">tyler@tylercipriani.com</a>’) * use gcd function enter
+habit to know if out of date * git commit aliases showing diff * find
+parents of hash: <code>git rev-list --parents -n 1 &lt;hash&gt;</code> *
+locate file content:
+<code>git log -S'content' -- file_name | tr '\n' ' '</code> * locate
+file added/deleted/modified/renamed:
+<code>git log --diff-filter=A -- foo.js</code> * previous commit
+messages:
+<code>git show --color -s --format='%C(yellow)(%as)%C(reset) %s' -5 | tr '~' ' '</code>
+<strong>merge commit with previous commit</strong>:
+<code>git rebase -i HEAD~n</code> a standard rebase will apply commits
+on top of interactive rebase to perform squashing on most recent
+<strong>merge conflict resolution</strong>:
+<code>git mergetool</code></p>
+<p>If wanting to create a new implementation of a function, perhaps
+don’t just delete it entirely, rather change its name to func_old()</p>
+<p>seems have CI for deploying or testing</p>
+<p>ingress (act of entering), egress used for traffic</p>
+<p>C is good as in the beginning you always want the results. In the end
+all you want is control (writing OS instead of libc will also allow for
+more powerful API) Embrace the complexity that C provides (as down the
+road, you will want that complexity to create varied things) You will
+have the control to solve your problem To be a good programmer, you have
+to want to learn how to do things You want compiler errors and things to
+be explicit C++ hides a lot of things. Oftentimes, the language allows
+you to do things that make you think your clever (intertwined with
+‘one-liners’). Extra typing is not bad, it makes things more explicit
+Crashes make you fix things</p>
+<p>Spacing good for searching and to avoid a+++++b (a++ + ++b)</p>
+<p>IMPORTANT: In C, this becomes a constant expression and so can be
+used in a switch Also, allow for or’ing of individual flags. In
+addition, composition of flag types typedef u32 MATCH_FLAGS; typedef u32
+S8_MATCH_FLAGS; enum { MATCH_FLAG_FIND_LAST = (1 &lt;&lt; 1), }; enum {
+S8_MATCH_FLAG = (1 &lt;&lt; 2) };</p>
+<p>typedef enum NODE_TYPE { NODE_TYPE_LIST, NODE_TYPE_COUNT, }
+NODE_TYPE;</p>
+<p>typedef struct Node Node; struct Node { NODE_TYPE type; };</p>
+<pre><code>u32 vals[2 * 3] = {
+           1, 2, 3
+           4, 5, 6
+}</code></pre>
+<p>NAMING (mirrors a directory structure):</p>
+<pre><code>// structs/functions/global prefixes in a file should have same name as the file they reside in
+obj_create(); obj_destroy(); etc. // would go in obj.[ch]
+
+enum MY_ENUM
+{
+ ME_VALUE1,
+ ME_VALUE2,
+};</code></pre>
+<p>ALLOCATE STYLE (MORE GENERAL, SIZEOF STYLE)</p>
+<pre><code>u32 *mem = malloc(sizeof(*mem) * 10);</code></pre>
+<p>If discriminated union size disparity an issue, consider:</p>
+<pre><code>struct SomeStruct
+{
+  CommonHeader *header;
+  u32 value;
+};
+some_func(CommonHeader *header)
+{
+  if (header-&gt;type == SOME_TYPE)
+  {
+    SomeStruct value = (SomeStruct *)header;  
+  }
+}</code></pre>
+<p>struct padding largest value wants to be on a byte boundary that is
+divisible by itself trailing members may have padding also to ensure
+consecutive structs in array are aligned as well (some machines may
+crash on unaligned access, or raise an exception which will trigger an
+interrupt) IMPORTANT: On machines with no unaligned accesses, memory
+arenas may create issues</p>
+<p>each memory page given by OS has rwx flags. this gives some
+sandboxing between process memory (compiler warning should detect stack
+smashing when trying to overwrite stack areas) (address sanitizer should
+pick up when trying to overwrite heap page areas)</p>
+<p>IMPORTANT: memory access is very slow. actual math operations etc.
+are very fast. e.g. SIMD perform 4 multiplies in 1 cycle, reading
+something from memory 50 cycles So, when optimising, look at reducing
+memory accesses and see if those memory accesses are in the cache
+(smaller cache faster lookups. larger cache, less liklihood of cache
+misses) (IN GENERAL, COMPUTE DON’T LOOKUP)</p>
+<pre><code>struct BareBonesNoRedundancies
+{
+  f32 width, height;
+  // f32 area;
+};
+Remove values that can be computed. Reduces possibility of bugs
+As math is effectively &#39;free&#39;, we can reduce memory size also
+
+If value is very expensive to compute, then wrap dependent values in function, e.g. set_width()</code></pre>
+<p>IMPORTANT: BUFFER ITERATIONS, USE STRIDE FOR GREATER FLEXIBILITY</p>
+<pre><code>void colour_iterate(u8 *colours, u32 count, u32 stride);
+struct Something
+{
+  u32 id;
+  u8 colour[3];
+};
+Something arr[10];
+colour_iterate(&amp;arr[0].colour, 10, sizeof(*Something));</code></pre>
+<p>IMPORTANT: A GOOD PROGRAMMER WANTS TO WRITE CODE. WHEN PEOPLE SAY TOO
+HARD, THIS IS AN OPPORTUNITY TO LEARN BUILD YOUR MOUNTAIN THAT WILL NOT
+AGE. YOU WILL BE A EXPERT THAT CAN FIX IT, BECAUSE YOU WROTE IT WHEN YOU
+WRITE A PIECE OF TECHNOLOGY DON’T VIEW IT AS STANDALONE, VIEW IT AS
+CREATING AN EVER HIGHER MOUNTAIN THAT WILL ALLOW YOU TO CREATE GREATER
+THINGS IN THE FUTURE IN CONTRAST, AN APPLICATION SHOULD BE A SMALL
+HOUSE; TECHNOLOGY STACK A MOUNTAIN LEARN BY IMPLEMENTING</p>
+<p>Think about your code running for decades</p>
+<p>TODO: with multithreading, be aware of cache byte line invalidation
+(which is an action of cache coherency)</p>
+<p>compiler assumes will not go into undefined behaviour. so anything
+that puts in UB state is considered unreachable (so x/0 is akin to
+<code>__builtin_unreachable()</code>)? u16 will be promoted to i32 if it
+fits (bugs with comparison) AS-IF (a.k.a equivalence) rule means a bug
+may appear before it has happened due to reordering</p>
+<p>uninitialised data has an indeterminant state. so, c[0] != c[0]</p>
+<p>struct padding is undefined, i.e. compiler’s don’t have to do it?</p>
+<pre><code>memset(ptr, 0, sizeof(*ptr));
+ptr-&gt;a = 10;
+ptr-&gt;b = 20;
+ptr-&gt;c = 30;
+the memset() lets the compiler know we are okay overriding padding bytes
+so can use a single 64bit write
+IMPORTANT: want the compiler to always be writing largest size possible</code></pre>
+<p>with pointers, does not know if point to same memory e.g. <em>array,
+</em>count. They could be the same, so can’t optimise into a memset
+however, it does assume no aliasing if the pointer types are different,
+e.g. int* and float* unsigned char aliases all types (exception to
+aforementioned rule)</p>
+<p>in C memory objects are not contiguous so, &amp;a == &amp;b will be
+optimised away (avoid by casting to integers) (however a != b will work
+even if pointers, it’s the address of that causes issues) are C fat
+pointers even worth caring about? only really C++ member functions
+etc.</p>
+<p>TODO: if requiring software square root, use Carmack’s square root
+function?</p>
+<p>strive for value orientated (less pointers), i.e. use structs by
+value; so return them and use as arguments. removes aliasing and x86
+passes small structs into registers, so never hit memory and if
+optimised and inline function, goes away entirely (is this the case for
+32bit arm?) (in C++ this in justified due to hidden copy
+constructors)</p>
+<p>error handling, have the function log internal errors such as errno
+errors. at the call site, just set .valid field in return struct to
+false so, for a series of consecutive calls that could return errors,
+only check the last one (all functions will check the .valid field)</p>
+<pre><code>file = open_file(&quot;f&quot;);
+img = open_img(file);
+tex = open_tex(img);
+if (tex.valid) {}</code></pre>
+<p>Use stb approach for library design (might be easier to start out
+sparse and when shipping, merge together) Have struct argument for large
+number of configuration options Request allocators, or memory; don’t
+allocate In fact, don’t call any OS specific calls. request hem</p>
+<p>Avoid using most of libc as it’s old, bad design (strtok global
+state, rand locking) and generally slow. There are some useful,
+e.g. memcpy, fixed ints and math</p>
+<p>Best to store length of string, so don’t have to traverse it with
+strlen() and negatively affect the cache std::string allocates on heap
+(in fact, a lot of C++ have implicit constructors, more so from implicit
+conversions)</p>
+<p>TODO: best practices and use cases of logging</p>
+<p>IMPORTANT: With these approaches, we feel like writing in a
+completely new language</p>
+<p>C has moved ahead of no typedefs, forward declarations C empty
+function argument is vararg C has designated initialisers (gcc extension
+has this as well)</p>
+<p>C like performance like vegan meat. If you want it, go for the real
+thing C not literally a high level assembly language as compilers do a
+lot of transformations Similarly, assembly is not a direct translation,
+as the CPU may reorder etc. Compiler follows AS-IF rule, i.e. as long as
+EVENTUALLY equals the same. (is this only a C compiler, hence why it’s
+fast?) So, if not observable (e.g. volatile, io, graphics, etc.) could
+perform instruction reordering/removal</p>
+<p>TODO: volatile vs atomics? atomic means we either read all of it, or
+none of it (i.e. don’t read if some other thread is writing to it)
+architectures have specific atomic instructions? like, a val++ is not
+atomic as something could be inserted in between so doing
+atomic_exchange_rel(shared_pointer, a); will nothing will interfere?
+(so, not enough to just say volatile as volatile will allow assignments
+to be reordered?) atomics related to release and acquire? release says
+everything before this point has to be done, i.e. won’t be reordered
+upwards acquire means this won’t be reordered downwards, i.e nothing
+after this will be done, before this completes full fence is release and
+acquire, i.e cannot move up or down atomics are not just instructions to
+compiler to not reorder, but also hardware instructions related to cache
+flushing etc.</p>
+<p>C standard as at least 6 pages of undefined behaviour could be more,
+in fact anything not explicit defined is undefined. there could be more
+undefined behaviour waiting to be noticed. it’s just because C is 50
+year old language that many corner cases explored</p>
+<p>compiler assumes that code that is undefined behaviour cannot be
+reached and so will optimise away wrapping is undefined for signed
+values, so can optimise this away in that case
+<code>x = (x * 2) / 2;</code> shifting more than 32 is undefined, so can
+optimise away if
+<code>u32_val &lt;&lt;= x; if (x &gt;= 32) ...</code></p>
+<pre><code>switch (index)
+{
+  case 0: func[0];
+  case 1: func[1];
+}
+this gets mapped to if (index) etc.
+however, if put __builtin_unreachable() in default case, can remove this
+so, this is useful for optimising range checks
+GET INTO HABIT OF USING LIKELY AND UNREACHABLE?</code></pre>
+<p>coroutine is function that can be suspended at any point, and resume
+later</p>
+<p>if consuming a list each iteration, use doubly linked list to reset
+(e.g. event consumption)</p>
+<p>for any list, stack, queue etc. will wrap in a struct that has first
+and last pointers</p>
+<p>although sh in containers (alpine linux), the ubiquity of bash (if
+git on windows, then have bash) use its features</p>
+<p>if global, decide if actually global or thread-local</p>
+<p>TODO: investigate analysing core dump files (when becomes
+necessary)</p>
+<p>Updating compiler symlinks: $(sudo ln -vfns /usr/bin/gcc-10
+/usr/bin/gcc)</p>
+<p>TODO: breakpoint/error function print out line information only in
+debug builds</p>
+<p>Files from templates are developed on each project, thereby
+iteratively improving</p>
+<p>TODO: Andrew Reece (rethinking doxygen youtube live streams)</p>
+<p>TODO: doesn’t asynchronous programming just make things harder to
+debug? is performance of say linux io_uring any better than
+synchronous?</p>
+<p>TODO(Ryan): Investigate useful POSIX C functions, e.g. nftw()
+(netfw.h), getaddrinfo() (netdb.h) Also, some require the definition of
+cryptic macros to be included</p>
+<p>TODO: aaron codes, code yao (leetcode walkthroughs)</p>
+<p>TODO: way to reduce transparency of active window dynamically?</p>
+<p>DIFFERENCE IN APPROACH TO WORKING ON TEAM AND STAGE OF PROJECT on a
+team, ‘proper’ commit should change one thing and have accompanying
+tests. So, write explorative code on branch and merge when done</p>
+<p>have a _COUNT at the end of every enum</p>
+<p>perhaps start with this: https://github.com/TheSandvichMaker/netgame
+and improve with glenn fielder? glenn fielder networking codersblock
+javidx9 mmo (possible informative videos:
+https://www.youtube.com/watch?v=jmHQa5P7hC8,
+https://www.youtube.com/watch?v=9OjIDko1uzc)</p>
+<p>techlinked + michel tunnell (this week in linux)</p>
+<p>does mesa stack include open-source drivers for NVIDIA. so, support
+opengl and vulkan?</p>
+<p>sudo and pipes doesn’t work. to allow gdb to attach: $(sudo bash -c
+“echo 0 &gt; /proc/sys/kernel/yama/ptrace_scope”) sudo -i; sudo vim
+/etc/sysctl.d/10-ptrace.conf IMPORTANT(This seems to work): sudo
+/sbin/setcap CAP_SYS_PTRACE=+eip /usr/bin/gdb</p>
+<p>TODO: GO THROUGH https://www.rfleury.com/ articles and implement!!!!
+mr4thdimension (allen webster) youtube videos https://mr4th.com/</p>
+<p>TODO: With strncpy and such, get some indication if didn’t write
+entire buffer, i.e. input buffer too small</p>
+<p>TODO: variable sized data structures that use memory arena with no
+holes</p>
+<p>TODO: use sanitisers from get go (may catch when mallocs less than a
+page)</p>
+<p>TODO: structure code for cross-platform from get go</p>
+<p>TODO: terminator tab autoopen for project (include file in project
+source)</p>
+<p>TODO: avoid using magic numbers for various buffer sizes</p>
+<p>TODO: prefix discriminated union fields</p>
+<p>TODO: write more comments on code that is ‘exploratory’, e.g. ASSUMES
+static size, IGNORES clearing other fields, etc.</p>
+<p>Good error messages say what happened and why, provide reassurance,
+are empathetic, and help users fix the problem.</p>
+<p>When working with array, always check if length &gt; 0</p>
+<p>For production, probably want to <code>dlopen()</code> to provide
+fallbacks for missing libraries</p>
+<p>TODO: some sort of code review on merge requests</p>
+<p>TODO: writing expansive tests (perhaps look at zeux github?)</p>
+<p>always in software development will have things that aren’t working
+optimally. know they are there. will later go back and fix them when
+required (e.g. when in quality improving mode). just know this will
+always happen</p>
+<p>Working with modern software is going to be a pain at some point.
+Have to stay strong and not belittle situation, rather accept it and
+move on. At times, have to get off high horse and roll up your
+sleeves.</p>
+<p>Linux issues: 1. runtime configurability (difficult part not API, but
+what to do when settings aren’t exact, i.e. what to fall back on when
+abstraction not there). 2. multiple binaries Although possible to
+dynamically load core libraries like xlib/wayland/alsa and support a
+minimum set of APIs, this is essentially what SDL does. However,
+system/user configurability is huge in linux. There is simply too much
+runtime variability to test for all users. Furthermore, multiple CRT to
+support, e.g. muslc for Alpine</p>
+<p>One way to solve variability is to use the Steam Runtime, which is a
+collection of .so files and configuration that is less subject to user
+configuration</p>
+<p>Linux desktop suffers from binary compatibility nightmare, e.g. 15
+binaries to support all. This is because libraries like glibc are happy
+to break abi to get minor improvements, e.g spec says this so let’s do
+it even though no one cares</p>
+<p>C STL has one version for each compiler + os. also, some compilers
+might not fully implement the STL feature</p>
+<p>With an undeclared identifier in a unity build, just reorder
+#includes in main file</p>
+<p>Cross platform naming, e.g. With libc, libraries is more of a
+discipline thing</p>
+<p>There are no absolutes, just tradeoffs for solving your problem, e.g
+raw vs smart pointers</p>
+<p>Often issue is not hard code, it’s because the problem is messy,
+i.e. Unwritten assumptions,<br />
+external constraints, users want lots of generic functionality. So often
+interesting at the same time, very annoying.</p>
+<p>Frameworks change all the time, fundamentals not so much, e.g how
+things glue together</p>
+<p>compression orientated program think about concept compression,
+rather than code compression. e.g. might be at such a small code size
+that there is no concept to really compress</p>
+<p>combinations: 2ⁿ-1, max: 2ⁿ introducing negatives we effectively
+remove one bit numbers represented in twos complement to handle
+addition/subtraction of negatives and positives. not because of
+representation, e.g. sign bit would work fine when saying complement,
+it’s with respect to negative number handling: ones ➞ invert all bits in
+positive number to get negative. therefore have -0 twos ➞ adding a
+positive and its negative will get a 2 in each place. think about the
+MSB as the negative place, hence why -1 is all 1s</p>
+<p>FPGA (matrix of CLBs) reprogrammable (as oppose to ASIC) IC with HDL.
+Better for parallel processing?</p>
+<p>dave’s garage, what’s a creel</p>
+<p>Switching between laptop and desktop as uni student meant merge
+conflicts were common. So, know how to fix with $(git mergetool) and
+have it as a rebase</p>
+<p>Github issue and pull request template files
+(https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/?mc_cid=a5a0d2dbbf&amp;mc_eid=UNIQID)</p>
+<p>Terminal + Editor + Window manager</p>
+<p>Important to have linux source so as to view Documentation folder
+$(make kernelversion) https://www.youtube.com/watch?v=Jl_0W4o0xao</p>
+<p>(Serial Advanced Technology Attachment) important that these are
+sustained speeds, so for small file sizes expect a lot less as seconds
+smaller note that storage space advertised with S.I units, whilst OS
+works with binary</p>
+<p>RAM potentially hundreds of cycles (CAS latency and cache retrieval
+process) (important to note that RAM CAS is only say 20% of total
+latency as will check traverse cache and than copy it to cache)
+https://sites.utexas.edu/jdm4372/2011/03/10/memory-latency-components/
+In general: check if in L1. If not go check in L2 and mark least
+recently accessed L1 for move to L2. bubbles up to L3 until need for
+memory access which will go to memory controller etc.</p>
+<p>so, ram frequency gives max. throughput however latency of ram also
+important</p>
+<p>(cache latency from wikichip)</p>
+<p>generic is referencing Ubuntu specific kernel compilation (could also
+have -lowlatency etc.) (generic does not include a lot of modules in
+kernel to alleviate RAM, so use modprobe) (-41 is build number, i.e how
+many times compiled) (the compiler, linker, libc are all specific to
+linux OS used, e.g. compiled with different settings, different
+versions, etc.)</p>
+<p>$(grub-install -V) /etc/default/grub (GRUB_CMDLINE_LINUX_DEFAULT=““);
+$(update-grub); $(cat /proc/cmdline) (acpi_enforce_resources=lax boot
+parameter to allow decode-dimms to find ram chip) Tentative to make boot
+changes, e.g. kernel parameters due to previous issues whereby
+performing a grub install on a loopback device affected the system’s
+existing EFI GUID. To alleviate these concerns, carry copy of ubuntu on
+USB to mount and backup regularly</p>
 <table style="width:8%;">
 <colgroup>
 <col style="width: 8%" />
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">most solder has flux core (typically
-rosin) to remove oxide films, i.e. wetting the metal (to remove
-dirt/grease will require cloth or steel brush) Sn/Pb (60/40) lower
-boiling point and shinier finish (cone shaped) then non-leaded. fumes
-are flux as boiling point of lead (≈1700°C) much higher fume extractor
-at top</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Don’t restrict right side of bell curve
-Let your aces be aces Being an ace involves having an opinion Most
-influential software written largely by one person, e.g Linux, Unix, git
-etc. Then a team is assigned to maintain it. Fallacy about solo
-programmer productivity requiring large teams. Design by committee
-pushes design to middle of bell curve as opposing views average out</td>
+<td>Don’t restrict right side of bell curve Let your aces be aces Being
+an ace involves having an opinion Most influential software written
+largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
+to maintain it. Fallacy about solo programmer productivity requiring
+large teams. Design by committee pushes design to middle of bell curve
+as opposing views average out</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Cpu try to guess what instructions ahead
-(preemptive). Cost of incorrect reflushing expensive. So want to get rid
-of conditional jumps. Ideally replace with conditional movs or
-arithmetic branch less techniques. Endianness (register view), twos
-complement (-1 all 1s) Branch less programming is essentially SIMD</td>
+<td>Cpu try to guess what instructions ahead (preemptive). Cost of
+incorrect reflushing expensive. So want to get rid of conditional jumps.
+Ideally replace with conditional movs or arithmetic branch less
+techniques. Endianness (register view), twos complement (-1 all 1s)
+Branch less programming is essentially SIMD</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">What simd instructions available to cpu?
-If variable clock speed, cpu could detect not using all cores and
-increase single core clock</td>
+<td>What simd instructions available to cpu? If variable clock speed,
+cpu could detect not using all cores and increase single core clock</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Flops calculated with best instruction
-set? Not memory bound is best case for hyper threading Intel speeds
-optimised for gpr arithmetic, boolean and flops Why is Intel shr
-instruction so slow? Intel deliberately makes mmx slow</td>
+<td>Flops calculated with best instruction set? Not memory bound is best
+case for hyper threading Intel speeds optimised for gpr arithmetic,
+boolean and flops Why is Intel shr instruction so slow? Intel
+deliberately makes mmx slow</td>
 </tr>
 </tbody>
 </table>
@@ -1720,18 +3150,18 @@ interactions. C is a simple language and if you understand it’s
 low-level capabilities, you can do many things. However, despite this
 recognition, I did come upon certain procedures to follow when working
 with Bash scripts.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as callee</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="ot">!</span> <span class="va">$#</span> <span class="ot">-ge</span> 3 <span class="bu">]</span> <span class="kw">&amp;&amp;</span> <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;-arg&quot;</span> <span class="bu">]</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking arguments as caller</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="ex">func</span> <span class="kw">||</span> <span class="bu">exit</span> 1</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function returning value</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="va">_FUNC_NAME</span><span class="op">=</span>val</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Informative usage information</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;App v1.0 by Ryan McClue\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;Usage:\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">&quot;app -arg &lt;value&gt;\n&quot;</span> <span class="op">&gt;&amp;</span><span class="dv">2</span></span></code></pre></div>
 <p>The diverse software landscape of Linux distros means that we don’t
 know what version of each</p>
 <p>STM32CubeMX (this justs generates code, IDE is full fledged) to
@@ -2309,5 +3739,502 @@ out. Proof of you will complete it. Here is the game, why I’m good at
 it, why people will like it and why I’m going to succeed at developing
 it Interview ability to explain problems you have encountered on
 projects</p>
+<p>time -p; getrusage();</p>
+<p>callbacks less CPU intensive than polling</p>
+<p>Saying one instruction is faster than the other ignores context of
+execution. e.g. mul and add same latency, however due to pipelining mul
+execution unit might be full TLS vs atomics, e.g. TLS is series of
+instructions determined by OS and compiler. Atomics depend on how other
+cores are run and synchronising necessary with other cores So, must
+measure which is faster for particular situation</p>
+<p>use $(time) for single line, use $(ctime)</p>
+<p>Can pin a thread to a core</p>
+<p>Can run programs in kernel space with eBPF</p>
+<p>Frequent context-switching will give terrible cache coherency</p>
+<p>adding <code>restrict</code> also useful to prevent aliasing and
+thereby might allow compiler to vectorise say array loops</p>
+<p>Before cpus increased in single thread execution speed. Now more
+cores. It’s a topic of research to convert single threaded into
+multithreaded for emulation. This is why emulation of something like the
+GameCube (powerpc) is slow. Furthermore, due to hardware irregularities
+that programs relied on may take hundreds of instructions to emulate If
+actually a simple translation, then should run close to native speed.
+This is reality of emulating hardware with hardware</p>
+<p>CISC gives reduced cache pressure for high-intensive, sustained
+loops</p>
+<p>log2(n) number of bits for decimal
+https://en.algorithmica.org/hpc/cpu-cache/associativity/</p>
+<p>using genetic algorithm/machine learning to optimise for us
+https://zeux.io/2020/01/22/learning-from-data/</p>
+<p>Cpu try to guess what instructions ahead (preemptive). Cost of
+incorrect reflushing expensive. So want to get rid of conditional jumps.
+Ideally replace with conditional movs or arithmetic branch less
+techniques. Endianness (register view), twos complement (-1 all 1s)
+Branch less programming is essentially SIMD</p>
+<p>If variable clock speed, cpu could detect not using all cores and
+increase single core clock</p>
+<p>Not memory bound is best case for hyper threading Intel speeds
+optimised for GPR arithmetic, boolean and flops Intel deliberately makes
+mmx slow</p>
+<p>Low cache associativity means fast lookup but a lot of misses and
+thus eviction policy like LRU</p>
+<p>Count cycles to counteract possible thermal throttling Hyperthreads
+useful only if different execution unit Cpu reads memory from cache and
+ram in cache lines (due to programmer access patterns). Each item in
+cache set is cache line size</p>
+<p>if apple computers use RISC ARM in M1, why CISC necessary? (only
+because on Intel?) emphasis of CISC simplify assembly (e.g. more
+addressing modes), thereby reducing size of binary? (reduce
+instructions) and increase cache coherency RISC will require less
+transistors to implement complex hardware but will make optimising
+harder for compiler? single cycle instructions (reduce cycles per
+instruction)</p>
+<p>when looking at a pointer, to optimise compiler must know whether it
+can assume it points to a local var or not. so, easier to eliminate
+aliasing with non-pointers</p>
+<p>when viewing from application in a sandboxed environment like a
+phone, total RAM less than installed as portion reserved for kernel</p>
+<p>simplistically RAM 50ns and HDD 10µs? faster to read than write</p>
+<p>2.5bln * 8 (simd) * n (execution units) * 2 (cores) assuming
+instructions have throughput of 1 so 64 / 4 gives how many floats per
+second from L1 cache in general, not streaming from memory the entire
+time (would probably hit a cache bandwidth limit)</p>
+<p>// undefined behaviour if not true ALWAYS_INLINE void assume(bool
+cond) { if(!(c)) {__builtin_unreachable()}; } times when manual inlining
+is required: https://www.youtube.com/watch?v=B2BFbs0DJzw</p>
+<p>Unless your in web where everything takes years to load, as single
+threaded performance is largely stagnant you will have to utilise
+parallelism if want performance. This is very difficult and like single
+threaded code generic libraries which can actually be very specific will
+create bloated in performing code based. Multithreading is building up a
+new discipline to single threaded. There are a lot of pitfalls for
+performance (balancing want things local, however must share to utilise)
+If you care about performance for anything, you should care about cache
+misses Memory bandwidth and caches are major reasons for a cup attaining
+performance. You have to think about where does memory actually live and
+how is it transferred around</p>
+<p>Optimiser allows for lexical scoping of stack variables. However, for
+optimiser to inline will have to get rid of pointers to prevent
+aliasing</p>
+<p>stack and heap memory are the same physical thing, so only more
+efficient if memory was hot, i.e. recently touched</p>
+<p>Computer faster than you think, e.g instructions, clock cycles,
+cores. Very large With M2 drive should be quick</p>
+<p>may be easier for optimising compiler to work with things passed by
+value as oppose to pointer. so, if need to modify something may have to
+return the value in a functional programming style. however, this is
+error prone. compiler cannot optimise pointers, e.g. if setting two
+values to same pointer, compiler cannot say that both the values are the
+same as another pointer may point to the same address. this is
+aliasing.</p>
+<p>we see contiguous memory in virtual memory, however in physical
+memory it is almost certainly going to be fragmented</p>
+<p>compilers can auto-vectorize loops for us (and other operations if we
+perform say 20 of them). so, floats will be twice as fast as doubles
+(more space, even though same latency and throughput)</p>
+<p>optimising is a very precise process. only do when you have code that
+is working and you know will keep. games by their very nature are about
+responsiveness, so optimisation and low-latency is important. I like
+programming with this as a mentality.</p>
+<p>with pure compiler optimisations, i.e. code we have not optimised
+ourselves, a 2x increase is not unexpected. (code we optimised not as
+much)</p>
+<p>optimise for worst case (looking out on whole world) not best case
+(in front of wall, don’t render what is behind). we care about highest
+framerate, not lowest.</p>
+<p>virtually never use lookup tables as ram memory is often 100x slower
+(so unless you can’t compute in 100 of instructions)</p>
+<ol type="1">
+<li>Optimisation (this is rarely done due to time involved) Do
+back-of-envelope calculations; look at algorithm to see if wasteful;
+benchmark to see if hitting theoretical calculations and then use
+timings etc. to isolate why our code isn’t hitting these theoretical
+numbers Very importantly need to know what the theoretical maximum is,
+which will be dependent on the program, e.g bounded by number of bytes
+sent to graphics card, kernel stdout etc.</li>
+<li>Non-pessimisation (do this all the time) Don’t introduce unecessary
+work (interpreter; complex libraries; constructs like
+polymorphism/classes people have convinced themselves are necessary) for
+the CPU to do to solve the problem</li>
+<li>Fake optimisation (very bad philosophy) Repeating context-specific
+statements e.g. use memcpy as it’s optimised (however the speed of
+something is so context specific, so non-statement), arrays are faster
+than linked lists (again, so dependent on what your usage patterns are)
+IMPORTANT: In programming, preface the suitability of something to a
+particular environment/context</li>
+</ol>
+<p>When many people say too much effort involved in optimisation, they
+are generally thinking of point 1</p>
+<p>sometimes things should be running faster than they should, however
+only so much we can replace e.g. the structure of many OSs are based on
+legacy code, so simply outputting to stdout may go through shell then
+kernel etc. also, may have to deal with pessimised libraries. in these
+cases: * isolate bad code, i.e. draw hard boundary between your code and
+theirs by caching calls to them * do as little modification to the data
+coming in from them (no need to say put in a string class etc.)</p>
+<p>People think that it’s slow, but it won’t crash (because of
+interpreter) Performance is critical in getting people excited about
+what you do, e.g. windows ce was laggy, iphone performant but less
+features changes the market low latency is more desirable, even if less
+features</p>
+<p>count number of math ops in function and control flow logic that is
+evaluated branches can get problematic if they’re unpredictable</p>
+<p>inspecting measurements of microarchitecture consider latency and
+throughtput (how much does it cost to start again) so, FMUL may have
+latency of 11, however throughput of 0.5, so can start 2 every cycle,
+i.e. issue again (cpus these days are incredibly overlapped even if
+single-threaded) so throughput is more of what we care about for
+sustained execution, e.g. in a loop</p>
+<p>however, these numbers are all assuming the data is in the chip. it’s
+just as important to see how long it takes to get data to the chip. look
+at cache parameters for microarchitecture; how many cycles to get from
+l1 cache, l2 cache, etc. when get to main memory potentially hundreds of
+cycles</p>
+<p>bandwidth of L1 cache say is 80 bytes/cycle, so can get 20 floats per
+cycle (however, based on size of L1 cache, not really sustainable for
+large data)</p>
+<p>http://igoro.com/archive/gallery-of-processor-cache-effects/</p>
+<p>(could just shortcut this and just see if flops is recorded for our
+chip)</p>
+<p>so, using these rough numbers we should be able to look at an
+algorithm (and dissect what operations it’s performing, like FMULs),
+know how much data it’s taking, and give a rough estimate as to how long
+it could optimally take (will never hit optimal however) IT’S CRITICAL
+TO KNOW HOW FAST SOMETHING SHOULD RUN</p>
+<p>REASONS SOFTWARE IS SLOW: 1. No back-of-envelope calculations (people
+aren’t concerned that they are running up to 1000 times slower thn what
+the hardware is capable of) These calculations involve say looking at
+number of math ops to be performed in the algoirthm and comparing that
+to the perfect hardware limit 2. Reusing code (20LOC is a lot; use
+things that do what you want to do, but not in the way you want them to
+be done; often piling up code that is ill-fitting to what the task was,
+e.g. we know this isn’t a regular ray cast, it’s a ray cast that is
+always looking down) 3. When writing, thinking of goals ancillary to
+task (not many places taught how to actually write code; all high level
+abstractions about clean code there are thinking about templates/classes
+etc. not just what does the computer actually have to do to do this
+task?) (there is no metric for clean code; it’s just some fictional
+thing people made up)</p>
+<p>WHENEVER UNDERSTANDING CODE EXAMPLES: 1. COMPILE AND STEP INTO (NOT
+OVER) IN DEBUGGER AND MAKE HIGH LEVEL STEPS PERFORMED look at these
+steps for duplicated/unecessary work (may pollute cache). (perhaps even
+asking why was the code written the way it was) could we gather things
+up in a prepass, i.e. outside of loop? if allocating memory each cycle
+that’s game over for performance. do we actually have to perform the
+same action to get the same result, e.g. a full raycast is not
+necessary, just segment on grid O(n·m) is multiplicative, not linear
+O(n). big oh is just indication of how it scales. could be less given
+some input threshold (big oh ignores constants, hence looking at
+aymptotic behaviour, i.e. limiting behaviour) now, once code reduced,
+look at minimising number of ops</p>
+<p>cpu front end is figuring out what work it has to do,
+i.e. instruction decoding</p>
+<p>e.g simd struct is 288 bytes, 4.5 cache lines, able to store 8
+triangles</p>
+<p>understanding assembly language is essential in understanding why the
+code might not be performing well</p>
+<p>branch prediction necessary to ensure that the front-end can keep
+going and not have to wait on the back-end</p>
+<p>execution ports execute uops. however, the days of assembly language
+registers actually mapping to real registers is gone. instead, the
+registers from the uops are passed through a register allocation table
+(if we have say 16 general purpose registers, table has about 192
+entries; so a lot more) in the back-end this is because in many
+programs, things can happen in any order. so to take advantage of this,
+the register allocation table stores dependency chains of operations
+(wikichips.org for diagram) from execution port, could be fed back into
+scheduler or to load/store in actual memory</p>
+<p>when looking at assembly, when we say from memory, we actually mean
+from the L1 cache</p>
+<p>xmm is a sse register (4 wide, 16 bytes); m128 is a memory operand of
+128 bits ymm is 8 wide 1<em>p01 + 1</em>p23 is saying issue 1 microop on
+either port0 or port1 and one microop on either port2 or port3 so, we
+could issue the same instruction multiple times, i.e. throughput of
+0.5</p>
+<p>microop fusion is where a microop doesn’t count for your penalty as
+it’s fused with another. with combined memory ops,
+e.g. <code>vsubps ymm8, ymm3, ymmword ptr [rdx]</code> this is the case
+so, if a compiler were to separate this out into a mov and then a sub,
+not only does this put unecessary strain on the front-end decoder it
+also removes microop fusion as they are now separate microops (important
+to point out that I’m not the world best optimiser, or the worlds best
+optimisers assistant, so perhaps best not to outrightly say bad codegen,
+just say makes nervous)</p>
+<p>godbolt.org good for comparing compiler outputs and possible
+detecting a spurious load etc.</p>
+<p>macrop fusion is where you have an instruction that the front-end
+will handle for you, e.g. add and a jne will merge to addjne which will
+just send the 1 microp of add through</p>
+<p>uica.uops.info gives percentage of time instruction was on a port
+(this is useful for determining bottle-necks, e.g. series of
+instructions all require port 1 and 2, so cannot paralleise easily) so,
+although best case say is issue instruction every 4 cycles, this
+bottleneck will give higher throughput</p>
+<p>some levels of abstraction are necessary and good, e.g. higher level
+languages to assembly</p>
+<p>Optimise: gather stats -&gt; make estimate -&gt; analyse efficiency
+and performance</p>
+<p>file size https://justine.lol/sizetricks
+https://codegolf.stackexchange.com/questions/215216/high-throughput-fizz-buzz/236630#236630</p>
+<p>more important to understand how CPU and memory work than language
+involved in an OS, you will get given a zero-page due to security
+concerns</p>
+<p>likely() macros for branch prediction compiler optimisations
+(https://akkadia.org/drepper/cpumemory.pdf, pg 56)</p>
+<p>recording information: We want to understand where slow with vtune,
+amd uprof, arm performance reports Next, determine if IO bound, memory
+bound etc.</p>
+<p>To determine performance must have some stable metric, e.g. ops/sec
+to compare to e.g measure total time and number of operations
+Hyper-threading useful in alleviating memory latency, e.g. one thread is
+waiting to get content from RAM, the other hyper-thread can execute
+However, as we are not memory bound (just going through pixel by pixel
+and not generating anything intermediate; will all probably stay in L1
+cache), we are probably saturating the core’s ALUs, so hyper-threading
+not as useful</p>
+<p>Inspecting the assembly of our most expensive loop, we see that
+rand() is not inlined and is a call festival. This must be replaced
+Essentially we are looking for mathematical functions that could be
+inlined and aren’t that are in our hot-path. When you want something to
+be fast, it should not be calling anything. If it does, probably made a
+mistake Also note that using SIMD instructions, however not to their
+widest extent, i.e. single scalar ‘ss’. Want to replace with ‘ps’ packed
+scalar</p>
+<p>we have the option of constructor/destructor pairs if we want to
+determine best possible time if all caches align etc. ‘hunt for
+mininum’, e.g. record mininum time execution in loop iteration or re-run
+if smaller time yielded alternatively, we could develop a statistical
+breakdown of values (could see moments when kernel switches us out
+etc.)</p>
+<p>(IMPORTANT save out configuration and timing information for various
+optimisation stages, e.g. ./app &gt; 17-04-2022-image.txt)</p>
+<p>agnerfog optimise website ‘what’s a creel’</p>
+<p>threading Observe CPU percentage use is not close to 100% For
+multithreading, often have to pack into 64 bit value to perform single
+operation on it,
+e.g. <code>delta = (val1 &lt;&lt; 32 | val2); interlocked_add(&amp;val, delta)</code></p>
+<p>When making multi-threaded, segregate task by writing prototype
+‘chunk’ function, e.g. <code>render_tile</code> Then write a for loop
+combining these chunk functions Before entering the chunk function, good
+to have a configuration printout, e.g. num chunks, num cores, chunk dim,
+chunk size, etc.</p>
+<p>When dividing a whole into pieces, an uneven divisor will give less
+than what’s needed. so <code>(total + divisor - 1) / divisor</code> to
+ensure always enough. We will want this calculation to be in the last
+dividing operation, e.g. tile_width then tile_count calculated, so use
+on tile_count Associated with this calculation is clamping to handle
+adding extra exceeding original dimensions For getting proper place in
+chunk, call function wrapper for pointer location per row</p>
+<p>(May have to inline functions?) Next we want to pass each chunk onto
+a queue and then dequeue them from each logical core? So, have a
+WorkOrder that will store all information required to perform operation
+on chunk, i.e. all parameters in <code>render_chunk</code> function (may
+also store entropy for each chunk, i.e. random number series) Then a
+WorkQueue that contains an array of WorkOrders with total number
+equalling number of chunks So, the original loop iterating of chunks now
+just populates the WorkOrders Now in a while loop that runs while there
+are still chunks to execute, we call the <code>render_chunk</code>
+function and pass in the WorkQueue The <code>render_chunk</code>
+function will increment the next_work_order_index and return true if
+more to be done</p>
+<p>When spawning the actual worker thread functions, have same while
+loop calling the <code>render_chunk</code> function as for core 0 (the
+amount of threads to spawn would think should be equal to number of
+logical cores? however exceeding them may increase performance?) (this
+debate of manually prescribing the core count applies to the chunk size
+as well. perhaps the sweet-spot for my machine in balancing context
+switching and drain out is to manually prescribe their size as oppose to
+computing them off the core count) (Collating information into the
+WorkQueue struct helsp for printing out configuration) (Setting up this
+way, we can easily turn multithreading off)</p>
+<p>As creating threads will require platform specific, put prototypes in
+main.h and the implementations in linux_main.cpp Then include
+linux_main.cpp based on macro definition of platform in the build script
+at the bottom of main.cpp</p>
+<p>hyperthreading, architecture specific information becomes more
+important when in a situation where memory is constrained in relation to
+the cache (hyper-threads share same L1-L2 cache)</p>
+<p>volatile says code other than what is generated by this compiler run,
+could modify this value. it’s required for multithreaded, as compiler
+may not re-read value that it may have cached in a register if changed
+elsewhere when incrementing volatiles, must use a
+locked_add_and_return_previous_value (could return new value, just be
+clear)</p>
+<p>simd clamp can be re-written as min() and max() combination, which
+are instructions in SSE Although looking at the system monitor shows
+cpus maxed out, we could be wasting cycles, e.g. not using SIMD</p>
+<p>Define lane width, and divide with this to get the new loop count Go
+through loop and loft used values e.g. lane_r32, lane_v3, lane_u32
+(IMPORTANT at first we are only concerned with getting single values to
+work, later can worry about n-wide loading of values) (TODO the current
+code has the slots for each lane generated, rather than unpacked. look
+at handmade hero for this unpacking mode) If parameters to functions,
+loft them also (not functions? just parameters? however we do
+random_bilateral_lane() so yes to functions?) If using struct or struct
+member references, take out values and loft them also,
+e.g. sphere.radius == lane_r32 sphere_r; (group struct remappings
+together) Remap if statement conditions into a lane_u32 mask and remove
+enclosing brace hierarchy (IMPORTANT you can still have if statements if
+they apply to lanes, e.g. if mask_is_zeroed() break;) (TODO for
+mask_is_zeroed() we want the masks to be either all 1’s or 0’s) (call
+mask_is_zeroed() on all masks to early out as often as possible to get a
+speed up) Once lofted all if statements, &amp; all the masks into a
+single mask (it seems if there is large amounts of code inside the if
+statements, you don’t want to do it this way and rather check if needing
+to execute?) (IMPORTANT to only &amp; dependent masks, e.g. if there is
+an intermediate if like a pick_mask or clamp, then don’t include it, but
+do the conditional assign directly on this mask) Then enclose remaining
+assignments in a conditional assignment function using this single mask?
+(conditional_assign(&amp;var, final_mask, value); this uses positive
+mask to get source and negative mask to get dest?) (also discover the
+work around to perform binary operations on floating point numbers) So,
+by end of this all values operated upon should be a lane type? (can have
+some scalar types if appropriate) We may have situation where some items
+in a lane may finish before others. So, introduce a lane_mask variable
+that indicates this. To indicate say a break, we can do (lane_mask =
+lane_mask &amp; (hit_value == 0)); For incrementing, will have to
+introduce an incrementor value that will be zeroed out for the
+appropriate lane item that has finished. Have horizontal_add()? Next
+once everything remapped create a lane.h. Here, typedef the lane types
+to their single variants to ensure working before adding actual simd
+instructions Also do simd helper functions like horizontal_add(),
+mask_is_zeroed() in one dimension first Wrap the single lane helper
+functions and types in an if depending on the lane width set (IMPORTANT
+any functions that we are to SIMD, place here. if it comes that we want
+actual scalar, then rename with func_lane prefix)</p>
+<p>for simd typically have to organically transition from AOS to SOA</p>
+<p>Debug in single lane, single threaded mode (easier and debugger
+works) However, can increase lane width as needed (threading not so
+much?)</p>
+<p>For bitwise SIMD instructions, the compiler does not need to know how
+we are segmenting the register, e.g. 4x8, 8x8 etc. as the same result is
+obtained performing on the entire register at once. So they only provide
+one version of it, i.e. no epi32 only si128 Naming convention have
+types: <code>__m128 (float), __m128i (integer), __m128d (double)</code>
+and names in functions:
+<code>epi32/si128 (integer), ps (float), pd (double)</code> Overload
+operators on actual wide lane structs (IMPORTANT remember to do both
+orders, e.g. (val / scalar) and (scalar / val)) Also have conversion
+functions</p>
+<p>Lane agnostic functions go at bottom (like +=, -=, &amp;=, most v3
+functionality) (IMPORTANT it seems we can replace logical &amp;&amp; and
+|| with binary for same functionality in simd)</p>
+<p>(IMPORTANT simd does not handle unsigned conversions, may have to cut
+off sign bit, e.g. &gt;&gt; 1)</p>
+<p>process of casting type to pointer to access individual bytes or
+containing elements (used in file reading too)</p>
+<p>(IMPORTANT masks in SIMD will either be all 1’s or 0’s. perhaps have
+a specific name for this to distinguish?)</p>
+<p>(IMPORTANT seems that not all operations are provided in SSE, like
+!=, so have to implement with some bitwise operations)</p>
+<p>SIMD allows divide by zeros by default? (because nature of SIMD have
+to allow divide by zeroes?)</p>
+<p>To get over the fact that C doesn’t allow &amp; floating point,
+reinterpret bit paradigm <code>*(u32 *)&amp;a</code> as oppose to cast
+(IMPORTANT in SIMD cast is reinterpreting bits, so the opposite of cast
+in C)</p>
+<p>caching https://akkadia.org/drepper/cpumemory.pdf 1. know cache sizes
+to have data fit in it 2. know cache line sizes to ensure data is close
+together (may have to separate components of structs to allow loops to
+access less cache lines) i.e. understand what you operate on frequently.
+may also have to align struct 3. simple, linear access patterns (or
+prefetch instructions) for things larger than cache size</p>
+<p>inline assembly (raw syscalls from github) HAVE TO INSPECT/VERIFY
+ASSEMBLY IS SANE FIRST THEN LOOK AT TIMING INFORMATION inspecting
+compiler generated assembly loops, look for JMP to ascertain looping
+condition due to macro-op fusion (relevent to say Skylake), e.g. cmp-jmp
+non-programmable instructions could be executed by the cpu similarly,
+instructions that only exist on the frontend but exist programmatically
+e.g. xmm to xmm might just be a renaming in register allocation table
+also due to concurrent port usage, can identify parts of code as
+relatively ‘free’ struct access typically off a [base pointer] in
+assembly, 1.0f might be large number e.g. 1065353216 in assembly loop,
+repeated instructions may be due to loop unrolling we might see: *
+superfluous loading of values off stack * more instructions required,
+e.g not efficiently using SIMD (often this exposes the misconception
+that compilers are better than programmers; so better to handwrite
+intrinsics)</p>
+<p>comparing unoptimised assembly to ‘wc’ see noticeable speed increase.
+example of non-pessimisation</p>
+<p>Following the basic principles of non-pessimisation, I make a note of
+the huge amount of cruft in the C STL. The output buffering, hidden
+<code>malloc()</code> ‘optimisations’ (uncommitted memory, encounter
+expensive page faults later; prefer reliability/clarity over
+edge-performance benefits), OS line ending conversions, non-obvious use
+of mutexes etc. Whilst these may seem like minor inconveniences, they
+can be insidious for performance, e.g. <code>rand()</code> has a huge
+call-stack that if we replace with a simple xor shift, results in 3x
+speed up. Although easy to criticise, it may be the situation that the
+CRT had to be that way because of C standards. To isolate use of the
+CRT, wrap in functions so we can hopefully replace with system calls,
+intrinisics, etc. Although generally okay to use STL, it forces you to
+use their patterns (e.g. memory allocation, locks etc.). This is true
+for STLs in general across all languages. Some may have bloatness from
+other areas, e.g. C++ templates To avoid the compiler having to generate
+a large export table of all functions, make them <code>static</code> To
+avoid large amounts of linking and ∴ increase compilation time, have a
+unity build. Furthermore, garunteed ability to inline functions (as with
+multiple translation units, possible one might only have function
+declaration and not definition) (issues may occur with slower
+incremental builds when including 3rd party libraries; yet, can still
+work around this possibly using ccache)</p>
+<!-- SPDX-License-Identifier: zlib-acknowledgement -->
+<p>https://marketplace.fedevel.education/itemDetail.html?itemtype=course&amp;dbid=1569757838995&amp;instrid=us-east-2_KpwYC7yK5:45f6c01d-ccc8-43e0-8f33-c5a70caf707f</p>
+<p>when creating lid lips, factor in printer tolerance, say 0.4mm</p>
+<p>Spreadsheet (have dimensions to make parametric): if want to access
+parameteric sketch constraint, &lt;<Sketch>&gt;.Constraints.name
+(IMPORTANT: even though variable, make sure to reference it off the
+sketch) GIVE OPTIONAL NAME SO CAN REFERENCE FROM .Constraints! (formula
+typecasting may be necessary, e.g. (value<em>1mm)) </em>
+printer_tolerance * container_l/w/h * board_offset_x/y * case_thickness
+* base_thickness * hole_diametre_percent_ratio
+(e.g. &lt;<Internal>&gt;.Constraints.height *
+hole_diametre_percent_ratio) * global_chamfer</p>
+<p>1.75mm PLA (polylactic acid) into 0.4mm nozzle</p>
+<p>0.15mm layer height speed/quality 15% infill gyroid
+integrity/speed/usage</p>
+<p>supports required for model that does not print over itself</p>
+<p>export g-code (like printer ISA?) to sd card</p>
+<p>supports necessary for complex geometries like overhangs, greater
+than 45°, etc. put supports everywhere by default? (perhaps add blockers
+to this?) maybe just use everywhere to get a feel for it, then manually
+add enforcers?</p>
+<p>can also use printrun usb-b interface to print without SD card?</p>
+<hr />
+<p>most solder has flux core (typically rosin) to remove oxide films,
+i.e. wetting the metal (to remove dirt/grease will require cloth or
+steel brush) Sn/Pb (60/40) lower boiling point and shinier finish (cone
+shaped) then non-leaded. fumes are flux as boiling point of lead
+(≈1700°C) much higher fume extractor at top</p>
+<p>like most metal products, the iron has core (Cu, Fe) and plating
+metals (Cr, Sn)</p>
+<p>lead is if course bad if ingested lead-free developed due to landfill
+leeching of disposed electronics</p>
+<p>wire guage is diametre use solid wire as easier to work with than
+stranded (which handles flexing better, so better for final
+projects)</p>
+<p>when heated, oxidation of solder iron tip is greatly accelerated
+thereby losing conductivity, wetting, etc.</p>
+<p>rusting is a form of corrosion (damage slowy by chemical reaction) as
+rust is technically iron oxide, only iron can rust (giving electrons)
+however, other metals can corrode e.g. less reactive copper corrodes
+more slowly e.g. more reactive aluminium corrodes, however the oxide is
+tough and not flaky</p>
+<p>silicon mat, brass wool (routinely removing stuck solder debris and
+rust), chisel-head (conical head other 10%), gloves, glasses</p>
+<p>300°C-350°C: lead 350°C-400°C: non-lead</p>
+<p>iron temp. of 325°C good compromise</p>
+<p>tin by touching tip with solder and thrusting into wool. repeat twice
+tin regularly</p>
+<p>heat materials with iron and apply solder to junction soldering
+station has feedback/adjustable/regulated temperature tin the tip every
+session</p>
+<h2 id="tht">THT</h2>
+<p>1mm gauges components typically higher thermal capacity, ∴ higher
+temperature</p>
+<h2 id="smd">SMD</h2>
+<p>flux pen 0.6mm gauge</p>
+<p>grounding strap with 1Mohm resistor to ensure same potential as board
+for sensitive electronics (not really necessary for dev-boards)</p>
 </body>
 </html>
