@@ -232,6 +232,8 @@
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
+<li><a href="#news---aquatic-bearings"
+id="toc-news---aquatic-bearings">NEWS - Aquatic Bearings</a></li>
 <li><a href="#news---a-virgin-woman" id="toc-news---a-virgin-woman">NEWS
 - A Virgin Woman</a></li>
 <li><a href="#check-if-nvidia-driver-is-installed"
@@ -249,22 +251,24 @@ id="toc-sorting-squared-array">Sorting Squared Array</a></li>
 <li><a href="#tournament-winner" id="toc-tournament-winner">Tournament
 Winner</a></li>
 </ul></li>
+<li><a href="#resilience" id="toc-resilience">Resilience</a></li>
+<li><a href="#rage-against-the-machine"
+id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
 <li><a
 href="#important-for-all-topics-included-have-some-mention-on-wallpaper"
 id="toc-important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
 FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</a></li>
-<li><a href="#mcu" id="toc-mcu">MCU</a></li>
-<li><a href="#phone" id="toc-phone">Phone</a></li>
-<li><a href="#wearable" id="toc-wearable">Wearable</a></li>
 <li><a href="#desktop" id="toc-desktop">Desktop</a>
 <ul>
+<li><a href="#chips" id="toc-chips">Chips</a></li>
 <li><a href="#legalities" id="toc-legalities">Legalities</a></li>
 <li><a href="#bootstrap" id="toc-bootstrap">Bootstrap</a></li>
 <li><a href="#formats" id="toc-formats">Formats</a></li>
 <li><a href="#unix" id="toc-unix">Unix</a></li>
-</ul></li>
-<li><a href="#laptop" id="toc-laptop">Laptop</a>
-<ul>
+<li><a href="#components" id="toc-components">Components</a></li>
+<li><a href="#power" id="toc-power">Power</a></li>
+<li><a href="#memory" id="toc-memory">Memory</a></li>
+<li><a href="#ports" id="toc-ports">Ports</a></li>
 <li><a href="#screens" id="toc-screens">Screens</a></li>
 </ul></li>
 <li><a href="#dalgo" id="toc-dalgo">Dalgo</a></li>
@@ -273,19 +277,23 @@ FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</a></li>
 <li><a href="#programmer" id="toc-programmer">Programmer</a>
 <ul>
 <li><a href="#wireless" id="toc-wireless">Wireless</a></li>
-<li><a href="#power" id="toc-power">Power</a></li>
-<li><a href="#memory" id="toc-memory">Memory</a></li>
-<li><a href="#cpu" id="toc-cpu">CPU</a></li>
 <li><a href="#arm" id="toc-arm">ARM</a></li>
-<li><a href="#ports" id="toc-ports">Ports</a></li>
 </ul></li>
+<li><a href="#mcu" id="toc-mcu">MCU</a></li>
+<li><a href="#phone" id="toc-phone">Phone</a></li>
+<li><a href="#wearable" id="toc-wearable">Wearable</a></li>
 <li><a href="#the-scripting-awakening"
 id="toc-the-scripting-awakening">The Scripting Awakening</a></li>
-<li><a href="#resilience" id="toc-resilience">Resilience</a></li>
-<li><a href="#rage-against-the-machine"
-id="toc-rage-against-the-machine">Rage Against the Machine</a></li>
 </ul>
 </nav>
+<h1 id="news---aquatic-bearings">NEWS - Aquatic Bearings</h1>
+<p>Interesting ‘vivovore’ found that is an organism that eats
+viruses</p>
+<p>Could the US China chip ban result in China becoming more
+self-reliant in the future as it’s forced to invest in own chip
+production?</p>
+<p>Further proliferation of OSs, e.g. Touch Ubuntu, Edubuntu, Kubuntu
+etc.</p>
 <!-- SPDX-License-Identifier: zlib-acknowledgement -->
 <h1 id="news---a-virgin-woman">NEWS - A Virgin Woman</h1>
 <p>Thread is new low-power protocol for Matter (and therefore IoT
@@ -494,6 +502,355 @@ Technology)</li>
 <li>COMP3121 (Algorithms and Programming Techniques)</li>
 </ul>
 <p>144UoC total: – COMP3900 (Computer Science Project)</p>
+<h1 id="resilience">Resilience</h1>
+<p>programming in AVR assembly actually made me think fondly of modern
+technology (a rare feeling indeed)</p>
+<p>TODO: MAKES THESE SUBSECTIONS OF PROJECTS</p>
+<p>TACKLING DIFFICULT PROBLEM – HOTLOADING FILE MODIFICATION TIME BEING
+READ TOO EARLY. MISINTERPRETING TIMESPEC NANOSEC</p>
+<p>SREG NOT BEING SAVED IN AVR INTERRUPT</p>
+<p>linux raw ALSA can fall into the trap of being so niche and difficult
+it is neck beard inducing</p>
+<p>use of set -x in bash scripts will exit if subprocess returns an
+error, even if 2&gt;/dev/null. Cryptic!</p>
+<p>xlib scaled, vsync, refresh rate</p>
+<p>ell library read test files for documentation</p>
+<p>linux input analysing SDL2 source</p>
+<p>polling multiple keyboards lag due to bug in gnome. inspect gnome git
+switched to desktop environment to lxfe 4. also makes creating shortcuts
+a breeze</p>
+<p>Starting from scratch, try to avoid analysis paralysis</p>
+<p>Pragmas and binary searching codebase to check where compiler
+optimises routine wrong</p>
+<p>signed comparison/branching/add/sub specifics and code flow jumps in
+assembly</p>
+<p>copy-pasta from UDP socket attempting to access like a TCP. doesn’t
+fail, just hangs on read()</p>
+<p>break inside of for loop thinking inside of switch having a
+assignment instead of comparison inside of if unsigned - value causing
+overflow thereby giving larger than actual mul instruction copying to
+r0, r1</p>
+<p>compiler giving wrong storage class for function, even though the
+issue was an unmatched closing parentheses. example of earlier syntax
+bug, giving other false-errors</p>
+<p>ALWAYS ENABLE ADDRESS SANITISER! (look at niagara user github page)
+u8_cursor += byte_counter SHOULD-BE u8_cursor = file_mem +
+byte_counter;</p>
+<p>Having -O2 made program crash as was using memory of stack that in
+debug mode was never modified</p>
+<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
+<p>https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative</p>
+<p>instead of feature, we introduce a patented terminology like user
+stories to have someone teach you them. slows down development business
+logic …. just means high-order operations in say main()</p>
+<p>Incessent unit-testing, why not test startup assembly then. Falls
+apart… What not to test, e.g. assume that hex_to_bin() simple enough to
+work? Introducing formulas to determine whether or not to automate
+something….</p>
+<p>certain ‘design pattern’ enforce really long names to conform to
+pattern. any competent programmer can read use-case specific functions
+with clearer names
+“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
+<p>file for every test, file for every class. leads to awful build
+times</p>
+<p>How can software better serve humanity? e.g. bloatware causes
+slowness for aus post workers</p>
+<p>With UML if doing sufficiently complex to the same level as a
+blueprint, may as well have just written the program the idea of
+iterative design would be followed by literal architects, however too
+costly and time consuming. with software, we have the ability to do
+this. 1. design (urban planner): separation of code (mental clarity and
+division of labour) design metrics are temporal coupling (physics
+outputs data to renderer, so format is important), layout coupling
+(renderer inherits from opengl), idealogical coupling (threading, width,
+memory), fluidity (one change to system causes a major crash) 2.
+programming (architect) 3. compiler (builder)</p>
+<p>Most design patterns are just utility classes rather than a way to
+architect a program</p>
+<p>I don’t want to fight the language (Java). Higher level languages
+should allow you to easily express cpu instructions</p>
+<p>reject the idea of TDD driving good design. accept that tests
+validate design. tdd and bdd have good elements in them, but the dogma
+is not effective.</p>
+<p>code shouldn’t take longer than 10 seconds to compile.</p>
+<p>in general we don’t add security threats that weren’t already
+present, e.g. loading from shared object could just as easily override
+binary if have write priveleges to both</p>
+<p>even though a ‘new’ language won’t crash, it can still have buffer
+overruns. NullPtrExceptions</p>
+<p>c++ struct functions implicitly have a this pointer. virtual
+functions will result in a vtable (array of function pointers) to be
+generated for that struct. therefore, virtual function will first go to
+vtable, then lookup in function, so double indirection (so not a
+zero-cost abstraction) normal function call just call 0x1234, however
+with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
+pointers)</p>
+<p>an engine makes things that aren’t likely to be difficult easy
+(except for linux…) important to know low-level to write new tools. we
+don’t have a wheel yet.</p>
+<p>for any non-trival task, scripting languages become a hindrance with
+no static type checking, no real debugger, slow, not as capable. there
+are complications in software we have wrongly convinced ourselves are
+necessary, e.g. scripting for hotloading hotloading C is far superior,
+as C is more powerful and can use same debugger (using Lua is a
+downgrade) build systems can be useful as they allow for incremental
+builds (however, in negatively reinforces people to only make small
+changes) (speed increase may only be noticeable for large, complex code
+base) they are also useful for managing cross compilation (libraries
+have to be pulled in and compile also) the idea of incorporating a
+scripting language into a game was a failed experiment in 2005s. things
+like a visual based interface is fine as it is constrained</p>
+<p>with closed source it is often the case that a company employs
+someone to oversee the experience of the software and have q+a
+therefore, better quality with this higher layer of checking than open
+source.</p>
+<p>the best bet in safeguarding security is to reduce the attack
+surface, which means to reduce the number of lines of code.</p>
+<p>Don’t restrict right side of bell curve Let your aces be aces Being
+an ace involves having an opinion Most influential software written
+largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
+to maintain it. Fallacy about solo programmer productivity requiring
+large teams. Design by committee pushes design to middle of bell curve
+as opposing views average out</p>
+<p>templates add complexity in the debugger (no actual names). only
+really useful if you save a ton of code (not much code to just write
+each implementation) if templates are necessary then just use
+meta-programming as it is much more powerful.</p>
+<p>many programs treat memory as an infinite resource. allocating memory
+is introducing a failure case and making not a fan of allocation
+festivals. we can create our application with minimal failure cases
+(cannot do this with the platform layer).</p>
+<p>uml and diagrams in general are a waste of time (its just code you
+would write and often fails to capture subtleties) you should become
+more proficient at reading code and understanding its relationship.</p>
+<p>oh no, we had a security bug in our development version! (printf and
+friends. printf %f defaults to double)</p>
+<p>understanding history is important; c runtime library way of packing
+return fail information is the reason for inverse truthniess</p>
+<p>downloading unverified external tool, always good to get more viruses
+on my machine… unless playing at EVO with some maxed out razer device,
+not feasible to hit that hard I guess RTFM is the answer to that…</p>
+<p>build tools are more of a hindrance! always asking yourself what
+flags are being passed (linker and compiling separate steps), what files
+are it picking up, what is the CWD, etc.</p>
+<p>Go against merge requests from strangers and just auto let a group of
+trusted people. This avoids the problem where you work for hours only to
+have it blocked</p>
+<p>Many online communities are anti-engineering in that they don’t
+embrace criticism.</p>
+<p>Do anything on web takes a lot longer than it should dealing with a
+myriad of software with different odd conventions. Lack of
+functionality/integration with hardware will lead to collapse Many
+features lacking like type system, try to emulate. Many features have
+like garbage collection try to avoid.</p>
+<p>Scripting languages can cause heap fragmentation. Why just use a real
+language as we want robustness (scripting languages dependent on
+interpreter speed) and type checking</p>
+<p>Fundamental lack of awareness that there is a better way to program.
+We all make slow because of lack of time however to say it can’t be done
+is a fallacy. The cultural differences with these people make it a
+fool’s errand to try and get these people to program correctly e.g. time
+visual studio users think is fast is less than 10 seconds?!</p>
+<p>Const rarely finds bugs that I have, i.e..writing to a variable a
+shouldn’t. In saying that, you should use features of language that
+helps you catch bugs.</p>
+<p>Apple store is hardly a free marketplace. They can just block your
+app for any reason</p>
+<p>DRM and engine usage make using games in the future difficult
+(e.g. museum)</p>
+<p>Also, the excessive testing is pushed by web where the poor languages
+dictate heavy testing. Testing first makes no sense as the app may
+change</p>
+<p>Audiophiles think they hear things that aren’t there</p>
+<p>Much like the food industry has organic vs processed, we need a term
+for games that are made by people who love games and care about the
+experience as opposed to large companies concerned with making money
+(indie vs triple a)</p>
+<p>Sometimes crashing is good because it signifies the serious problem
+that can be rectified immediately rather than some other Insidious
+hidden bug The problem is not mapping id/pointer (or whatever std:: c++
+people would use) to an entity correctly (i.e. correspondence problem).
+the symptom of this problem will be different depending on the
+implementation, e.g. pointer will crash program.</p>
+<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
+commands except privileged ls. Plus sign turning off, minus on, etc.</p>
+<p>The flip side of high level languages is loss of capability in
+controlling the cpu Run time languages are slower and more complex Most
+scripting languages aren’t designed for modern hardware, e.g. simd,
+threads</p>
+<p>Scripting once, deploying everywhere is broken. You must test what
+you write on each machine. Computers aren’t wonderful abstractions we
+wish they were</p>
+<p>C was created to solve the problem of a portable high level assembly
+language for UNIX. C++ is a frankenstein languAge with bjarne just
+adding features in, e.g. he just wanted c with classes. Go and rust were
+designed for specific purposes, although I don’t care about safe memory
+features or want garbage collection. Complexity creates bugs. C++
+incredibly complex. People just stick to a subset of c++, which may be
+different to yours. Exceptions defer error handling and also bring about
+an ethos of more errors when they should just be states of your
+program.</p>
+<p>roughly 90% of games played on PC games are pirated. however
+intensive anti-piracy makes it harder for people to play your game yet,
+in line with this is, there is no code of ethics in computer science for
+wasting peoples time. so, get more respect from community? drm just
+introduces another way for the software to waste people’s time (however,
+may come a day when it’s required…)</p>
+<p>Successful ideas are higher level languages to assembly and compile
+time type checking Success is solving a problem people have talked
+themselves out of solving Why does Twitter need 4000 employees? Spacex
+is roughly the same and the put rockets on mars! They make problems
+difficult by the engineering culture they create. 18000 classes
+overflowed java function pointer buffer, they are deluded in thinking
+this way Over concerned with Uml, state diagrams, acronyms, etc.
+Nightmarish distractions/unproductive</p>
+<p>High level don’t worry about implementation details - chrome c++
+entering a 1 char created 25000 memory allocations with std::strong
+Abstractions - more code makes program as a whole more difficult to
+understand. Abstractions are just hiding low level which is the most
+important part and will constrain the system. Java huge call stack to
+make a http request. Make lightweight abstractions only Functional
+programming - Haskell around since 1990 hasn’t taken over. Imperative
+more clear. Functional breaks down over non trivial work Data hiding -
+poor cache performance, redundant code Excessive inheritance - poor
+cache performance Exceptions - constant cognitive tax on remembering
+what throws what and huge verbosity doing so. Also don’t know what
+program will throw during some time Commenting - write good comments and
+garden them as they can rot easily Re-use - only effective when used to
+small extent, humans are bad at understanding layers upon layers. You
+don’t make something better by making it more complicated All
+aforementioned ideas can be contextually useful</p>
+<p>The backbone of web tcp/ip has scaled tremendously well over 60
+years. The web software stack is opposite. Browsers rev every 15
+minutes, everything is worse than it was before, JavaScript slower than
+anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
+particular type of software development rapid. However they fail to
+effectively utilise system resources to solve a problem that would be
+easy in C. Often people are only concerned with how fast they can write
+this, without caring about quality. In the web sphere google, Facebook
+etc. Know their competitors aren’t going to be concerned with quality,
+e.g. gmail is incredibly slow and littered with bugs (typing in a name
+gives wrong result as it hasn’t finished time to server) so they use
+these technologies that help to get something working quickly but will
+be janky. I want to write software where quality matters and software is
+enjoyable to use. Web needs to acknowledge this. They have different
+thinking, e.g. network latency so we don’t have to care about
+performance, no you need more effort to avoid this latency! Although
+different tradeoffs made for different contexts, on a whole programming
+is programming. The web is almost impossible to write good software as
+have to deal with complexities that don’t have to be there. Best minds
+are being put to make people click ads</p>
+<p>Why is it big news regarding command prompt. Battlefield orders of
+magnitude complex and runs faster Msdos could see all physical memory;
+Modern cpus have mmu</p>
+<p>must be able to judge the quality of something from your own
+criteria, not simply on social cues/norms</p>
+<p>memory safety not of that much concern for programming. however, for
+security I suppose it is? wish security wasn’t an issue
+https://github.com/KULeuven-COSIC/Starlink-FI/</p>
+<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
+beaglebone cape, raspberry pi hat etc.</p>
+<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
+package name, however binaries are named differently.</p>
+<p>still installing an OS is a cross-your-fingers exercise. A single USB
+presents multiple boot options. choosing between uefi 1.0 and 1.0 one
+will give you WIFI during install ubuntu forums have contemporary posts
+mentioning install issues this finicky nature means just have barebones
+things and install separate OS in virtual machine chose xcfe4 for
+gnome-repeat-bug and easy shortcuts</p>
+<p>the lack of type systems in Javascript and Python leads to extensions
+with it</p>
+<p>Vulkan like filling in a centrelink form, so much setup</p>
+<p>Any overarching idelogoy like everything is objects, everything is
+data is pretty arbitrary. Certain approaches are useful for particular
+problems. I’m sensiiltive to Input lag in text editor, so use vim.
+Intellisense pop ups slow</p>
+<p>Although large groups can help maintain, the introduction of many can
+create imperfections This extends to all software companies. Do a lot of
+good things, but will always have things that are dysfunctional at, e.g
+documentation, disparate build systems, non-uniform design practices
+Don’t restrict right side of bell curve Let your aces be aces Being an
+ace involves having an opinion Most influential software written largely
+by one person, e.g Linux, Unix, git etc. Then a team is assigned to
+maintain it. Fallacy about solo programmer productivity requiring large
+teams. Design by committee pushes design to middle of bell curve as
+opposing views average out</p>
+<p>Loss of generational knowledge, i.e. people forgetting gensis of
+influential software written by individuals</p>
+<p>Growth of machine learning due to quantity of computation available.
+Localised improvements, overall degradation (rendering, update
+processing etc. far more involved) Wrong perception that performance
+takes too much time, so we want do it but we could do it. However, if
+they have never done it, how could they say they could? Growth of
+startups are just finding a niche, rather than writing revolutionary
+software</p>
+<p>Testing nomenclature so diverse, yet could be boiled down to a
+handful of terms, e.g. Regression testing just re-running tests on new
+changes, which is something you do implicitly</p>
+<p>JSON is not even robust enough to allow trailing commas that even C89
+arrays support …</p>
+<p>Now have ‘memory leak’ finder tools for interpreted languages like
+Javascript…</p>
+<p>IPv6 classic example of second-system effect</p>
+<p>Windows have to enable hidden file extensions to not enter a .txt
+file</p>
+<p>Although I’m in favour of an OS wrapper, these don’t give you all the
+control you need and you end up having to write your own OS specific
+code</p>
+<p>Unfortunately can’t even use modern GNU AVR assembly with numbered
+labels, advanced macros and location counter</p>
+<p>C stdlib BUFSIZ macro vastly different across OSs, e.g. 1K, 8K,
+512bytes</p>
+<p>Concept of non-daemonic and daemonic ‘threads’ in python</p>
+<p>w3m-img installs to non default path /usr/lib. Have to resort to X11
+python ueberzug</p>
+<p>difference in size between C and CPP header files for vulkan SDK is
+huge, leads to much slower compile times. contains some useful things,
+but not that useful</p>
+<p>Unfortunately software like npm is poorly designed so will inevitable
+get ‘fast/lightweight’ variants</p>
+<p>Many tutorials on low-level like Vulkan, X11 can be wrong so need to
+understand spec</p>
+<p>Fibres are green threads, i.e. not OS or hardware threads so not
+actually faster. They just allow interleaved execution which is used in
+web to not freeze UI on large linear execution</p>
+<p>Unfortunate trend on Internet for people to ask why aren’t you using
+what I’m using, e.g. VScode, as oppose to asking why are you doing
+things your way Tech news propagates shallow information fast. In
+aggregate, most of it not important, e.g. new bright blueberry distro
+release</p>
+<p>The distinction between new as in fashion and new as in forward
+progress can be overlooked in tech. Unfortunately, most is the
+former</p>
+<p>Despite Wayland (and Mir) being far more sane (merging display server
+and client into one), still not fully supported</p>
+<p>Being able to sift through low-quality tech news essential, e.g. 
+‘new’ database library, css library, VR headset, distro, container
+library etc. Amazon, Tesla, Twitter, Netflix endeavours Cancer,
+alzheimer trial drugs Fusion energy</p>
+<p>Have to update Ubuntu version if want to easily get compiled version
+of modern gcc</p>
+<p>Unfortunate mnemonic repetition of nonsensical statements in
+programming, e.g. manual memory management is hard (overly simplistic
+and misleading)</p>
+<p>Auto, i.e. type inference is good when the type is not actually
+known. However, often used in replace of a name that is too long to
+type, leading to unclear types and over complication</p>
+<p>Virtually every week a new ‘container-specifier’ project appears on
+Github</p>
+<p>C grew out of existing code. All new languages trying to be a
+top-down design on the opinions of a single programmer (BDFL) Just have
+a simple language with ideal metaprogramming/code generation facilities
+so the programmer can decide, not the language designer</p>
+<p>Whilst github codespaces seems cool, the reason for having some many
+containers is that the build systems for each project is incredibly
+complex and requires many dependencies</p>
+<p>Sometimes have to rephrase something for the compiler to generate
+more optimal code, e.g. div /= 2; div /= 2; will generate more efficient
+instruciton that div &gt;&gt; 2 for avr_gcc</p>
+<p>The advent of AI assistants just gives you more settings to disable
+at factory reset time on a phone 2022, modern Samsung galaxy S22 ultra
+won’t even recognise USB to transfer files on Ubuntu and Windows …</p>
 <ul>
 <li><p>vinegar and bicarb for walls and drain cleaning</p></li>
 <li><p>cool idea of SDR (software defined radio) and RF analyser
@@ -1472,69 +1829,85 @@ add a 1</p>
 <h1
 id="important-for-all-topics-included-have-some-mention-on-wallpaper">IMPORTANT:
 FOR ALL TOPICS INCLUDED, HAVE SOME MENTION ON WALLPAPER</h1>
-<p>creating website:
-https://threadreaderapp.com/thread/1606219302855745538.html</p>
-<p>TODO: what is blockchain and web3?</p>
-<h1 id="mcu">MCU</h1>
-<p>On startup, copy from Flash to RAM then jump to reset handler address
-No real need for newlib, just use standalone mpaland/printf Some chips
-have XIP (execute-in-place) which allows for running directly from
-flash</p>
-<p>QI is a wireless charging standard most supported by mobile-devices
-for distances up to 4cm FreePower technology allows QI charging mats to
-support concurrent device charging</p>
-<h1 id="phone">Phone</h1>
-<p>(Serial Advanced Technology Attachment) important that these are
-sustained speeds, so for small file sizes expect a lot less as seconds
-smaller note that storage space advertised with S.I units, whilst OS
-works with binary</p>
-<p>RAM potentially hundreds of cycles (CAS latency and cache retrieval
-process) (important to note that RAM CAS is only say 20% of total
-latency as will check traverse cache and than copy it to cache)
-https://sites.utexas.edu/jdm4372/2011/03/10/memory-latency-components/
-In general: check if in L1. If not go check in L2 and mark least
+<h1 id="desktop">Desktop</h1>
+<h2 id="chips">Chips</h2>
+<p>cpu contains clock. each tick marks a step in the fetch(signal sent
+along address bus as specified by PC; instruction or data sent along
+data bus)- so, whenever interacting with memory, will first have to
+specify address bus and get/store result via data bus therefore, for
+something like LDR rax, [val] will require two fetch-executes. this is
+von-neumann bottleneck most modern computers are modified-harvard, in
+that the L1 caches have separate instruction and data regions.
+therefore, they can be read simultaneously</p>
+<p>decode-execute cycle an accumulator register is term used to indicate
+typical register that holds results of large arithmetic</p>
+<p>von-neumann instruction, data in RAM instructions+data share data bus
+between CPU and RAM, so they have to be fetched separately</p>
+<p>harvard instruction, data separate</p>
+<p>in reality, all CPUs are von-neumann presented to the user and
+harvard at the low-level. it’s only harvard from the pipeline/cache
+stage modified harvard could also mean instruction and data bus, but
+unified memory so, the variation amongst harvard architectures is in how
+one transitions to the other</p>
+<p>Procedure Call Standard for the Arm Architecture (AAPCS). Part of ABI
+for ARM (also part of ABI is debugging, dynamic linking semantics etc.)
+From this we can garner say, not to put more than 4 word sized arguments
+to function as this will require stack, consuming more time and space
+Furthermore, alignment restrictions mean that passing a double word has
+to be even-odd register pair, so ordering of parameters important So,
+call standard important for ordering and number of parameters?</p>
+<p>When people say vector operations, they mean SIMD</p>
+<p>endianness only relevent when reading and writing to memory addresses
+and interpreting the bytes overall, endianness usefulness determined by
+majority of operations performed, e.g. converting string to int easier
+in big-endian e.g. little-endian easier to read values of variable
+length (address does not change)</p>
+<p>memory model: visibility and consistency of changes to data stored in
+memory necessary for understanding multiple thread execution</p>
+<p>alignment ensures that value doesn’t straddle cache line
+boundaries</p>
+<p>more instructions required for unaligned memory accesses? (most
+modern x64 arm will not crash on an unaligned access?) from armv7,
+unaligned accesses allowed</p>
+<p>to implement a software memory model, i.e. C++, will have to know
+hardware memory model</p>
+<p>language (from source to machine code) so, C11 memory model is in
+relation to rearranging of loads/stores in assembly for optimisations?
+(so is a weak model?) mainly in reference to the behaviour of atomics to
+synchronise programs language memory model will abstract away hardware
+memory model https://research.swtch.com/plmm</p>
+<p>a language memory model will provide ways to order memory operations
+and to ensure coherency of modification order, e.g. atomics,
+acquire/release etc. (we can ignore this if we use intrinisics?)
+(i.e. to provide synchronisation primitives, language will have to
+implement a memory model)</p>
+<p>hardware (from machine code to execution on the CPU): * sequential
+consistency (ideal as easy to understand, however doesn’t maximise
+hardware speed) * x86-TSO (total store order). each processor reads from
+shared memory all processors agree upon the order in which their write
+queues are written to memory write queue is FIFO, so write queue is
+flushed in same order as seen by the processor however, when the write
+queue is flushed is up to the CPU therefore, to enforce stronger memory
+ordering, architecture supplies memory barriers/fences (in a sense to
+enforce sequentially consistent behaviours) to ensure write queue is
+flushed before any future reads occur (without fences, I suppose write
+queue length would determine whether certain synchronisation problems
+occur more frequently) * ARM (most relaxed/weak) each processor reads
+and writes from its own copy of memory writes propagate to other
+processors independently, i.e not all update at same time furthermore,
+the order of the writes can be reordered furthermore, processors are
+allowed to delay reads until writes later in the instruction stream</p>
+<p>In general: check if in L1. If not go check in L2 and mark least
 recently accessed L1 for move to L2. bubbles up to L3 until need for
 memory access which will go to memory controller etc.</p>
-<p>so, ram frequency gives max. throughput however latency of ram also
-important</p>
-<p>(cache latency from wikichip)</p>
-<p>generic is referencing Ubuntu specific kernel compilation (could also
-have -lowlatency etc.) (generic does not include a lot of modules in
-kernel to alleviate RAM, so use modprobe) (-41 is build number, i.e how
-many times compiled) (the compiler, linker, libc are all specific to
-linux OS used, e.g. compiled with different settings, different
-versions, etc.)</p>
-<p>For intel CPUs, i3-i7 of same generation will have same
+<p>For Intel CPUs, i3-i7 of same generation will have same
 micro-architecture. Just more cache, hyperthreading, cores, die size
 etc.</p>
-<p>$(grub-)</p>
-<p>Intel clock frequency is often changed by OS?</p>
-<p>Is cortex-m4 microarchitecture? How does this relate to intel naming?
-AMD also?</p>
+<p>important that these are sustained speeds, so for small file sizes
+expect a lot less as seconds smaller note that storage space advertised
+with S.I units, whilst OS works with binary</p>
+<p>Intel clock frequency is often changed by OS</p>
 <p>also have uOP cache considered L0</p>
-<p>$(getconf LEVEL1_DCACHE_LINESIZE)</p>
-<p>$(sudo lshw -html &gt; info.html) for RAM, harddrive and drivers of
-things $(ldd –version) $(lsb_release -a), $(cat /etc/debian_version)</p>
-<p>SATA ssd is the lowest grade ssd (however still 4 times
-bandwidth)</p>
-<p>storage devices: form factor (M.2 keying, PCIe), interface (SATAIII,
-NVMe, PCIe), technology a single form factor may support multiple
-interfaces, so ensure motherboard has appropriate chipset</p>
-<p>DRAM refreshed periodically. SDRAM (synchronises clock speed with
-memory speed). SDRAM. LPDDR4 (low-power; double pumping on rising and
-falling edge of clock)</p>
-<p>SRAM more expensive, faster, not refreshed, larger die size.</p>
-<p>DIIM (dual in-line memory module) is form factor (wider bus) SODIMM
-(small outline)</p>
-<p>From $(cpuinfo) see that although 64bit cpu this is just what the
-instruction set supports. As we have no need for 16 exabytes (tera,
-peta, exa), the physical address size may be 39bits, and virtual size
-48bits to save on unused transistors</p>
-<p>$(cpu-x) for cache information per core</p>
-<p>NUMA node relationship between CPU socket (location on motherboard)
-and memory banks. So, say 2 sockets will probably have 2 NUMA nodes.
-Therefore, not all physical memory directly accessible from 1 cpu
-socket; will have to go through other socket to get it</p>
 <p>Hyperthreads don’t increase number of instructions per second, rather
 number of instructions that can be queued (so hyperthread like a
 queue)</p>
@@ -1549,31 +1922,41 @@ Flow of cache, is it check if from 8-way copy then L2 8-way or finish L1
 entirely? If found, in L2 does it copy to L1?</p>
 <p>Microarchitecture will affect instruction latency and throughtput by
 implementation of execution and control units</p>
-<h1 id="wearable">Wearable</h1>
-<p>5ATM is 5 atmospheres. 1 atmosphere is about 10m (however calculated
-when motionless) 50m for 10 minutes</p>
-<h1 id="desktop">Desktop</h1>
 <p>Codec is typically a separate hardware unit that you interact with
 via a specific API HEVC (H.265; high efficiency video coding) newer
 version of H.264 VP9 is a open source Google video coding format</p>
-<p>Typically stored as crt0.s, this will perform OS specific run-time
-initialisation. The conditions assumed here will be outlined in ABI,
-e.g. argc in rdi Some functions include setting up processor registers
-(e.g. SSE), MMU, caches, threading ABI stack alignment, frame pointer
-initialisation, C runtime setup (setting .bss to 0), C library setup
-(e.g. stdout, math precision) The program loader will load from Flash
-into RAM then call _start (which is crt entrypoint)</p>
-<p>ELF (executable and linkable format) executable header contains type
-(executable, dynamic, relocatable) and entrypoint sections: .text ()
-.bss () .data () .rodata () A segment (which confusingly is called a
-section in ld to be placed in a memory region)</p>
-<p>section compile-time so, something like .text, .bss segment run-time
-so, something like .dseg (data), .eseg (eeprom) and .cseg (code/program)
-essentially will have loadable code segment and loadable data segment
-which will comprise of sections (possibly more segments in MCUs as more
-memory spaces)</p>
 <p>SSE registers are 128bits (4 bytes) XMM, AVX are 256bits (8 bytes)
 YMM</p>
+<p>Common transistor size is 7nm. Low as 2nm Silicon atom is 0.2nm From
+gleaning a Moore’s law transistor graph, see that average CPU a few
+billion transistors and high end SOCs around 50 billion transistors</p>
+<p>TDP (thermal design power) maximum amount of heat (measure in watts)
+at maximum load that is designed to be dissipated (bus sizes of chips
+smaller, so TDP getting lower) However, value is rather vague as could
+be measured on over-clock and doesn’t take into account ambient
+conditions</p>
+<p>Cache eats up precious die-area. Having a large cache increases
+lookup time</p>
+<p>CISC gives reduced cache pressure for high-intensive, sustained loops
+Instructions with higher cycle count Typically a register-memory
+architecture, e.g. can add one value in register, one in memory (as
+oppose to load-store)</p>
+<p>Average CPU die-size is 100mm², GPU much larger as benefits from
+parallelisation around 500mm²</p>
+<p>direct-mapped cache has each memory address mapping to a single cache
+line lookup is instantenous, however high replacement inefficiences
+fully-associative cache has each memory address mapping to any cache
+line entire cache has to be searched, however low replacement
+inefficiencies set-associative cache divides cache into blocks of
+fully-associative. the number of cache lines in a block is what say an
+8-way cache means this compromises between the efficiency and lookup
+speed</p>
+<p>Caches will stay relatively small due to the nature of how computers
+are used. At any point, there is only a small amount of local data the
+CPU will process next. So, beyond the sweet spot of 64MB, having a
+larger cache will marginally better hit ratio.</p>
+<p>hardware scheduler allows for hyperthreading (AMD simultaneous
+multi-threading) share execution units</p>
 <h2 id="legalities">Legalities</h2>
 <p>Anti-trust laws don’t prevent monopolies, they prevent attempts to
 monopolise by unfair means, e.g. Microsoft browser market, Apple app
@@ -1620,51 +2003,6 @@ bootloader is the EFI OS loader and is part of the OS that will load the
 kernel</p>
 <p>ACPI interface to pass information from firmware to OS. This firmware
 will have hardware information baked into it set by manufacturers</p>
-<p>Each CPU socket have memory banks that are local to it, i.e. can be
-accessed from it directly. NUMA (non-uniform memory access) means that
-accessing memory from a non-local bank will not be the same speed. A
-NUMA-aware OS will try to mitigate these accesses</p>
-<p>Common transistor size is 7nm. Low as 2nm Silicon atom is 0.2nm From
-gleaning a Moore’s law transistor graph, see that average CPU a few
-billion transistors and high end SOCs around 50 billion transistors</p>
-<p>TDP (thermal design power) maximum amount of heat (measure in watts)
-at maximum load that is designed to be dissipated (bus sizes of chips
-smaller, so TDP getting lower) However, value is rather vague as could
-be measured on over-clock and doesn’t take into account ambient
-conditions</p>
-<p>Cache eats up precious die-area. Having a large cache increases
-lookup time</p>
-<p>Linux is a monolithic kernel, i.e. drivers, file system etc. are all
-in kernel space. So, more efficient, not as robust to component failure
-Windows in hybrid kernel, moving away from microkernel due to
-inefficiencies Compiled differently, e.g. generic</p>
-<p>SystemV ABI: IMPORTANT: cannot easily access upper portion of
-register, only lower rdi, rsi, rdx, rcx, r8, r9 (6 integer arguments)
-xmm0, xmm1, xmm2, xmm3, xmm4, xmm5, xmm6 (7 floating arguments)
-remaining arguments pushed right-to-left on stack rax return and syscall
-number stack 16-byte aligned before function call (SSE2 is baseline for
-x86-64, so make efficient for __m128)? (word size 8 bytes?)</p>
-<p>CISC gives reduced cache pressure for high-intensive, sustained loops
-Instructions with higher cycle count Typically a register-memory
-architecture, e.g. can add one value in register, one in memory (as
-oppose to load-store)</p>
-<p>SRAM is fast, requires 6 transistors for each bit. So, for 64MB
-cache, 3.2billion transistors. Sizeable percentage of die-area DRAM is 1
-transistor per bit</p>
-<p>Average CPU die-size is 100mm², GPU much larger as benefits from
-parallelisation around 500mm²</p>
-<p>direct-mapped cache has each memory address mapping to a single cache
-line lookup is instantenous, however high replacement inefficiences
-fully-associative cache has each memory address mapping to any cache
-line entire cache has to be searched, however low replacement
-inefficiencies set-associative cache divides cache into blocks of
-fully-associative. the number of cache lines in a block is what say an
-8-way cache means this compromises between the efficiency and lookup
-speed</p>
-<p>Caches will stay relatively small due to the nature of how computers
-are used. At any point, there is only a small amount of local data the
-CPU will process next. So, beyond the sweet spot of 64MB, having a
-larger cache will marginally better hit ratio.</p>
 <h2 id="formats">Formats</h2>
 <p>Inodes store file metadata. The metadata stored by an inode is
 determined by filesystem in use, except for filename which is never
@@ -1691,13 +2029,32 @@ automatically includes proprietary drivers like WiFi, has PPAs to allow
 installation of 3rd party applications, and install procedure just
 works. Also updates more regularly than Debian and provides LTS, so know
 regular backports provided</p>
+<p>Linux is a monolithic kernel, i.e. drivers, file system etc. are all
+in kernel space. So, more efficient, not as robust to component failure
+Windows uses a hybrid kernel, moving away from original microkernel due
+to inefficiencies Using Ubuntu generic kernel (could also have
+-lowlatency etc.) to not include a lot of modules in kernel to free up
+RAM usage</p>
 <p>Xfce as default Ubuntu GNOME had bug with multiple keyboards.
 Furthermore, Xfce codebase was readable when inspecting X11 code. In
 addition, Xfce automatically provided GUI shortcut creation</p>
+<p>.deb and .rpm are binary packages. Annoyances arise due to specifying
+the specific library dependency for each distro version Flatpaks and
+Snaps are containerised applications that include the specific libraries
+and runtimes AppImages combine the ‘shared’ libraries and runtimes of
+Flatpaks and Snaps into a giant file. This file can be copied and run on
+any distro If packages is being actively maintained, preferable to use
+.deb as faster and simpler</p>
 <p>Linux DRM (direct rendering manager) -&gt; X11 (display server) -&gt;
 xfce (desktop environment)<br />
 Linux ALSA (advanced linux sound architecture) -&gt; pulseaudio (sound
 server)</p>
+<p>SystemV ABI: IMPORTANT: cannot easily access upper portion of
+register, only lower rdi, rsi, rdx, rcx, r8, r9 (6 integer arguments)
+xmm0, xmm1, xmm2, xmm3, xmm4, xmm5, xmm6 (7 floating arguments)
+remaining arguments pushed right-to-left on stack rax return and syscall
+number stack 16-byte aligned before function call (SSE2 is baseline for
+x86-64, so make efficient for __m128)? (word size 8 bytes?)</p>
 <p>A premptive scheduler will swap processes based on specific criteria.
 Round-robin means each process will run for a designated time slice CFS
 is a premptive round-robin scheduler. Time slices are dynamic, computed
@@ -1720,27 +2077,103 @@ cgroups etc. (chroot cannot access files outside its designated tree) A
 container will utilise one of these options provided by the kernel to
 acheive: * cannot send signals to processes outside container * has own
 networking namespace * resource usage limits</p>
-<p>.deb and .rpm are binary packages. Annoyances arise due to specifying
-the specific library dependency for each distro version Flatpaks and
-Snaps are containerised applications that include the specific libraries
-and runtimes AppImages combine the ‘shared’ libraries and runtimes of
-Flatpaks and Snaps into a giant file. This file can be copied and run on
-any distro If packages is being actively maintained, preferable to use
-.deb as faster and simpler</p>
-<p>Terminal type writer something you should ask your grandfather
-about</p>
-<p>KVM (kernel-based virutal machine) kernel based virtual machine
-allows linux kernel to act as hypervisor ∴ type 1 hypervisor (virtualbox
-type 2, i.e. run atop an OS) Often see with KVM/QEMU (virt-manager)</p>
-<p>hardware scheduler allows for hyperthreading (AMD simultaneous
-multi-threading) share execution units</p>
+<p>Typically stored as crt0.s, this will perform OS specific run-time
+initialisation. The conditions assumed here will be outlined in ABI,
+e.g. argc in rdi Some functions include setting up processor registers
+(e.g. SSE), MMU, caches, threading ABI stack alignment, frame pointer
+initialisation, C runtime setup (setting .bss to 0), C library setup
+(e.g. stdout, math precision) The program loader will load from Flash
+into RAM then call _start (which is crt entrypoint)</p>
+<p>ELF (executable and linkable format) executable header contains type
+(executable, dynamic, relocatable) and entrypoint sections: .text (code)
+.bss (uninitialised globals) .data (globals) .rodata (constants) A
+segment (which confusingly is called a section in ld to be placed in a
+memory region)</p>
+<p>section compile-time so, something like .text, .bss segment run-time
+so, something like .dseg (data), .eseg (eeprom) and .cseg (code/program)
+essentially will have loadable code segment and loadable data segment
+which will comprise of sections (possibly more segments in MCUs as more
+memory spaces)</p>
+<h2 id="components">Components</h2>
+<p>Column Address Strobe (CAS), or CL (CAS latency) is time between RAM
+controller read and when data is available</p>
+<p>so, ram frequency gives max. throughput however latency of ram also
+important</p>
+<p>RAM potentially hundreds of cycles (CAS latency and cache retrieval
+process) (important to note that RAM CAS is only say 20% of total
+latency as will check traverse cache and than copy it to cache)</p>
+<p>(Serial Advanced Technology Attachment) storage devices: form factor
+(M.2 keying, PCIe), interface (SATAIII, NVMe, PCIe), technology a single
+form factor may support multiple interfaces, so ensure motherboard has
+appropriate chipset</p>
+<p>SATA SSD is the lowest grade ssd (however still 4 times
+bandwidth)</p>
+<p>DRAM refreshed periodically. SDRAM (synchronises clock speed with
+memory speed). SDRAM. LPDDR4 (low-power; double pumping on rising and
+falling edge of clock)</p>
+<p>SRAM more expensive, faster, not refreshed, larger die size.</p>
+<p>DIIM (dual in-line memory module) is form factor (wider bus) SODIMM
+(small outline)</p>
+<p>From $(cpuinfo) see that although 64bit cpu this is just what the
+instruction set supports. As we have no need for 16 exabytes (tera,
+peta, exa), the physical address size may be 39bits, and virtual size
+48bits to save on unused transistors (i.e. the address bus of the CPU
+won’t support 16 exabytes)</p>
+<p>NUMA node relationship between CPU socket (location on motherboard)
+and memory banks. So, say 2 sockets will probably have 2 NUMA nodes.
+Therefore, not all physical memory directly accessible from 1 cpu
+socket; will have to go through other socket to get it</p>
+<p>Each CPU socket have memory banks that are local to it, i.e. can be
+accessed from it directly. NUMA (non-uniform memory access) means that
+accessing memory from a non-local bank will not be the same speed. A
+NUMA-aware OS will try to mitigate these accesses</p>
 <p>RAID is method of combining multiple disks together so appear like
 one disk called an array. Various types, e.g. RAID0 (striping) some
 parts of file in multiple disks, RAID1 (mirroring) each disk is
 dusplicate so could give speed increase etc.</p>
 <p>PCI usually for attaching peripherals to motherboards,
 e.g. network/audio/usb/graphics controller cards</p>
-<h1 id="laptop">Laptop</h1>
+<p>SRAM is fast, requires 6 transistors for each bit. So, for 64MB
+cache, 3.2billion transistors. Sizeable percentage of die-area DRAM is 1
+transistor per bit</p>
+<h2 id="power">Power</h2>
+<p>Petrol cars still use lead-acid as they have lower internal
+resistance and so can give higher peak current then equivalent lipo
+(just not for as long)</p>
+<p>LiPo is lithium-ion poly. uses polymer electrolyte instead of liquid.
+lipo more expensive, shorter lifespan, less energy, more robust li-poly
+battery is rechargeable (so rechargeable is structured to allow a
+current to be passed to it to reverse the process) battery will have two
+electrodes, say lithium cobalt oxide (cathode) and graphite (anode,
+negative) graphite is almost always used as anode when charging, lithium
+ions move to graphite when discharging, lithium ions move from graphite
+to lithium so, we can see that the atomic structure of the electrodes
+are changed, hence why charge cycles affect battery life</p>
+<p>Lithium-ion has higher energy density, cheaper, not available in
+small sizes and more dangerous due to liquid electrolyte</p>
+<p>Battery 51Watt/hr, which is A/hr * V is not a fixed value, e.g. 1A/hr
+could run 0.1A for 10 hours</p>
+<h2 id="memory">Memory</h2>
+<p>NAND and NOR flash are two types of non-volatile memory NOR has
+faster read, however more expensive per bit and slower write/erase NOR
+used in BIOS chips (firmware will be motherboard manufacturer,
+e.g. Lenovo) A NAND mass storage device will require a controller chip,
+i.e. a microcontroller How the controller accesses the NAND flash
+(i.e. how its Flash Translation Layer operates), will determine what
+type of storage it is: * SD (secure digital) * eMMC (embedded multimedia
+card): Typically SD soldered on motherboard * USB (universal serial bus)
+* SSD (solid state drive): Parallel NAND access, more intelligent wear
+leveling and block sparring</p>
+<p>QSPI can be used without CPU with data queues</p>
+<h2 id="ports">Ports</h2>
+<p>(audio visual) HDMI-A, C (mini), D (micro) USB-A,USB-B,USB-B(mini)
+USB-C is USB3.0</p>
+<p>3.5mm audio jack (3 pole number of shafts (internal wires); 4 pole
+for added microphone)</p>
+<p>ethernet CAT backwards compatible. connector called RJ45 telephone
+cable is called RJ11</p>
+<p>IEC power cords (kettleplug, cloverleaf)</p>
+<p>DC barrel jack</p>
 <h2 id="screens">Screens</h2>
 <p>Touch screen types need some external input to complete circuit
 Resistive works by pressure pushing down plastic&lt;-electric
@@ -1856,101 +2289,6 @@ and bare metal (fixed bandwidth rate set into price) Matchmaking, host
 migration difficult as hard to measure what user has good
 connection,<br />
 e.g. Whats there NAT type?</p>
-<h2 id="power">Power</h2>
-<p>Pertol cars still use lead-acid as they have lower internal
-resistance and so can give higher peak current then equivalent lipo
-(just not for as long)</p>
-<p>LiPo is lithium-ion poly. uses polymer electrolyte instead of liquid.
-lipo more expensive, shorter lifespan, less energy, more robust li-poly
-battery is rechargeable (so rechargeable is structured to allow a
-current to be passed to it to reverse the process) battery will have two
-electrodes, say lithium cobalt oxide (cathode) and graphite (anode,
-negative) graphite is almost always used as anode when charging, lithium
-ions move to graphite when discharging, lithium ions move from graphite
-to lithium so, we can see that the atomic structure of the electrodes
-are changed, hence why charge cycles affect battery life</p>
-<p>Lithium-ion has higher energy density, cheaper, not available in
-small sizes and more dangerous due to liquid electrolyte</p>
-<p>Battery 51Watt/hr, which is A/hr * V is not a fixed value, e.g. 1A/hr
-could run 0.1A for 10 hours</p>
-<h2 id="memory">Memory</h2>
-<p>NAND and NOR flash are two types of non-volatile memory NOR has
-faster read, however more expensive per bit and slower write/erase NOR
-used in BIOS chips A NAND mass storage device will require a controller
-chip, i.e. a microcontroller How the controller accesses the NAND flash
-(i.e. how its Flash Translation Layer operates), will determine what
-type of storage it is: * SD (secure digital) * eMMC (embedded multimedia
-card): Typically SD soldered on motherboard * USB (universal serial bus)
-* SSD (solid state drive): Parallel NAND access, more intelligent wear
-leveling and block sparring</p>
-<p>QSPI can be used without CPU with data queues</p>
-<h2 id="cpu">CPU</h2>
-<p>cpu contains clock. each tick marks a step in the fetch(signal sent
-along address bus as specified by PC; instruction or data sent along
-data bus)- so, whenever interacting with memory, will first have to
-specify address bus and get/store result via data bus therefore, for
-something like LDR rax, [val] will require two fetch-executes. this is
-von-neumann bottleneck most modern computers are modified-harvard, in
-that the L1 caches have separate instruction and data regions.
-therefore, they can be read simultaneously</p>
-<p>decode-execute cycle an accumulator register is term used to indicate
-typical register that holds results of large arithmetic</p>
-<p>von-neumann instruction, data in RAM instructions+data share data bus
-between CPU and RAM, so they have to be fetched separately</p>
-<p>harvard instruction, data separate</p>
-<p>in reality, all CPUs are von-neumann presented to the user and
-harvard at the low-level. it’s only harvard from the pipeline/cache
-stage modified harvard could also mean instruction and data bus, but
-unified memory so, the variation amongst harvard architectures is in how
-one transitions to the other</p>
-<p>Procedure Call Standard for the Arm Architecture (AAPCS). Part of ABI
-for ARM (also part of ABI is debugging, dynamic linking semantics etc.)
-From this we can garner say, not to put more than 4 word sized arguments
-to function as this will require stack, consuming more time and space
-Furthermore, alignment restrictions mean that passing a double word has
-to be even-odd register pair, so ordering of parameters important So,
-call standard important for ordering and number of parameters?</p>
-<p>When people say vector operations, they mean SIMD</p>
-<p>endianness only relevent when reading and writing to memory addresses
-and interpreting the bytes overall, endianness usefulness determined by
-majority of operations performed, e.g. converting string to int easier
-in big-endian e.g. little-endian easier to read values of variable
-length (address does not change)</p>
-<p>memory model: visibility and consistency of changes to data stored in
-memory necessary for understanding multiple thread execution</p>
-<p>alignment ensures that value doesn’t straddle cache line
-boundaries</p>
-<p>more instructions required for unaligned memory accesses? (most
-modern x64 arm will not crash on an unaligned access?) from armv7,
-unaligned accesses allowed</p>
-<p>to implement a software memory model, i.e. C++, will have to know
-hardware memory model</p>
-<p>language (from source to machine code) so, C11 memory model is in
-relation to rearranging of loads/stores in assembly for optimisations?
-(so is a weak model?) mainly in reference to the behaviour of atomics to
-synchronise programs language memory model will abstract away hardware
-memory model https://research.swtch.com/plmm</p>
-<p>a language memory model will provide ways to order memory operations
-and to ensure coherency of modification order, e.g. atomics,
-acquire/release etc. (we can ignore this if we use intrinisics?)
-(i.e. to provide synchronisation primitives, language will have to
-implement a memory model)</p>
-<p>hardware (from machine code to execution on the CPU): * sequential
-consistency (ideal as easy to understand, however doesn’t maximise
-hardware speed) * x86-TSO (total store order). each processor reads from
-shared memory all processors agree upon the order in which their write
-queues are written to memory write queue is FIFO, so write queue is
-flushed in same order as seen by the processor however, when the write
-queue is flushed is up to the CPU therefore, to enforce stronger memory
-ordering, architecture supplies memory barriers/fences (in a sense to
-enforce sequentially consistent behaviours) to ensure write queue is
-flushed before any future reads occur (without fences, I suppose write
-queue length would determine whether certain synchronisation problems
-occur more frequently) * ARM (most relaxed/weak) each processor reads
-and writes from its own copy of memory writes propagate to other
-processors independently, i.e not all update at same time furthermore,
-the order of the writes can be reordered furthermore, processors are
-allowed to delay reads until writes later in the instruction stream</p>
 <h2 id="arm">ARM</h2>
 <p>cortex-a53 is a synthesisable IP core sold to other semiconductor
 companies (stm, nxp, etc.) as licensed IP core, the amount of cache will
@@ -1959,15 +2297,6 @@ vary e.g. 8-64Kb?</p>
 architecture</p>
 <p>details hidden due to IP nature, e.g. LPDDR3 memory controller from
 CPU is all we can know?</p>
-<h2 id="ports">Ports</h2>
-<p>(audio visual) HDMI-A, C (mini), D (micro) USB-A,USB-B,USB-B(mini)
-USB-C is USB3.0</p>
-<p>3.5mm audio jack (3 pole number of shafts (internal wires); 4 pole
-for added microphone)</p>
-<p>ethernet CAT backwards compatible. connector called RJ45 telephone
-cable is called RJ11</p>
-<p>IEC power cords (kettleplug, cloverleaf)</p>
-<p>DC barrel jack</p>
 <p>RENDERING: rendering is the process of creating the 2D/3D model,
 i.e. the drawing onto the monitor ray tracing solves transparency
 issues, it’s just substantially slower than standard projection
@@ -1986,6 +2315,21 @@ screen, similar triangles)</li>
 </ol>
 <p>/dev/urandom is cryptographically secure pseudo-random number
 /dev/zero</p>
+<p>creating website:
+https://threadreaderapp.com/thread/1606219302855745538.html</p>
+<p>TODO: what is blockchain and web3?</p>
+<h1 id="mcu">MCU</h1>
+<p>On startup, copy from Flash to RAM then jump to reset handler address
+No real need for newlib, just use standalone mpaland/printf Some chips
+have XIP (execute-in-place) which allows for running directly from
+flash</p>
+<p>QI is a wireless charging standard most supported by mobile-devices
+for distances up to 4cm FreePower technology allows QI charging mats to
+support concurrent device charging</p>
+<h1 id="phone">Phone</h1>
+<h1 id="wearable">Wearable</h1>
+<p>5ATM is 5 atmospheres. 1 atmosphere is about 10m (however calculated
+when motionless) 50m for 10 minutes</p>
 <h1 id="the-scripting-awakening">The Scripting Awakening</h1>
 <p>I decided to try and implement ctime in Bash for pedagogical
 purposes. My first task was to write and read a binary file. Googling
@@ -2135,354 +2479,5 @@ nucleo boards have convenient IDD jumper) verify signal ringing
 completely bottom out)</p>
 <p>Bus Pirate has PIC as a SOIC (surface outline integrated circuit)
 package</p>
-<h1 id="resilience">Resilience</h1>
-<p>programming in AVR assembly actually made me think fondly of modern
-technology (a rare feeling indeed)</p>
-<p>TODO: MAKES THESE SUBSECTIONS OF PROJECTS</p>
-<p>TACKLING DIFFICULT PROBLEM – HOTLOADING FILE MODIFICATION TIME BEING
-READ TOO EARLY. MISINTERPRETING TIMESPEC NANOSEC</p>
-<p>SREG NOT BEING SAVED IN AVR INTERRUPT</p>
-<p>linux raw ALSA can fall into the trap of being so niche and difficult
-it is neck beard inducing</p>
-<p>use of set -x in bash scripts will exit if subprocess returns an
-error, even if 2&gt;/dev/null. Cryptic!</p>
-<p>xlib scaled, vsync, refresh rate</p>
-<p>ell library read test files for documentation</p>
-<p>linux input analysing SDL2 source</p>
-<p>polling multiple keyboards lag due to bug in gnome. inspect gnome git
-switched to desktop environment to lxfe 4. also makes creating shortcuts
-a breeze</p>
-<p>Starting from scratch, try to avoid analysis paralysis</p>
-<p>Pragmas and binary searching codebase to check where compiler
-optimises routine wrong</p>
-<p>signed comparison/branching/add/sub specifics and code flow jumps in
-assembly</p>
-<p>copy-pasta from UDP socket attempting to access like a TCP. doesn’t
-fail, just hangs on read()</p>
-<p>break inside of for loop thinking inside of switch having a
-assignment instead of comparison inside of if unsigned - value causing
-overflow thereby giving larger than actual mul instruction copying to
-r0, r1</p>
-<p>compiler giving wrong storage class for function, even though the
-issue was an unmatched closing parentheses. example of earlier syntax
-bug, giving other false-errors</p>
-<p>ALWAYS ENABLE ADDRESS SANITISER! (look at niagara user github page)
-u8_cursor += byte_counter SHOULD-BE u8_cursor = file_mem +
-byte_counter;</p>
-<p>Having -O2 made program crash as was using memory of stack that in
-debug mode was never modified</p>
-<h1 id="rage-against-the-machine">Rage Against the Machine</h1>
-<p>https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative</p>
-<p>instead of feature, we introduce a patented terminology like user
-stories to have someone teach you them. slows down development business
-logic …. just means high-order operations in say main()</p>
-<p>Incessent unit-testing, why not test startup assembly then. Falls
-apart… What not to test, e.g. assume that hex_to_bin() simple enough to
-work? Introducing formulas to determine whether or not to automate
-something….</p>
-<p>certain ‘design pattern’ enforce really long names to conform to
-pattern. any competent programmer can read use-case specific functions
-with clearer names
-“test_CommandHardware_CheckForMsg_Should_GetCharAndAddToPacker_When_BytesAvailable”</p>
-<p>file for every test, file for every class. leads to awful build
-times</p>
-<p>How can software better serve humanity? e.g. bloatware causes
-slowness for aus post workers</p>
-<p>With UML if doing sufficiently complex to the same level as a
-blueprint, may as well have just written the program the idea of
-iterative design would be followed by literal architects, however too
-costly and time consuming. with software, we have the ability to do
-this. 1. design (urban planner): separation of code (mental clarity and
-division of labour) design metrics are temporal coupling (physics
-outputs data to renderer, so format is important), layout coupling
-(renderer inherits from opengl), idealogical coupling (threading, width,
-memory), fluidity (one change to system causes a major crash) 2.
-programming (architect) 3. compiler (builder)</p>
-<p>Most design patterns are just utility classes rather than a way to
-architect a program</p>
-<p>I don’t want to fight the language (Java). Higher level languages
-should allow you to easily express cpu instructions</p>
-<p>reject the idea of TDD driving good design. accept that tests
-validate design. tdd and bdd have good elements in them, but the dogma
-is not effective.</p>
-<p>code shouldn’t take longer than 10 seconds to compile.</p>
-<p>in general we don’t add security threats that weren’t already
-present, e.g. loading from shared object could just as easily override
-binary if have write priveleges to both</p>
-<p>even though a ‘new’ language won’t crash, it can still have buffer
-overruns. NullPtrExceptions</p>
-<p>c++ struct functions implicitly have a this pointer. virtual
-functions will result in a vtable (array of function pointers) to be
-generated for that struct. therefore, virtual function will first go to
-vtable, then lookup in function, so double indirection (so not a
-zero-cost abstraction) normal function call just call 0x1234, however
-with vtable mov rax, qword ptr [rsp + 20] etc. (dereferencing
-pointers)</p>
-<p>an engine makes things that aren’t likely to be difficult easy
-(except for linux…) important to know low-level to write new tools. we
-don’t have a wheel yet.</p>
-<p>for any non-trival task, scripting languages become a hindrance with
-no static type checking, no real debugger, slow, not as capable. there
-are complications in software we have wrongly convinced ourselves are
-necessary, e.g. scripting for hotloading hotloading C is far superior,
-as C is more powerful and can use same debugger (using Lua is a
-downgrade) build systems can be useful as they allow for incremental
-builds (however, in negatively reinforces people to only make small
-changes) (speed increase may only be noticeable for large, complex code
-base) they are also useful for managing cross compilation (libraries
-have to be pulled in and compile also) the idea of incorporating a
-scripting language into a game was a failed experiment in 2005s. things
-like a visual based interface is fine as it is constrained</p>
-<p>with closed source it is often the case that a company employs
-someone to oversee the experience of the software and have q+a
-therefore, better quality with this higher layer of checking than open
-source.</p>
-<p>the best bet in safeguarding security is to reduce the attack
-surface, which means to reduce the number of lines of code.</p>
-<p>Don’t restrict right side of bell curve Let your aces be aces Being
-an ace involves having an opinion Most influential software written
-largely by one person, e.g Linux, Unix, git etc. Then a team is assigned
-to maintain it. Fallacy about solo programmer productivity requiring
-large teams. Design by committee pushes design to middle of bell curve
-as opposing views average out</p>
-<p>templates add complexity in the debugger (no actual names). only
-really useful if you save a ton of code (not much code to just write
-each implementation) if templates are necessary then just use
-meta-programming as it is much more powerful.</p>
-<p>many programs treat memory as an infinite resource. allocating memory
-is introducing a failure case and making not a fan of allocation
-festivals. we can create our application with minimal failure cases
-(cannot do this with the platform layer).</p>
-<p>uml and diagrams in general are a waste of time (its just code you
-would write and often fails to capture subtleties) you should become
-more proficient at reading code and understanding its relationship.</p>
-<p>oh no, we had a security bug in our development version! (printf and
-friends. printf %f defaults to double)</p>
-<p>understanding history is important; c runtime library way of packing
-return fail information is the reason for inverse truthniess</p>
-<p>downloading unverified external tool, always good to get more viruses
-on my machine… unless playing at EVO with some maxed out razer device,
-not feasible to hit that hard I guess RTFM is the answer to that…</p>
-<p>build tools are more of a hindrance! always asking yourself what
-flags are being passed (linker and compiling separate steps), what files
-are it picking up, what is the CWD, etc.</p>
-<p>Go against merge requests from strangers and just auto let a group of
-trusted people. This avoids the problem where you work for hours only to
-have it blocked</p>
-<p>Many online communities are anti-engineering in that they don’t
-embrace criticism.</p>
-<p>Do anything on web takes a lot longer than it should dealing with a
-myriad of software with different odd conventions. Lack of
-functionality/integration with hardware will lead to collapse Many
-features lacking like type system, try to emulate. Many features have
-like garbage collection try to avoid.</p>
-<p>Scripting languages can cause heap fragmentation. Why just use a real
-language as we want robustness (scripting languages dependent on
-interpreter speed) and type checking</p>
-<p>Fundamental lack of awareness that there is a better way to program.
-We all make slow because of lack of time however to say it can’t be done
-is a fallacy. The cultural differences with these people make it a
-fool’s errand to try and get these people to program correctly e.g. time
-visual studio users think is fast is less than 10 seconds?!</p>
-<p>Const rarely finds bugs that I have, i.e..writing to a variable a
-shouldn’t. In saying that, you should use features of language that
-helps you catch bugs.</p>
-<p>Apple store is hardly a free marketplace. They can just block your
-app for any reason</p>
-<p>DRM and engine usage make using games in the future difficult
-(e.g. museum)</p>
-<p>Also, the excessive testing is pushed by web where the poor languages
-dictate heavy testing. Testing first makes no sense as the app may
-change</p>
-<p>Audiophiles think they hear things that aren’t there</p>
-<p>Much like the food industry has organic vs processed, we need a term
-for games that are made by people who love games and care about the
-experience as opposed to large companies concerned with making money
-(indie vs triple a)</p>
-<p>Sometimes crashing is good because it signifies the serious problem
-that can be rectified immediately rather than some other Insidious
-hidden bug The problem is not mapping id/pointer (or whatever std:: c++
-people would use) to an entity correctly (i.e. correspondence problem).
-the symptom of this problem will be different depending on the
-implementation, e.g. pointer will crash program.</p>
-<p>Crazy nuttiness of command line parsing UNIX. No one remembers single
-commands except privileged ls. Plus sign turning off, minus on, etc.</p>
-<p>The flip side of high level languages is loss of capability in
-controlling the cpu Run time languages are slower and more complex Most
-scripting languages aren’t designed for modern hardware, e.g. simd,
-threads</p>
-<p>Scripting once, deploying everywhere is broken. You must test what
-you write on each machine. Computers aren’t wonderful abstractions we
-wish they were</p>
-<p>C was created to solve the problem of a portable high level assembly
-language for UNIX. C++ is a frankenstein languAge with bjarne just
-adding features in, e.g. he just wanted c with classes. Go and rust were
-designed for specific purposes, although I don’t care about safe memory
-features or want garbage collection. Complexity creates bugs. C++
-incredibly complex. People just stick to a subset of c++, which may be
-different to yours. Exceptions defer error handling and also bring about
-an ethos of more errors when they should just be states of your
-program.</p>
-<p>roughly 90% of games played on PC games are pirated. however
-intensive anti-piracy makes it harder for people to play your game yet,
-in line with this is, there is no code of ethics in computer science for
-wasting peoples time. so, get more respect from community? drm just
-introduces another way for the software to waste people’s time (however,
-may come a day when it’s required…)</p>
-<p>Successful ideas are higher level languages to assembly and compile
-time type checking Success is solving a problem people have talked
-themselves out of solving Why does Twitter need 4000 employees? Spacex
-is roughly the same and the put rockets on mars! They make problems
-difficult by the engineering culture they create. 18000 classes
-overflowed java function pointer buffer, they are deluded in thinking
-this way Over concerned with Uml, state diagrams, acronyms, etc.
-Nightmarish distractions/unproductive</p>
-<p>High level don’t worry about implementation details - chrome c++
-entering a 1 char created 25000 memory allocations with std::strong
-Abstractions - more code makes program as a whole more difficult to
-understand. Abstractions are just hiding low level which is the most
-important part and will constrain the system. Java huge call stack to
-make a http request. Make lightweight abstractions only Functional
-programming - Haskell around since 1990 hasn’t taken over. Imperative
-more clear. Functional breaks down over non trivial work Data hiding -
-poor cache performance, redundant code Excessive inheritance - poor
-cache performance Exceptions - constant cognitive tax on remembering
-what throws what and huge verbosity doing so. Also don’t know what
-program will throw during some time Commenting - write good comments and
-garden them as they can rot easily Re-use - only effective when used to
-small extent, humans are bad at understanding layers upon layers. You
-don’t make something better by making it more complicated All
-aforementioned ideas can be contextually useful</p>
-<p>The backbone of web tcp/ip has scaled tremendously well over 60
-years. The web software stack is opposite. Browsers rev every 15
-minutes, everything is worse than it was before, JavaScript slower than
-anything before it. Nodejs, php etc. Bourne out of good idea to mAke a
-particular type of software development rapid. However they fail to
-effectively utilise system resources to solve a problem that would be
-easy in C. Often people are only concerned with how fast they can write
-this, without caring about quality. In the web sphere google, Facebook
-etc. Know their competitors aren’t going to be concerned with quality,
-e.g. gmail is incredibly slow and littered with bugs (typing in a name
-gives wrong result as it hasn’t finished time to server) so they use
-these technologies that help to get something working quickly but will
-be janky. I want to write software where quality matters and software is
-enjoyable to use. Web needs to acknowledge this. They have different
-thinking, e.g. network latency so we don’t have to care about
-performance, no you need more effort to avoid this latency! Although
-different tradeoffs made for different contexts, on a whole programming
-is programming. The web is almost impossible to write good software as
-have to deal with complexities that don’t have to be there. Best minds
-are being put to make people click ads</p>
-<p>Why is it big news regarding command prompt. Battlefield orders of
-magnitude complex and runs faster Msdos could see all physical memory;
-Modern cpus have mmu</p>
-<p>must be able to judge the quality of something from your own
-criteria, not simply on social cues/norms</p>
-<p>memory safety not of that much concern for programming. however, for
-security I suppose it is? wish security wasn’t an issue
-https://github.com/KULeuven-COSIC/Starlink-FI/</p>
-<p>various daughterboard accoutrement nomenclature, e.g. arduino shield,
-beaglebone cape, raspberry pi hat etc.</p>
-<p>discordant packaging naming in ubuntu ‘dummy packages’, e.g. qemu is
-package name, however binaries are named differently.</p>
-<p>still installing an OS is a cross-your-fingers exercise. A single USB
-presents multiple boot options. choosing between uefi 1.0 and 1.0 one
-will give you WIFI during install ubuntu forums have contemporary posts
-mentioning install issues this finicky nature means just have barebones
-things and install separate OS in virtual machine chose xcfe4 for
-gnome-repeat-bug and easy shortcuts</p>
-<p>the lack of type systems in Javascript and Python leads to extensions
-with it</p>
-<p>Vulkan like filling in a centrelink form, so much setup</p>
-<p>Any overarching idelogoy like everything is objects, everything is
-data is pretty arbitrary. Certain approaches are useful for particular
-problems. I’m sensiiltive to Input lag in text editor, so use vim.
-Intellisense pop ups slow</p>
-<p>Although large groups can help maintain, the introduction of many can
-create imperfections This extends to all software companies. Do a lot of
-good things, but will always have things that are dysfunctional at, e.g
-documentation, disparate build systems, non-uniform design practices
-Don’t restrict right side of bell curve Let your aces be aces Being an
-ace involves having an opinion Most influential software written largely
-by one person, e.g Linux, Unix, git etc. Then a team is assigned to
-maintain it. Fallacy about solo programmer productivity requiring large
-teams. Design by committee pushes design to middle of bell curve as
-opposing views average out</p>
-<p>Loss of generational knowledge, i.e. people forgetting gensis of
-influential software written by individuals</p>
-<p>Growth of machine learning due to quantity of computation available.
-Localised improvements, overall degradation (rendering, update
-processing etc. far more involved) Wrong perception that performance
-takes too much time, so we want do it but we could do it. However, if
-they have never done it, how could they say they could? Growth of
-startups are just finding a niche, rather than writing revolutionary
-software</p>
-<p>Testing nomenclature so diverse, yet could be boiled down to a
-handful of terms, e.g. Regression testing just re-running tests on new
-changes, which is something you do implicitly</p>
-<p>JSON is not even robust enough to allow trailing commas that even C89
-arrays support …</p>
-<p>Now have ‘memory leak’ finder tools for interpreted languages like
-Javascript…</p>
-<p>IPv6 classic example of second-system effect</p>
-<p>Windows have to enable hidden file extensions to not enter a .txt
-file</p>
-<p>Although I’m in favour of an OS wrapper, these don’t give you all the
-control you need and you end up having to write your own OS specific
-code</p>
-<p>Unfortunately can’t even use modern GNU AVR assembly with numbered
-labels, advanced macros and location counter</p>
-<p>C stdlib BUFSIZ macro vastly different across OSs, e.g. 1K, 8K,
-512bytes</p>
-<p>Concept of non-daemonic and daemonic ‘threads’ in python</p>
-<p>w3m-img installs to non default path /usr/lib. Have to resort to X11
-python ueberzug</p>
-<p>difference in size between C and CPP header files for vulkan SDK is
-huge, leads to much slower compile times. contains some useful things,
-but not that useful</p>
-<p>Unfortunately software like npm is poorly designed so will inevitable
-get ‘fast/lightweight’ variants</p>
-<p>Many tutorials on low-level like Vulkan, X11 can be wrong so need to
-understand spec</p>
-<p>Fibres are green threads, i.e. not OS or hardware threads so not
-actually faster. They just allow interleaved execution which is used in
-web to not freeze UI on large linear execution</p>
-<p>Unfortunate trend on Internet for people to ask why aren’t you using
-what I’m using, e.g. VScode, as oppose to asking why are you doing
-things your way Tech news propagates shallow information fast. In
-aggregate, most of it not important, e.g. new bright blueberry distro
-release</p>
-<p>The distinction between new as in fashion and new as in forward
-progress can be overlooked in tech. Unfortunately, most is the
-former</p>
-<p>Despite Wayland (and Mir) being far more sane (merging display server
-and client into one), still not fully supported</p>
-<p>Being able to sift through low-quality tech news essential, e.g. 
-‘new’ database library, css library, VR headset, distro, container
-library etc. Amazon, Tesla, Twitter, Netflix endeavours Cancer,
-alzheimer trial drugs Fusion energy</p>
-<p>Have to update Ubuntu version if want to easily get compiled version
-of modern gcc</p>
-<p>Unfortunate mnemonic repetition of nonsensical statements in
-programming, e.g. manual memory management is hard (overly simplistic
-and misleading)</p>
-<p>Auto, i.e. type inference is good when the type is not actually
-known. However, often used in replace of a name that is too long to
-type, leading to unclear types and over complication</p>
-<p>Virtually every week a new ‘container-specifier’ project appears on
-Github</p>
-<p>C grew out of existing code. All new languages trying to be a
-top-down design on the opinions of a single programmer (BDFL) Just have
-a simple language with ideal metaprogramming/code generation facilities
-so the programmer can decide, not the language designer</p>
-<p>Whilst github codespaces seems cool, the reason for having some many
-containers is that the build systems for each project is incredibly
-complex and requires many dependencies</p>
-<p>Sometimes have to rephrase something for the compiler to generate
-more optimal code, e.g. div /= 2; div /= 2; will generate more efficient
-instruciton that div &gt;&gt; 2 for avr_gcc</p>
-<p>The advent of AI assistants just gives you more settings to disable
-at factory reset time on a phone 2022, modern Samsung galaxy S22 ultra
-won’t even recognise USB to transfer files on Ubuntu and Windows …</p>
 </body>
 </html>
